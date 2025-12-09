@@ -1,10 +1,10 @@
 export interface Dog {
-  id: string;
+  id: number;
   name: string;
   breed: string;
-  age: number;
-  gender: 'male' | 'female';
-  size: 'small' | 'medium' | 'large';
+  age: string; // 'Young' | 'Adult' | 'Senior'
+  gender: 'Male' | 'Female';
+  health: string; // 'Healthy' | 'Special needs'
   description: string;
   imageUrl: string;
   isAdopted: boolean;
@@ -12,7 +12,7 @@ export interface Dog {
 }
 
 export interface AdoptionRequest {
-  id: string;
+  id: number;
   dogId: string;
   applicantName: string;
   applicantEmail: string;
@@ -20,4 +20,11 @@ export interface AdoptionRequest {
   message: string;
   status: 'pending' | 'approved' | 'rejected';
   submittedAt: Date;
+}
+
+export interface DogFilters {
+  age: string; // 'Young' | 'Adult' | 'Senior' | ''
+  gender: string; // 'Male' | 'Female' | ''
+  health: string; // 'Healthy' | 'Special needs' | ''
+  breed: string; // 'Rottweiler' | 'Cane Corso' | 'Mixed breed' | ''
 }
