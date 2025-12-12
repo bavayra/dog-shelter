@@ -18,7 +18,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="fixed left-4 top-20 z-40 md:hidden bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed left-4 top-20 z-40 md:hidden bg-primary-500 text-neutral-50 p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
       >
@@ -39,23 +39,25 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-neutral-500 bg-opacity-10 z-40 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       <aside
-        className={`fixed left-0 top-16 h-[calc(100vh-4rem)] bg-white shadow-lg z-50 transition-transform duration-300 ${
+        className={`fixed left-0 top-16 h-[calc(100vh-4rem)] bg-primary-100 shadow-lg z-50 transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 md:static md:h-auto ${className}`}
       >
         <nav className="p-6 space-y-2">
-          <h2 className="text-lg font-bold text-gray-800 mb-4">Navigation</h2>
+          <h2 className="text-lg font-bold text-neutral-700 mb-4">
+            NAVIGATION
+          </h2>
           {menuItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors group"
+              className="flex items-center gap-3 px-4 py-3 text-neutral-700 hover:bg-primary-200 hover:text-primary-700 rounded-lg transition-colors group"
               onClick={() => setIsOpen(false)}
             >
               <span className="text-2xl group-hover:scale-110 transition-transform">
@@ -66,7 +68,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           ))}
         </nav>
         <button
-          className="absolute top-4 right-4 md:hidden text-gray-500 hover:text-gray-700"
+          className="absolute top-4 right-4 md:hidden text-neutral-500 hover:text-neutral-700"
           onClick={() => setIsOpen(false)}
           aria-label="Close sidebar"
         >

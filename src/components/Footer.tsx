@@ -8,15 +8,15 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-primary-900 text-neutral-50 py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">{APP_NAME}</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-neutral-100 mb-4">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-neutral-300">
               © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
             </p>
           </div>
@@ -24,12 +24,12 @@ const Footer = () => {
           {/* Contact Information */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <div className="space-y-2 text-gray-400">
+            <div className="space-y-2 text-neutral-500">
               <p className="flex items-center gap-2">
                 <span>📧</span>
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-primary-500 transition-colors"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -38,7 +38,7 @@ const Footer = () => {
                 <span>📞</span>
                 <a
                   href={`tel:${CONTACT_PHONE}`}
-                  className="hover:text-blue-400 transition-colors"
+                  className="hover:text-primary-500 transition-colors"
                 >
                   {CONTACT_PHONE}
                 </a>
@@ -58,7 +58,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 📷
@@ -67,7 +67,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 📘
@@ -76,7 +76,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
                 aria-label="Telegram"
               >
                 ✈️
@@ -85,7 +85,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.vkontakte}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-700 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
                 aria-label="VKontakte"
               >
                 🔵
@@ -94,8 +94,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+        <div className="border-t border-primary-900 mt-8 pt-8 text-center text-neutral-300 text-sm">
           <p>Made with ❤️ for dogs in need</p>
         </div>
       </div>

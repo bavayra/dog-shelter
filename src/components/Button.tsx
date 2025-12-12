@@ -21,11 +21,12 @@ const Button = ({
   const baseStyles =
     'font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    primary:
+      'bg-[var(--color-primary-700)] text-white hover:bg-[var(--color-primary-900)] focus:ring-[var(--color-primary-500)]',
     secondary:
-      'bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500 active:bg-gray-800',
+      'bg-[var(--color-primary-200)] text-[var(--color-primary-900)] hover:bg-[var(--color-primary-300)] focus:ring-gray-500 active:bg-gray-800',
     outline:
-      'bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500',
+      'bg-transparent border-2 border-[var(--color-accent-200)] text-[var(--color-accent-500)] hover:bg-[var(--color-primary-100)] focus:ring-[var(--color-accent-500)]',
   };
   const sizeStyles: Record<ButtonSize, string> = {
     small: 'px-3 py-1.5 text-sm',

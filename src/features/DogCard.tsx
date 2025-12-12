@@ -20,7 +20,10 @@ const DogCard = ({
       });
     }
   };
-  const genderBadgeColor = gender === 'Male' ? 'bg-blue-500' : 'bg-pink-500';
+  const genderBadgeColor =
+    gender === 'Male'
+      ? 'bg-[var(--color-primary-500)]'
+      : 'bg-[var(--color-accent-500)]';
   const genderSymbol = gender === 'Male' ? '♂' : '♀';
 
   const showHealthBadge = health !== 'Healthy';
@@ -28,7 +31,7 @@ const DogCard = ({
   return (
     <article
       className="
-        bg-white
+        bg-neutral-50
         rounded-lg
         shadow-md
         overflow-hidden
@@ -74,7 +77,7 @@ const DogCard = ({
           <div
             className="
             absolute top-3 left-3
-            bg-green-600
+            bg-primary-700
             text-white
             px-4 py-2
             rounded-full
@@ -87,8 +90,8 @@ const DogCard = ({
         )}
       </div>
       <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">{name}</h3>
-        <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-gray-600">
+        <h3 className="text-2xl font-bold text-primary-700 mb-3">{name}</h3>
+        <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-neutral-700">
           <span className="flex items-center gap-1.5">
             <span role="img" aria-label="birthday cake">
               🎂
@@ -107,8 +110,8 @@ const DogCard = ({
             className="
             inline-flex
             items-center gap-2
-            bg-yellow-100
-            text-yellow-800
+            bg-color-accent-200
+            text-primary-700
             px-3 py-1.5
             rounded-full
             text-xs font-medium
@@ -116,13 +119,12 @@ const DogCard = ({
             self-start
           "
           >
-            <span>⚠️</span>
             <span>{health}</span>
           </div>
         )}
         <p
           className="
-          text-gray-700
+          text-neutral-700
           text-sm
           leading-relaxed
           mb-6
