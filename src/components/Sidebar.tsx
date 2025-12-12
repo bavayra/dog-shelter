@@ -1,5 +1,11 @@
 import { useState } from 'react';
 
+import ContactsIcon from '@assets/icons/contacts-nav-icon.svg?react';
+import HelpIcon from '@assets/icons/help-nav-icon.svg?react';
+import OurStoryIcon from '@assets/icons/our_story-nav-icon.svg?react';
+import PetPawIcon from '@assets/icons/pet_paw-nav-icon.svg?react';
+import RulesIcon from '@assets/icons/rules-nav-icon.svg?react';
+
 interface SidebarProps {
   className?: string;
 }
@@ -8,11 +14,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { icon: '🏠', label: 'Our Pets', href: '#pets' },
-    { icon: '📖', label: 'Our Story', href: '#about' },
-    { icon: '🤝', label: 'How to Help', href: '#help' },
-    { icon: '📋', label: 'Adoption Rules', href: '#rules' },
-    { icon: '📞', label: 'Contact', href: '#contact' },
+    { icon: PetPawIcon, label: 'Our Pets', href: '#pets' },
+    { icon: OurStoryIcon, label: 'Our Story', href: '#about' },
+    { icon: HelpIcon, label: 'How to Help', href: '#help' },
+    { icon: RulesIcon, label: 'Adoption Rules', href: '#rules' },
+    { icon: ContactsIcon, label: 'Contact', href: '#contact' },
   ];
 
   return (
@@ -50,22 +56,26 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
         } md:translate-x-0 md:static md:h-auto ${className}`}
       >
         <nav className="p-6 space-y-2">
-          <h2 className="text-lg font-bold text-neutral-700 mb-4">
+          <h2 className="text-lg font-bold text-primary-500 mb-4">
             NAVIGATION
           </h2>
-          {menuItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="flex items-center gap-3 px-4 py-3 text-neutral-700 hover:bg-primary-200 hover:text-primary-700 rounded-lg transition-colors group"
-              onClick={() => setIsOpen(false)}
-            >
-              <span className="text-2xl group-hover:scale-110 transition-transform">
-                {item.icon}
-              </span>
-              <span className="font-medium">{item.label}</span>
-            </a>
-          ))}
+          {menuItems.map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className="flex items-center gap-3 px-4 py-3 text-neutral-700 hover:bg-primary-200 hover:text-primary-700 rounded-lg transition-colors group"
+                onClick={() => setIsOpen(false)}
+              >
+                <IconComponent
+                  className="w-6 h-6 group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                />
+                <span className="font-medium">{item.label}</span>
+              </a>
+            );
+          })}
         </nav>
         <button
           className="absolute top-4 right-4 md:hidden text-neutral-500 hover:text-neutral-700"
