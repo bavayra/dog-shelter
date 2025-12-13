@@ -60,12 +60,12 @@ const Footer = () => {
           {/* Social Media */}
           <div>
             <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
+            <div className="flex gap-4 ">
               <a
                 href={CONTACT_SOCIALS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
                 aria-label="Instagram"
               >
                 <InstagramIcon
@@ -77,7 +77,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
                 aria-label="Facebook"
               >
                 <FacebookIcon
@@ -89,7 +89,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.telegram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
                 aria-label="Telegram"
               >
                 <TelegramIcon
@@ -101,7 +101,7 @@ const Footer = () => {
                 href={CONTACT_SOCIALS.vkontakte}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-colors"
+                className="w-10 h-10 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
                 aria-label="VKontakte"
               >
                 <VKIcon
@@ -119,7 +119,7 @@ const Footer = () => {
             <HeartIcon
               className="inline w-5 h-5 text-primary-500 m-2"
               aria-hidden="true"
-            />{' '}
+            />
             for dogs in need
           </p>
         </div>

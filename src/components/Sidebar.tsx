@@ -65,7 +65,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-3 px-4 py-3 text-neutral-700 hover:bg-primary-200 hover:text-primary-700 rounded-lg transition-colors group"
+                className="flex items-center gap-3 px-4 py-3 text-neutral-700 hover:bg-primary-200 hover:text-primary-700 hover:scale-105 rounded-lg transition-transform group"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
