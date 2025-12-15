@@ -5,11 +5,10 @@ import {
   HEALTH_FILTER_OPTIONS,
 } from '@/constants';
 
-import type { DogFilters } from '@/types';
-/*import Button from '@/components/Button';*/ // I don't know yet if I'll need this
+import type { DogFilters as DogFiltersType } from '@/types';
 
 interface DogFiltersProps {
-  filters: DogFilters;
+  filters: DogFiltersType;
   onAgeChange: (age: string) => void;
   onGenderChange: (gender: string) => void;
   onHealthChange: (health: string) => void;
