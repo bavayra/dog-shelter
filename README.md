@@ -9,16 +9,18 @@
 
 ## 📋 About
 
-Dog Shelter is a web application designed to help animal shelters manage their dogs and facilitate the adoption process. The platform allows visitors to browse available dogs, learn about their stories, and submit adoption applications.
+Dog Shelter is a web application designed to help animal shelters manage their dogs and facilitate the adoption process. The platform allows visitors to browse available dogs, learn about their stories, and submit adoption applications. Built as a portfolio project featuring real shelter dogs with proper consent.
 
 ## ✨ Features
 
-- 🐶 Browse available dogs for adoption
-- 🔍 Filter dogs by breed, size, age, and gender
-- 📝 Submit adoption applications
+- 🐶 Browse available dogs for adoption with real photos
+- 🔍 Advanced filtering system (breed, age, gender, health status)
+- 📊 Real-time shelter statistics
+- 🖼️ Optimized image delivery (WebP, responsive srcset, lazy loading)
 - 📱 Fully responsive design
-- ♿ Accessible and user-friendly interface
-- 🎨 Modern UI with Tailwind CSS
+- ♿ Accessible and user-friendly interface (ARIA labels, keyboard navigation)
+- 🎨 Modern UI with Tailwind CSS variant grouping
+- ⚡ Fast performance with memoized filtering
 
 ## 🛠️ Tech Stack
 
@@ -37,16 +39,25 @@ Dog Shelter is a web application designed to help animal shelters manage their d
 ```
 dog-shelter/
 ├── src/
-│   ├── components/     # Reusable UI components
+│   ├── components/     # Reusable UI components (Button, Header, Footer, Sidebar, Icon, DogCard)
 │   ├── features/       # Feature-specific modules
+│   │   ├── useDogFilters.ts  # Custom hook for filtering logic
+│   │   ├── DogFilters.tsx    # Filter UI component
+│   │   └── DogGrid.tsx       # Dog listing grid container
 │   ├── hooks/          # Custom React hooks
-│   ├── types/          # TypeScript type definitions
+│   ├── types/          # TypeScript type definitions (Dog, DogFilters)
+│   ├── data/           # Mock data and shelter statistics
 │   ├── utils/          # Utility functions
 │   ├── constants/      # App constants and configs
-│   ├── assets/         # Static assets (images, icons)
+│   ├── assets/         # Static assets (icons, raw images)
+│   │   └── dogs-images/ # Raw dog photos before processing
+│   ├── styles/         # Global styles
 │   ├── App.tsx         # Main App component
 │   └── main.tsx        # Application entry point
-├── public/             # Static public assets
+├── public/
+│   └── images/dogs/    # Processed dog images (JPEG, WebP, multiple sizes)
+├── scripts/            # Build and utility scripts
+│   └── process-images.js # Image optimization pipeline
 └── ...config files
 ```
 
@@ -80,18 +91,44 @@ npm run dev
 
 4. Open your browser and navigate to `http://localhost:5173`
 
+### Image Setup (Optional)
+
+To use optimized images with multiple sizes and WebP format:
+
+1. Install sharp for image processing:
+
+```bash
+npm install --save-dev sharp
+```
+
+2. Place raw dog photos in `src/assets/dogs-images/raw/`
+
+3. Run the image processing script:
+
+```bash
+npm run process-images
+```
+
+This will generate optimized images in `public/images/dogs/` with:
+
+- Multiple sizes (400w, 800w, 1200w)
+- WebP and JPEG formats
+- Consistent 4:3 aspect ratio
+- Optimized quality for web
+
 ## 📜 Available Scripts
 
-| Script                 | Description                  |
-| ---------------------- | ---------------------------- |
-| `npm run dev`          | Start development server     |
-| `npm run build`        | Build for production         |
-| `npm run preview`      | Preview production build     |
-| `npm run lint`         | Run ESLint                   |
-| `npm run lint:fix`     | Fix ESLint errors            |
-| `npm run format`       | Format code with Prettier    |
-| `npm run format:check` | Check code formatting        |
-| `npm run type-check`   | Run TypeScript type checking |
+| Script                   | Description                                |
+| ------------------------ | ------------------------------------------ |
+| `npm run dev`            | Start development server                   |
+| `npm run build`          | Build for production                       |
+| `npm run preview`        | Preview production build                   |
+| `npm run lint`           | Run ESLint                                 |
+| `npm run lint:fix`       | Fix ESLint errors                          |
+| `npm run format`         | Format code with Prettier                  |
+| `npm run format:check`   | Check code formatting                      |
+| `npm run type-check`     | Run TypeScript type checking               |
+| `npm run process-images` | Process and optimize dog images (optional) |
 
 ## 🤝 Contributing
 
@@ -114,16 +151,26 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**Your Name**
+**Alix Bell**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+- GitHub: [@bavayra](https://github.com/bavayra)
 
 ## 🙏 Acknowledgments
 
-- Dog icons and images from [source]
+- Dog photos provided with consent from real animal shelter
+- Icons from Lucide React
 - Inspiration from real animal shelter websites
 - Built with love for animals 🐾
+
+## 🖼️ Image Guidelines
+
+This project uses real photographs of shelter dogs. All images:
+
+- Are used with proper consent from the shelter
+- Should be preprocessed for consistent presentation
+- Support responsive delivery (srcset, WebP)
+- Include proper alt text for accessibility
+- Respect privacy and are stripped of EXIF metadata
 
 ---
 
