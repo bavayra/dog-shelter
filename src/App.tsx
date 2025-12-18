@@ -14,7 +14,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="relative min-h-svh bg-linear-to-b from-primary-500 to-primary-50  py-18 px-4 "
+            className="relative min-h-svh bg-linear-to-b from-primary-500 to-primary-50  py-16 px-4 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,19 +31,15 @@ function App() {
             <h2 className=" relative z-10 text-5xl text-primary-700 font-medium text-center mt-6 mx-5">
               Give a Shelter Dog a Loving Home
             </h2>
-            {/*<div className="flex relative z-10 justify-center ">
-              <h3 className=" text-2xl bg-white/10 backdrop-blur-xl rounded-2xl text-center text-primary-700 mt-14 font-semibold py-4 px-6 drop-shadow-2xl">
-                Adopt a dog today and change your life forever!
-              </h3>
-            </div>*/}
 
             <div
               className="relative max-w-2xl mx-auto text-xl z-10 mt-8 text-center text-primary-700 font-bold rounded-2xl py-6 px-8"
               style={{
-                WebkitBackdropFilter: 'blur(150px) saturate(100%)',
-                backdropFilter: 'blur(150px) saturate(100%)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
+                background: 'rgba(255, 255, 255, 0.05)',
+                WebkitBackdropFilter: 'blur(1px) saturate(100%)',
+                backdropFilter: 'blur(1px) saturate(100%)',
+                border: '1px solid rgba(255, 255, 255, 0.5)',
+                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.2)',
               }}
             >
               <p className="mb-2">
@@ -71,10 +67,17 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
+            <div className="flex relative z-10 justify-center  ">
+              <h3 className=" text-xl  text-center text-primary-500 mt-7 font-semibold">
+                Left behind and waiting each day-many gentle hearts long for a
+                warm lap and a loving home. Help a lonely dog find safety and a
+                chance to trust again.
+              </h3>
+            </div>
           </section>
           <section id="our-pets" className="bg-primary-50 py-16">
             <div className="container mx-auto px-4">
-              <h2 className="text-8xl text-primary-500 font-bold text-center mb-8">
+              <h2 className="text-6xl text-primary-500 font-bold text-center mb-8">
                 Our Pets
               </h2>
             </div>
