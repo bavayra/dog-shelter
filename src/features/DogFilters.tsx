@@ -36,7 +36,7 @@ const DogFilters = ({
           key={option.value}
           onClick={() => onChange(option.value)}
           className={`
-          px-4 py-2 rounded-lg font-medium transition-colors
+          px-3 py-2 rounded-lg font-medium transition-colors text-sm
           ${
             isActive
               ? 'bg-primary-500 text-white'
@@ -56,13 +56,13 @@ const DogFilters = ({
       className="bg-white p-6 rounded-lg shadow-md mb-8"
       aria-label="Filter dogs by age, gender, breed, and health"
     >
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-primary-900">Filter Dogs</h2>
+      <div className="mb-4">
+        <h2 className="text-2xl font-bold text-primary-700">Filter Dogs</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-2">
+          <label className="block text-xl font-semibold text-neutral-700 mb-2">
             Age:
           </label>
           <div className="flex gap-2 flex-wrap">
@@ -71,7 +71,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-2">
+          <label className="block text-xl font-semibold text-neutral-700 mb-2">
             Gender:
           </label>
           <div className="flex gap-2 flex-wrap">
@@ -84,7 +84,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-2">
+          <label className="block text-xl font-semibold text-neutral-700 mb-2">
             Breed:
           </label>
           <div className="flex gap-2 flex-wrap">
@@ -97,7 +97,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-neutral-700 mb-2">
+          <label className="block text-xl font-semibold text-neutral-700 mb-2">
             Health:
           </label>
           <div className="flex gap-2 flex-wrap">
@@ -113,7 +113,7 @@ const DogFilters = ({
       <div className="mt-6 flex justify-end">
         <button
           onClick={onReset}
-          className="px-4 py-2 bg-neutral-300 text-neutral-700 rounded-lg font-medium hover:bg-neutral-400 transition-colors"
+          className="px-4 py-2 mt-4 bg-primary-200 text-neutral-700 rounded-lg font-medium hover:bg-primary-500 transition-colors"
         >
           Reset Filters
         </button>
