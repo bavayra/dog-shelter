@@ -21,10 +21,10 @@ const DogCard = ({
     }
   };
   const genderBadgeColor =
-    gender === 'Male'
+    gender === 'Boy'
       ? 'bg-[var(--color-primary-500)]'
       : 'bg-[var(--color-accent-500)]';
-  const genderSymbol = gender === 'Male' ? '♂' : '♀';
+  const genderSymbol = gender === 'Boy' ? '♂' : '♀';
 
   const showHealthBadge = health !== 'Healthy';
 
@@ -68,6 +68,7 @@ const DogCard = ({
             text-sm font-semibold
             shadow-lg
             flex items-center gap-1
+            tracking-wider
           `}
         >
           <span className="text-lg">{genderSymbol}</span>
