@@ -1,10 +1,12 @@
-const pets = [
+import type { Dog } from '@/types';
+
+const pets: Dog[] = [
   {
     id: 1,
     name: 'Bianka',
     breed: 'Rottweiler',
     age: 'Adult',
-    gender: 'Female',
+    gender: 'Girl',
     health: 'Healthy',
     imageUrl: 'https://via.placeholder.com/600x400.png?text=Bianka',
     description:
@@ -17,7 +19,7 @@ const pets = [
     name: 'Vasilisa',
     breed: 'Rottweiler',
     age: 'Adult',
-    gender: 'Female',
+    gender: 'Girl',
     health: 'Healthy',
     imageUrl: 'https://via.placeholder.com/600x400.png?text=Vasilisa',
     description:
@@ -30,7 +32,7 @@ const pets = [
     name: 'Birdy',
     breed: 'Mixed breed',
     age: 'Senior',
-    gender: 'Female',
+    gender: 'Girl',
     health: 'Special needs',
     imageUrl: 'https://via.placeholder.com/600x400.png?text=Birdy',
     description:
@@ -43,7 +45,7 @@ const pets = [
     name: 'Archie',
     breed: 'Rottweiler',
     age: 'Adult',
-    gender: 'Male',
+    gender: 'Boy',
     health: 'Special needs',
     imageUrl: 'https://via.placeholder.com/600x400.png?text=Archie',
     description:
@@ -56,7 +58,7 @@ const pets = [
     name: 'Baikal',
     breed: 'Cane Corso',
     age: 'Adult',
-    gender: 'Male',
+    gender: 'Boy',
     health: 'Healthy',
     imageUrl: 'https://via.placeholder.com/600x400.png?text=Baikal',
     description:
@@ -69,7 +71,7 @@ const pets = [
     name: 'Jessie',
     breed: 'Rottweiler',
     age: 'Senior',
-    gender: 'Female',
+    gender: 'Girl',
     health: 'Special needs',
     imageUrl: 'https://via.placeholder.com/600x400.png?text=Jessie',
     description:
