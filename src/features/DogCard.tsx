@@ -1,5 +1,6 @@
 import type { Dog } from '@/types';
 import Button from '@/components/Button';
+import { getDogImage } from '@/utils/images';
 
 const DogCard = ({
   name,
@@ -20,6 +21,9 @@ const DogCard = ({
       });
     }
   };
+
+  const resolvedImageUrl = getDogImage(imageUrl);
+
   const genderBadgeColor =
     gender === 'Boy'
       ? 'bg-[var(--color-primary-500)]'
@@ -46,7 +50,7 @@ const DogCard = ({
     >
       <div className="relative h-64 overflow-hidden group">
         <img
-          src={imageUrl}
+          src={resolvedImageUrl}
           alt={`${name} - ${breed}`}
           className="
             w-full
