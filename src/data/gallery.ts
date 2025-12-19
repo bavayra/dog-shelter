@@ -1,0 +1,50 @@
+export const shelterGallery = [
+  {
+    imageUrl: 'src/assets/gallery/team-1.jpg',
+    caption:
+      'Our ROTVOMAMA - the woman who stands at the origins of our shelter',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-2.jpg',
+    caption: 'First there were just few of us and a lot of dogs to save...',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-3.jpg',
+    caption:
+      'We have spent every spare minute and cent taking care of our pets and finding them homes',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-4.jpg',
+    caption:
+      'We were united by one goal - to save as many dogs as possible but our resources were limited',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-5.jpg',
+    caption:
+      'So we reached out to the community for help and support - and we were amazed by the response',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-6.jpg',
+    caption:
+      'In sickness and hunger, in joy and despair, we have always been there for our dogs',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-7.jpg',
+    caption:
+      'Providing the best medical care, rehabilitation behavior correction to each and every one of them',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-8.jpg',
+    caption:
+      'And so we made hundreads of dogs and dozens of people happy together',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-9.jpg',
+    caption: 'A lot of adults - and their kids - found their best friends here',
+  },
+  {
+    imageUrl: 'src/assets/gallery/team-10.jpg',
+    caption:
+      'That is why we do what we do - because every dog deserves a loving home',
+  },
+];

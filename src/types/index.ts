@@ -3,28 +3,22 @@ export interface Dog {
   name: string;
   breed: string;
   age: string; // 'Young' | 'Adult' | 'Senior'
-  gender: 'Male' | 'Female';
+  gender: 'Boy' | 'Girl';
   health: string; // 'Healthy' | 'Special needs'
   description: string;
   imageUrl: string;
   isAdopted: boolean;
-  adoptionDate?: Date;
-}
-
-export interface AdoptionRequest {
-  id: number;
-  dogId: string;
-  applicantName: string;
-  applicantEmail: string;
-  applicantPhone: string;
-  message: string;
-  status: 'pending' | 'approved' | 'rejected';
-  submittedAt: Date;
 }
 
 export interface DogFilters {
   age: string; // 'Young' | 'Adult' | 'Senior' | ''
-  gender: string; // 'Male' | 'Female' | ''
+  gender: string; // 'Boy' | 'Girl' | ''
   health: string; // 'Healthy' | 'Special needs' | ''
   breed: string; // 'Rottweiler' | 'Cane Corso' | 'Mixed breed' | ''
+}
+
+export interface GalleryImage {
+  id: number;
+  imageUrl: string;
+  caption: string;
 }
