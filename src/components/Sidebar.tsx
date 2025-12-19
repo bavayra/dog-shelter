@@ -24,7 +24,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="fixed left-4 top-20 z-40 md:hidden bg-primary-500 text-neutral-50 p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
+        className="fixed left-3 top-22 z-40 md:hidden border-2 border-accent-500 bg-primary-500 text-neutral-50 p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
       >
@@ -45,17 +45,17 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-neutral-500 bg-opacity-10 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       <aside
-        className={`fixed left-0 top-16 h-[calc(100vh-4rem)] bg-primary-100 shadow-lg z-50 transition-transform duration-300 ${
+        className={`fixed left-0 top-22 h-[calc(100vh-31rem)] rounded-r-md bg-primary-200 shadow-md z-50 transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 md:static md:h-auto ${className}`}
       >
-        <nav className="p-6 space-y-2">
+        <nav className="p-6 ">
           <h2 className="text-lg font-bold text-primary-500 mb-4">
             NAVIGATION
           </h2>
@@ -65,14 +65,14 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-3 px-4 py-3 text-neutral-700 hover:bg-primary-200 hover:text-primary-700 hover:scale-105 rounded-lg transition-transform group"
+                className="flex items-center gap-2 px-4 py-3 text-primary-500 hover:bg-primary-200 hover:text-primary-700 hover:scale-110 rounded-lg transition-colors group"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="w-6 h-6 group-hover:scale-110 transition-transform"
+                  className="w-6 h-6 group-hover:scale-110 text-neutral-700 transition-transform"
                   aria-hidden="true"
                 />
-                <span className="font-medium">{item.label}</span>
+                <span className="text-lg font-bold">{item.label}</span>
               </a>
             );
           })}
