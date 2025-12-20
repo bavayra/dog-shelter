@@ -6,12 +6,12 @@ export const shelterGallery = [
   },
   {
     imageUrl: 'src/assets/gallery/team-2.jpg',
-    caption: 'First there were just few of us and a lot of dogs to save...',
+    caption: 'First there were just few of us and a lot of dogs to save',
   },
   {
     imageUrl: 'src/assets/gallery/team-3.jpg',
     caption:
-      'We have spent every spare minute and cent taking care of our pets and finding them homes',
+      'We spent every spare minute and cent taking care of our pets and finding them homes',
   },
   {
     imageUrl: 'src/assets/gallery/team-4.jpg',
@@ -21,7 +21,7 @@ export const shelterGallery = [
   {
     imageUrl: 'src/assets/gallery/team-5.jpg',
     caption:
-      'So we reached out to the community for help and support - and we were amazed by the response',
+      'So we reached out to the community for help - and we were amazed by the response',
   },
   {
     imageUrl: 'src/assets/gallery/team-6.jpg',
@@ -31,12 +31,12 @@ export const shelterGallery = [
   {
     imageUrl: 'src/assets/gallery/team-7.jpg',
     caption:
-      'Providing the best medical care, rehabilitation behavior correction to each and every one of them',
+      'Providing the best medical care and rehabilitation to each and every one of them',
   },
   {
     imageUrl: 'src/assets/gallery/team-8.jpg',
     caption:
-      'And so we made hundreads of dogs and dozens of people happy together',
+      'And so we made hundreds of dogs and dozens of people happy together',
   },
   {
     imageUrl: 'src/assets/gallery/team-9.jpg',

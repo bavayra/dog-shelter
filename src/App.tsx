@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Button from './components/Button';
 import { shelterStats } from './data/dogs';
 import DogGrid from './features/DogGrid';
+import AboutUs from './features/AboutUs';
 
 function App() {
   return (
@@ -100,6 +101,7 @@ function App() {
             </div>
             <DogGrid />
           </section>
+          <AboutUs />
         </main>
       </div>
       <Footer />

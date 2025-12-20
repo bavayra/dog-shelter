@@ -26,10 +26,10 @@ const PhotoCarousel = () => {
         <img
           src={currentImage.imageUrl}
           alt={currentImage.caption}
-          className="w-full h-64 md:h-80 lg:h-[500px] object-cover transition-opacity duration-500"
+          className="w-full h-64 md:h-80 lg:h-125 object-cover transition-opacity duration-500"
         />
-        <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm p-4">
-          <p className="text-white text-center text-lg font-medium">
+        <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm p-2">
+          <p className="text-white text-center text-md font-normal">
             {currentImage.caption}
           </p>
         </div>

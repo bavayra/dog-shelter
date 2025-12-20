@@ -12,6 +12,20 @@ for (const path in imageModules) {
     dogImages[fileName] = imageModules[path].default;
   }
 }
+const galleryImageModules = import.meta.glob<{ default: string }>(
+  '../assets/gallery/*.{jpg,jpeg,png,webp,svg}',
+  { eager: true }
+);
+
+const galleryImages: Record<string, string> = {};
+
+for (const path in galleryImageModules) {
+  const fileName = path.split('/').pop();
+
+  if (fileName) {
+    galleryImages[fileName] = galleryImageModules[path].default;
+  }
+}
 
 export const getDogImage = (
   fileName: string,
@@ -23,5 +37,17 @@ export const getDogImage = (
   return dogImages[fileName] || fallback;
 };
 
+export const getGalleryImage = (
+  fileName: string,
+  fallback = '/placeholder-gallery.jpg'
+): string => {
+  if (fileName.startsWith('http://') || fileName.startsWith('https://')) {
+    return fileName;
+  }
+
+  return galleryImages[fileName] || fallback;
+};
+
 export const allDogImages = dogImages;
 export default dogImages;
+export const allGalleryImages = galleryImages;
