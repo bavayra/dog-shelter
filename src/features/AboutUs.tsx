@@ -2,7 +2,7 @@ import PhotoCarousel from './PhotoCarousel';
 
 const AboutUs = () => {
   return (
-    <section id="about-us" className="bg-white py-16">
+    <section id="about-us" className="bg-primary-50 py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl text-primary-500 font-bold text-center mb-8">
           About Us
