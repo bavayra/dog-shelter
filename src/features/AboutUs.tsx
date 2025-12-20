@@ -2,13 +2,13 @@ import PhotoCarousel from './PhotoCarousel';
 
 const AboutUs = () => {
   return (
-    <section id="about-us" className="bg-primary-50 py-16">
+    <section id="about-us" className="bg-primary-50 py-10">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl text-primary-500 font-bold text-center mb-8">
           About Us
         </h2>
 
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12 text-gray-700">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12 text-neutral-700">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one

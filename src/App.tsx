@@ -5,6 +5,7 @@ import Button from './components/Button';
 import { shelterStats } from './data/dogs';
 import DogGrid from './features/DogGrid';
 import AboutUs from './features/AboutUs';
+import HowToHelp from './features/HowToHelp';
 
 function App() {
   return (
@@ -97,13 +98,14 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="text-6xl text-primary-500 font-bold text-center"
+                className="text-5xl text-primary-500 font-bold text-center"
               >
                 Our Pets
               </h2>
             </div>
             <DogGrid />
           </section>
+          <HowToHelp />
           <AboutUs />
         </main>
       </div>
