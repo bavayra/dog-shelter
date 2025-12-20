@@ -22,7 +22,7 @@ const Button = ({
     'font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-[var(--color-primary-700)] text-white hover:bg-[var(--color-primary-900)] focus:ring-[var(--color-primary-500)]',
+      'bg-[var(--color-primary-700)] text-white hover:bg-[var(--color-primary-900)] focus:ring-[var(--color-primary-500)]active:bg-[var(--color-primary-800)]',
     secondary:
       'bg-[var(--color-primary-200)] text-[var(--color-primary-900)] hover:bg-[var(--color-primary-300)] focus:ring-gray-500 active:bg-gray-800',
     outline:

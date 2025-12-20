@@ -94,9 +94,9 @@ const DogCard = ({
           </div>
         )}
       </div>
-      <div className="p-6 flex-1 flex flex-col">
+      <div className="p-3 flex-1 flex flex-col">
         <h3 className="text-2xl font-bold text-primary-700 mb-3">{name}</h3>
-        <div className="flex flex-wrap items-center gap-4 mb-4 text-sm text-neutral-700">
+        <div className="flex flex-wrap items-center gap-4 mb-4 text-md text-neutral-700">
           <span className="flex items-center gap-1.5">
             <span role="img" aria-label="birthday cake">
               🎂
@@ -117,9 +117,9 @@ const DogCard = ({
             items-center gap-2
             bg-color-accent-200
             text-primary-700
-            px-3 py-1.5
+            p-0
             rounded-full
-            text-xs font-medium
+            text-md font-medium
             mb-4
             self-start
           "
@@ -129,7 +129,7 @@ const DogCard = ({
         )}
         <p
           className="
-          text-neutral-700
+          text-primary-700
           text-sm
           leading-relaxed
           mb-6

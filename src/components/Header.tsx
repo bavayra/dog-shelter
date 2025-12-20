@@ -5,7 +5,7 @@ import LogoIcon from '@assets/icons/rottweiler-logo-icon.svg?react';
 const Header = () => {
   const navigationLinks = [
     { name: 'HOME', href: '#hero' },
-    { name: 'OUR PETS', href: '#pets' },
+    { name: 'OUR PETS', href: '#pets-heading' },
     { name: 'HOW TO HELP', href: '#help' },
     { name: 'ABOUT US', href: '#about' },
     { name: 'CONTACT', href: '#contact' },
@@ -20,7 +20,7 @@ const Header = () => {
             aria-hidden="true"
           />
           <div className="flex items-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-primary-500 mr-38">
+            <h1 className="text-2xl md:text-3xl font-bold text-primary-500 mr-35">
               {APP_NAME}
             </h1>
           </div>
