@@ -15,7 +15,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
   const menuItems = [
     { icon: PetPawIcon, label: 'Our Pets', href: '#pets' },
-    { icon: OurStoryIcon, label: 'Our Story', href: '#about' },
+    { icon: OurStoryIcon, label: 'Our Story', href: '#about-us' },
     { icon: HelpIcon, label: 'How to Help', href: '#help' },
     { icon: RulesIcon, label: 'Adoption Rules', href: '#rules' },
     { icon: ContactsIcon, label: 'Contact', href: '#contact' },
