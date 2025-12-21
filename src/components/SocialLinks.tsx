@@ -17,11 +17,34 @@ const SocialLinks = ({ size = 'md', className }: SocialLinksProps) => {
     { name: 'Telegram', icon: TelegramIcon, url: CONTACT_SOCIALS.telegram },
     { name: 'VK', icon: VKIcon, url: CONTACT_SOCIALS.vkontakte },
   ];
+
+  const sizeClasses = {
+    sm: 'w-10 h-10',
+    md: 'w-12 h-12',
+    lg: 'w-14 h-14',
+  };
+
+  const iconSizeClasses = {
+    sm: 'w-5 h-5',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+  };
+
   return (
-    <div className={`flex gap-4 ${className}`}>
+    <div className={`flex gap-4 justify-center ${className || ''}`}>
       {socialNetworks.map((social) => (
-        <a key={social.name} href={social.url}>
-          <social.icon />
+        <a
+          key={social.name}
+          href={social.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`${sizeClasses[size]} bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110`}
+          aria-label={social.name}
+        >
+          <social.icon
+            className={`${iconSizeClasses[size]} text-primary-900`}
+            aria-hidden="true"
+          />
         </a>
       ))}
     </div>

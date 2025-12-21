@@ -14,18 +14,18 @@ import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-900 text-neutral-50 py-12">
+    <footer className="bg-primary-900 text-neutral-50 py-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center md:justify-items-start">
           <div>
             <h3 className="text-xl text-center font-bold mb-4">{APP_NAME}</h3>
-            <p className="text-neutral-100 text-center text-lg mb-4">
+            <p className="text-neutral-100 text-center text-lg mb-2">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-center mb-4">Contact Us</h3>
-            <div className="flex flex-col items-center space-y-2  text-neutral-500">
+            <h3 className="text-xl font-bold text-center mb-2">Contact Us</h3>
+            <div className="flex flex-col items-center space-y-1  text-neutral-500">
               <p className="flex items-center gap-2">
                 <EmailIcon className="w-5 h-5" aria-hidden="true" />
                 <a
@@ -53,11 +53,11 @@ const Footer = () => {
 
           <div className="mt-2">
             <h3 className="text-xl text-center font-bold mb-4">Follow Us</h3>
-            <SocialLinks size="lg" />
+            <SocialLinks size="sm" />
           </div>
         </div>
 
-        <div className="border-t border-primary-900 mt-6 pt-8 text-center text-neutral-300 text-lg">
+        <div className="border-t border-primary-900 mt-6 pt-2 text-center text-neutral-300 text-lg">
           <p>
             Made with
             <HeartIcon
