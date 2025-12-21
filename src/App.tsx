@@ -6,6 +6,7 @@ import { shelterStats } from './data/dogs';
 import DogGrid from './features/DogGrid';
 import AboutUs from './features/AboutUs';
 import HowToHelp from './features/HowToHelp';
+import ContactSection from './features/ContactSection';
 
 function App() {
   return (
@@ -107,6 +108,7 @@ function App() {
           </section>
           <HowToHelp />
           <AboutUs />
+          <ContactSection />
         </main>
       </div>
       <Footer />

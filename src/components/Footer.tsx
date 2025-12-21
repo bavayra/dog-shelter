@@ -2,7 +2,6 @@ import {
   CONTACT_EMAIL,
   CONTACT_PHONE,
   CONTACT_ADDRESS,
-  CONTACT_SOCIALS,
   APP_NAME,
 } from '@/constants';
 
@@ -10,11 +9,8 @@ import EmailIcon from '@assets/icons/email.svg?react';
 import PhoneIcon from '@assets/icons/phone.svg?react';
 import LocationIcon from '@assets/icons/location.svg?react';
 
-import FacebookIcon from '@assets/icons/facebook-icon.svg?react';
-import InstagramIcon from '@assets/icons/instagram-icon.svg?react';
-import TelegramIcon from '@assets/icons/telegram-icon.svg?react';
-import VKIcon from '@assets/icons/vk-icon.svg?react';
 import HeartIcon from '@assets/icons/heart-icon.svg?react';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   return (
@@ -55,59 +51,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Social Media */}
           <div className="mt-2">
             <h3 className="text-xl text-center font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4 justify-center  md:justify-start">
-              <a
-                href={CONTACT_SOCIALS.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-                aria-label="Instagram"
-              >
-                <InstagramIcon
-                  className="w-8 h-8  text-primary-900"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                href={CONTACT_SOCIALS.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-                aria-label="Facebook"
-              >
-                <FacebookIcon
-                  className="w-8 h-8 text-primary-900"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                href={CONTACT_SOCIALS.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-                aria-label="Telegram"
-              >
-                <TelegramIcon
-                  className="w-8 h-8 text-primary-900"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                href={CONTACT_SOCIALS.vkontakte}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-14 h-14 bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110"
-                aria-label="VKontakte"
-              >
-                <VKIcon
-                  className="w-8 h-8 text-primary-900"
-                  aria-hidden="true"
-                />
-              </a>
-            </div>
+            <SocialLinks size="lg" />
           </div>
         </div>
 
