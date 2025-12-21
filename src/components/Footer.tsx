@@ -53,7 +53,7 @@ const Footer = () => {
 
           <div className="mt-2">
             <h3 className="text-xl text-center font-bold mb-4">Follow Us</h3>
-            <SocialLinks size="sm" />
+            <SocialLinks size="md" />
           </div>
         </div>
 
