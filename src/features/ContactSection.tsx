@@ -33,57 +33,83 @@ const ContactSection = () => {
       <h2 className="flex justify-center text-5xl text-primary-500 font-bold text-center mb-8 ">
         Contact Us
       </h2>
-      <div className="flex flex-col">
-        <div id="socials" className="hidden lg:flex flex-col">
-          <h3>Find us on social media</h3>
-          <SocialLinks size="lg" />
-        </div>
-        <div id="contact-form">
-          <form onSubmit={handleSubmit} className=" w-svw px-6">
-            <div
-              id="form-left-side"
-              className="grid grid-rows-3 w-auto mx-auto"
-            >
+      <div className="flex justify-center">
+        <div className="w-full max-w-md px-6">
+          <form onSubmit={handleSubmit} className="space-y-2">
+            <div>
+              <label
+                htmlFor="input-name"
+                className="block text-primary-700 text-md font-semibold"
+              >
+                Name
+              </label>
               <input
+                id="input-name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Name..."
+                placeholder=""
                 required
-                className="border bg-primary-100 border-primary-500 rounded-md px-4 py-1 mb-4 w-full placeholder:text-xs"
+                className="w-full  cursor-pointer mb-7 bg-transparent border-0 border-b-2 border-neutral-500 p-0 text-base focus:outline-none focus:border-primary-500 focus:ring-0"
               />
+            </div>
+
+            <div>
+              <label
+                htmlFor="input-email"
+                className="block text-primary-700 text-md font-semibold"
+              >
+                Email
+              </label>
               <input
+                id="input-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email..."
+                placeholder=""
                 required
-                className="border bg-primary-100 border-primary-500 rounded-md px-4 py-1 mb-4 w-full placeholder:text-xs"
+                className="w-full cursor-pointer mb-7 bg-transparent border-0 border-b-2 border-neutral-500 p-0 text-base  focus:outline-none focus:border-primary-500 focus:ring-0"
               />
+            </div>
+
+            <div>
+              <label
+                htmlFor="input-phone"
+                className="block text-primary-700 text-md font-semibold "
+              >
+                Phone Number
+              </label>
               <input
+                id="input-phone"
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="Mobile..."
+                placeholder=""
                 required
-                className="border bg-primary-100 border-primary-500 rounded-md px-4 py-1 mb-4 w-full placeholder:text-xs"
+                className="w-full  cursor-pointer mb-7 bg-transparent border-0 border-b-2 border-neutral-500 p-0 text-base  focus:outline-none focus:border-primary-500 focus:ring-0"
               />
+            </div>
 
+            <div>
               <textarea
+                id="input-message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Your Message..."
+                placeholder="Write your message..."
                 required
-                className="border bg-primary-100 border-primary-500 rounded-md px-4 py-2 mb-4 w-full min-h-60 placeholder:text-xs"
+                className="w-full bg-transparent  border-2 rounded-md border-neutral-500 px-4 py-3 text-base placeholder:text-primary-900 text-md min-h-24 focus:outline-none focus:border-primary-500 focus:ring-0 resize-none"
               ></textarea>
             </div>
-            <Button
-              type="submit"
-              variant="primary"
-              className="mt-4 flex col-span-2 text-center text-lg mx-auto"
-            >
-              Send Message
-            </Button>
+
+            <div className="flex justify-center pt-4">
+              <Button
+                type="submit"
+                variant="primary"
+                className="w-full  cursor-pointer text-center text-base font-semibold"
+              >
+                Send Message
+              </Button>
+            </div>
           </form>
         </div>
       </div>
