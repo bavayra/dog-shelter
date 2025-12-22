@@ -8,9 +8,16 @@ import { CONTACT_SOCIALS } from '@/constants';
 interface SocialLinksProps {
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  iconColor?: string;
+  bgColor?: string;
 }
 
-const SocialLinks = ({ size = 'md', className }: SocialLinksProps) => {
+const SocialLinks = ({
+  size = 'md',
+  className,
+  iconColor = 'text-primary-900',
+  bgColor = 'bg-neutral-500',
+}: SocialLinksProps) => {
   const socialNetworks = [
     { name: 'Instagram', icon: InstagramIcon, url: CONTACT_SOCIALS.instagram },
     { name: 'Facebook', icon: FacebookIcon, url: CONTACT_SOCIALS.facebook },
@@ -38,11 +45,11 @@ const SocialLinks = ({ size = 'md', className }: SocialLinksProps) => {
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${sizeClasses[size]} bg-neutral-500 hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110`}
+          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110`}
           aria-label={social.name}
         >
           <social.icon
-            className={`${iconSizeClasses[size]} text-primary-900`}
+            className={`${iconSizeClasses[size]} ${iconColor}`}
             aria-hidden="true"
           />
         </a>
