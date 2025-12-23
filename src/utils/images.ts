@@ -7,11 +7,13 @@ const dogImages: Record<string, string> = {};
 
 for (const path in imageModules) {
   const fileName = path.split('/').pop();
+  const module = imageModules[path] as { default: string };
 
-  if (fileName) {
-    dogImages[fileName] = imageModules[path].default;
+  if (fileName && module) {
+    dogImages[fileName] = module.default;
   }
 }
+
 const galleryImageModules = import.meta.glob<{ default: string }>(
   '../assets/gallery/*.{jpg,jpeg,png,webp,svg}',
   { eager: true }
@@ -21,22 +23,12 @@ const galleryImages: Record<string, string> = {};
 
 for (const path in galleryImageModules) {
   const fileName = path.split('/').pop();
+  const module = galleryImageModules[path] as { default: string };
 
-  if (fileName) {
-    galleryImages[fileName] = galleryImageModules[path].default;
+  if (fileName && module) {
+    galleryImages[fileName] = module.default;
   }
 }
-
-// Lazy load image helper
-export const loadImage = async (path: string): Promise<string> => {
-  const module = await imageModules[path]?.();
-  return module?.default || '';
-};
-
-export const loadGalleryImage = async (path: string): Promise<string> => {
-  const module = await galleryImageModules[path]?.();
-  return module?.default || '';
-};
 
 export const getDogImage = (
   fileName: string,

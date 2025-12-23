@@ -20,13 +20,16 @@ const PhotoCarousel = () => {
 
   const currentImage = shelterGallery[currentIndex];
 
+  if (!currentImage) return null;
+
   return (
-    <div className="relative max-w-5xl mx-auto">
+    <div className="relative max-w-5xl mx-auto bg-primary-50">
       <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gray-100">
         <img
           src={currentImage.imageUrl}
           alt={currentImage.caption}
           className="w-full h-64 md:h-80 lg:h-125 object-cover transition-opacity duration-500"
+          loading="lazy"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm p-2">
           <p className="text-white text-center text-md font-normal">
@@ -36,14 +39,14 @@ const PhotoCarousel = () => {
       </div>
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary-200 hover:bg-primary-500 p-3 rounded-full shadow-lg transition-all hover:scale-110"
         aria-label="Previous image"
       >
         <Icon name="arrow-left" className="w-6 h-6 text-primary-500" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary-200 hover:bg-primary-500 p-3 rounded-full shadow-lg transition-all hover:scale-110"
         aria-label="Next image"
       >
         <Icon name="arrow-right" className="w-6 h-6 text-primary-500" />
