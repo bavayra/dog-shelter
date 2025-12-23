@@ -27,6 +27,17 @@ for (const path in galleryImageModules) {
   }
 }
 
+// Lazy load image helper
+export const loadImage = async (path: string): Promise<string> => {
+  const module = await imageModules[path]?.();
+  return module?.default || '';
+};
+
+export const loadGalleryImage = async (path: string): Promise<string> => {
+  const module = await galleryImageModules[path]?.();
+  return module?.default || '';
+};
+
 export const getDogImage = (
   fileName: string,
   fallback = '/placeholder-dog.jpg'
