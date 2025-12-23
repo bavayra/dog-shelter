@@ -1,14 +1,17 @@
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import Button from './components/Button';
 import { shelterStats } from './data/dogs';
 import DogGrid from './features/DogGrid';
-import AboutUs from './features/AboutUs';
-import HowToHelp from './features/HowToHelp';
-import ContactSection from './features/ContactSection';
 import SocialLinks from './components/SocialLinks';
 import RottweilerBg from '@assets/icons/rottweiler-vector-bg.svg?react';
+
+// Lazy load секции которые не нужны сразу
+const AboutUs = lazy(() => import('./features/AboutUs'));
+const HowToHelp = lazy(() => import('./features/HowToHelp'));
+const ContactSection = lazy(() => import('./features/ContactSection'));
 
 function App() {
   return (
@@ -89,9 +92,11 @@ function App() {
             </div>
             <DogGrid />
           </section>
-          <HowToHelp />
-          <AboutUs />
-          <ContactSection />
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <HowToHelp />
+            <AboutUs />
+            <ContactSection />
+          </Suspense>
         </main>
       </div>
       <Footer />
