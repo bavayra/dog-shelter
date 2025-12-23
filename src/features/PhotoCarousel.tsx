@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Icon from '../components/Icon';
 import { shelterGallery } from '../data/gallery';
+import { getGalleryImage } from '@/utils/images';
 
 const PhotoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,11 +23,13 @@ const PhotoCarousel = () => {
 
   if (!currentImage) return null;
 
+  const resolvedImageUrl = getGalleryImage(currentImage.imageUrl);
+
   return (
     <div className="relative max-w-5xl mx-auto bg-primary-50">
       <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gray-100">
         <img
-          src={currentImage.imageUrl}
+          src={resolvedImageUrl}
           alt={currentImage.caption}
           className="w-full h-64 md:h-80 lg:h-125 object-cover transition-opacity duration-500"
           loading="lazy"
