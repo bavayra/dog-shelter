@@ -4,6 +4,7 @@ import TelegramIcon from '@assets/icons/telegram-icon.svg?react';
 import VKIcon from '@assets/icons/vk-icon.svg?react';
 
 import { CONTACT_SOCIALS } from '@/constants';
+import Icon from './Icon';
 
 interface SocialLinksProps {
   size?: 'sm' | 'md' | 'lg';
@@ -31,10 +32,10 @@ const SocialLinks = ({
     lg: 'w-14 h-14',
   };
 
-  const iconSizeClasses = {
-    sm: 'w-5 h-5',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
+  const iconSizeMap = {
+    sm: 'sm' as const,
+    md: 'md' as const,
+    lg: 'lg' as const,
   };
 
   return (
@@ -45,11 +46,13 @@ const SocialLinks = ({
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110`}
+          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110 shrink-0`}
           aria-label={social.name}
         >
-          <social.icon
-            className={`${iconSizeClasses[size]} ${iconColor}`}
+          <Icon
+            as={social.icon}
+            size={iconSizeMap[size]}
+            className={iconColor}
             aria-hidden="true"
           />
         </a>

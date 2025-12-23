@@ -25,16 +25,18 @@ const Icon = ({
   }
 
   const sizeClass = sizeMap[size];
-  const combinedClassName = `${sizeClass} ${className}`.trim();
+  const combinedClassName = `${className}`.trim();
 
   return (
-    <Component
-      role={title ? 'img' : 'presentation'}
-      aria-hidden={title ? undefined : 'true'}
-      aria-label={title}
-      className={combinedClassName}
-      {...restProps}
-    />
+    <div className={`${sizeClass} flex items-center justify-center shrink-0`}>
+      <Component
+        role={title ? 'img' : 'presentation'}
+        aria-hidden={title ? undefined : 'true'}
+        aria-label={title}
+        className={`w-full h-full ${combinedClassName}`}
+        {...restProps}
+      />
+    </div>
   );
 };
 
