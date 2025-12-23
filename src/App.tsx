@@ -63,7 +63,11 @@ function App() {
             </div>
 
             <div className="flex justify-center">
-              <Button variant="primary" size="medium" className="-mt-5 z-10">
+              <Button
+                variant="primary"
+                size="medium"
+                className="-mt-5 z-10 hover:scale-105 transition-transform"
+              >
                 Find Your Best Friend
               </Button>
             </div>
