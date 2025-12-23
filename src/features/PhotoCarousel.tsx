@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Icon from '../components/Icon';
-import { shelterGallery } from '../data/gallery';
+import Icon from '@/components/Icon';
+import { shelterGallery } from '@/data/gallery';
 import { getGalleryImage } from '@/utils/images';
 
 const PhotoCarousel = () => {

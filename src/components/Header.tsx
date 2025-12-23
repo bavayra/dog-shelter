@@ -1,5 +1,5 @@
 import { APP_NAME } from '@/constants';
-import Button from './Button';
+import Button from '@/components/Button';
 import LogoIcon from '@assets/icons/rottweiler-logo-icon.svg?react';
 
 const Header = () => {

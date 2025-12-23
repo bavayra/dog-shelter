@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import Button from './components/Button';
-import { shelterStats } from './data/dogs';
-import DogGrid from './features/DogGrid';
-import SocialLinks from './components/SocialLinks';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Sidebar from '@/components/Sidebar';
+import Button from '@/components/Button';
+import { shelterStats } from '@/data/dogs';
+import DogGrid from '@/features/DogGrid';
+import SocialLinks from '@/components/SocialLinks';
 import RottweilerBg from '@assets/icons/rottweiler-vector-bg.svg?react';
 
 // Lazy load секции которые не нужны сразу
@@ -22,18 +22,18 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="relative min-h-svh bg-linear-to-b from-primary-500 to-primary-50  pt-16 px-4 pb-24"
+            className="relative min-h-screen md:min-h-svh bg-linear-to-b from-primary-500 to-primary-50 pt-16 px-4 pb-24"
           >
             <RottweilerBg
               aria-hidden="true"
               className="z-0 pointer-events-none absolute right-1 -top-62 w-full h-full transform drop-shadow-2xl opacity-95 text-primary-300"
             />
-            <h2 className=" relative z-10 text-5xl  text-primary-700 font-medium text-center mt-7 mx-5">
+            <h2 className="relative z-10 text-5xl w-full text-primary-700 font-medium text-center mt-10 mx-0">
               Give a Shelter Dog a Loving Home
             </h2>
 
             <div
-              className="relative max-w-xl  tracking-wide mx-auto text-lg z-10 mt-7 text-center text-primary-700 font-semibold rounded-2xl py-6 px-0"
+              className="relative max-w-xl mt-8 tracking-wide mx-auto text-lg z-10 my-auto text-center text-primary-700 font-semibold rounded-2xl py-6 px-0"
               style={{
                 background: 'rgba(255, 255, 255, 0.05)',
                 WebkitBackdropFilter: 'blur(1px) saturate(100%)',
@@ -85,7 +85,7 @@ function App() {
               bgColor="bg-primary-500"
             />
           </section>
-          <section id="pets" className="bg-primary-50 scroll-mt-20">
+          <section id="pets" className="bg-primary-50 scroll-mt-18">
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"

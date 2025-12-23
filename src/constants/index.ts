@@ -38,7 +38,6 @@ export const CONTACT_PHONE = '+1 (555) 123-4567';
 export const CONTACT_ADDRESS = 'Jekaterinburg, Russia';
 export const CONTACT_SOCIALS = {
   facebook: 'https://www.facebook.com/rotvoDom',
-  twitter: 'https://twitter.com/dogshelter',
   instagram: 'https://www.instagram.com/rotvodom',
   telegram: 'https://web.telegram.org/k/#@huskyekb',
   vkontakte: 'https://vk.com/rotvodom66',

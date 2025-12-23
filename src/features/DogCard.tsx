@@ -144,7 +144,7 @@ const DogCard = ({
           size="medium"
           onClick={handleAdoptClick}
           disabled={isAdopted}
-          className="w-full mt-auto"
+          className="w-full mt-auto "
           aria-label={`Adopt ${name}`}
         >
           {isAdopted ? 'Already found home ❤️' : 'ADOPT ME'}

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 import path from 'path';
+import compression from 'vite-plugin-compression';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,9 +11,10 @@ export default defineConfig({
     svgr({
       svgrOptions: {
         icon: true,
-        dimensions: false,
       },
     }),
+    compression({ algorithm: 'gzip' }),
+    compression({ algorithm: 'brotliCompress', ext: '.br' }),
   ],
   resolve: {
     alias: {
@@ -24,6 +26,15 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
       '@constants': path.resolve(__dirname, './src/constants'),
       '@assets': path.resolve(__dirname, './src/assets'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
     },
   },
 });
