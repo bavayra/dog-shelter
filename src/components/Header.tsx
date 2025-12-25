@@ -1,6 +1,6 @@
 import { APP_NAME } from '@/constants';
 import Button from '@/components/Button';
-import LogoIcon from '@assets/icons/rottweiler-logo-icon.svg?react';
+import LogoIcon from '@/assets/icons/rottweiler-logo-icon.webp';
 
 const Header = () => {
   const navigationLinks = [
@@ -15,12 +15,13 @@ const Header = () => {
     <header className="bg-primary-200 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
-          <LogoIcon
-            className="w-14 h-14 bg-primary-500 px-2 py-2 rounded-full shadow-lg"
-            aria-hidden="true"
+          <img
+            src={LogoIcon}
+            alt="Logo"
+            className="w-16 h-16 object-center bg-transparent py-2 px-1 rounded-full border-2 border-primary-500"
           />
           <div className="flex items-center">
-            <h1 className="text-2xl md:text-3xl font-bold text-primary-500 mr-35">
+            <h1 className="text-2xl md:text-3xl font-bold text-primary-500 mr-55">
               {APP_NAME}
             </h1>
           </div>
