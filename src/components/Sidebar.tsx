@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import ContactsIcon from '@assets/icons/contacts-nav-icon.svg?react';
 import HelpIcon from '@assets/icons/help-nav-icon.svg?react';
-import OurStoryIcon from '@assets/icons/our_story-nav-icon.svg?react';
+import AboutUsIcon from '@assets/icons/about-us-nav-icon.svg?react';
 import PetPawIcon from '@assets/icons/pet_paw-nav-icon.svg?react';
 import RulesIcon from '@assets/icons/rules-nav-icon.svg?react';
 
@@ -15,7 +15,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
   const menuItems = [
     { icon: PetPawIcon, label: 'Our Pets', href: '#pets' },
-    { icon: OurStoryIcon, label: 'Our Story', href: '#about-us' },
+    { icon: AboutUsIcon, label: 'About Us', href: '#about-us' },
     { icon: HelpIcon, label: 'How to Help', href: '#help' },
     { icon: RulesIcon, label: 'Adoption Rules', href: '#rules' },
     { icon: ContactsIcon, label: 'Contact', href: '#contact' },
