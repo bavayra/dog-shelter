@@ -4,14 +4,15 @@ export const APP_DESCRIPTION =
 
 export const DOG_GENDERS = ['Male', 'Female'] as const;
 export const DOG_BREEDS = ['Rottweiler', 'Cane Corso', 'Mixed breed'] as const;
-export const DOG_AGE = ['Young', 'Adult', 'Senior'] as const;
+export const DOG_AGE = ['under-1', '1-3', '4-7', '8-plus'] as const;
 export const DOG_HEALTH = ['Healthy', 'Special needs'] as const;
 
 export const AGE_FILTER_OPTIONS = [
   { value: '', label: 'ANY' },
-  { value: 'Young', label: 'YOUNG' },
-  { value: 'Adult', label: 'ADULT' },
-  { value: 'Senior', label: 'SENIOR' },
+  { value: 'under-1', label: 'UNDER 1' },
+  { value: '1-3', label: '1-3 YEARS' },
+  { value: '4-7', label: '4-7 YEARS' },
+  { value: '8-plus', label: '8+ YEARS' },
 ] as const;
 
 export const GENDER_FILTER_OPTIONS = [

@@ -2,6 +2,28 @@ import type { Dog } from '@/types';
 import Button from '@/components/Button';
 import { getDogImage } from '@/utils/images';
 
+const AGE_LABELS: Record<string, string> = {
+  'under-1': 'Under 1 year',
+  '1-3': '1–3 years',
+  '4-7': '4–7 years',
+  '8-plus': '8+ years',
+  '': 'Unknown',
+};
+
+const OLD_TO_KEY: Record<string, string> = {
+  young: '1-3',
+  adult: '4-7',
+  senior: '8-plus',
+};
+
+const getAgeLabel = (ageValue?: string) => {
+  if (!ageValue) return AGE_LABELS[''];
+  const lower = ageValue.toLowerCase();
+  if (AGE_LABELS[ageValue]) return AGE_LABELS[ageValue];
+  if (OLD_TO_KEY[lower]) return AGE_LABELS[OLD_TO_KEY[lower]];
+  return AGE_LABELS[ageValue] ?? ageValue ?? AGE_LABELS[''];
+};
+
 const DogCard = ({
   name,
   breed,
@@ -101,7 +123,7 @@ const DogCard = ({
             <span role="img" aria-label="birthday cake">
               🎂
             </span>
-            <span>{age}</span>
+            <span>{getAgeLabel(age)}</span>
           </span>
           <span className="flex items-center gap-1.5">
             <span role="img" aria-label="dog">
