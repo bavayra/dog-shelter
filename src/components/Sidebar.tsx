@@ -51,9 +51,9 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`fixed left-0 top-22 h-[calc(100vh-31rem)] rounded-r-md bg-primary-200 shadow-md z-50 transition-transform duration-300 ${
+        className={`fixed left-0 top-20 bottom-4 overflow-y-auto rounded-r-md bg-primary-200 shadow-md z-50 transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:translate-x-0 md:static md:h-auto ${className}`}
+        } md:translate-x-0 md:static md:h-auto md:bottom-auto ${className}`}
       >
         <nav className="p-6 ">
           <h2 className="text-lg font-bold text-primary-500 mb-4">
