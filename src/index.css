@@ -43,3 +43,12 @@ html {
     scroll-behavior: auto;
   }
 }
+
+@layer components {
+  .paw-pattern {
+    background-image: url('src/assets/icons/paw-trail-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: 250px 750px;
+    background-position: left center;
+  }
+}

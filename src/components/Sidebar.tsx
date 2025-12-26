@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ContactsIcon from '@assets/icons/contacts-nav-icon.svg?react';
 import HelpIcon from '@assets/icons/help-nav-icon.svg?react';
 import AboutUsIcon from '@assets/icons/about-us-nav-icon.svg?react';
-import PetPawIcon from '@assets/icons/pet_paw-nav-icon.svg?react';
+import PetPawIcon from '@assets/icons/paw-decor-icon.svg?react';
 import RulesIcon from '@assets/icons/rules-nav-icon.svg?react';
 
 interface SidebarProps {
@@ -51,12 +51,12 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`fixed left-0 top-20 bottom-4 overflow-y-auto rounded-r-md bg-primary-200 shadow-md z-50 transition-transform duration-300 ${
+        className={`fixed left-0 top-20 bottom-0 overflow-hidden touch-none overscroll-none rounded-r-sm bg-primary-500 shadow-md z-50 transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:translate-x-0 md:static md:h-auto md:bottom-auto ${className}`}
       >
-        <nav className="p-6 ">
-          <h2 className="text-lg font-bold text-primary-500 mb-4">
+        <nav className="p-6 relative">
+          <h2 className="text-lg font-bold text-neutral-100 mb-4">
             NAVIGATION
           </h2>
           {menuItems.map((item) => {
@@ -65,11 +65,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-3 text-primary-500 hover:bg-primary-200 hover:text-primary-700 hover:scale-110 rounded-lg transition-colors group"
+                className="flex items-center gap-2 px-4 py-3 text-neutral-100 hover:bg-primary-200 hover:text-primary-700 hover:scale-110 rounded-lg transition-colors group relative z-10"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="w-6 h-6 group-hover:scale-110 text-neutral-700 transition-transform"
+                  className="w-6 h-6 group-hover:scale-110 text-neutral-300 transition-transform"
                   aria-hidden="true"
                 />
                 <span className="text-lg font-bold">{item.label}</span>
@@ -96,6 +96,10 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
             />
           </svg>
         </button>
+        <div
+          className="paw-pattern absolute left-0 w-full pointer-events-none z-0"
+          style={{ top: '14rem', bottom: '0' }}
+        ></div>
       </aside>
     </>
   );
