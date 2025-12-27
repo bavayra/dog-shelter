@@ -28,8 +28,8 @@ const ContactSection = () => {
     setMessage('');
   };
   return (
-    <section id="contact" className="bg-primary-200 pt-8 pb-10 ">
-      <h2 className="text-5xl text-primary-500 font-bold text-center mb-8 ">
+    <section id="contact" className="bg-primary-200 pt-8 pb-10">
+      <h2 className="text-primary-500 3xs:text-4xl mb-8 text-center text-5xl font-bold">
         Contact Us
       </h2>
       <div className="flex justify-center">
@@ -71,7 +71,7 @@ const ContactSection = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Write your message..."
                 required
-                className="w-full bg-transparent  border-2 rounded-md border-neutral-500 px-4 py-3 text-base placeholder:text-primary-900 text-md min-h-24 focus:outline-none focus:border-primary-500 focus:ring-0 resize-none"
+                className="placeholder:text-primary-900 text-md focus:border-primary-500 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-base focus:ring-0 focus:outline-none"
               ></textarea>
             </div>
 

@@ -8,32 +8,31 @@ import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
 import RottweilerBg from '@assets/icons/rottweiler-vector-bg.svg?react';
 
-// Lazy load секции которые не нужны сразу
 const AboutUs = lazy(() => import('./features/AboutUs'));
 const HowToHelp = lazy(() => import('./features/HowToHelp'));
 const ContactSection = lazy(() => import('./features/ContactSection'));
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1">
         <Sidebar className="lg:hidden" />
         <main className="flex-1">
           <section
             id="hero"
-            className="relative min-h-screen md:min-h-svh bg-linear-to-b from-primary-500 to-primary-50 pt-16 px-4 pb-24"
+            className="3xs:mt-6 xs2:mt-24 from-primary-500 to-primary-50 relative mt-16 min-h-screen bg-linear-to-b px-4 pt-16 pb-24 md:min-h-svh"
           >
             <RottweilerBg
               aria-hidden="true"
-              className="z-0 pointer-events-none absolute right-1 -top-62 w-full h-full transform drop-shadow-2xl opacity-95 text-primary-300"
+              className="text-primary-300 3xs:-top-58 pointer-events-none absolute -top-56 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl"
             />
-            <h2 className="relative z-10 text-5xl w-full text-primary-700 font-medium text-center mt-10 mx-0">
+            <h2 className="text-primary-700 3xs:text-4xl 3xs:mt-12 relative z-10 mx-0 mt-10 w-full text-center text-5xl font-medium">
               Give a Shelter Dog a Loving Home
             </h2>
 
             <div
-              className="relative max-w-xl mt-8 tracking-wide mx-auto text-lg z-10 my-auto text-center text-primary-700 font-semibold rounded-2xl py-6 px-0"
+              className="text-primary-700 3xs:mt-4 relative z-10 mx-auto my-auto mt-8 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide"
               style={{
                 background: 'rgba(255, 255, 255, 0.05)',
                 WebkitBackdropFilter: 'blur(1px) saturate(100%)',
@@ -42,7 +41,7 @@ function App() {
                 boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.2)',
               }}
             >
-              <p className="mb-2 letter-spacing-wider">
+              <p className="letter-spacing-wider mb-2">
                 Dogs in Rotvodom Now:{' '}
                 <span className="text-accent-500">
                   {shelterStats.totalDogsNow}{' '}
@@ -66,21 +65,29 @@ function App() {
               <Button
                 variant="primary"
                 size="medium"
-                className="-mt-5 z-10 hover:scale-105 transition-transform"
+                className="z-10 -mt-5 transition-transform hover:scale-105"
               >
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="flex relative z-10 justify-center  ">
-              <h3 className=" text-lg  text-center text-primary-500 mt-7 font-semibold">
+            <div className="relative z-10 flex justify-center">
+              <h3 className="text-primary-500 3xs:mt-5 3xs:text-md mt-7 text-center text-lg font-semibold">
                 Left behind and waiting each day-many gentle hearts long for a
-                warm lap and a loving home. We rely solely on the generosity of
-                people.
+                warm lap and a loving home. We are Autonomous Non-profit
+                Organization (ANO), we only spend and never earn. We rely solely
+                on the{' '}
+                <a
+                  href="#help"
+                  className="hover:text-accent-500 font-bold underline"
+                >
+                  generosity
+                </a>{' '}
+                of people.
               </h3>
             </div>
             <SocialLinks
               size="md"
-              className="mt-20 gap-5"
+              className="mt-8 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -89,7 +96,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="text-5xl text-primary-500 font-bold text-center"
+                className="text-primary-500 3xs:text-4xl text-center text-5xl font-bold"
               >
                 Our Pets
               </h2>

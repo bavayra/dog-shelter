@@ -2,13 +2,13 @@ import Button from '../components/Button';
 
 const HowToHelp = () => {
   return (
-    <section id="help" className="bg-primary-50 py-6 scroll-mt-20">
+    <section id="help" className="bg-primary-50 scroll-mt-20 py-6">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl text-primary-500 font-bold text-center mb-6">
+        <h2 className="text-primary-500 3xs:text-3xl mb-6 text-center text-4xl font-bold">
           How to Help ROTVODOM
         </h2>
-        <div className="max-w-3xl mx-auto text-center mb-2">
-          <p className="text-xl text-neutral-700 leading-relaxed mb-4">
+        <div className="3xs:mb-6 mx-auto mb-2 max-w-3xl text-center">
+          <p className="3xs:text-lg mb-4 text-xl leading-relaxed text-neutral-700">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
             the kindness and generosity of people like{' '}
@@ -16,7 +16,7 @@ const HowToHelp = () => {
             donation helps us provide food, medical care, and a safe home for
             dogs in need.
           </p>
-          <p className="text-lg text-neutral-700 leading-relaxed">
+          <p className="text-lg leading-relaxed text-neutral-700">
             Your support makes a{' '}
             <span className="text-primary-500 font-semibold">
               real difference

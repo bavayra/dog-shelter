@@ -26,42 +26,42 @@ const PhotoCarousel = () => {
   const resolvedImageUrl = getGalleryImage(currentImage.imageUrl);
 
   return (
-    <div className="relative max-w-5xl mx-auto bg-primary-50">
-      <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-gray-100">
+    <div className="bg-primary-50 relative mx-auto max-w-5xl">
+      <div className="relative overflow-hidden rounded-2xl bg-gray-100 shadow-2xl">
         <img
           src={resolvedImageUrl}
           alt={currentImage.caption}
-          className="w-full h-64 md:h-80 lg:h-125 object-cover transition-opacity duration-500"
+          className="h-64 w-full object-cover transition-opacity duration-500 md:h-80 lg:h-125"
           loading="lazy"
         />
-        <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm p-2">
-          <p className="text-white text-center text-md font-normal">
+        <div className="absolute right-0 bottom-0 left-0 bg-black/40 p-2 backdrop-blur-sm">
+          <p className="text-md 3xs:text-sm text-center font-normal text-white">
             {currentImage.caption}
           </p>
         </div>
       </div>
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary-200 hover:bg-primary-500 p-3 rounded-full shadow-lg transition-all hover:scale-110"
+        className="bg-primary-200 hover:bg-primary-500 absolute top-1/2 left-4 -translate-y-1/2 rounded-full p-3 shadow-lg transition-all hover:scale-110"
         aria-label="Previous image"
       >
-        <Icon name="arrow-left" className="w-6 h-6 text-primary-500" />
+        <Icon name="arrow-left" className="text-primary-500 h-6 w-6" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary-200 hover:bg-primary-500 p-3 rounded-full shadow-lg transition-all hover:scale-110"
+        className="bg-primary-200 hover:bg-primary-500 absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-3 shadow-lg transition-all hover:scale-110"
         aria-label="Next image"
       >
-        <Icon name="arrow-right" className="w-6 h-6 text-primary-500" />
+        <Icon name="arrow-right" className="text-primary-500 h-6 w-6" />
       </button>
-      <div className="flex justify-center gap-2 mt-6">
+      <div className="mt-6 flex justify-center gap-2">
         {shelterGallery.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`h-3 rounded-full transition-all ${
               index === currentIndex
-                ? 'w-8 bg-primary-500'
+                ? 'bg-primary-500 w-8'
                 : 'w-3 bg-gray-300 hover:bg-gray-400'
             }`}
             aria-label={`Go to image ${index + 1}`}

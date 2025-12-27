@@ -17,16 +17,18 @@
   --color-neutral-300: #abb0c7;
   --color-neutral-500: #979cb0;
   --color-neutral-700: #747787;
+
+  --breakpoint-3xs: 320px;
+  --breakpoint-2xs: 375px;
+  --breakpoint-xs: 425px;
 }
 
-/* Custom CSS Variables */
 :root {
   --font-sans:
     system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
     sans-serif;
 }
 
-/* Base Styles */
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;

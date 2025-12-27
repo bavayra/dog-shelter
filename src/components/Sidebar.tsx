@@ -24,12 +24,12 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="fixed left-3 top-22 z-40 md:hidden border-2 border-accent-500 bg-primary-500 text-neutral-50 p-3 rounded-full shadow-lg hover:bg-primary-700 transition-colors"
+        className="border-accent-500 bg-primary-500 hover:bg-primary-700 3xs:top-19 fixed top-22 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
       >
         <svg
-          className="w-6 h-6"
+          className="h-6 w-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -45,18 +45,18 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       <aside
-        className={`fixed left-0 top-20 bottom-0 overflow-hidden touch-none overscroll-none rounded-r-sm bg-primary-500 shadow-md z-50 transition-transform duration-300 ${
+        className={`bg-primary-500 3xs:top-16 fixed top-20 bottom-0 left-0 z-50 touch-none overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:translate-x-0 md:static md:h-auto md:bottom-auto ${className}`}
+        } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
       >
-        <nav className="p-6 relative">
-          <h2 className="text-lg font-bold text-neutral-100 mb-4">
+        <nav className="relative p-6">
+          <h2 className="mb-4 text-lg font-bold text-neutral-100">
             NAVIGATION
           </h2>
           {menuItems.map((item) => {
@@ -65,11 +65,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               <a
                 key={item.label}
                 href={item.href}
-                className="flex items-center gap-2 px-4 py-3 text-neutral-100 hover:bg-primary-200 hover:text-primary-700 hover:scale-110 rounded-lg transition-colors group relative z-10"
+                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-4 py-3 text-neutral-100 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="w-6 h-6 group-hover:scale-110 text-neutral-300 transition-transform"
+                  className="h-6 w-6 text-neutral-300 transition-transform group-hover:scale-110"
                   aria-hidden="true"
                 />
                 <span className="text-lg font-bold">{item.label}</span>
@@ -78,12 +78,12 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           })}
         </nav>
         <button
-          className="absolute top-4 right-4 md:hidden text-neutral-500 hover:text-neutral-700"
+          className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-700 md:hidden"
           onClick={() => setIsOpen(false)}
           aria-label="Close sidebar"
         >
           <svg
-            className="w-6 h-6"
+            className="h-6 w-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -97,8 +97,8 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           </svg>
         </button>
         <div
-          className="paw-pattern absolute left-0 w-full pointer-events-none z-0"
-          style={{ top: '14rem', bottom: '0' }}
+          className="paw-pattern 3xs:h-100 pointer-events-none absolute left-0 z-0 w-full"
+          style={{ bottom: '0' }}
         ></div>
       </aside>
     </>

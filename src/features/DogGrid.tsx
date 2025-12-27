@@ -24,18 +24,18 @@ const DogGrid = () => {
         onReset={resetFilters}
       />
 
-      <p className="text-lg text-neutral-700 mb-4">
+      <p className="3xs:text-md mb-4 text-lg text-neutral-700">
         Found {filteredDogs.length} {filteredDogs.length === 1 ? 'dog' : 'dogs'}
       </p>
 
       {filteredDogs.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredDogs.map((dog) => (
             <DogCard key={dog.id} {...dog} />
           ))}
         </div>
       ) : (
-        <p className="text-center text-neutral-500 text-lg">
+        <p className="text-center text-lg text-neutral-500">
           No dogs found. Try adjusting your filters.
         </p>
       )}
