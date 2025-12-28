@@ -7,7 +7,7 @@ import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
 import RottweilerBg from '@assets/icons/rottweiler-vector-bg.svg?react';
-
+const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
 const HowToHelp = lazy(() => import('./features/HowToHelp'));
 const ContactSection = lazy(() => import('./features/ContactSection'));
@@ -21,7 +21,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="3xs:mt-6 xs2:mt-24 from-primary-500 to-primary-50 relative mt-16 min-h-screen bg-linear-to-b px-4 pt-16 pb-24 md:min-h-svh"
+            className="3xs:mt-6 2xs:mt-15 from-primary-500 to-primary-50 relative mt-16 min-h-screen bg-linear-to-b px-4 pt-16 pb-24 md:min-h-svh"
           >
             <RottweilerBg
               aria-hidden="true"
@@ -105,6 +105,7 @@ function App() {
           </section>
           <Suspense fallback={<div className="min-h-screen" />}>
             <HowToHelp />
+            <AdoptionRules />
             <AboutUs />
             <ContactSection />
           </Suspense>
