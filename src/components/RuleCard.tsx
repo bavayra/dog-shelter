@@ -5,8 +5,8 @@ interface RuleCardProps {
 
 const RuleCard = ({ number, text }: RuleCardProps) => {
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md">
-      <div className="flex items-start gap-4">
+    <div className="mx-3 rounded-lg bg-white px-6 py-4 shadow-md">
+      <div className="flex items-start gap-2">
         <span className="text-primary-500 bg-primary-100 flex h-8 w-8 shrink-0 items-center justify-center rounded-full font-bold">
           {number}
         </span>

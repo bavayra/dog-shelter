@@ -2,19 +2,18 @@ import RuleCard from '@/components/RuleCard';
 
 const AdoptionRules = () => {
   const rules = [
-    'Adoption is free; donations welcome.',
-    'If interested, please contact our team for further details and for an online interview.',
-    'Interview questions are based on 15 years rehoming experience and might be answered for the better understanding of your needs.',
+    'If you are interested in adoption, please contact our team for further details and for an online interview.',
+    'Interview questions are based on 15 years rehoming experience and have be answered for the better understanding of your needs.',
     'All decisions prioritize the dog’s welfare; we may suggest another dog or refuse adoption.',
     'After the interview, an in-person showing is required (except for applicants who live further than 300 km from Yekaterinburg); dogs are not handed over at showings.',
-    'Multiple visits and walking activities are allowed to help the dog and applicants acclimate (optional).',
+    'Multiple visits and walking activities are allowed to help the dog and applicants acclimate.',
     "If approved, the curator will arrange the transfer and typically deliver the dog straight to the new owner's home.",
     'After transfer is completed, it is formalized by a contract with passport details of both parties.',
     'After the adoption, we stay in touch and provide support as needed. The shelter has a right to contact new owner anytime to check in on the dog.',
   ];
 
   return (
-    <section id="adoption-rules" className="bg-neutral-50 py-16">
+    <section id="adoption-rules" className="bg-neutral-50 py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-primary-500 mb-6 text-center text-3xl font-bold">
           Adoption Rules
@@ -32,11 +31,11 @@ const AdoptionRules = () => {
         ))}
       </div>
 
-      <div className="mt-12 text-center">
+      <div className="mt-6 text-center">
         <div>
           <a
             href="https://vk.com/topic-215318612_49115975"
-            className="bg-primary-500 hover:bg-primary-600 inline-block rounded-lg px-8 py-3 font-semibold text-white transition-colors"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 mb-4 inline-block rounded-lg px-8 py-3 font-semibold transition-transform hover:scale-105"
           >
             See All The Rules
           </a>
@@ -44,7 +43,7 @@ const AdoptionRules = () => {
         <div>
           <a
             href="https://vk.com/topic-215318612_49115985"
-            className="bg-primary-500 hover:bg-primary-600 inline-block rounded-lg px-8 py-3 font-semibold text-white transition-colors"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 inline-block rounded-lg px-8 py-3 font-semibold transition-transform hover:scale-105"
           >
             See The Contract Template
           </a>
