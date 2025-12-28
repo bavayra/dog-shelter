@@ -17,7 +17,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
     { icon: PetPawIcon, label: 'Our Pets', href: '#pets' },
     { icon: AboutUsIcon, label: 'About Us', href: '#about-us' },
     { icon: HelpIcon, label: 'How to Help', href: '#help' },
-    { icon: RulesIcon, label: 'Adoption Rules', href: '#rules' },
+    { icon: RulesIcon, label: 'Adoption Rules', href: '#adoption-rules' },
     { icon: ContactsIcon, label: 'Contact', href: '#contact' },
   ];
 
