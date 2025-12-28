@@ -17,8 +17,8 @@ export const AGE_FILTER_OPTIONS = [
 
 export const GENDER_FILTER_OPTIONS = [
   { value: '', label: 'ANY' },
-  { value: 'Male', label: 'MALE' },
-  { value: 'Female', label: 'FEMALE' },
+  { value: 'Boy', label: 'BOY' },
+  { value: 'Girl', label: 'GIRL' },
 ] as const;
 
 export const HEALTH_FILTER_OPTIONS = [
