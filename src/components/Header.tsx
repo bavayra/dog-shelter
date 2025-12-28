@@ -1,6 +1,7 @@
 import { APP_NAME } from '@/constants';
 import Button from '@/components/Button';
 import LogoIcon from '@/assets/icons/rottweiler-logo-icon.webp';
+import HomeIcon from '@/assets/icons/home-icon.svg';
 
 const Header = () => {
   const navigationLinks = [
@@ -12,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-primary-200 fixed top-0 z-50 shadow-md">
+    <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <img
@@ -21,10 +22,17 @@ const Header = () => {
             className="border-primary-500 3xs:h-12 3xs:w-12 h-16 w-16 rounded-full border-2 bg-transparent object-center px-1 py-2"
           />
           <div className="flex items-center">
-            <h1 className="text-primary-500 3xs:text-xl mr-55 text-2xl font-bold md:text-3xl">
+            <h1 className="text-primary-500 3xs:text-xlw-auto mr-30 text-2xl font-bold md:text-3xl">
               {APP_NAME}
             </h1>
           </div>
+          <a href="#hero" className="flex items-center justify-end">
+            <img
+              src={HomeIcon}
+              alt="Home"
+              className="3xs:h-8 3xs:w-8 h-10 w-10 cursor-pointer object-cover"
+            />
+          </a>
 
           <nav className="hidden items-center gap-6 md:flex">
             {navigationLinks.map((link) => (
