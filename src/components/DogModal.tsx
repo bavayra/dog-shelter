@@ -71,28 +71,23 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white"
+        className="bg-primary-200 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center"
+          className="text-primary-500 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
           ×
         </button>
 
-        <div className="relative h-80 overflow-hidden rounded-t-2xl">
+        <div className="relative h-70 overflow-hidden rounded-t-2xl">
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
             className="h-full w-full object-cover"
           />
-          <div
-            className={`absolute top-4 right-16 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-wider text-white shadow-lg`}
-          >
-            <span className="text-xl">{genderSymbol}</span>
-            <span>{gender}</span>
-          </div>
+
           {isAdopted && (
             <div className="bg-primary-700 absolute top-4 left-4 rounded-full px-5 py-2.5 text-base font-bold text-white shadow-lg">
               ✓ Adopted
@@ -100,23 +95,29 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           )}
         </div>
 
-        <div className="p-8">
+        <div className="p-4">
           <h2
             id="modal-title"
-            className="text-primary-700 mb-6 text-4xl font-bold"
+            className="text-primary-700 mb-4 text-3xl font-bold"
           >
             {name}
           </h2>
+          <div
+            className={`absolute top-74 right-4 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-wider text-white shadow-lg`}
+          >
+            <span className="text-md">{genderSymbol}</span>
+            <span className="text-sm font-normal">{gender}</span>
+          </div>
 
-          <div className="mb-6 flex flex-wrap gap-6 text-lg text-neutral-700">
+          <div className="text-md mb-4 flex flex-wrap gap-3 text-neutral-700">
             <div className="flex items-center gap-2">
-              <span role="img" aria-label="birthday cake" className="text-2xl">
+              <span role="img" aria-label="birthday cake" className="text-xl">
                 🎂
               </span>
               <span className="font-medium">{getAgeLabel(age)}</span>
             </div>
             <div className="flex items-center gap-2">
-              <span role="img" aria-label="dog" className="text-2xl">
+              <span role="img" aria-label="dog" className="text-xl">
                 🐕
               </span>
               <span className="font-medium">{breed}</span>
@@ -132,11 +133,29 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="mb-8">
-            <h3 className="text-primary-600 mb-3 text-xl font-semibold">
-              About {name}
-            </h3>
-            <p className="text-primary-700 text-base leading-relaxed whitespace-pre-line">
-              {description}
+            <p className="text-primary-700 text-base leading-normal whitespace-pre-line">
+              {description.split('\n').map((line, i) => {
+                const colonIndex = line.indexOf(':');
+                if (colonIndex > 0 && colonIndex < 30) {
+                  const before = line.slice(0, colonIndex + 1);
+                  const after = line.slice(colonIndex + 1);
+                  return (
+                    <span key={i}>
+                      <strong className="text-accent-600 font-bold">
+                        {before}
+                      </strong>
+                      {after}
+                      {'\n'}
+                    </span>
+                  );
+                }
+                return (
+                  <span key={i}>
+                    {line}
+                    {'\n'}
+                  </span>
+                );
+              })}
             </p>
           </div>
 
