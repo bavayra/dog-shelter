@@ -133,7 +133,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="mb-8">
-            <p className="text-primary-700 text-base leading-normal whitespace-pre-line">
+            <p className="text-primary-700 text-justify text-base leading-normal whitespace-pre-line">
               {description.split('\n').map((line, i) => {
                 const colonIndex = line.indexOf(':');
                 if (colonIndex > 0 && colonIndex < 30) {
@@ -141,7 +141,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
                   const after = line.slice(colonIndex + 1);
                   return (
                     <span key={i}>
-                      <strong className="text-accent-600 font-bold">
+                      <strong className="text-primary-500 font-bold">
                         {before}
                       </strong>
                       {after}
