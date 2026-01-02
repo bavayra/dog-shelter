@@ -6,6 +6,10 @@ export const AGE_LABELS: Record<string, string> = {
   '': 'Unknown',
 };
 
+export const getAgeLabel = (age: string): string => {
+  return AGE_LABELS[age] ?? 'Unknown';
+};
+
 export const getGenderBadgeColor = (gender: 'Boy' | 'Girl') => {
   return gender === 'Boy'
     ? 'bg-[var(--color-primary-500)]'
