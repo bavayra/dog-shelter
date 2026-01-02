@@ -1,7 +1,7 @@
 import { APP_NAME } from '@/constants';
 import Button from '@/components/Button';
 import LogoIcon from '@/assets/icons/rottweiler-logo-icon.webp';
-import HomeIcon from '@/assets/icons/home-icon.svg';
+import HomeIcon from '@/assets/icons/home-icon.svg?react';
 
 const Header = () => {
   const navigationLinks = [
@@ -22,7 +22,7 @@ const Header = () => {
             className="border-primary-500 3xs:h-12 3xs:w-12 h-16 w-16 rounded-full border-2 bg-transparent object-center px-1 py-2"
           />
           <div className="flex items-center">
-            <h1 className="text-primary-500 3xs:text-xlw-auto mr-30 text-2xl font-bold md:text-3xl">
+            <h1 className="text-primary-500 3xs:text-xl 3xs:mr-18 mr-30 w-auto text-2xl font-bold md:text-3xl">
               {APP_NAME}
             </h1>
           </div>
@@ -30,7 +30,7 @@ const Header = () => {
             <img
               src={HomeIcon}
               alt="Home"
-              className="3xs:h-8 3xs:w-8 h-10 w-10 cursor-pointer object-cover"
+              className="3xs:h-8 3xs:w-8 h-10 w-10 cursor-pointer object-contain"
             />
           </a>
 
