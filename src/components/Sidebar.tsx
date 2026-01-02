@@ -65,6 +65,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               <a
                 key={item.label}
                 href={item.href}
+                rel="noopener noreferrer"
                 className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-4 py-3 text-neutral-100 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >

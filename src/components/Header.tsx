@@ -26,7 +26,11 @@ const Header = () => {
               {APP_NAME}
             </h1>
           </div>
-          <a href="#hero" className="flex items-center justify-end">
+          <a
+            href="#hero"
+            rel="noopener noreferrer"
+            className="flex items-center justify-end"
+          >
             <img
               src={HomeIcon}
               alt="Home"
@@ -38,6 +42,7 @@ const Header = () => {
             {navigationLinks.map((link) => (
               <a
                 key={link.name}
+                rel="noopener noreferrer"
                 href={link.href}
                 className="hover:text-primary-700 hover:bg-primary-200 px-3 py-3 font-medium text-neutral-700 transition-transform hover:scale-105 hover:rounded-lg hover:font-bold"
               >

@@ -78,6 +78,7 @@ function App() {
                 on the{' '}
                 <a
                   href="#help"
+                  rel="noopener noreferrer"
                   className="hover:text-accent-500 font-bold underline"
                 >
                   generosity
