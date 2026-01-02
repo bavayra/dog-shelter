@@ -1,4 +1,6 @@
-export const shelterGallery = [
+import type { GalleryImage } from '@/types';
+
+export const shelterGallery: GalleryImage[] = [
   {
     imageUrl: 'team-1.webp',
     caption:
