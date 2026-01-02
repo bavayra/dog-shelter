@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import type { Dog } from '@/types';
 import Button from '@/components/Button';
 import { getDogImage } from '@/utils/images';
@@ -15,25 +15,24 @@ interface DogModalProps {
 }
 
 const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
+  const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (isOpen) {
-      // Сохраняем текущую позицию скролла
-      const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
-      document.body.style.overflow = 'hidden';
+    if (!isOpen) return;
 
-      // При размонтировании или закрытии восстанавливаем позицию
-      return () => {
-        const scrollY = document.body.style.top;
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
-        document.body.style.overflow = '';
-        window.scrollTo(0, parseInt(scrollY || '0') * -1);
-      };
-    }
+    const scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      document.body.style.overflow = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    };
   }, [isOpen]);
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -47,6 +46,38 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen, onClose]);
   if (!isOpen) return null;
+
+  useEffect(() => {
+    if (!isOpen || !modalRef.current) return;
+
+    const modal = modalRef.current;
+    const focusableElements = modal.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    firstElement?.focus();
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement?.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement?.focus();
+        }
+      }
+    };
+
+    modal.addEventListener('keydown', handleTab);
+
+    return () => modal.removeEventListener('keydown', handleTab);
+  }, [isOpen]);
 
   const { name, breed, age, gender, health, description, imageUrl, isAdopted } =
     dog;
@@ -73,6 +104,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       <div
         className="bg-primary-200 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl"
         onClick={(e) => e.stopPropagation()}
+        ref={modalRef}
       >
         <button
           onClick={onClose}
