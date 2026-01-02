@@ -53,4 +53,12 @@ html {
     background-size: 250px 750px;
     background-position: left center;
   }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(1px) saturate(100%);
+    backdrop-filter: blur(1px) saturate(100%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  }
 }

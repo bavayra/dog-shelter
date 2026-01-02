@@ -31,16 +31,7 @@ function App() {
               Give a Shelter Dog a Loving Home
             </h2>
 
-            <div
-              className="text-primary-700 3xs:mt-4 relative z-10 mx-auto my-auto mt-8 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide"
-              style={{
-                background: 'rgba(255, 255, 255, 0.05)',
-                WebkitBackdropFilter: 'blur(1px) saturate(100%)',
-                backdropFilter: 'blur(1px) saturate(100%)',
-                border: '1px solid rgba(255, 255, 255, 0.5)',
-                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.2)',
-              }}
-            >
+            <div className="glass-card text-primary-700 3xs:mt-4 relative z-10 mx-auto my-auto mt-8 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
               <p className="letter-spacing-wider mb-2">
                 Dogs in Rotvodom Now:{' '}
                 <span className="text-accent-500">
