@@ -2,11 +2,6 @@ export const APP_NAME = 'ROTVODOM';
 export const APP_DESCRIPTION =
   'Find your perfect companion and give a shelter dog a loving home';
 
-export const DOG_GENDERS = ['Male', 'Female'] as const;
-export const DOG_BREEDS = ['Rottweiler', 'Cane Corso', 'Mixed breed'] as const;
-export const DOG_AGE = ['under-1', '1-3', '4-7', '8-plus'] as const;
-export const DOG_HEALTH = ['Healthy', 'Special needs'] as const;
-
 export const AGE_FILTER_OPTIONS = [
   { value: '', label: 'ANY' },
   { value: 'under-1', label: 'UNDER 1' },
