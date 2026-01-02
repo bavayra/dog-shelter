@@ -50,7 +50,3 @@ export const getGalleryImage = (
 
   return galleryImages[fileName] || fallback;
 };
-
-export const allDogImages = dogImages;
-export default dogImages;
-export const allGalleryImages = galleryImages;
