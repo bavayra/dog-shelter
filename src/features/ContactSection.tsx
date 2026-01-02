@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { sanitizeFormData } from '@/utils/sanitize';
 
 import Button from '@/components/Button';
 import TextInput from '@/components/TextInput';
@@ -8,19 +9,32 @@ const ContactSection = () => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!name.trim() || !phone.trim() || !email.trim() || !message.trim()) {
-      alert('Please fill in all required fields');
-      return;
-    }
-    const formData = {
+
+    const rawData = {
       name: name.trim(),
       phone: phone.trim(),
       email: email.trim(),
       message: message.trim(),
     };
-    console.log('Sending message:', formData);
+
+    const sanitizedData = sanitizeFormData(rawData);
+
+    if (
+      !sanitizedData.name ||
+      !sanitizedData.phone ||
+      !sanitizedData.email ||
+      !sanitizedData.message
+    ) {
+      alert('Please fill in all required fields');
+      return;
+    }
+
+    // Теперь sanitizedData безопасно отправлять на сервер
+    console.log('Safe data:', sanitizedData);
+
     alert('Thank you! Your message has been sent.');
     setName('');
     setPhone('');
