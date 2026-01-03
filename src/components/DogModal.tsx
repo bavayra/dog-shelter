@@ -45,7 +45,6 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen, onClose]);
-  if (!isOpen) return null;
 
   useEffect(() => {
     if (!isOpen || !modalRef.current) return;
@@ -78,6 +77,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
     return () => modal.removeEventListener('keydown', handleTab);
   }, [isOpen]);
+  if (!isOpen) return null;
 
   const { name, breed, age, gender, health, description, imageUrl, isAdopted } =
     dog;
@@ -108,6 +108,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       >
         <button
           onClick={onClose}
+          aria-label="Close modal"
           className="text-primary-500 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
           ×
