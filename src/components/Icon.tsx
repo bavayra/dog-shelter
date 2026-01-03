@@ -16,10 +16,9 @@ const Icon = ({
   title,
   size = 'md',
   className = '',
-  ...props
+  as: Component,
+  ...restProps
 }: IconProps & { as?: React.ComponentType<SVGProps<SVGSVGElement>> }) => {
-  const { as: Component, ...restProps } = props as any;
-
   if (!Component) {
     return null;
   }
