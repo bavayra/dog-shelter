@@ -10,19 +10,19 @@ const useDogFilters = () => {
     breed: '',
   });
 
-  const setAgeFilter = (age: string) => {
+  const setAgeFilter = (age: DogFilters['age']) => {
     setFilters((prev) => ({ ...prev, age }));
   };
 
-  const setGenderFilter = (gender: string) => {
+  const setGenderFilter = (gender: DogFilters['gender']) => {
     setFilters((prev) => ({ ...prev, gender }));
   };
 
-  const setHealthFilter = (health: string) => {
+  const setHealthFilter = (health: DogFilters['health']) => {
     setFilters((prev) => ({ ...prev, health }));
   };
 
-  const setBreedFilter = (breed: string) => {
+  const setBreedFilter = (breed: DogFilters['breed']) => {
     setFilters((prev) => ({ ...prev, breed }));
   };
 
