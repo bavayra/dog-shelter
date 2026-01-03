@@ -19,21 +19,17 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
   useEffect(() => {
     if (!isOpen) return;
 
-    const scrollY = window.scrollY;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = '100%';
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
     document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
 
     return () => {
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
       document.body.style.overflow = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
+      document.body.style.paddingRight = '';
     };
   }, [isOpen]);
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) {
@@ -119,6 +115,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
             className="h-full w-full object-cover"
+            loading="lazy"
           />
 
           {isAdopted && (
