@@ -6,7 +6,7 @@ import Button from '@/components/Button';
 import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
-import RottweilerBg from '@assets/icons/rottweiler-vector-bg.svg?react';
+import RottweilerBg from '@/assets/icons/rottweiler-vector-bg.svg?react';
 const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
 const HowToHelp = lazy(() => import('./features/HowToHelp'));
@@ -69,8 +69,8 @@ function App() {
                 on the{' '}
                 <a
                   href="#help"
-                  rel="noopener noreferrer"
                   className="hover:text-accent-500 font-bold underline"
+                  aria-label="Go to How to Help section"
                 >
                   generosity
                 </a>{' '}

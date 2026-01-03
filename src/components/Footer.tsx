@@ -5,10 +5,10 @@ import {
   APP_NAME,
 } from '@/constants';
 
-import EmailIcon from '@assets/icons/email.svg?react';
-import PhoneIcon from '@assets/icons/phone.svg?react';
-import LocationIcon from '@assets/icons/location.svg?react';
-import HeartIcon from '@assets/icons/heart-icon.svg?react';
+import EmailIcon from '@/assets/icons/email.svg?react';
+import PhoneIcon from '@/assets/icons/phone.svg?react';
+import LocationIcon from '@/assets/icons/location.svg?react';
+import HeartIcon from '@/assets/icons/heart-icon.svg?react';
 
 import SocialLinks from './SocialLinks';
 

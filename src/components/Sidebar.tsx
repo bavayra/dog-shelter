@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import ContactsIcon from '@assets/icons/contacts-nav-icon.svg?react';
-import HelpIcon from '@assets/icons/help-nav-icon.svg?react';
-import AboutUsIcon from '@assets/icons/about-us-nav-icon.svg?react';
-import PetPawIcon from '@assets/icons/paw-decor-icon.svg?react';
-import RulesIcon from '@assets/icons/rules-nav-icon.svg?react';
+import ContactsIcon from '@/assets/icons/contacts-nav-icon.svg?react';
+import HelpIcon from '@/assets/icons/help-nav-icon.svg?react';
+import AboutUsIcon from '@/assets/icons/about-us-nav-icon.svg?react';
+import PetPawIcon from '@/assets/icons/paw-decor-icon.svg?react';
+import RulesIcon from '@/assets/icons/rules-nav-icon.svg?react';
 
 interface SidebarProps {
   className?: string;
@@ -65,7 +65,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               <a
                 key={item.label}
                 href={item.href}
-                rel="noopener noreferrer"
+                aria-label={`Go to ${item.label} section`}
                 className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-4 py-3 text-neutral-100 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >

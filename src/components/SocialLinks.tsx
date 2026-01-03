@@ -1,7 +1,7 @@
-import FacebookIcon from '@assets/icons/facebook-icon.svg?react';
-import InstagramIcon from '@assets/icons/instagram-icon.svg?react';
-import TelegramIcon from '@assets/icons/telegram-icon.svg?react';
-import VKIcon from '@assets/icons/vk-icon.svg?react';
+import FacebookIcon from '@/assets/icons/facebook-icon.svg?react';
+import InstagramIcon from '@/assets/icons/instagram-icon.svg?react';
+import TelegramIcon from '@/assets/icons/telegram-icon.svg?react';
+import VKIcon from '@/assets/icons/vk-icon.svg?react';
 
 import { CONTACT_SOCIALS } from '@/constants';
 import Icon from './Icon';
@@ -39,14 +39,14 @@ const SocialLinks = ({
   };
 
   return (
-    <div className={`flex gap-4 justify-center ${className || ''}`}>
+    <div className={`flex justify-center gap-4 ${className || ''}`}>
       {socialNetworks.map((social) => (
         <a
           key={social.name}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 rounded-full flex items-center justify-center transition-transform hover:scale-110 shrink-0`}
+          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 flex shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110`}
           aria-label={social.name}
         >
           <Icon
