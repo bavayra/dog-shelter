@@ -1,23 +1,17 @@
 import DOMPurify from 'dompurify';
 
-export const sanitizeInput = (input: string): string => {
-  return DOMPurify.sanitize(input, {
-    ALLOWED_TAGS: [],
-    ALLOWED_ATTR: [],
-  });
+const DEFAULT_CONFIG = {
+  ALLOWED_TAGS: ['a', 'b', 'i', 'em', 'strong', 'p', 'br', 'ul', 'ol', 'li'],
+  ALLOWED_ATTR: ['href', 'rel', 'target'],
 };
 
-export const sanitizeFormData = <T extends Record<string, unknown>>(
-  data: T
-): T => {
-  const sanitized = {} as T;
+export function sanitizeInput(input: string): string {
+  const withBreaks = input.replace(/\r\n?/g, '\n').replace(/\n/g, '<br>');
+  return DOMPurify.sanitize(withBreaks, {
+    ...DEFAULT_CONFIG,
+    FORCE_BODY: true,
+    RETURN_TRUSTED_TYPE: false,
+  }) as string;
+}
 
-  for (const key in data) {
-    const value = data[key];
-    sanitized[key] = (
-      typeof value === 'string' ? sanitizeInput(value) : value
-    ) as T[Extract<keyof T, string>];
-  }
-
-  return sanitized;
-};
+export const sanitizeFormData = sanitizeInput;
