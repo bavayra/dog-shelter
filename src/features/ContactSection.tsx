@@ -20,8 +20,12 @@ const ContactSection = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const isValidEmail = (s: string) => /\S+@\S+\.\S+/.test(s);
-  const isValidPhone = (s: string) => /^\+?[0-9\s\-()]{7,20}$/.test(s);
+  const isValidEmail = (s: string) =>
+    /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(s);
+  const isValidPhone = (s: string) =>
+    /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/.test(
+      s
+    );
 
   const validateAll = (data: {
     name: string;
