@@ -75,9 +75,10 @@ const ContactSection = () => {
       setEmail('');
       setMessage('');
     } catch (err) {
-      console.error(err);
       const message = err instanceof Error ? err.message : 'Unknown error';
-      console.error('Form submission error:', message);
+      if (import.meta.env.DEV) {
+        console.error('Form submission error:', message);
+      }
       setErrorMessage('Something went wrong. Please try again later.');
     } finally {
       setIsSubmitting(false);
