@@ -46,6 +46,9 @@ const DogCard = (dog: Dog) => {
             alt={`${name} - ${breed}`}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
+            onError={(e) => {
+              e.currentTarget.src = 'data:image/svg+xml,...';
+            }}
           />
           <div
             className={`absolute top-3 right-3 ${genderBadgeColor} flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold tracking-wider text-white shadow-lg`}
@@ -96,7 +99,6 @@ const DogCard = (dog: Dog) => {
         </div>
       </article>
 
-      {/* Модальное окно */}
       <DogModal
         dog={dog}
         isOpen={isModalOpen}
