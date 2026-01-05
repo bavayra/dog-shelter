@@ -9,12 +9,13 @@ import type { DogFilters as DogFiltersType } from '@/types';
 
 interface DogFiltersProps {
   filters: DogFiltersType;
-  onAgeChange: (age: DogFiltersType['age']) => void;
-  onGenderChange: (gender: DogFiltersType['gender']) => void;
-  onHealthChange: (health: DogFiltersType['health']) => void;
-  onBreedChange: (breed: DogFiltersType['breed']) => void;
+  onAgeChange: (value: string) => void;
+  onGenderChange: (value: string) => void;
+  onHealthChange: (value: string) => void;
+  onBreedChange: (value: string) => void;
   onReset: () => void;
 }
+
 const DogFilters = ({
   filters,
   onAgeChange,
@@ -42,7 +43,7 @@ const DogFilters = ({
                 : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
             } `}
             aria-pressed={isActive}
-            aria-label="Filter option button"
+            aria-label={`Filter by ${option.label.toLowerCase()}`}
           >
             {option.label}
           </button>
