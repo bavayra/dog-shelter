@@ -1,7 +1,7 @@
 import useDogFilters from './useDogFilters';
 import DogFilters from './DogFilters';
 import DogCard from './DogCard';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const DogGrid = () => {
   const {
@@ -15,8 +15,16 @@ const DogGrid = () => {
   } = useDogFilters();
 
   const [showAll, setShowAll] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const INITIAL_DISPLAY_COUNT = 4;
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 800);
+
+    return () => clearTimeout(timer);
+  }, []);
   const displayedDogs = showAll
     ? filteredDogs
     : filteredDogs.slice(0, INITIAL_DISPLAY_COUNT);
@@ -33,12 +41,19 @@ const DogGrid = () => {
         onBreedChange={setBreedFilter}
         onReset={resetFilters}
       />
+      {!isLoading && (
+        <p className="3xs:text-md mb-4 text-lg text-neutral-700">
+          Found {filteredDogs.length}{' '}
+          {filteredDogs.length === 1 ? 'dog' : 'dogs'}
+        </p>
+      )}
 
-      <p className="3xs:text-md mb-4 text-lg text-neutral-700">
-        Found {filteredDogs.length} {filteredDogs.length === 1 ? 'dog' : 'dogs'}
-      </p>
-
-      {filteredDogs.length > 0 ? (
+      {isLoading ? (
+        <div className="flex min-h-64 items-center justify-center">
+          <div className="border-primary-500 h-12 w-12 animate-spin rounded-full border-4 border-t-transparent"></div>
+          <p className="text-primary-700 ml-4 text-lg">Loading pets...</p>
+        </div>
+      ) : filteredDogs.length > 0 ? (
         <>
           <div className="grid grid-cols-1 gap-6 transition-all md:grid-cols-2 lg:grid-cols-3">
             {displayedDogs.map((dog) => (
