@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Sidebar from '@/components/Sidebar';
@@ -7,6 +8,7 @@ import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
 import RottweilerBg from '@/assets/icons/rottweiler-vector-bg.svg?react';
+
 const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
 const HowToHelp = lazy(() => import('./features/HowToHelp'));
@@ -95,7 +97,7 @@ function App() {
             </div>
             <DogGrid />
           </section>
-          <Suspense fallback={<div className="min-h-screen" />}>
+          <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
             <HowToHelp />
             <AdoptionRules />
             <AboutUs />
