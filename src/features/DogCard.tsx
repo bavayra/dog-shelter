@@ -1,7 +1,8 @@
 import type { Dog } from '@/types';
 import Button from '@/components/Button';
 import { getDogImage } from '@/utils/images';
-import { useState } from 'react';
+import { useState, memo } from 'react';
+import type { MouseEvent } from 'react';
 import DogModal from '@/components/DogModal';
 import {
   getAgeLabel,
@@ -9,13 +10,13 @@ import {
   getGenderSymbol,
 } from '@/utils/dogHelpers';
 
-const DogCard = (dog: Dog) => {
+const DogCard = memo((dog: Dog) => {
   const { name, breed, age, gender, health, description, imageUrl, isAdopted } =
     dog;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleAdoptClick = (e: React.MouseEvent) => {
+  const handleAdoptClick = (e: MouseEvent) => {
     e.stopPropagation();
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -36,7 +37,6 @@ const DogCard = (dog: Dog) => {
     <>
       <article
         className="flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
-        role="article"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -107,6 +107,8 @@ const DogCard = (dog: Dog) => {
       />
     </>
   );
-};
+});
+
+DogCard.displayName = 'DogCard';
 
 export default DogCard;
