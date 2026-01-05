@@ -1,15 +1,10 @@
-import { APP_NAME } from '@/constants';
+import { APP_NAME, NAVIGATION_ITEMS } from '@/constants';
 import Button from '@/components/Button';
 import LogoIcon from '@/assets/icons/rottweiler-logo-icon.webp';
 import HomeIcon from '@/assets/icons/home-icon.svg?react';
 
 const Header = () => {
-  const navigationLinks = [
-    { name: 'OUR PETS', href: '#pets-heading' },
-    { name: 'HOW TO HELP', href: '#help' },
-    { name: 'ABOUT US', href: '#about' },
-    { name: 'CONTACT', href: '#contact' },
-  ];
+  const headerLinks = NAVIGATION_ITEMS.filter((item) => item.showInHeader);
 
   return (
     <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
@@ -40,14 +35,14 @@ const Header = () => {
             className="hidden items-center gap-6 md:flex"
             aria-label="Main navigation"
           >
-            {navigationLinks.map((link) => (
+            {headerLinks.map((link) => (
               <a
-                key={link.name}
+                key={link.id}
                 href={link.href}
                 className="hover:text-primary-700 hover:bg-primary-200 px-3 py-3 font-medium text-neutral-700 transition-transform hover:scale-105 hover:rounded-lg hover:font-bold"
-                aria-label={`Go to ${link.name} section`}
+                aria-label={`Go to ${link.label} section`}
               >
-                {link.name}
+                {link.label.toUpperCase()}
               </a>
             ))}
           </nav>

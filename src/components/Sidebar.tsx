@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NAVIGATION_ITEMS } from '@/constants';
 
 import ContactsIcon from '@/assets/icons/contacts-nav-icon.svg?react';
 import HelpIcon from '@/assets/icons/help-nav-icon.svg?react';
@@ -13,13 +14,13 @@ interface SidebarProps {
 const Sidebar = ({ className = '' }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const menuItems = [
-    { icon: PetPawIcon, label: 'Our Pets', href: '#pets' },
-    { icon: HelpIcon, label: 'How to Help', href: '#help' },
-    { icon: RulesIcon, label: 'Adoption Rules', href: '#adoption-rules' },
-    { icon: AboutUsIcon, label: 'About Us', href: '#about-us' },
-    { icon: ContactsIcon, label: 'Contact', href: '#contact' },
-  ];
+  const iconMap = {
+    pets: PetPawIcon,
+    help: HelpIcon,
+    'adoption-rules': RulesIcon,
+    about: AboutUsIcon,
+    contact: ContactsIcon,
+  };
 
   return (
     <>
@@ -27,6 +28,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
         className="border-accent-500 bg-primary-500 hover:bg-primary-700 3xs:top-19 fixed top-22 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
+        aria-expanded={isOpen}
       >
         <svg
           className="h-6 w-6"
@@ -51,7 +53,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 3xs:top-16 fixed top-20 bottom-0 left-0 z-50 touch-none overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 ${
+        className={`bg-primary-500 3xs:top-16 fixed top-20 bottom-0 left-0 z-50 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
       >
@@ -59,11 +61,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           <h2 className="mb-4 text-lg font-bold text-neutral-100">
             NAVIGATION
           </h2>
-          {menuItems.map((item) => {
-            const IconComponent = item.icon;
+          {NAVIGATION_ITEMS.map((item) => {
+            const IconComponent = iconMap[item.id];
             return (
               <a
-                key={item.label}
+                key={item.id}
                 href={item.href}
                 aria-label={`Go to ${item.label} section`}
                 className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-4 py-3 text-neutral-100 transition-colors hover:scale-110"

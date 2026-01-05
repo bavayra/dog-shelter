@@ -38,3 +38,36 @@ export const CONTACT_SOCIALS = {
   telegram: 'https://web.telegram.org/k/#@huskyekb',
   vkontakte: 'https://vk.com/rotvodom66',
 };
+
+export const NAVIGATION_ITEMS = [
+  {
+    id: 'pets',
+    label: 'Our Pets',
+    href: '#pets',
+    showInHeader: true,
+  },
+  {
+    id: 'help',
+    label: 'How to Help',
+    href: '#help',
+    showInHeader: true,
+  },
+  {
+    id: 'adoption-rules',
+    label: 'Adoption Rules',
+    href: '#adoption-rules',
+    showInHeader: true,
+  },
+  {
+    id: 'about',
+    label: 'About Us',
+    href: '#about-us',
+    showInHeader: true,
+  },
+  {
+    id: 'contact',
+    label: 'Contact',
+    href: '#contact',
+    showInHeader: true,
+  },
+] as const;
