@@ -9,10 +9,10 @@ import type { DogFilters as DogFiltersType } from '@/types';
 
 interface DogFiltersProps {
   filters: DogFiltersType;
-  onAgeChange: (age: string) => void;
-  onGenderChange: (gender: string) => void;
-  onHealthChange: (health: string) => void;
-  onBreedChange: (breed: string) => void;
+  onAgeChange: (age: DogFiltersType['age']) => void;
+  onGenderChange: (gender: DogFiltersType['gender']) => void;
+  onHealthChange: (health: DogFiltersType['health']) => void;
+  onBreedChange: (breed: DogFiltersType['breed']) => void;
   onReset: () => void;
 }
 const DogFilters = ({
@@ -42,6 +42,7 @@ const DogFilters = ({
                 : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
             } `}
             aria-pressed={isActive}
+            aria-label="Filter option button"
           >
             {option.label}
           </button>
@@ -113,6 +114,7 @@ const DogFilters = ({
       <div className="3xs:mt-2 mt-6 flex justify-end">
         <button
           onClick={onReset}
+          aria-label="Reset filters"
           className="bg-primary-200 text-primary-700 hover:bg-primary-500 mt-4 rounded-lg px-4 py-2 font-medium transition-colors hover:scale-105 hover:text-neutral-50"
         >
           Reset Filters

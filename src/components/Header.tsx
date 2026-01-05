@@ -5,7 +5,6 @@ import HomeIcon from '@/assets/icons/home-icon.svg?react';
 
 const Header = () => {
   const navigationLinks = [
-    { name: 'HOME', href: '#hero' },
     { name: 'OUR PETS', href: '#pets-heading' },
     { name: 'HOW TO HELP', href: '#help' },
     { name: 'ABOUT US', href: '#about' },
@@ -18,7 +17,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <img
             src={LogoIcon}
-            alt="Logo"
+            alt="Rotvodom Dog Shelter Logo"
             className="border-primary-500 3xs:h-12 3xs:w-12 h-16 w-16 rounded-full border-2 bg-transparent object-center px-1 py-2"
           />
           <div className="flex items-center">
@@ -28,23 +27,25 @@ const Header = () => {
           </div>
           <a
             href="#hero"
-            rel="noopener noreferrer"
             className="flex items-center justify-end"
+            aria-label="Go to home section"
           >
-            <img
-              src={HomeIcon}
-              alt="Home"
+            <HomeIcon
               className="3xs:h-8 3xs:w-8 h-10 w-10 cursor-pointer object-contain"
+              aria-label="Home"
             />
           </a>
 
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav
+            className="hidden items-center gap-6 md:flex"
+            aria-label="Main navigation"
+          >
             {navigationLinks.map((link) => (
               <a
                 key={link.name}
-                rel="noopener noreferrer"
                 href={link.href}
                 className="hover:text-primary-700 hover:bg-primary-200 px-3 py-3 font-medium text-neutral-700 transition-transform hover:scale-105 hover:rounded-lg hover:font-bold"
+                aria-label={`Go to ${link.name} section`}
               >
                 {link.name}
               </a>
@@ -52,7 +53,16 @@ const Header = () => {
           </nav>
 
           <div className="hidden transition-transform hover:scale-105 md:block">
-            <Button variant="primary" size="medium">
+            <Button
+              variant="primary"
+              size="medium"
+              onClick={() =>
+                document
+                  .getElementById('contact')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+              ariaLabel="Go to contact form"
+            >
               CONTACT US
             </Button>
           </div>

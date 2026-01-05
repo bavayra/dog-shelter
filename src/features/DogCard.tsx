@@ -93,7 +93,7 @@ const DogCard = (dog: Dog) => {
             onClick={handleAdoptClick}
             disabled={isAdopted}
             className="mt-auto w-full"
-            aria-label={`Adopt ${name}`}
+            ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home ❤️' : 'ADOPT ME'}
           </Button>

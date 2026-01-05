@@ -8,6 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
+  ariaLabel?: string;
 }
 
 const Button = ({
@@ -16,17 +17,18 @@ const Button = ({
   size = 'medium',
   className = '',
   disabled,
+  ariaLabel,
   ...props
 }: ButtonProps) => {
   const baseStyles =
     'font-semibold rounded-lg transform transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-[var(--color-primary-700)] text-white hover:bg-[var(--color-primary-900)] hover:scale-103 focus:ring-[var(--color-primary-500)] active:bg-[var(--color-primary-800)]',
+      'bg-primary-700 text-white hover:bg-primary-900 hover:scale-103 focus:ring-primary-500 active:bg-primary-800',
     secondary:
-      'bg-[var(--color-primary-200)] text-[var(--color-primary-900)] hover:bg-[var(--color-primary-300)] hover:scale-103 focus:ring-gray-500 active:bg-gray-800',
+      'bg-primary-200 text-primary-900 hover:bg-primary-300 hover:scale-103 focus:ring-gray-500 active:bg-gray-800',
     outline:
-      'bg-transparent border-2 border-[var(--color-accent-200)] text-[var(--color-accent-500)] hover:scale-103 hover:bg-[var(--color-primary-100)] focus:ring-[var(--color-accent-500)]',
+      'bg-transparent border-2 border-accent-200 text-accent-500 hover:scale-103 hover:bg-primary-100 focus:ring-accent-500',
   };
   const sizeStyles: Record<ButtonSize, string> = {
     small: 'px-3 py-1.5 text-sm',
@@ -37,6 +39,7 @@ const Button = ({
     <button
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
       disabled={disabled}
+      aria-label={ariaLabel}
       {...props}
     >
       {children}

@@ -180,6 +180,7 @@ const ContactSection = () => {
                 type="submit"
                 variant="primary"
                 disabled={isSubmitting}
+                ariaLabel="Submit this form"
                 className="w-full text-center text-base font-semibold"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}

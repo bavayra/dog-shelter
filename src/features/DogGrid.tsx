@@ -49,6 +49,7 @@ const DogGrid = () => {
             <div className="mt-8 text-center">
               <button
                 onClick={() => setShowAll(true)}
+                aria-label="View all pets button"
                 className="bg-primary-500 hover:bg-primary-600 rounded-lg px-8 py-3 font-semibold text-white transition-colors"
               >
                 View All Pets
