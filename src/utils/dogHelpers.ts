@@ -11,9 +11,7 @@ export const getAgeLabel = (age: string): string => {
 };
 
 export const getGenderBadgeColor = (gender: 'Boy' | 'Girl') => {
-  return gender === 'Boy'
-    ? 'bg-[var(--color-primary-500)]'
-    : 'bg-[var(--color-accent-500)]';
+  return gender === 'Boy' ? 'bg-primary-500' : 'bg-accent-500';
 };
 
 export const getGenderSymbol = (gender: 'Boy' | 'Girl') => {
