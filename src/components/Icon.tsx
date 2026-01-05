@@ -1,4 +1,4 @@
-import type { SVGProps } from 'react';
+import type { ComponentType, SVGProps } from 'react';
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
   title?: string;
@@ -18,7 +18,7 @@ const Icon = ({
   className = '',
   as: Component,
   ...restProps
-}: IconProps & { as?: React.ComponentType<SVGProps<SVGSVGElement>> }) => {
+}: IconProps & { as?: ComponentType<SVGProps<SVGSVGElement>> }) => {
   if (!Component) {
     return null;
   }
@@ -31,7 +31,7 @@ const Icon = ({
       role={title ? 'img' : 'presentation'}
       aria-hidden={title ? undefined : 'true'}
       aria-label={title}
-      className={`h-full w-full ${combinedClassName} ${sizeClass} flex shrink-0 items-center justify-center`}
+      className={`${combinedClassName} ${sizeClass} flex shrink-0 items-center justify-center`}
       {...restProps}
     />
   );
