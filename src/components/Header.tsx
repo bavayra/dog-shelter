@@ -4,7 +4,9 @@ import LogoIcon from '@/assets/icons/rottweiler-logo-icon.webp';
 import HomeIcon from '@/assets/icons/home-icon.svg?react';
 
 const Header = () => {
-  const headerLinks = NAVIGATION_ITEMS.filter((item) => item.showInHeader);
+  const headerLinks = NAVIGATION_ITEMS.filter(
+    (item) => item.showInHeader && item.id !== 'contact'
+  );
 
   return (
     <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
@@ -26,7 +28,7 @@ const Header = () => {
             aria-label="Go to home section"
           >
             <HomeIcon
-              className="3xs:h-8 3xs:w-8 h-10 w-10 cursor-pointer object-contain"
+              className="3xs:h-6 3xs:w-6 hover:text-primary-700 text-primary-500 h-10 w-10 cursor-pointer object-contain transition hover:scale-115"
               aria-label="Home"
             />
           </a>
