@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { sanitizeFormData } from '@/utils/sanitize';
 
 import Button from '@/components/Button';
@@ -25,10 +25,14 @@ const ContactSection = () => {
       /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
     return emailRegex.test(s);
   };
-  const isValidPhone = (s: string) =>
-    /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/.test(
-      s
+  const isValidPhone = (s: string) => {
+    const phoneRegex =
+      /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{4,}$/;
+    const digitsOnly = s.replace(/\D/g, '');
+    return (
+      phoneRegex.test(s) && digitsOnly.length >= 10 && digitsOnly.length <= 15
     );
+  };
 
   const validateAll = (data: {
     name: string;
@@ -48,7 +52,16 @@ const ContactSection = () => {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const [lastSubmitTime, setLastSubmitTime] = useState(0);
+  const MIN_SUBMIT_INTERVAL = 30000;
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    const now = Date.now();
+    if (now - lastSubmitTime < MIN_SUBMIT_INTERVAL) {
+      setErrorMessage('Please wait 30 seconds before submitting again.');
+      return;
+    }
+    setLastSubmitTime(now);
     e.preventDefault();
     setSuccessMessage('');
     setErrorMessage('');
@@ -76,6 +89,7 @@ const ContactSection = () => {
         const body = await resp.text();
         throw new Error(`Server error: ${resp.status} ${body}`);
       }
+      setLastSubmitTime(now);
       setSuccessMessage('Thank you! Your message has been sent.');
       setName('');
       setPhone('');
