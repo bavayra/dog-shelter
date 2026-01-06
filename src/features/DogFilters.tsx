@@ -1,3 +1,4 @@
+import Button from '@/components/Button';
 import {
   AGE_FILTER_OPTIONS,
   GENDER_FILTER_OPTIONS,
@@ -109,13 +110,14 @@ const DogFilters = ({
       </div>
 
       <div className="3xs:mt-2 mt-6 flex justify-end">
-        <button
+        <Button
           onClick={onReset}
           aria-label="Reset filters"
-          className="bg-primary-200 text-primary-700 hover:bg-primary-500 mt-4 rounded-lg px-4 py-2 font-medium transition-colors hover:scale-105 hover:text-neutral-50"
+          variant="filter"
+          active={false}
         >
-          Reset Filters
-        </button>
+          RESET FILTERS
+        </Button>
       </div>
     </section>
   );

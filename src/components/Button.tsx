@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'filter';
 type ButtonSize = 'small' | 'medium' | 'large';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -9,6 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   className?: string;
   ariaLabel?: string;
+  active?: boolean;
 }
 
 const Button = ({
@@ -18,17 +19,21 @@ const Button = ({
   className = '',
   disabled,
   ariaLabel,
+  active = false,
   ...props
 }: ButtonProps) => {
   const baseStyles =
     'font-semibold rounded-lg transform transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-primary-700 text-white hover:bg-primary-900 hover:scale-103 focus:ring-primary-500 active:bg-primary-800',
+      'bg-primary-700 text-white hover:bg-primary-900 hover:scale-105 focus:ring-primary-500 active:bg-primary-800',
     secondary:
-      'bg-primary-200 text-primary-900 hover:bg-primary-300 hover:scale-103 focus:ring-gray-500 active:bg-gray-800',
+      'bg-primary-200 text-primary-900 hover:bg-primary-300 hover:scale-105 focus:ring-gray-500 active:bg-gray-800',
     outline:
-      'bg-transparent border-2 border-accent-200 text-accent-500 hover:scale-103 hover:bg-primary-100 focus:ring-accent-500',
+      'bg-transparent border-2 border-accent-200 text-accent-500 hover:scale-105 hover:bg-primary-100 focus:ring-accent-200',
+    filter: active
+      ? 'bg-primary-500 text-primary-700  focus:ring-primary-500'
+      : 'bg-primary-200 text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm',
   };
   const sizeStyles: Record<ButtonSize, string> = {
     small: 'px-3 py-1.5 text-sm',
