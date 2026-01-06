@@ -59,6 +59,12 @@ function App() {
                 variant="primary"
                 size="medium"
                 className="z-10 -mt-5 transition-transform hover:scale-105"
+                onClick={() =>
+                  document
+                    .getElementById('pets')
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                }
+                ariaLabel="Find Your Best Friend"
               >
                 Find Your Best Friend
               </Button>
