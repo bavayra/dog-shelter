@@ -49,7 +49,7 @@ const PhotoCarousel = () => {
       </div>
       <button
         onClick={prevSlide}
-        className="bg-primary-200 hover:bg-primary-500 absolute top-1/2 left-4 -translate-y-1/2 rounded-full p-3 shadow-lg transition-all hover:scale-110"
+        className="bg-primary-200 hover:bg-primary-500 absolute top-1/2 left-2 -translate-y-1/2 rounded-full p-1 shadow-lg transition-all hover:scale-110"
         aria-label="Previous image"
       >
         <svg
@@ -69,7 +69,7 @@ const PhotoCarousel = () => {
       </button>
       <button
         onClick={nextSlide}
-        className="bg-primary-200 hover:bg-primary-500 absolute top-1/2 right-4 -translate-y-1/2 rounded-full p-3 shadow-lg transition-all hover:scale-110"
+        className="bg-primary-200 hover:bg-primary-500 absolute top-1/2 right-2 -translate-y-1/2 rounded-full p-1 shadow-lg transition-all hover:scale-110"
         aria-label="Next image"
       >
         <svg
