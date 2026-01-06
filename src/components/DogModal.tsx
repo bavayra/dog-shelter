@@ -107,10 +107,23 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       >
         <button
           onClick={onClose}
-          aria-label="Close modal"
+          aria-label="Close dog details modal"
           className="text-primary-500 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
-          ×
+          <svg
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </button>
 
         <div className="relative h-70 overflow-hidden rounded-t-2xl">
