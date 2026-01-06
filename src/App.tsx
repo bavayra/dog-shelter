@@ -36,19 +36,19 @@ function App() {
             <div className="glass-card text-primary-700 3xs:mt-4 relative z-10 mx-auto my-auto mt-8 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
               <p className="letter-spacing-wider mb-2">
                 Dogs in Rotvodom Now:{' '}
-                <span className="text-accent-500">
+                <span className="text-primary-900">
                   {shelterStats.totalDogsNow}{' '}
                 </span>
               </p>
               <p className="mb-2">
                 Dogs Adopted This Year:{' '}
-                <span className="text-accent-500">
+                <span className="text-primary-900">
                   {shelterStats.dogsAdoptedThisYear}
                 </span>
               </p>
               <p className="mb-2">
                 Total Dogs Adopted:{' '}
-                <span className="text-accent-500">
+                <span className="text-primary-900">
                   {shelterStats.dogsAdoptedTotal}
                 </span>
               </p>
@@ -77,7 +77,7 @@ function App() {
                 on the{' '}
                 <a
                   href="#help"
-                  className="hover:text-accent-500 font-bold underline"
+                  className="hover:text-primary-700 font-bold underline"
                   aria-label="Go to How to Help section"
                 >
                   generosity
