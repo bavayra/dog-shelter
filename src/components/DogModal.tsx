@@ -47,12 +47,16 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
     if (!isOpen || !modalRef.current) return;
 
     const modal = modalRef.current;
+    const closeButton = modal.querySelector(
+      '[aria-label*="Close"]'
+    ) as HTMLElement;
+    closeButton?.focus();
+
     const focusableElements = modal.querySelectorAll<HTMLElement>(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
-    firstElement?.focus();
 
     const handleTab = (e: KeyboardEvent) => {
       if (e.key !== 'Tab') return;
