@@ -43,10 +43,7 @@ const DogGrid = () => {
         onReset={resetFilters}
       />
       {!isLoading && (
-        <p
-          className="3xs:text-md mb-4 text-lg text-neutral-700"
-          aria-live="polite"
-        >
+        <p className="typography-body mb-4 text-center" aria-live="polite">
           Found {filteredDogs.length}{' '}
           {filteredDogs.length === 1 ? 'dog' : 'dogs'}
         </p>
@@ -78,7 +75,7 @@ const DogGrid = () => {
           )}
         </>
       ) : (
-        <p className="text-center text-lg text-neutral-500">
+        <p className="typography-large text-center">
           No dogs found. Try adjusting your filters.
         </p>
       )}
