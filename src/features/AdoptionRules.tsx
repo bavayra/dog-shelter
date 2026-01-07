@@ -15,11 +15,9 @@ const AdoptionRules = () => {
   return (
     <section id="adoption-rules" className="bg-neutral-50 py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-primary-500 mb-6 text-center text-3xl font-bold">
-          Adoption Rules
-        </h2>
+        <h2 className="typography-h2 mb-0 text-center">Adoption Rules</h2>
 
-        <p className="text-md mb-8 text-center text-neutral-600">
+        <p className="typography-large mt-2 mb-6 text-center">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
