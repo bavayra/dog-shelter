@@ -15,12 +15,10 @@ const Header = () => {
           <img
             src={LogoIcon}
             alt="Rotvodom Dog Shelter Logo"
-            className="border-primary-500 3xs:h-12 3xs:w-12 h-16 w-16 rounded-full border-2 bg-transparent object-center px-1 py-2"
+            className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2"
           />
           <div className="flex items-center">
-            <h1 className="text-primary-500 3xs:text-xl 3xs:mr-18 mr-30 w-auto text-2xl font-bold md:text-3xl">
-              {APP_NAME}
-            </h1>
+            <h1 className="typography-h1 mr-22 w-auto">{APP_NAME}</h1>
           </div>
           <a
             href="#hero"
@@ -28,7 +26,7 @@ const Header = () => {
             aria-label="Go to home section"
           >
             <HomeIcon
-              className="3xs:h-6 3xs:w-6 hover:text-primary-700 text-primary-500 h-10 w-10 cursor-pointer object-contain transition hover:scale-115"
+              className="hover:text-primary-700 text-primary-500 h-6 w-6 cursor-pointer object-contain transition hover:scale-115"
               aria-label="Home"
             />
           </a>
