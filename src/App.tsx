@@ -23,17 +23,20 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="3xs:mt-6 2xs:mt-15 from-primary-500 to-primary-50 relative mt-16 min-h-screen bg-linear-to-b px-4 pt-16 pb-24 md:min-h-svh"
+            className="from-primary-500 to-primary-50 relative mt-6 min-h-screen bg-linear-to-b px-4 pt-16 pb-24 md:min-h-svh"
           >
             <RottweilerBg
               aria-hidden="true"
-              className="text-primary-300 3xs:-top-58 pointer-events-none absolute -top-56 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl"
+              className="text-primary-300 pointer-events-none absolute -top-50 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl"
             />
-            <h2 className="text-primary-700 3xs:text-4xl 3xs:mt-12 relative z-10 mx-0 mt-10 w-full text-center text-5xl font-medium">
+            <h2 className="text-primary-700 relative z-10 mx-0 mt-12 w-full text-center text-4xl font-bold md:text-5xl lg:text-6xl">
+              {' '}
+              {/*I didn't use typography class because this h2 has to be
+              different*/}{' '}
               Give a Shelter Dog a Loving Home
             </h2>
 
-            <div className="glass-card text-primary-700 3xs:mt-4 relative z-10 mx-auto my-auto mt-8 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
+            <div className="glass-card text-primary-700 relative z-10 mx-auto my-auto mt-4 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
               <p className="letter-spacing-wider mb-2">
                 Dogs in Rotvodom Now:{' '}
                 <span className="text-primary-900">
@@ -70,7 +73,7 @@ function App() {
               </Button>
             </div>
             <div className="relative z-10 flex justify-center">
-              <h3 className="text-primary-500 3xs:mt-5 3xs:text-md mt-7 text-center text-lg font-semibold">
+              <p className="typography-large mt-8 text-center">
                 Left behind and waiting each day-many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -83,11 +86,11 @@ function App() {
                   generosity
                 </a>{' '}
                 of people.
-              </h3>
+              </p>
             </div>
             <SocialLinks
               size="md"
-              className="mt-8 gap-5"
+              className="mt-10 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -96,7 +99,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="text-primary-500 3xs:text-4xl text-center text-5xl font-bold"
+                className="typography-h2 mt-12 mb-8 text-center"
               >
                 Our Pets
               </h2>
