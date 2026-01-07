@@ -25,7 +25,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-accent-500 bg-primary-500 hover:bg-primary-700 3xs:top-19 fixed top-22 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
+        className="border-accent-500 bg-primary-500 hover:bg-primary-700 fixed top-19 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
@@ -53,11 +53,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 3xs:top-16 fixed top-20 bottom-0 left-0 z-50 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 ${
+        className={`bg-primary-500 fixed top-16 bottom-0 left-0 z-50 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
       >
-        <nav className="relative p-6">
+        <nav className="relative p-4">
           <h2 className="mb-4 text-lg font-bold text-neutral-100">
             NAVIGATION
           </h2>
@@ -68,7 +68,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 key={item.id}
                 href={item.href}
                 aria-label={`Go to ${item.label} section`}
-                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-4 py-3 text-neutral-100 transition-colors hover:scale-110"
+                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-100 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
@@ -100,7 +100,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           </svg>
         </button>
         <div
-          className="paw-pattern 3xs:h-100 pointer-events-none absolute left-0 z-0 w-full"
+          className="paw-pattern pointer-events-none absolute right-6 z-0 h-100 w-full"
           style={{ bottom: '0' }}
         ></div>
       </aside>
