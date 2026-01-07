@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`3xs:text-xs rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+          className={`rounded-lg px-3 py-2 text-xs font-medium transition-colors ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
@@ -56,23 +56,19 @@ const DogFilters = ({
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-4">
-        <h2 className="text-primary-700 text-2xl font-bold">Filter Dogs</h2>
+        <h3 className="typography-h3 mb-4">Filter Dogs</h3>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label className="3xs:text-md mb-2 block text-xl font-semibold text-neutral-700">
-            Age:
-          </label>
+          <label className="typography-small mb-2 block">Age:</label>
           <div className="flex flex-wrap gap-2">
             {renderFilterButtons(AGE_FILTER_OPTIONS, filters.age, onAgeChange)}
           </div>
         </div>
 
         <div>
-          <label className="3xs:text-md mb-2 block text-xl font-semibold text-neutral-700">
-            Gender:
-          </label>
+          <label className="typography-small mb-2 block">Gender:</label>
           <div className="flex flex-wrap gap-2">
             {renderFilterButtons(
               GENDER_FILTER_OPTIONS,
@@ -83,9 +79,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="3xs:text-md mb-2 block text-xl font-semibold text-neutral-700">
-            Breed:
-          </label>
+          <label className="typography-small mb-2 block">Breed:</label>
           <div className="flex flex-wrap gap-2">
             {renderFilterButtons(
               BREED_FILTER_OPTIONS,
@@ -96,9 +90,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="3xs:text-md mb-2 block text-xl font-semibold text-neutral-700">
-            Health:
-          </label>
+          <label className="typography-small mb-2 block">Health:</label>
           <div className="flex flex-wrap gap-2">
             {renderFilterButtons(
               HEALTH_FILTER_OPTIONS,
@@ -109,7 +101,7 @@ const DogFilters = ({
         </div>
       </div>
 
-      <div className="3xs:mt-2 mt-6 flex justify-end">
+      <div className="mt-2 flex justify-end">
         <Button
           onClick={onReset}
           aria-label="Reset filters"
