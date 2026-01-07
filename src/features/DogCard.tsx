@@ -54,7 +54,7 @@ const DogCard = memo((dog: Dog) => {
           <div
             className={`absolute top-3 right-3 ${genderBadgeColor} flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold tracking-wider text-white shadow-lg`}
           >
-            <span className="text-lg">{genderSymbol}</span>
+            <span className="text-sm">{genderSymbol}</span>
             <span>{gender}</span>
           </div>
           {isAdopted && (
@@ -64,8 +64,8 @@ const DogCard = memo((dog: Dog) => {
           )}
         </div>
         <div className="flex flex-1 flex-col p-3">
-          <h3 className="text-primary-700 mb-3 text-2xl font-bold">{name}</h3>
-          <div className="text-md mb-4 flex flex-wrap items-center gap-4 text-neutral-700">
+          <h3 className="typography-h3 mb-3">{name}</h3>
+          <div className="mb-4 flex flex-wrap items-center gap-4 text-base text-neutral-700">
             <span className="flex items-center gap-1.5">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -80,11 +80,11 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 text-md mb-4 inline-flex items-center gap-2 self-start rounded-full p-0 font-medium">
+            <div className="bg-color-accent-200 text-primary-700 mb-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
               <span>{health}</span>
             </div>
           )}
-          <p className="text-primary-700 mb-6 line-clamp-3 flex-1 text-sm leading-relaxed">
+          <p className="typography-small mb-6 line-clamp-3 flex-1">
             {description}
           </p>
           <Button
