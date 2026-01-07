@@ -64,8 +64,8 @@ const DogCard = memo((dog: Dog) => {
           )}
         </div>
         <div className="flex flex-1 flex-col p-3">
-          <h3 className="typography-h3 mb-3">{name}</h3>
-          <div className="mb-4 flex flex-wrap items-center gap-4 text-base text-neutral-700">
+          <h3 className="typography-h3 mb-1">{name}</h3>
+          <div className="mb-2 flex flex-wrap items-center gap-4 text-base text-neutral-700">
             <span className="flex items-center gap-1.5">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -80,11 +80,11 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 mb-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
+            <div className="bg-color-accent-200 text-primary-700 mb-2 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
               <span>{health}</span>
             </div>
           )}
-          <p className="typography-small mb-6 line-clamp-3 flex-1">
+          <p className="typography-small mb-4 line-clamp-3 flex-1">
             {description}
           </p>
           <Button

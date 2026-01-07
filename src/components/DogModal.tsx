@@ -150,20 +150,17 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
         </div>
 
         <div className="p-4">
-          <h2
-            id="modal-title"
-            className="text-primary-700 mb-4 text-3xl font-bold"
-          >
+          <h3 id="modal-title" className="typography-h3 mb-4">
             {name}
-          </h2>
+          </h3>
           <div
-            className={`absolute top-[18.5rem] right-4 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-wider text-white shadow-lg`}
+            className={`absolute top-74 right-4 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-wider text-white shadow-lg`}
           >
-            <span className="text-md">{genderSymbol}</span>
+            <span className="text-sm">{genderSymbol}</span>
             <span className="text-sm font-normal">{gender}</span>
           </div>
 
-          <div className="text-md mb-4 flex flex-wrap gap-3 text-neutral-700">
+          <div className="typography-small mb-4 flex flex-wrap gap-3">
             <div className="flex items-center gap-2">
               <span role="img" aria-label="birthday cake" className="text-xl">
                 🎂
@@ -188,7 +185,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
           <div className="mb-8">
             <div
-              className="text-primary-700 text-justify text-base leading-normal"
+              className="typography-body px-1 text-justify font-semibold"
               dangerouslySetInnerHTML={{ __html: sanitized }}
             />
           </div>
