@@ -1,10 +1,10 @@
-import type { InputHTMLAttributes } from 'react';
+import type { ChangeEvent, InputHTMLAttributes } from 'react';
 
 interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   id: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 const TextInput = ({
   label,
@@ -20,13 +20,12 @@ const TextInput = ({
 }: TextInputProps) => {
   const baseInputStyles = `
     w-full
-    mb-7
+    mb-4
     bg-transparent
     border-0
     border-b-2
     border-neutral-500
-    py-2
-    text-base
+    typography-large
     focus:outline-none
     focus:border-primary-500
     focus:ring-0
@@ -36,10 +35,7 @@ const TextInput = ({
     .replace(/\s+/g, ' ');
   return (
     <div>
-      <label
-        htmlFor={id}
-        className="block text-primary-700 text-md font-semibold"
-      >
+      <label htmlFor={id} className="typography-small block">
         {label}
       </label>
 
