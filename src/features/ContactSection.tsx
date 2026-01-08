@@ -56,13 +56,14 @@ const ContactSection = () => {
   const MIN_SUBMIT_INTERVAL = 30000;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     const now = Date.now();
     if (now - lastSubmitTime < MIN_SUBMIT_INTERVAL) {
       setErrorMessage('Please wait 30 seconds before submitting again.');
       return;
     }
-    setLastSubmitTime(now);
-    e.preventDefault();
+
     setSuccessMessage('');
     setErrorMessage('');
     setErrors({});
@@ -107,9 +108,7 @@ const ContactSection = () => {
   };
   return (
     <section id="contact" className="bg-primary-200 pt-8 pb-10">
-      <h2 className="text-primary-500 3xs:text-4xl mb-8 text-center text-5xl font-bold">
-        Contact Us
-      </h2>
+      <h2 className="typography-h2 mb-4 text-center">Contact Us</h2>
       <div className="flex justify-center">
         <div className="w-full max-w-md px-6">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
@@ -169,7 +168,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="text-primary-700 text-md block font-semibold"
+                className="typography-small mb-4 block"
               >
                 Message
               </label>
@@ -180,7 +179,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="placeholder:text-primary-900 text-md focus:border-primary-500 mb-7 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-base focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="placeholder:text-primary-900 focus:border-primary-500 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-base focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">
