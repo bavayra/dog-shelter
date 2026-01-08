@@ -16,10 +16,10 @@ const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 justify-items-center gap-8 md:grid-cols-3 md:justify-items-start">
+        <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-3 md:justify-items-start">
           <div>
             <h3 className="mb-4 text-center text-xl font-bold">{APP_NAME}</h3>
-            <p className="mb-2 text-center text-lg text-neutral-100">
+            <p className="typography-small text-center">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
@@ -27,7 +27,7 @@ const Footer = () => {
             <h3 className="mb-2 text-center text-xl font-bold">Contact Us</h3>
             <div className="flex flex-col items-center space-y-1 text-neutral-500">
               <p className="flex items-center gap-2">
-                <EmailIcon className="h-5 w-5" aria-hidden="true" />
+                <EmailIcon className="h-4 w-4" aria-hidden="true" />
                 <a
                   rel="noopener noreferrer"
                   href={`mailto:${CONTACT_EMAIL}`}
@@ -37,7 +37,7 @@ const Footer = () => {
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <PhoneIcon className="h-5 w-5" aria-hidden="true" />
+                <PhoneIcon className="h-4 w-4" aria-hidden="true" />
                 <a
                   href={`tel:${CONTACT_PHONE}`}
                   rel="noopener noreferrer"
@@ -47,23 +47,23 @@ const Footer = () => {
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <LocationIcon className="h-5 w-5" aria-hidden="true" />
+                <LocationIcon className="h-4 w-4" aria-hidden="true" />
                 <span>{CONTACT_ADDRESS}</span>
               </p>
             </div>
           </div>
 
-          <div className="mt-2">
+          <div>
             <h3 className="mb-4 text-center text-xl font-bold">Follow Us</h3>
-            <SocialLinks size="md" />
+            <SocialLinks size="sm" />
           </div>
         </div>
 
-        <div className="border-primary-900 mt-6 border-t pt-2 text-center text-lg text-neutral-300">
+        <div className="border-primary-900 mt-6 border-t pt-2 text-center text-base text-neutral-300">
           <p>
             Made with
             <HeartIcon
-              className="text-primary-500 m-2 inline h-5 w-5"
+              className="text-primary-500 m-2 inline h-4 w-4"
               aria-hidden="true"
             />
             for dogs in need
