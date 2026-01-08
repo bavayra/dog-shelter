@@ -23,20 +23,20 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-500 to-primary-50 relative mt-6 min-h-screen bg-linear-to-b px-4 pt-16 pb-24 md:min-h-svh"
+            className="from-primary-500 to-primary-50 relative mt-6 min-h-screen bg-linear-to-b px-4 pt-16 pb-24"
           >
             <RottweilerBg
               aria-hidden="true"
-              className="text-primary-300 pointer-events-none absolute -top-50 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl"
+              className="text-primary-300 xs:-top-56 pointer-events-none absolute -top-50 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl"
             />
-            <h2 className="text-primary-700 relative z-10 mx-0 mt-12 w-full text-center text-4xl font-bold md:text-5xl lg:text-6xl">
+            <h2 className="text-primary-700 xs:mt-16 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-12 w-full text-center text-4xl font-bold">
               {' '}
               {/*I didn't use typography class because this h2 has to be
               different*/}{' '}
               Give a Shelter Dog a Loving Home
             </h2>
 
-            <div className="glass-card text-primary-700 relative z-10 mx-auto my-auto mt-4 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
+            <div className="glass-card text-primary-700 xs:mt-8 relative z-10 mx-auto my-auto mt-4 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
               <p className="letter-spacing-wider mb-2">
                 Dogs in Rotvodom Now:{' '}
                 <span className="text-primary-900">
@@ -73,7 +73,7 @@ function App() {
               </Button>
             </div>
             <div className="relative z-10 flex justify-center">
-              <p className="typography-large mt-8 text-center">
+              <p className="typography-large xs:text-lg mt-8 text-center">
                 Left behind and waiting each day-many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -89,7 +89,7 @@ function App() {
               </p>
             </div>
             <SocialLinks
-              size="md"
+              size="lg"
               className="mt-10 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
@@ -97,10 +97,7 @@ function App() {
           </section>
           <section id="pets" className="bg-primary-50 scroll-mt-18">
             <div className="container mx-auto px-4">
-              <h2
-                id="pets-heading"
-                className="typography-h2 mt-12 mb-8 text-center"
-              >
+              <h2 id="pets-heading" className="typography-h2 m-0 text-center">
                 Our Pets
               </h2>
             </div>
