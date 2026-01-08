@@ -18,7 +18,9 @@ const Header = () => {
             className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2"
           />
           <div className="flex items-center">
-            <h1 className="typography-h1 mr-22 w-auto">{APP_NAME}</h1>
+            <h1 className="typography-h1 xs:text-2xl xs:mr-30 mr-22 w-auto">
+              {APP_NAME}
+            </h1>
           </div>
           <a
             href="#hero"
@@ -26,7 +28,7 @@ const Header = () => {
             aria-label="Go to home section"
           >
             <HomeIcon
-              className="hover:text-primary-700 text-primary-500 h-6 w-6 cursor-pointer object-contain transition hover:scale-115"
+              className="hover:text-primary-700 text-primary-500 xs:h-8 xs:w-8 h-6 w-6 cursor-pointer object-contain transition hover:scale-115"
               aria-label="Home"
             />
           </a>
