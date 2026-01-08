@@ -52,7 +52,7 @@ const DogFilters = ({
 
   return (
     <section
-      className="mb-8 rounded-lg bg-white p-6 shadow-md"
+      className="mb-8 rounded-lg bg-white px-4 py-6 shadow-md"
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-4">
@@ -101,7 +101,7 @@ const DogFilters = ({
         </div>
       </div>
 
-      <div className="mt-2 flex justify-end">
+      <div className="xs:mt-6 mt-2 flex justify-end">
         <Button
           onClick={onReset}
           aria-label="Reset filters"

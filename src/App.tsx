@@ -97,7 +97,10 @@ function App() {
           </section>
           <section id="pets" className="bg-primary-50 scroll-mt-18">
             <div className="container mx-auto px-4">
-              <h2 id="pets-heading" className="typography-h2 m-0 text-center">
+              <h2
+                id="pets-heading"
+                className="typography-h2 xs:text-5xl m-0 text-center"
+              >
                 Our Pets
               </h2>
             </div>
