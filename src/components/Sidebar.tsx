@@ -53,7 +53,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 fixed top-16 bottom-0 left-0 z-50 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 ${
+        className={`bg-primary-500 fixed top-16 bottom-0 left-0 z-50 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
       >
