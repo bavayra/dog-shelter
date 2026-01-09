@@ -18,7 +18,7 @@ const Header = () => {
             className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2"
           />
           <div className="flex items-center">
-            <h1 className="typography-h1 xs:text-2xl xs:mr-30 mr-22 w-auto">
+            <h1 className="typography-h1 xs:text-2xl xs:mr-30 mr-22 w-auto sm:mr-40">
               {APP_NAME}
             </h1>
           </div>
