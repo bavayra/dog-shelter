@@ -33,7 +33,7 @@ const Button = ({
       'bg-transparent border-2 border-accent-200 text-accent-500 hover:scale-105 hover:bg-primary-100 focus:ring-accent-200',
     filter: active
       ? 'bg-primary-500 text-primary-700  focus:ring-primary-500 font-semibold'
-      : 'bg-primary-200 text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm font-semibold focus:ring-primary-500',
+      : 'bg-primary-200 sm:text-sm text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm font-semibold focus:ring-primary-500',
   };
   const sizeStyles: Record<ButtonSize, string> = {
     small: 'px-3 py-1.5 text-sm',
