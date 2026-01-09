@@ -110,8 +110,3 @@ Dog Shelter is a web application designed to help animal shelters manage their d
   Alix Bell — https://github.com/bavayra
 
   ***
-
-  If you want, I can also:
-  - translate the README into Russian
-  - add a short usage section for the image processing script
-  - add badges for CI or coverage if you use them
