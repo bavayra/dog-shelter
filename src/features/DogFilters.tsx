@@ -52,7 +52,7 @@ const DogFilters = ({
 
   return (
     <section
-      className="mb-8 rounded-lg bg-white px-4 py-6 shadow-md"
+      className="mb-8 rounded-lg bg-white px-4 py-6 shadow-md sm:mx-4"
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-4">
