@@ -73,7 +73,7 @@ function App() {
               </Button>
             </div>
             <div className="relative z-10 flex justify-center">
-              <p className="typography-large xs:text-lg mt-8 text-center">
+              <p className="typography-large xs:text-lg mt-8 text-center sm:mx-8">
                 Left behind and waiting each day-many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
