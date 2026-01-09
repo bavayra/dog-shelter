@@ -6,7 +6,7 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <h2 className="typography-h2 mb-4 text-center">About Us</h2>
 
-        <div className="bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center">
+        <div className="bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one
