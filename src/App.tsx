@@ -27,7 +27,7 @@ function App() {
           >
             <RottweilerBg
               aria-hidden="true"
-              className="text-primary-300 xs:-top-56 pointer-events-none absolute -top-50 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl"
+              className="text-primary-300 xs:-top-56 pointer-events-none absolute -top-50 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl sm:-top-50"
             />
             <h2 className="text-primary-700 xs:mt-16 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-12 w-full text-center text-4xl font-bold">
               {' '}
@@ -36,8 +36,8 @@ function App() {
               Give a Shelter Dog a Loving Home
             </h2>
 
-            <div className="glass-card text-primary-700 xs:mt-8 relative z-10 mx-auto my-auto mt-4 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold tracking-wide">
-              <p className="letter-spacing-wider mb-2">
+            <div className="glass-card text-primary-700 xs:mt-8 relative z-10 mx-auto my-auto mt-4 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold sm:w-xs sm:text-xl">
+              <p className="mb-2">
                 Dogs in Rotvodom Now:{' '}
                 <span className="text-primary-900">
                   {shelterStats.totalDogsNow}{' '}
@@ -61,7 +61,7 @@ function App() {
               <Button
                 variant="primary"
                 size="medium"
-                className="z-10 -mt-5 transition-transform hover:scale-105"
+                className="xs:px-6 xs:py-3 z-10 -mt-5 transition-transform hover:scale-105"
                 onClick={() =>
                   document
                     .getElementById('pets')
