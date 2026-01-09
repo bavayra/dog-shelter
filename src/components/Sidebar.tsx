@@ -57,7 +57,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
       >
-        <nav className="relative p-4">
+        <nav className="relative p-4 sm:mt-4">
           <h2 className="mb-4 text-lg font-bold text-neutral-100">
             NAVIGATION
           </h2>
@@ -100,7 +100,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           </svg>
         </button>
         <div
-          className="paw-pattern pointer-events-none absolute right-6 z-0 h-100 w-full"
+          className="paw-pattern pointer-events-none absolute right-6 z-0 h-100 w-full sm:-mb-36 sm:h-full"
           style={{ bottom: '0' }}
         ></div>
       </aside>
