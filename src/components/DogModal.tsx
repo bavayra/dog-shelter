@@ -98,7 +98,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm sm:px-2"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -185,14 +185,14 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
           <div className="mb-8">
             <div
-              className="typography-body px-1 text-justify font-semibold"
+              className="typography-body px-2 text-justify font-semibold"
               dangerouslySetInnerHTML={{ __html: sanitized }}
             />
           </div>
 
           <Button
             variant={isAdopted ? 'secondary' : 'primary'}
-            size="large"
+            size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
             className="w-full"
