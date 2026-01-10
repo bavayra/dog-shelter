@@ -104,6 +104,9 @@ function App() {
             <DogGrid />
           </section>
           <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
+            <div className="relative">
+              <div className="bg-primary-500 pointer-events-none absolute -top-8 -left-30 z-10 h-64 w-64 rounded-full opacity-20"></div>
+            </div>
             <HowToHelp />
             <AdoptionRules />
             <AboutUs />
