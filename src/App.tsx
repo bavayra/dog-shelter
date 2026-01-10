@@ -7,7 +7,6 @@ import Button from '@/components/Button';
 import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
-import RottweilerBg from '@/assets/icons/rottweiler-vector-bg.svg?react';
 
 const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
@@ -23,12 +22,8 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-500 to-primary-50 relative mt-6 min-h-screen bg-linear-to-b px-4 pt-16 pb-24"
+            className="from-primary-300 to-primary-50 relative mt-6 min-h-screen bg-linear-to-b px-4 pt-16 pb-24"
           >
-            <RottweilerBg
-              aria-hidden="true"
-              className="text-primary-300 xs:-top-56 pointer-events-none absolute -top-50 right-1 z-0 h-full w-full transform opacity-95 drop-shadow-2xl sm:-top-50"
-            />
             <h2 className="text-primary-700 xs:mt-16 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-12 w-full text-center text-4xl font-bold">
               {' '}
               {/*I didn't use typography class because this h2 has to be
