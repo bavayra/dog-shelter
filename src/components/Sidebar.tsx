@@ -75,7 +75,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                   className="h-6 w-6 text-neutral-300 transition-transform group-hover:scale-110"
                   aria-hidden="true"
                 />
-                <span className="text-lg font-bold">{item.label}</span>
+                <span className="text-lg font-semibold">{item.label}</span>
               </a>
             );
           })}
