@@ -18,9 +18,12 @@
   --color-neutral-500: #979cb0;
   --color-neutral-700: #747787;
 
-  --breakpoint-3xs: 320px;
-  --breakpoint-2xs: 375px;
-  --breakpoint-xs: 425px;
+  /*--DEFAULT: 320px;*/
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 425px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
 :root {
@@ -48,7 +51,7 @@ html {
 
 @layer components {
   .paw-pattern {
-    background-image: url('src/assets/icons/paw-trail-pattern.svg');
+    background-image: url('/src/assets/icons/paw-trail-pattern.svg');
     background-repeat: no-repeat;
     background-size: 250px 750px;
     background-position: left center;
@@ -60,5 +63,29 @@ html {
     backdrop-filter: blur(1px) saturate(100%);
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  }
+
+  .typography-h1 {
+    @apply text-primary-500 text-xl leading-tight font-bold;
+  }
+
+  .typography-h2 {
+    @apply text-primary-500 text-4xl leading-snug font-bold;
+  }
+
+  .typography-h3 {
+    @apply text-primary-700 text-2xl leading-normal font-bold;
+  }
+
+  .typography-large {
+    @apply text-primary-500 text-base leading-normal font-medium;
+  }
+
+  .typography-body {
+    @apply text-base leading-normal text-neutral-700;
+  }
+
+  .typography-small {
+    @apply text-sm leading-snug font-semibold text-neutral-700;
   }
 }

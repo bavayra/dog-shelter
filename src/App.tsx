@@ -92,11 +92,11 @@ function App() {
               aria-hidden="true"
             />
           </section>
-          <section id="pets" className="bg-primary-50 scroll-mt-18">
+          <section id="pets" className="bg-primary-50 scroll-mt-10">
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h2 xs:text-5xl m-0 text-center"
+                className="typography-h2 xs:text-5xl m-0 pt-10 text-center"
               >
                 Our Pets
               </h2>

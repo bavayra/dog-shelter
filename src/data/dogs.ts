@@ -45,7 +45,7 @@ const pets: Dog[] = [
     gender: 'Girl',
     health: 'Special needs',
     imageUrl: 'dog-birdy.webp',
-    description: `Most of my life felt like a real nightmare. I never went for walks or played outside, never felt a gentle touch… all they wanted from me was to have puppies. I was scared of everything... But now I have learnt that not all humans are bad. Where are you, my perfect human?,
+    description: `Most of my life felt like a real nightmare. I never went for walks or played outside, never felt a gentle touch… all they wanted from me was to have puppies. I was scared of everything... But now I have learnt that not all humans are bad. Where are you, my perfect human?
       -My food: I eat soft food only.
       -My health: I am completely deaf and need help while walking.
       -Doghouse: I would love to live inside your home.

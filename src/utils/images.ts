@@ -9,7 +9,7 @@ for (const path in imageModules) {
   const fileName = path.split('/').pop();
   const module = imageModules[path] as { default: string };
 
-  if (fileName && module) {
+  if (fileName && module?.default) {
     dogImages[fileName] = module.default;
   }
 }

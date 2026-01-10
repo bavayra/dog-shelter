@@ -33,7 +33,7 @@ const DogGrid = () => {
   const hasMoreDogs = filteredDogs.length > INITIAL_DISPLAY_COUNT;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4">
       <DogFilters
         filters={filters}
         onAgeChange={setAgeFilter}
@@ -62,12 +62,12 @@ const DogGrid = () => {
             ))}
           </div>
           {!showAll && hasMoreDogs && (
-            <div className="mt-8 text-center">
+            <div className="mt-6 text-center">
               <Button
                 onClick={() => setShowAll(true)}
                 aria-label="View all pets"
                 variant="secondary"
-                size="large"
+                size="medium"
               >
                 View All Pets
               </Button>

@@ -23,7 +23,7 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    'font-semibold rounded-lg transform transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+    'font-semibold rounded-full transform transition-all duration-200 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
       'bg-primary-700 text-white hover:bg-primary-900 hover:scale-105 md:text-sm focus:ring-primary-500 active:bg-primary-800',

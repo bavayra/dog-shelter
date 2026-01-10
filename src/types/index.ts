@@ -18,7 +18,7 @@ export interface DogFilters {
 }
 
 export interface GalleryImage {
-  id: number;
+  id?: number;
   imageUrl: string;
   caption: string;
 }
