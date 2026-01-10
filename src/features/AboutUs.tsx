@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="bg-primary-50 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="typography-h2 mb-4 text-center">About Us</h2>
+        <h2 className="typography-h2 z-12 mb-4 text-center">About Us</h2>
 
         <div className="bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4">
           <p>
@@ -27,7 +27,9 @@ const AboutUs = () => {
             background or circumstances.
           </p>
         </div>
-
+        <div className="relative">
+          <div className="pointer-events-none absolute -top-8 -right-40 z-9 h-72 w-72 rounded-full bg-neutral-500 opacity-40"></div>
+        </div>
         <h3 className="typography-h3 text-primary-500 my-6 text-center">
           Moments from Rotvodom
         </h3>

@@ -25,7 +25,7 @@ const PhotoCarousel = () => {
   const resolvedImageUrl = getGalleryImage(currentImage.imageUrl);
 
   return (
-    <div className="bg-primary-50 relative mx-auto max-w-5xl">
+    <div className="bg-primary-50 relative z-10 mx-auto max-w-5xl rounded-2xl">
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         Slide {currentIndex + 1} of {shelterGallery.length}:{' '}
         {currentImage.caption}

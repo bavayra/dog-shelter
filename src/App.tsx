@@ -109,6 +109,10 @@ function App() {
             </div>
             <HowToHelp />
             <AdoptionRules />
+            <div className="relative">
+              <div className="bg-primary-700 pointer-events-none absolute top-18 -left-4 z-10 h-20 w-20 rounded-full opacity-40"></div>
+              <div className="bg-primary-500 pointer-events-none absolute top-21 left-8 z-10 h-12 w-12 rounded-full opacity-90"></div>
+            </div>
             <AboutUs />
             <ContactSection />
           </Suspense>
