@@ -58,9 +58,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
         } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
       >
         <nav className="relative p-4 sm:mt-4">
-          <h2 className="mb-4 text-lg font-bold text-neutral-100">
-            NAVIGATION
-          </h2>
+          <h2 className="mb-4 text-lg font-bold text-neutral-50">NAVIGATION</h2>
           {NAVIGATION_ITEMS.map((item) => {
             const IconComponent = iconMap[item.id];
             return (
@@ -68,11 +66,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 key={item.id}
                 href={item.href}
                 aria-label={`Go to ${item.label} section`}
-                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-100 transition-colors hover:scale-110"
+                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-50 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="h-6 w-6 text-neutral-300 transition-transform group-hover:scale-110"
+                  className="h-6 w-6 text-neutral-50 transition-transform group-hover:scale-110"
                   aria-hidden="true"
                 />
                 <span className="text-lg font-semibold">{item.label}</span>
