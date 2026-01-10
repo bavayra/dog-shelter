@@ -7,6 +7,7 @@ import Button from '@/components/Button';
 import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
+import RottweilerImage from '@/assets/icons/rott-image-bg.avif';
 
 const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
@@ -22,33 +23,25 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 relative mt-6 min-h-screen bg-linear-to-b px-4 pt-16 pb-24"
+            className="from-primary-300 to-primary-50 border-primary-500 relative min-h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
           >
-            <h2 className="text-primary-700 xs:mt-16 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-12 w-full text-center text-4xl font-bold">
+            <h2 className="text-primary-700 xs:mt-16 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold">
               {' '}
               {/*I didn't use typography class because this h2 has to be
               different*/}{' '}
               Give a Shelter Dog a Loving Home
             </h2>
+            <div className="bg-primary-500 pointer-events-none absolute top-60 -left-30 h-58 w-58 rounded-full opacity-70"></div>
 
-            <div className="glass-card text-primary-700 xs:mt-8 relative z-10 mx-auto my-auto mt-4 max-w-xl rounded-2xl px-0 py-6 text-center text-lg font-semibold sm:w-xs sm:text-xl">
+            <div className="glass-card text-primary-700 xs:mt-8 text-md relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-xl">
               <p className="mb-2">
-                Dogs in Rotvodom Now:{' '}
-                <span className="text-primary-900">
-                  {shelterStats.totalDogsNow}{' '}
-                </span>
+                DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
               <p className="mb-2">
-                Dogs Adopted This Year:{' '}
-                <span className="text-primary-900">
-                  {shelterStats.dogsAdoptedThisYear}
-                </span>
+                DOGS ADOPTED THIS YEAR: {shelterStats.dogsAdoptedThisYear}
               </p>
               <p className="mb-2">
-                Total Dogs Adopted:{' '}
-                <span className="text-primary-900">
-                  {shelterStats.dogsAdoptedTotal}
-                </span>
+                TOTAL DOGS ADOPTED: {shelterStats.dogsAdoptedTotal}
               </p>
             </div>
 
@@ -56,7 +49,7 @@ function App() {
               <Button
                 variant="primary"
                 size="medium"
-                className="xs:px-6 xs:py-3 z-10 -mt-5 transition-transform hover:scale-105"
+                className="xs:px-6 xs:py-3 z-10 -mt-4 transition-transform hover:scale-105"
                 onClick={() =>
                   document
                     .getElementById('pets')
@@ -67,7 +60,7 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="relative z-10 flex justify-center">
+            <div className="relative z-10 hidden justify-center md:flex">
               <p className="typography-large xs:text-lg mt-8 text-center sm:mx-8">
                 Left behind and waiting each day-many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
@@ -84,10 +77,19 @@ function App() {
               </p>
             </div>
             <SocialLinks
-              size="lg"
+              size="md"
               className="mt-10 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
+            />
+            <div className="bg-primary-500 pointer-events-none absolute top-150 left-30 z-2 h-64 w-64 rounded-full"></div>
+            <div className="bg-primary-300 pointer-events-none absolute top-170 left-15 z-1 h-40 w-40 rounded-full"></div>
+            <div className="bg-primary-200 pointer-events-none absolute top-180 left-8 z-0 h-30 w-30 rounded-full"></div>
+            <img
+              src={RottweilerImage}
+              className="xs:h-64 xs:w-64 absolute -right-10 bottom-0 z-3 h-68 w-68 object-contain sm:h-80 sm:w-80"
+              alt="Rottweiler Dog Illustration"
+              aria-hidden="true"
             />
           </section>
           <section id="pets" className="bg-primary-50 scroll-mt-18">
