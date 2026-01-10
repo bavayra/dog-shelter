@@ -1,8 +1,12 @@
 import Button from '../components/Button';
+import RottweilerPupImage from '@/assets/icons/rott-puppy-bg-image.avif';
 
 const HowToHelp = () => {
   return (
-    <section id="help" className="bg-primary-50 scroll-mt-20 py-6">
+    <section
+      id="help"
+      className="bg-primary-50 relative scroll-mt-20 overflow-hidden pt-6 pb-32"
+    >
       <div className="container mx-auto px-4">
         <h2 className="typography-h2 mb-4 text-center">How to Help ROTVODOM</h2>
         <div className="mx-auto mb-6 max-w-3xl text-center">
@@ -41,6 +45,12 @@ const HowToHelp = () => {
             </Button>
           </a>
         </div>
+        <img
+          src={RottweilerPupImage}
+          alt="Cute Rottweiler Puppy"
+          aria-hidden="true"
+          className="pointer-events-none absolute bottom-0 left-1/2 -z-10 w-full max-w-3xl -translate-x-1/2 object-contain opacity-95"
+        />
       </div>
     </section>
   );
