@@ -1,3 +1,4 @@
+import { DecorativeCircle } from '@/components/DecorativeCircle';
 import PhotoCarousel from './PhotoCarousel';
 
 const AboutUs = () => {
@@ -28,7 +29,14 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="relative">
-          <div className="pointer-events-none absolute -top-8 -right-40 z-9 h-72 w-72 rounded-full bg-neutral-500 opacity-40"></div>
+          <DecorativeCircle
+            size={44}
+            color="neutral-500"
+            top="-32"
+            right="-12"
+            opacity={30}
+            zIndex={5}
+          />
         </div>
         <h3 className="typography-h3 text-primary-500 my-6 text-center">
           Moments from Rotvodom

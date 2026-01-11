@@ -3,6 +3,7 @@ import { sanitizeFormData } from '@/utils/sanitize';
 
 import Button from '@/components/Button';
 import TextInput from '@/components/TextInput';
+import { DecorativeCircle } from '@/components/DecorativeCircle';
 
 const ContactSection = () => {
   const [name, setName] = useState('');
@@ -108,7 +109,19 @@ const ContactSection = () => {
   };
   return (
     <section id="contact" className="bg-primary-200 pt-8 pb-10">
-      <h2 className="typography-h2 mb-4 text-center">Contact Us</h2>
+      <div className="relative">
+        <DecorativeCircle
+          size={10}
+          color="primary-50"
+          top="-2"
+          right="10"
+          zIndex={10}
+          opacity={70}
+        />
+      </div>
+      <h2 className="typography-h2 relative z-11 mb-4 text-center">
+        Contact Us
+      </h2>
       <div className="flex justify-center">
         <div className="w-full max-w-md px-6">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
@@ -186,6 +199,15 @@ const ContactSection = () => {
                   {errors.message}
                 </p>
               )}
+            </div>
+            <div className="relative">
+              <DecorativeCircle
+                size={8}
+                color="primary-500"
+                top="1"
+                left="-2"
+                zIndex={12}
+              />
             </div>
 
             <div className="flex justify-center pt-4">

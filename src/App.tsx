@@ -8,6 +8,7 @@ import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
 import RottweilerImage from '@/assets/icons/rott-image-bg.avif';
+import { DecorativeCircle } from './components/DecorativeCircle';
 
 const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
@@ -31,8 +32,13 @@ function App() {
               different*/}{' '}
               Give a Shelter Dog a Loving Home
             </h2>
-            <div className="bg-primary-500 pointer-events-none absolute top-60 -left-30 h-58 w-58 rounded-full opacity-70"></div>
-
+            <DecorativeCircle
+              size={58}
+              color="primary-500"
+              top="60"
+              left="-30"
+              opacity={70}
+            />
             <div className="glass-card text-primary-700 xs:mt-8 text-md relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-xl">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
@@ -82,9 +88,27 @@ function App() {
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
-            <div className="bg-primary-500 pointer-events-none absolute top-150 left-30 z-2 h-64 w-64 rounded-full"></div>
-            <div className="bg-primary-300 pointer-events-none absolute top-170 left-15 z-1 h-40 w-40 rounded-full"></div>
-            <div className="bg-primary-200 pointer-events-none absolute top-180 left-8 z-0 h-30 w-30 rounded-full"></div>
+            <DecorativeCircle
+              size={64}
+              color="primary-500"
+              top="150"
+              left="30"
+              zIndex={2}
+            />
+            <DecorativeCircle
+              size={40}
+              color="primary-300"
+              top="170"
+              left="15"
+              zIndex={1}
+            />
+            <DecorativeCircle
+              size={30}
+              color="primary-200"
+              top="180"
+              left="8"
+              zIndex={0}
+            />
             <img
               src={RottweilerImage}
               className="xs:h-64 xs:w-64 absolute -right-10 bottom-0 z-3 h-68 w-68 object-contain sm:h-80 sm:w-80"
@@ -105,13 +129,34 @@ function App() {
           </section>
           <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
             <div className="relative">
-              <div className="bg-primary-500 pointer-events-none absolute -top-8 -left-30 z-10 h-64 w-64 rounded-full opacity-20"></div>
+              <DecorativeCircle
+                size={64}
+                color="primary-500"
+                top="-8"
+                left="-30"
+                opacity={20}
+                zIndex={2}
+              />
             </div>
             <HowToHelp />
             <AdoptionRules />
             <div className="relative">
-              <div className="bg-primary-700 pointer-events-none absolute top-18 -left-4 z-10 h-20 w-20 rounded-full opacity-40"></div>
-              <div className="bg-primary-500 pointer-events-none absolute top-21 left-8 z-10 h-12 w-12 rounded-full opacity-90"></div>
+              <DecorativeCircle
+                size={36}
+                color="primary-300"
+                top="14"
+                left="-10"
+                opacity={40}
+                zIndex={10}
+              />
+              <DecorativeCircle
+                size={16}
+                color="primary-500"
+                top="22"
+                left="0"
+                opacity={90}
+                zIndex={10}
+              />
             </div>
             <AboutUs />
             <ContactSection />

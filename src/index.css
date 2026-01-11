@@ -88,4 +88,8 @@ html {
   .typography-small {
     @apply text-sm leading-snug font-semibold text-neutral-700;
   }
+
+  .z-3 {
+    z-index: 3;
+  }
 }
