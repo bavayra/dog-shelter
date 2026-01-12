@@ -5,12 +5,12 @@ const HowToHelp = () => {
   return (
     <section
       id="help"
-      className="bg-primary-50 border-b-primary-500 relative z-1 scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30"
+      className="bg-primary-50 border-b-primary-500 relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:pt-10"
     >
       <div className="z-10 container mx-auto px-4">
-        <h2 className="typography-h2 mb-4 text-center">How to Help ROTVODOM</h2>
-        <div className="mx-auto mb-6 max-w-3xl text-center">
-          <p className="typography-body xs:text-lg mb-4 leading-relaxed">
+        <h2 className="typography-h2 mb-6 text-center">How to Help ROTVODOM</h2>
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <p className="typography-body xs:text-lg mb-2 leading-relaxed">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
             the kindness and generosity of people like{' '}
@@ -28,7 +28,7 @@ const HowToHelp = () => {
           </p>
         </div>
 
-        <div className="mb-4 flex justify-center">
+        <div className="mb-4 flex justify-center sm:mb-0">
           <a
             href="https://qr.nspk.ru/example-link"
             target="_blank"
@@ -36,8 +36,8 @@ const HowToHelp = () => {
             className="inline-block"
           >
             <Button
-              variant="secondary"
-              size="medium"
+              variant="primary"
+              size="large"
               className="flex items-center gap-2"
               ariaLabel="Donate to help our pets button"
             >
@@ -50,7 +50,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 xs:top-119 pointer-events-none absolute top-124 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain"
+        className="from-primary-50 xs:top-119 pointer-events-none absolute top-124 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:top-122 sm:w-110"
       />
     </section>
   );
