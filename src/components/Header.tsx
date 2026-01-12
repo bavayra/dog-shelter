@@ -11,14 +11,14 @@ const Header = () => {
   return (
     <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
       <div className="xs:m-0 container mx-auto px-0 py-2">
-        <div className="ml-2 flex items-center justify-around">
+        <div className="ml-4 flex items-center justify-between">
           <img
             src={LogoIcon}
             alt="Rotvodom Dog Shelter Logo"
             className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2 md:ml-2 md:h-16 md:w-16"
           />
           <div className="flex items-center">
-            <h1 className="typography-h1 xs:text-2xl xs:mr-30 mr-28 w-auto md:hidden">
+            <h1 className="typography-h1 xs:text-2xl xs:mr-30 mr-28 w-auto sm:mr-38 md:hidden">
               {APP_NAME}
             </h1>
           </div>
@@ -55,7 +55,7 @@ const Header = () => {
           </div>
           <a
             href="#hero"
-            className="mr-28 flex items-center justify-end"
+            className="mr-28 flex items-center justify-end sm:mr-8"
             aria-label="Go to home section"
           >
             <HomeIcon
