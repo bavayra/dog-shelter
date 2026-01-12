@@ -13,7 +13,7 @@ const AdoptionRules = () => {
   ];
 
   return (
-    <section id="adoption-rules" className="bg-neutral-50 py-12">
+    <section id="adoption-rules" className="relative z-1 bg-neutral-50 py-12">
       <div className="container mx-auto px-4">
         <h2 className="typography-h2 mb-0 text-center">Adoption Rules</h2>
 
