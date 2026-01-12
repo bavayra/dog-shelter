@@ -35,7 +35,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   const circleId = useId().replace(/:/g, '');
 
   const mediaQueryStyles = smSize
-    ? `@media (min-width: 425px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem; height: ${smSize * 0.25}rem; } }`
+    ? `@media (min-width: 425px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem !important; height: ${smSize * 0.25}rem !important; } }`
     : '';
 
   const colorMap: Record<string, string> = {

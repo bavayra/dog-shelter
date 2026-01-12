@@ -40,7 +40,7 @@ function App() {
               opacity={70}
               className="xs:mt-6"
             />
-            <div className="glass-card text-primary-700 xs:mt-8 text-md relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-xl">
+            <div className="glass-card text-primary-700 xs:mt-8 text-md relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-lg">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -85,33 +85,36 @@ function App() {
             </div>
             <SocialLinks
               size="md"
-              className="xs:mt-14 mt-10 gap-5"
+              className="xs:mt-14 mt-10 gap-5 sm:mt-10"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
             <DecorativeCircle
               size={64}
+              smSize={84}
               color="primary-500"
               top="150"
               left="30"
               zIndex={2}
-              className="xs:mt-8 xs:ml-12"
+              className="xs:mt-8 xs:ml-12 sm:mt-10 sm:ml-20"
             />
             <DecorativeCircle
               size={40}
+              smSize={52}
               color="primary-300"
               top="170"
               left="15"
               zIndex={1}
-              className="xs:mt-8 xs:ml-12"
+              className="xs:mt-8 xs:ml-12 sm:mt-6 sm:ml-18"
             />
             <DecorativeCircle
               size={30}
+              smSize={36}
               color="primary-200"
               top="180"
               left="8"
               zIndex={0}
-              className="xs:mt-8 xs:ml-12"
+              className="xs:mt-8 xs:ml-12 sm:mt-8 sm:ml-12"
             />
             <img
               src={RottweilerImage}
