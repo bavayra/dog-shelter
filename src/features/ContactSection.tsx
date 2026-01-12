@@ -117,7 +117,7 @@ const ContactSection = () => {
           right="10"
           zIndex={10}
           opacity={70}
-          className="xs:mr-8"
+          className="xs:mr-8 sm:mr-14"
         />
       </div>
       <h2 className="typography-h2 relative z-11 mb-4 text-center">
@@ -206,8 +206,9 @@ const ContactSection = () => {
                 size={8}
                 color="primary-500"
                 top="1"
-                left="-2"
+                left="12"
                 zIndex={12}
+                className="sm:ml-12"
               />
             </div>
 
@@ -217,7 +218,7 @@ const ContactSection = () => {
                 variant="primary"
                 disabled={isSubmitting}
                 ariaLabel="Submit this form"
-                className="w-full text-center text-base font-semibold"
+                className="w-auto text-center text-base font-semibold"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
