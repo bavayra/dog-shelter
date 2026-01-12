@@ -50,7 +50,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 pointer-events-none absolute top-124 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain"
+        className="from-primary-50 xs:top-119 pointer-events-none absolute top-124 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain"
       />
     </section>
   );
