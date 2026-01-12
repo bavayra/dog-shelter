@@ -34,7 +34,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 mb-4 inline-block rounded-lg px-8 py-3 font-semibold transition-transform hover:scale-105 sm:text-lg"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 xs:text-lg mb-4 inline-block rounded-lg px-8 py-3 font-semibold transition-transform hover:scale-105 sm:text-lg"
           >
             See All The Rules
           </a>
@@ -43,7 +43,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 inline-block rounded-lg px-8 py-3 font-semibold transition-transform hover:scale-105 sm:text-lg"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 xs:text-lg inline-block rounded-lg px-8 py-3 font-semibold transition-transform hover:scale-105 sm:text-lg"
           >
             See The Contract Template
           </a>
