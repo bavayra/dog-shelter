@@ -98,7 +98,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm sm:px-2"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm sm:px-4"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -149,8 +149,8 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           )}
         </div>
 
-        <div className="p-4">
-          <h3 id="modal-title" className="typography-h3 mb-4">
+        <div className="p-4 sm:px-6 sm:py-2">
+          <h3 id="modal-title" className="typography-h3 mb-4 sm:text-3xl">
             {name}
           </h3>
           <div
