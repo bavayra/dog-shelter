@@ -25,7 +25,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-accent-500 bg-primary-500 hover:bg-primary-700 fixed top-19 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 fixed top-19 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
@@ -77,6 +77,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
               </a>
             );
           })}
+
+          <div
+            className="paw-pattern pointer-events-none absolute top-54 right-2 h-150 w-full overflow-visible sm:-mb-36 sm:h-full"
+            style={{ bottom: '0' }}
+          ></div>
         </nav>
         <button
           className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-700 md:hidden"
@@ -97,10 +102,6 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
             />
           </svg>
         </button>
-        <div
-          className="paw-pattern pointer-events-none absolute right-6 z-0 h-100 w-full sm:-mb-36 sm:h-full"
-          style={{ bottom: '0' }}
-        ></div>
       </aside>
     </>
   );
