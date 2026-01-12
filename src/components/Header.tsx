@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
-      <div className="container mx-auto px-0 py-2">
+      <div className="xs:m-0 container mx-auto px-0 py-2">
         <div className="ml-2 flex items-center justify-around">
           <img
             src={LogoIcon}
