@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="from-primary-300 to-primary-50 border-primary-500 relative min-h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
           >
-            <h2 className="text-primary-700 xs:mt-16 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold">
+            <h2 className="text-primary-700 xs:mt-6 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold">
               {' '}
               {/*I didn't use typography class because this h2 has to be
               different*/}{' '}
@@ -38,6 +38,7 @@ function App() {
               top="60"
               left="-30"
               opacity={70}
+              className="xs:mt-6"
             />
             <div className="glass-card text-primary-700 xs:mt-8 text-md relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-xl">
               <p className="mb-2">
@@ -84,7 +85,7 @@ function App() {
             </div>
             <SocialLinks
               size="md"
-              className="mt-10 gap-5"
+              className="xs:mt-14 mt-10 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -94,6 +95,7 @@ function App() {
               top="150"
               left="30"
               zIndex={2}
+              className="xs:mt-8 xs:ml-12"
             />
             <DecorativeCircle
               size={40}
@@ -101,6 +103,7 @@ function App() {
               top="170"
               left="15"
               zIndex={1}
+              className="xs:mt-8 xs:ml-12"
             />
             <DecorativeCircle
               size={30}
@@ -108,6 +111,7 @@ function App() {
               top="180"
               left="8"
               zIndex={0}
+              className="xs:mt-8 xs:ml-12"
             />
             <img
               src={RottweilerImage}
