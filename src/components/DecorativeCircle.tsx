@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 interface DecorativeCircleProps {
   size: number;
+  smSize?: number;
   color:
     | 'primary-50'
     | 'primary-200'
@@ -21,6 +22,7 @@ interface DecorativeCircleProps {
 
 export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   size,
+  smSize,
   color,
   top,
   bottom,
@@ -30,6 +32,12 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   zIndex,
   className = '',
 }) => {
+  const circleId = useId().replace(/:/g, '');
+
+  const mediaQueryStyles = smSize
+    ? `@media (min-width: 425px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem; height: ${smSize * 0.25}rem; } }`
+    : '';
+
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
@@ -59,10 +67,14 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   };
 
   return (
-    <div
-      className={`pointer-events-none absolute rounded-full ${className}`}
-      style={style}
-      aria-hidden="true"
-    />
+    <>
+      {smSize && <style>{mediaQueryStyles}</style>}
+      <div
+        data-circle-id={circleId}
+        className={`pointer-events-none absolute rounded-full ${className}`}
+        style={style}
+        aria-hidden="true"
+      />
+    </>
   );
 };
