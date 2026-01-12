@@ -154,13 +154,13 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             {name}
           </h3>
           <div
-            className={`absolute top-74 right-4 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-wider text-white shadow-lg`}
+            className={`absolute top-74 right-4 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-normal text-white shadow-lg`}
           >
             <span className="text-sm">{genderSymbol}</span>
             <span className="text-sm font-normal">{gender}</span>
           </div>
 
-          <div className="typography-small mb-4 flex flex-wrap gap-3">
+          <div className="typography-small xs:text-base mb-4 flex flex-wrap gap-3">
             <div className="flex items-center gap-2">
               <span role="img" aria-label="birthday cake" className="text-xl">
                 🎂
@@ -185,7 +185,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
           <div className="mb-8">
             <div
-              className="typography-body px-2 text-justify font-semibold"
+              className="typography-body xs:text-lg px-2 text-justify font-semibold tracking-tighter"
               dangerouslySetInnerHTML={{ __html: sanitized }}
             />
           </div>
