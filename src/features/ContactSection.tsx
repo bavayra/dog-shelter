@@ -117,6 +117,7 @@ const ContactSection = () => {
           right="10"
           zIndex={10}
           opacity={70}
+          className="xs:mr-8"
         />
       </div>
       <h2 className="typography-h2 relative z-11 mb-4 text-center">
@@ -181,7 +182,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-small mb-4 block"
+                className="typography-small xs:text-base mb-4 block"
               >
                 Message
               </label>
