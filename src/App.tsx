@@ -20,11 +20,11 @@ function App() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1">
-        <Sidebar className="lg:hidden" />
+        <Sidebar className="md:hidden" />
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 relative min-h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
+            className="from-primary-300 to-primary-50 border-primary-500 relative min-h-screen overflow-x-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
           >
             <h2 className="text-primary-700 xs:mt-6 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold">
               {' '}
@@ -118,7 +118,7 @@ function App() {
             />
             <img
               src={RottweilerImage}
-              className="xs:h-64 xs:w-64 absolute -right-10 bottom-0 z-3 h-68 w-68 object-contain sm:h-80 sm:w-80"
+              className="xs:h-64 xs:w-64 absolute right-0 bottom-0 z-3 h-56 w-56 object-contain sm:h-72 sm:w-72 md:h-80 md:w-80"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
@@ -135,7 +135,7 @@ function App() {
             <DogGrid />
           </section>
           <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
-            <div className="relative">
+            <div className="relative sm:top-2">
               <DecorativeCircle
                 size={64}
                 color="primary-500"
