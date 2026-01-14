@@ -50,45 +50,49 @@ html {
 
 @layer components {
   .paw-pattern {
-    background-image: url('/src/assets/icons/paw-trail-pattern.svg');
-    background-repeat: no-repeat;
-    background-size: 250px 750px;
-    background-position: left center;
+    -webkit-mask-image: url('./assets/icons/paw-trail-pattern-mask.svg');
+    mask-image: url('./assets/icons/paw-trail-pattern-mask.svg');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 250px 750px;
+    mask-size: 250px 750px;
+    -webkit-mask-position: left center;
+    mask-position: left center;
   }
+}
 
-  .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    -webkit-backdrop-filter: blur(1px) saturate(100%);
-    backdrop-filter: blur(1px) saturate(100%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-  }
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(1px) saturate(100%);
+  backdrop-filter: blur(1px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
 
-  .typography-h1 {
-    @apply text-primary-500 text-xl leading-tight font-bold;
-  }
+.typography-h1 {
+  @apply text-primary-500 text-xl leading-tight font-bold;
+}
 
-  .typography-h2 {
-    @apply text-primary-500 text-4xl leading-snug font-bold;
-  }
+.typography-h2 {
+  @apply text-primary-500 text-4xl leading-snug font-bold;
+}
 
-  .typography-h3 {
-    @apply text-primary-700 text-2xl leading-normal font-bold;
-  }
+.typography-h3 {
+  @apply text-primary-700 text-2xl leading-normal font-bold;
+}
 
-  .typography-large {
-    @apply text-primary-500 text-base leading-normal font-medium;
-  }
+.typography-large {
+  @apply text-primary-500 text-base leading-normal font-medium;
+}
 
-  .typography-body {
-    @apply text-base leading-normal text-neutral-700;
-  }
+.typography-body {
+  @apply text-base leading-normal text-neutral-700;
+}
 
-  .typography-small {
-    @apply text-sm leading-snug font-semibold text-neutral-700;
-  }
+.typography-small {
+  @apply text-sm leading-snug font-semibold text-neutral-700;
+}
 
-  .z-3 {
-    z-index: 3;
-  }
+.z-3 {
+  z-index: 3;
 }

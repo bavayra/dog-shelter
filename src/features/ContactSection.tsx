@@ -120,10 +120,10 @@ const ContactSection = () => {
           className="xs:mr-8 sm:mr-14"
         />
       </div>
-      <h2 className="typography-h2 relative z-11 mb-4 text-center">
+      <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl">
         Contact Us
       </h2>
-      <div className="flex justify-center">
+      <div className="relative flex justify-center md:grid md:grid-cols-2">
         <div className="w-full max-w-md px-6">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
@@ -243,6 +243,7 @@ const ContactSection = () => {
             )}
           </form>
         </div>
+        <div className="paw-pattern bg-primary-100 pointer-events-none absolute top-0 right-0 hidden h-150 w-1/2 md:block md:h-100"></div>
       </div>
     </section>
   );

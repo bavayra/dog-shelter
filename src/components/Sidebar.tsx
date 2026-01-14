@@ -79,7 +79,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           })}
 
           <div
-            className="paw-pattern pointer-events-none absolute top-54 right-2 h-150 w-full overflow-visible sm:top-4 sm:h-250"
+            className="paw-pattern bg-primary-200 pointer-events-none absolute top-54 right-2 h-150 w-full overflow-visible sm:top-4 sm:h-250"
             style={{ bottom: '0' }}
           ></div>
         </nav>
