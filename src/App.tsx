@@ -143,9 +143,10 @@ function App() {
             <DogGrid />
           </section>
           <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
-            <div className="relative sm:top-2">
+            <div className="relative sm:top-2 md:top-18 md:right-8">
               <DecorativeCircle
                 size={64}
+                mdSize={88}
                 color="primary-500"
                 top="-8"
                 left="-30"
