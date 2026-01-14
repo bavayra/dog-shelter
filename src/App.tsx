@@ -24,7 +24,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 relative min-h-screen overflow-x-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
+            className="from-primary-300 to-primary-50 border-primary-500 relative h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
           >
             <h2 className="text-primary-700 xs:mt-6 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold md:mt-12 md:text-6xl">
               {' '}
