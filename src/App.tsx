@@ -17,7 +17,7 @@ const ContactSection = lazy(() => import('./features/ContactSection'));
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
       <Header />
       <div className="flex flex-1">
         <Sidebar className="md:hidden" />
@@ -72,7 +72,7 @@ function App() {
                 </div>
               </div>
               <div className="relative z-10 hidden justify-center md:flex">
-                <p className="text-primary-700 glass-card mt-8 rounded-3xl text-center font-semibold tracking-normal md:p-6 md:text-base">
+                <p className="text-primary-700 glass-card mt-10 rounded-3xl p-6 text-center text-base font-semibold tracking-normal">
                   LEFT BEHIND AND WAITING EACH DAY-MANY GENTLE HEARTS LONG FOR A
                   WARM LAP AND A LOVING HOME. WE ARE AUTONOMOUS NON-PROFIT
                   ORGANIZATION (ANO), WE ONLY SPEND AND NEVER EARN. WE RELY
