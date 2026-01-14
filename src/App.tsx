@@ -159,19 +159,23 @@ function App() {
             <div className="relative">
               <DecorativeCircle
                 size={36}
+                mdSize={64}
                 color="primary-300"
                 top="14"
                 left="-10"
                 opacity={40}
                 zIndex={10}
+                className="md:ml-10"
               />
               <DecorativeCircle
                 size={16}
+                mdSize={40}
                 color="primary-500"
                 top="22"
                 left="0"
                 opacity={90}
                 zIndex={10}
+                className="md:ml-12"
               />
             </div>
             <AboutUs />
