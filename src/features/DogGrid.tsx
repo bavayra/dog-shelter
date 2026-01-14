@@ -43,7 +43,10 @@ const DogGrid = () => {
         onReset={resetFilters}
       />
       {!isLoading && (
-        <p className="typography-body mb-4 text-center" aria-live="polite">
+        <p
+          className="typography-body mb-4 text-center md:mb-8 md:text-2xl"
+          aria-live="polite"
+        >
           Found {filteredDogs.length}{' '}
           {filteredDogs.length === 1 ? 'dog' : 'dogs'}
         </p>
@@ -62,7 +65,7 @@ const DogGrid = () => {
             ))}
           </div>
           {!showAll && hasMoreDogs && (
-            <div className="mt-6 text-center">
+            <div className="mt-6 text-center md:mt-12">
               <Button
                 onClick={() => setShowAll(true)}
                 aria-label="View all pets"

@@ -28,7 +28,7 @@ const Button = ({
     primary:
       'bg-primary-700 text-white hover:bg-primary-900 hover:scale-105 md:text-sm xs:text-lg focus:ring-primary-500 active:bg-primary-800',
     secondary:
-      'bg-primary-200 text-primary-700 hover:bg-primary-300 hover:scale-105 xs:text-lgfocus:ring-gray-500 active:bg-gray-800',
+      'bg-primary-200 text-primary-700 hover:bg-primary-300 hover:scale-105 xs:text-lg md:text-2xl md:px-8 focus:ring-gray-500 active:bg-gray-800',
     outline:
       'bg-transparent border-2 border-accent-200 text-accent-500 hover:scale-105 hover:bg-primary-100 focus:ring-accent-200',
     filter: active
