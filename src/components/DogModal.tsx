@@ -105,7 +105,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-primary-200 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl"
+        className="bg-primary-200 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
@@ -130,11 +130,11 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </svg>
         </button>
 
-        <div className="relative h-70 overflow-hidden rounded-t-2xl">
+        <div className="relative h-70 overflow-hidden rounded-t-2xl md:h-auto md:rounded-2xl">
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-116 md:w-auto md:rounded-2xl md:object-contain"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
@@ -150,17 +150,19 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
         </div>
 
         <div className="p-4 sm:px-6 sm:py-2">
-          <h3 id="modal-title" className="typography-h3 mb-4 sm:text-3xl">
-            {name}
-          </h3>
-          <div
-            className={`absolute top-74 right-4 ${genderBadgeColor} flex items-center gap-1 rounded-full px-4 py-2 text-base font-semibold tracking-normal text-white shadow-lg`}
-          >
-            <span className="text-sm">{genderSymbol}</span>
-            <span className="text-sm font-normal">{gender}</span>
+          <div className="mb-4 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
+            <h3 id="modal-title" className="typography-h3 sm:text-3xl md:mt-2">
+              {name}
+            </h3>
+            <div
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} flex items-center gap-2 rounded-full px-4 py-2 font-semibold tracking-normal text-white shadow-lg`}
+            >
+              <span className="text-sm md:text-xl">{genderSymbol}</span>
+              <span className="text-sm font-normal md:text-lg">{gender}</span>
+            </div>
           </div>
 
-          <div className="typography-small xs:text-base mb-4 flex flex-wrap gap-3">
+          <div className="typography-small xs:text-base mb-4 flex flex-wrap gap-3 md:text-lg">
             <div className="flex items-center gap-2">
               <span role="img" aria-label="birthday cake" className="text-xl">
                 🎂
@@ -195,7 +197,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="w-full"
+            className="w-full md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
