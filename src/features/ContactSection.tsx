@@ -243,7 +243,6 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="paw-pattern bg-primary-100 pointer-events-none absolute top-0 right-0 hidden h-150 w-1/2 md:block md:h-100"></div>
       </div>
     </section>
   );

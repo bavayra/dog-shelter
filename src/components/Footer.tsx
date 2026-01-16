@@ -1,78 +1,45 @@
-import {
-  CONTACT_EMAIL,
-  CONTACT_PHONE,
-  CONTACT_ADDRESS,
-  APP_NAME,
-} from '@/constants';
+import { APP_NAME } from '@/constants';
 
-import EmailIcon from '@/assets/icons/email.svg?react';
-import PhoneIcon from '@/assets/icons/phone.svg?react';
-import LocationIcon from '@/assets/icons/location.svg?react';
 import HeartIcon from '@/assets/icons/heart-icon.svg?react';
 
 import SocialLinks from './SocialLinks';
+import ContactInfo from './ContactInfo';
 
 const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 justify-items-center gap-4 md:grid-cols-3 md:justify-items-start">
+      <div className="md:flex-cols-2 container mx-auto px-4 md:flex md:justify-center md:gap-30">
+        <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
             <h3 className="mb-4 text-center text-xl font-bold">{APP_NAME}</h3>
-            <p className="typography-small text-center">
+            <p className="typography-small text-center md:w-64 md:text-lg">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
-          <div>
+          <div className="text-center md:hidden md:text-right">
             <h3 className="mb-2 text-center text-xl font-bold">Contact Us</h3>
-            <div className="flex flex-col items-center space-y-1 text-neutral-500">
-              <p className="flex items-center gap-2">
-                <EmailIcon className="h-4 w-4" aria-hidden="true" />
-                <a
-                  rel="noopener noreferrer"
-                  href={`mailto:${CONTACT_EMAIL}`}
-                  className="hover:text-primary-500 transition-colors"
-                >
-                  {CONTACT_EMAIL}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <PhoneIcon className="h-4 w-4" aria-hidden="true" />
-                <a
-                  href={`tel:${CONTACT_PHONE}`}
-                  rel="noopener noreferrer"
-                  className="hover:text-primary-500 transition-colors"
-                >
-                  {CONTACT_PHONE}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <LocationIcon className="h-4 w-4" aria-hidden="true" />
-                <span>{CONTACT_ADDRESS}</span>
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="mb-4 text-center text-xl font-bold">Follow Us</h3>
-            <SocialLinks size="sm" />
+            <ContactInfo />
           </div>
         </div>
-
-        <div className="border-primary-900 mt-6 border-t pt-2 text-center text-base text-neutral-300">
-          <p>
-            Made with
-            <HeartIcon
-              className="text-primary-500 m-2 inline h-4 w-4"
-              aria-hidden="true"
-            />
-            for dogs in need
-          </p>
+        <div>
+          <h3 className="mb-4 text-center text-xl font-bold">FOLLOW US</h3>
+          <SocialLinks size="sm" />
         </div>
-        <p className="text-center text-xs text-neutral-300">
-          © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
+      </div>
+
+      <div className="border-primary-900 mt-6 border-t pt-2 text-center text-base text-neutral-300 md:mt-2">
+        <p>
+          Made with
+          <HeartIcon
+            className="text-primary-500 m-2 inline h-4 w-4"
+            aria-hidden="true"
+          />
+          for dogs in need
         </p>
       </div>
+      <p className="text-center text-xs text-neutral-300">
+        © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
+      </p>
     </footer>
   );
 };
