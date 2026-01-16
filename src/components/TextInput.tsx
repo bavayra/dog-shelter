@@ -35,7 +35,10 @@ const TextInput = ({
     .replace(/\s+/g, ' ');
   return (
     <div>
-      <label htmlFor={id} className="typography-small xs:text-base block">
+      <label
+        htmlFor={id}
+        className="typography-small xs:text-base block md:text-lg"
+      >
         {label}
       </label>
 

@@ -4,6 +4,7 @@ import { sanitizeFormData } from '@/utils/sanitize';
 import Button from '@/components/Button';
 import TextInput from '@/components/TextInput';
 import { DecorativeCircle } from '@/components/DecorativeCircle';
+import ContactInfo from '@/components/ContactInfo';
 
 const ContactSection = () => {
   const [name, setName] = useState('');
@@ -117,13 +118,13 @@ const ContactSection = () => {
           right="10"
           zIndex={10}
           opacity={70}
-          className="xs:mr-8 sm:mr-14"
+          className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50"
         />
       </div>
       <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl">
         Contact Us
       </h2>
-      <div className="relative flex justify-center md:grid md:grid-cols-2">
+      <div className="relative flex justify-center md:m-6 md:grid md:grid-cols-2 md:gap-4">
         <div className="w-full max-w-md px-6">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
@@ -182,7 +183,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-small xs:text-base mb-4 block"
+                className="typography-small xs:text-base mb-4 block md:text-lg"
               >
                 Message
               </label>
@@ -208,7 +209,7 @@ const ContactSection = () => {
                 top="1"
                 left="12"
                 zIndex={12}
-                className="sm:ml-12"
+                className="sm:ml-12 md:ml-2"
               />
             </div>
 
@@ -242,6 +243,14 @@ const ContactSection = () => {
               </div>
             )}
           </form>
+        </div>
+        <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center">
+          <p className="typography-large px-4 text-center text-xl md:block md:font-normal">
+            Visits to the shelter are by appointment only. If you have any
+            questions about adopting proccesses or volunteering, just get in
+            touch however is easiest for you.
+          </p>
+          <ContactInfo className="md:text-primary-700 md:flex md:items-center md:justify-center md:font-bold" />
         </div>
       </div>
     </section>
