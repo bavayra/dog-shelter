@@ -25,13 +25,13 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-primary-700 bg-primary-500 hover:bg-primary-700 fixed top-19 left-3 z-40 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 fixed top-19 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
       >
         <svg
-          className="h-6 w-6"
+          className="h-6 w-6 md:h-10 md:w-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -47,18 +47,20 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-51 bg-black/50 backdrop-blur-sm lg:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       <aside
-        className={`bg-primary-500 fixed top-16 bottom-0 left-0 z-50 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:hidden ${
+        className={`bg-primary-500 fixed top-20 bottom-0 left-0 z-52 w-64 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:top-0 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:static md:bottom-auto md:h-auto md:translate-x-0 ${className}`}
+        } ${className}`}
       >
         <nav className="relative p-4 sm:mt-4">
-          <h2 className="mb-4 text-lg font-bold text-neutral-50">NAVIGATION</h2>
+          <h2 className="mb-4 text-lg font-bold text-neutral-50 md:text-2xl">
+            NAVIGATION
+          </h2>
           {NAVIGATION_ITEMS.map((item) => {
             const IconComponent = iconMap[item.id];
             return (
@@ -70,21 +72,23 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="h-6 w-6 text-neutral-50 transition-transform group-hover:scale-110"
+                  className="h-6 w-6 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
                   aria-hidden="true"
                 />
-                <span className="text-lg font-semibold">{item.label}</span>
+                <span className="text-lg font-semibold md:text-2xl md:font-normal">
+                  {item.label}
+                </span>
               </a>
             );
           })}
 
           <div
-            className="paw-pattern bg-primary-200 pointer-events-none absolute top-54 right-2 h-150 w-full overflow-visible sm:top-4 sm:h-250"
+            className="paw-pattern bg-primary-200 pointer-events-none absolute top-54 right-2 h-150 w-full overflow-visible sm:top-4 sm:h-250 md:right-4 md:h-250 md:rotate-10"
             style={{ bottom: '0' }}
           ></div>
         </nav>
         <button
-          className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-700 md:hidden"
+          className="absolute top-4 right-4 text-neutral-300 hover:text-neutral-700 lg:hidden"
           onClick={() => setIsOpen(false)}
           aria-label="Close sidebar"
         >
