@@ -22,21 +22,21 @@ const Header = () => {
               <h1 className="typography-h1 xs:text-2xl w-auto md:mr-0 md:text-xl">
                 {APP_NAME}
               </h1>
-              <p className="text-primary-500 hidden text-xl font-semibold md:ml-2 md:flex">
+              <p className="text-primary-500 hidden text-xl font-semibold md:ml-2 md:flex lg:hidden">
                 - Best Friends' Shelter
               </p>
             </div>
           </div>
 
           <nav
-            className="hidden items-center gap-8 text-center lg:grid lg:grid-cols-2 lg:gap-2"
+            className="hidden items-center gap-8 text-center lg:flex lg:flex-row lg:gap-2"
             aria-label="Main navigation"
           >
             {headerLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
-                className="hover:text-primary-900 hover:bg-primary-200 mx-0 py-3 text-base font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold"
+                className="hover:text-primary-900 hover:bg-primary-200 mx-0 py-3 text-lg font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
                 aria-label={`Go to ${link.label} section`}
               >
                 {link.label.toUpperCase()}
