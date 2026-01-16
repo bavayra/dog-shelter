@@ -10,30 +10,33 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
-      <div className="xs:m-0 container mx-auto px-0 py-2 md:px-4 md:py-4">
-        <div className="ml-4 flex items-center justify-between md:ml-0">
+      <div className="xs:m-0 container mx-auto px-0 py-2 md:px-4">
+        <div className="ml-4 flex flex-row items-center justify-between md:ml-0 md:pr-6 md:pl-2">
           <div className="flex flex-row">
             <img
               src={LogoIcon}
               alt="Rotvodom Dog Shelter Logo"
-              className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2 md:h-16 md:w-16"
+              className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2 md:h-14 md:w-14"
             />
             <div className="flex items-center">
-              <h1 className="typography-h1 xs:text-2xl w-auto md:mr-0">
+              <h1 className="typography-h1 xs:text-2xl w-auto md:mr-0 md:text-xl">
                 {APP_NAME}
               </h1>
+              <p className="text-primary-500 hidden text-xl font-semibold md:ml-2 md:flex">
+                - Best Friends' Shelter
+              </p>
             </div>
           </div>
 
           <nav
-            className="hidden items-center gap-8 text-center md:grid md:grid-cols-2 md:gap-2"
+            className="hidden items-center gap-8 text-center lg:grid lg:grid-cols-2 lg:gap-2"
             aria-label="Main navigation"
           >
             {headerLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
-                className="hover:text-primary-900 hover:bg-primary-200 md:bg-primary-300 text-primary-700 mx-0 py-3 text-base font-medium transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold"
+                className="hover:text-primary-900 hover:bg-primary-200 mx-0 py-3 text-base font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold"
                 aria-label={`Go to ${link.label} section`}
               >
                 {link.label.toUpperCase()}
@@ -43,7 +46,7 @@ const Header = () => {
 
           <div className="hidden transition-transform hover:scale-105 md:block md:px-0">
             <Button
-              variant="primary"
+              variant="secondary"
               size="medium"
               onClick={() =>
                 document
