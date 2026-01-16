@@ -8,11 +8,11 @@ import ContactInfo from './ContactInfo';
 const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
-      <div className="md:flex-cols-2 container mx-auto px-4 md:flex md:justify-center md:gap-30">
+      <div className="md:flex-cols-2 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36">
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
             <h3 className="mb-4 text-center text-xl font-bold">{APP_NAME}</h3>
-            <p className="typography-small text-center md:w-64 md:text-lg">
+            <p className="typography-small text-center md:w-64 md:text-base">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-primary-900 mt-6 border-t pt-2 text-center text-base text-neutral-300 md:mt-2">
+      <div className="border-primary-900 mt-6 border-t pt-2 text-center text-base text-neutral-300 md:mt-0">
         <p>
           Made with
           <HeartIcon
