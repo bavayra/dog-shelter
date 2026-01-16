@@ -26,11 +26,11 @@ const Button = ({
     'font-semibold rounded-full transform transition-all duration-200 px-6 py-3 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-primary-700 text-white hover:bg-primary-900 md:text-xl hover:scale-105 md:text-sm xs:text-lg focus:ring-primary-500 active:bg-primary-800',
+      'bg-primary-700 text-white hover:bg-primary-900 md:text-lg hover:scale-105 md:font-normal xs:text-lg focus:ring-primary-500 active:bg-primary-800',
     secondary:
       'bg-primary-200 text-primary-700 hover:bg-primary-300 md:border-2 md:border-primary-700 hover:scale-105 xs:text-lg md:text-sm md:bg-primary-300 md:px-6 focus:ring-gray-500 active:bg-gray-800',
     outline:
-      'bg-transparent border-2 border-accent-200 text-accent-500 hover:scale-105 hover:bg-primary-100 focus:ring-accent-200',
+      'bg-primary-200 border-2 border-primary-500 text-primary-700 hover:scale-105 hover:bg-primary-100 focus:ring-primary-200 shadow-md active:bg-primary-300',
     filter: active
       ? 'bg-primary-500 text-primary-700  focus:ring-primary-500 font-semibold'
       : 'bg-primary-200 sm:text-sm text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm font-semibold focus:ring-primary-500',
