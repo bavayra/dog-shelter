@@ -34,7 +34,7 @@ const PhotoCarousel = () => {
         <img
           src={resolvedImageUrl}
           alt={currentImage.caption}
-          className="h-64 w-full object-cover transition-opacity duration-500 md:h-80 lg:h-125"
+          className="h-64 w-full object-cover transition-opacity duration-500 md:h-80 lg:h-100"
           loading="lazy"
           onError={(e) => {
             e.currentTarget.src =
@@ -53,7 +53,7 @@ const PhotoCarousel = () => {
         aria-label="Previous image"
       >
         <svg
-          className="text-primary-500 h-6 w-6"
+          className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ const PhotoCarousel = () => {
         aria-label="Next image"
       >
         <svg
-          className="text-primary-500 h-6 w-6"
+          className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
