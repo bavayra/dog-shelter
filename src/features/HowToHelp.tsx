@@ -5,7 +5,7 @@ const HowToHelp = () => {
   return (
     <section
       id="help"
-      className="bg-primary-50 border-b-primary-500 relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:pt-10"
+      className="bg-primary-50 border-b-primary-500 relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:pt-10 lg:min-h-[90vh]"
     >
       <div className="z-10 container mx-auto px-4">
         <h2 className="typography-h2 mb-6 text-center md:mt-6 md:text-5xl">
@@ -52,7 +52,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 xs:top-119 pointer-events-none absolute top-129 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:top-123 sm:w-110 md:top-125 md:w-200 md:max-w-3xl"
+        className="from-primary-50 xs:top-119 pointer-events-none absolute top-129 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:top-123 sm:w-110 md:top-125 md:w-200 md:max-w-3xl lg:top-130 lg:w-130 lg:bg-none"
       />
     </section>
   );
