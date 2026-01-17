@@ -38,7 +38,7 @@ const HowToHelp = () => {
             className="inline-block"
           >
             <Button
-              variant="primary"
+              variant="outline"
               size="large"
               className="flex items-center gap-2 md:mt-4"
               ariaLabel="Donate to help our pets button"
