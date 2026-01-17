@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
-      <div className="xs:m-0 container mx-auto px-0 py-2 md:px-4">
+      <div className="xs:m-0 container mx-auto px-0 py-2 md:px-4 xl:mx-auto">
         <div className="ml-4 flex flex-row items-center justify-between md:ml-0 md:pr-6 md:pl-2">
           <div className="flex flex-row">
             <img
@@ -19,7 +19,7 @@ const Header = () => {
               className="border-primary-500 h-12 w-12 rounded-full border-2 bg-transparent object-center px-1 py-2 md:h-14 md:w-14"
             />
             <div className="flex items-center">
-              <h1 className="typography-h1 xs:text-2xl w-auto md:mr-0 md:text-xl">
+              <h1 className="typography-h1 xs:text-2xl w-auto md:mr-0 md:text-xl xl:text-2xl">
                 {APP_NAME}
               </h1>
               <p className="text-primary-500 hidden text-xl font-semibold md:ml-2 md:flex lg:hidden">
