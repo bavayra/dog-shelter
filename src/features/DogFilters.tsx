@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`typography-small rounded-lg px-3 py-2 font-medium transition-colors md:text-base ${
+          className={`typography-small rounded-lg px-3 py-2 font-medium transition-colors md:text-base lg:text-sm ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
