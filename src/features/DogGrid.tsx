@@ -17,7 +17,7 @@ const DogGrid = () => {
 
   const [showAll, setShowAll] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const INITIAL_DISPLAY_COUNT = 4;
+  const [initialDisplayCount, setInitialDisplayCount] = useState(4);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -26,11 +26,26 @@ const DogGrid = () => {
 
     return () => clearTimeout(timer);
   }, []);
+  useEffect(() => {
+    const updateDisplayCount = () => {
+      if (window.innerWidth >= 1024) {
+        setInitialDisplayCount(6);
+      } else {
+        setInitialDisplayCount(4);
+      }
+    };
+
+    updateDisplayCount();
+    window.addEventListener('resize', updateDisplayCount);
+
+    return () => window.removeEventListener('resize', updateDisplayCount);
+  }, []);
+
   const displayedDogs = showAll
     ? filteredDogs
-    : filteredDogs.slice(0, INITIAL_DISPLAY_COUNT);
+    : filteredDogs.slice(0, initialDisplayCount);
 
-  const hasMoreDogs = filteredDogs.length > INITIAL_DISPLAY_COUNT;
+  const hasMoreDogs = filteredDogs.length > initialDisplayCount;
 
   return (
     <div className="container mx-auto px-4 py-4">
