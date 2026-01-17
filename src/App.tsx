@@ -25,7 +25,7 @@ function App() {
           id="hero"
           className="from-primary-300 to-primary-50 border-primary-500 relative h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
         >
-          <h2 className="text-primary-700 xs:mt-6 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold md:mt-12 md:text-6xl lg:mt-2 lg:mb-2">
+          <h2 className="text-primary-700 xs:mt-6 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold md:mt-12 md:text-6xl lg:mt-2 lg:mb-2 xl:mt-6 xl:text-7xl">
             {' '}
             {/*I didn't use typography class because this h2 has to be
               different*/}{' '}
@@ -43,7 +43,7 @@ function App() {
           />
           <div className="grid-cols-2 grid-rows-2 md:grid md:items-center md:justify-center">
             <div>
-              <div className="glass-card text-primary-700 xs:mt-8 text-md relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-lg md:font-semibold">
+              <div className="glass-card text-primary-700 xs:mt-8 text-md xl:py-6xl:text-xl relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-lg md:font-semibold xl:w-sm xl:px-6">
                 <p className="mb-2">
                   DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
                 </p>
@@ -72,7 +72,7 @@ function App() {
               </div>
             </div>
             <div className="relative z-10 hidden justify-center md:flex">
-              <p className="text-primary-700 glass-card mt-10 rounded-3xl p-6 text-center text-base font-semibold tracking-normal lg:mx-auto lg:mt-4 lg:mr-8">
+              <p className="text-primary-700 glass-card mt-10 rounded-3xl p-6 text-center text-base font-semibold tracking-normal lg:mx-auto lg:mt-4 lg:mr-8 xl:mt-12 xl:mr-36 xl:w-xl xl:text-lg">
                 LEFT BEHIND AND WAITING EACH DAY-MANY GENTLE HEARTS LONG FOR A
                 WARM LAP AND A LOVING HOME. WE ARE AUTONOMOUS NON-PROFIT
                 ORGANIZATION (ANO), WE ONLY SPEND AND NEVER EARN. WE RELY SOLELY
@@ -89,7 +89,7 @@ function App() {
             </div>
             <SocialLinks
               size="md"
-              className="xs:mt-14 mt-10 gap-5 sm:mt-10 md:mt-0 md:mb-10 md:grid md:grid-cols-[repeat(2,min-content)] md:grid-rows-2 md:justify-center md:gap-x-10 md:gap-y-6 lg:mt-6"
+              className="xs:mt-14 mt-10 gap-5 sm:mt-10 md:mt-0 md:mb-10 md:grid md:grid-cols-[repeat(2,min-content)] md:grid-rows-2 md:justify-center md:gap-x-10 md:gap-y-6 lg:mt-6 xl:mt-10"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -127,7 +127,7 @@ function App() {
           />
           <img
             src={RottweilerImage}
-            className="xs:h-64 xs:w-64 absolute right-0 bottom-0 z-3 h-56 w-56 object-contain sm:h-72 sm:w-72 md:h-110 md:w-110"
+            className="xs:h-64 xs:w-64 absolute right-0 bottom-0 z-3 h-56 w-56 object-contain sm:h-72 sm:w-72 md:h-110 md:w-110 xl:mr-10 xl:h-120 xl:w-120"
             alt="Rottweiler Dog Illustration"
             aria-hidden="true"
           />
