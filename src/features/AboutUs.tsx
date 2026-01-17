@@ -9,7 +9,7 @@ const AboutUs = () => {
           About Us
         </h2>
 
-        <div className="bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto md:text-xl">
+        <div className="bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto md:text-xl lg:max-w-3xl">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one
@@ -34,12 +34,13 @@ const AboutUs = () => {
           <DecorativeCircle
             size={44}
             mdSize={64}
+            lgSize={76}
             color="neutral-500"
             top="-32"
             right="-12"
             opacity={30}
             zIndex={5}
-            className="md:mr-10"
+            className="md:mr-10 lg:-mt-20"
           />
         </div>
         <h3 className="typography-h3 text-primary-500 my-6 text-center md:py-2 md:text-3xl">
