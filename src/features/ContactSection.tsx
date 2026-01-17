@@ -113,12 +113,13 @@ const ContactSection = () => {
       <div className="relative">
         <DecorativeCircle
           size={10}
+          lgSize={12}
           color="primary-50"
           top="-2"
           right="10"
           zIndex={10}
           opacity={70}
-          className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50"
+          className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80"
         />
       </div>
       <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl">
@@ -205,11 +206,12 @@ const ContactSection = () => {
             <div className="relative">
               <DecorativeCircle
                 size={8}
+                lgSize={10}
                 color="primary-500"
                 top="1"
                 left="12"
                 zIndex={12}
-                className="sm:ml-12 md:ml-2"
+                className="sm:ml-12 md:ml-2 lg:ml-12"
               />
             </div>
 
