@@ -4,6 +4,7 @@ interface DecorativeCircleProps {
   size: number;
   smSize?: number;
   mdSize?: number;
+  lgSize?: number;
   color:
     | 'primary-50'
     | 'primary-200'
@@ -25,6 +26,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   size,
   smSize,
   mdSize,
+  lgSize,
   color,
   top,
   bottom,
@@ -44,8 +46,11 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 768px) { [data-circle-id="${circleId}"] { width: ${mdSize * 0.25}rem !important; height: ${mdSize * 0.25}rem !important; } }`
     : '';
 
-  const mediaQueryStyles = `${smMediaQuery} ${mdMediaQuery}`;
+  const lgMediaQuery = lgSize
+    ? `@media (min-width: 1024px) { [data-circle-id="${circleId}"] { width: ${lgSize * 0.25}rem !important; height: ${lgSize * 0.25}rem !important; } }`
+    : '';
 
+  const mediaQueryStyles = `${smMediaQuery} ${mdMediaQuery} ${lgMediaQuery}`;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
@@ -76,7 +81,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
 
   return (
     <>
-      {(smSize || mdSize) && <style>{mediaQueryStyles}</style>}
+      {(smSize || mdSize || lgSize) && <style>{mediaQueryStyles}</style>}
       <div
         data-circle-id={circleId}
         className={`pointer-events-none absolute rounded-full ${className}`}
