@@ -18,8 +18,8 @@
   --color-neutral-500: #979cb0;
   --color-neutral-700: #747787;
 
-  /*--DEFAULT: 320px;*/
-  --breakpoint-xs: 375px;
+  /*--DEFAULT: 320px x 568;*/
+  --breakpoint-xs: 360px;
   --breakpoint-sm: 425px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
@@ -59,40 +59,40 @@ html {
     -webkit-mask-position: left center;
     mask-position: left center;
   }
-}
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(1px) saturate(100%);
-  backdrop-filter: blur(1px) saturate(100%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-}
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(1px) saturate(100%);
+    backdrop-filter: blur(1px) saturate(100%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  }
 
-.typography-h1 {
-  @apply text-primary-500 text-xl leading-tight font-bold;
-}
+  .typography-h1 {
+    @apply text-primary-500 text-xl leading-tight font-bold;
+  }
 
-.typography-h2 {
-  @apply text-primary-500 text-4xl leading-snug font-bold;
-}
+  .typography-h2 {
+    @apply text-primary-500 text-4xl leading-snug font-bold;
+  }
 
-.typography-h3 {
-  @apply text-primary-700 text-2xl leading-normal font-bold;
-}
+  .typography-h3 {
+    @apply text-primary-700 text-2xl leading-normal font-bold;
+  }
 
-.typography-large {
-  @apply text-primary-500 text-base leading-normal font-medium;
-}
+  .typography-large {
+    @apply text-primary-500 text-base leading-normal font-medium;
+  }
 
-.typography-body {
-  @apply text-base leading-normal text-neutral-700;
-}
+  .typography-body {
+    @apply text-base leading-normal text-neutral-700;
+  }
 
-.typography-small {
-  @apply text-sm leading-snug font-semibold text-neutral-700;
-}
+  .typography-small {
+    @apply text-sm leading-snug tracking-normal text-neutral-700;
+  }
 
-.z-3 {
-  z-index: 3;
+  .z-3 {
+    z-index: 3;
+  }
 }
