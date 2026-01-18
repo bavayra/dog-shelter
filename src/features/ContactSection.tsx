@@ -116,7 +116,7 @@ const ContactSection = () => {
           lgSize={12}
           color="primary-50"
           top="-2"
-          right="10"
+          right="12"
           zIndex={10}
           opacity={70}
           className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
@@ -199,7 +199,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="placeholder:text-primary-900 focus:border-primary-500 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-base focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="placeholder:text-primary-900 focus:border-primary-500 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">
@@ -222,10 +222,10 @@ const ContactSection = () => {
             <div className="flex justify-center pt-4">
               <Button
                 type="submit"
-                variant="primary"
+                variant="outline"
                 disabled={isSubmitting}
                 ariaLabel="Submit this form"
-                className="w-auto text-center text-base font-semibold"
+                className="w-auto text-center font-semibold"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
