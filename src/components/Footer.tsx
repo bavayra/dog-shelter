@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
             <h3 className="mb-4 text-center text-xl font-bold">{APP_NAME}</h3>
-            <p className="typography-small text-center md:w-64 md:text-base">
+            <p className="typography-small text-center md:w-64 md:text-base xl:w-100 xl:text-lg">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
