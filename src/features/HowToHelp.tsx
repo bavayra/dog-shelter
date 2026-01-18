@@ -11,7 +11,7 @@ const HowToHelp = () => {
         <h2 className="typography-h2 mb-6 text-center md:mt-6 md:text-5xl xl:text-7xl">
           How to Help ROTVODOM
         </h2>
-        <div className="mx-auto mb-10 max-w-3xl text-center md:mb-6 md:px-12">
+        <div className="mx-auto mb-6 max-w-3xl text-center md:mb-6 md:px-12">
           <p className="typography-body xs:text-lg mb-2 leading-relaxed md:text-2xl">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
@@ -39,8 +39,8 @@ const HowToHelp = () => {
           >
             <Button
               variant="outline"
-              size="large"
-              className="flex items-center gap-2 md:mt-4 xl:mt-2"
+              size="medium"
+              className="flex items-center md:mt-4 xl:mt-2"
               ariaLabel="Donate to help our pets button"
             >
               Help Our Pets Now
@@ -52,7 +52,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 xs:top-119 pointer-events-none absolute top-129 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:top-123 sm:w-110 md:top-125 md:w-200 md:max-w-3xl lg:top-130 lg:w-130 lg:bg-none xl:w-154"
+        className="from-primary-50 xs:top-119 pointer-events-none absolute top-123 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:top-123 sm:w-110 md:top-125 md:w-200 md:max-w-3xl lg:top-130 lg:w-130 lg:bg-none xl:w-154"
       />
     </section>
   );
