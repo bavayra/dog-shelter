@@ -98,7 +98,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm sm:px-4"
+      className="fixed inset-0 z-53 flex items-center justify-center bg-black/60 backdrop-blur-sm sm:px-4"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -150,19 +150,19 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
         </div>
 
         <div className="p-4 sm:px-6 sm:py-2">
-          <div className="mb-4 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
+          <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3 id="modal-title" className="typography-h3 sm:text-3xl md:mt-2">
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} flex items-center gap-2 rounded-full px-4 py-2 font-semibold tracking-normal text-white shadow-lg`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} flex items-center gap-1 rounded-full px-3 py-2 font-semibold tracking-normal text-white shadow-lg`}
             >
               <span className="text-sm md:text-xl">{genderSymbol}</span>
-              <span className="text-sm font-normal md:text-lg">{gender}</span>
+              <span className="text-xs md:text-lg">{gender}</span>
             </div>
           </div>
 
-          <div className="typography-small xs:text-base mb-4 flex flex-wrap gap-3 md:text-lg">
+          <div className="typography-small xs:text-base mb-2 flex flex-wrap gap-3 md:text-lg">
             <div className="flex items-center gap-2">
               <span role="img" aria-label="birthday cake" className="text-xl">
                 🎂
@@ -185,9 +185,9 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             )}
           </div>
 
-          <div className="mb-8">
+          <div className="mb-4">
             <div
-              className="typography-body xs:text-lg px-2 text-justify font-semibold tracking-tighter"
+              className="typography-small xs:text-lg px-2 text-justify leading-relaxed font-semibold"
               dangerouslySetInnerHTML={{ __html: sanitized }}
             />
           </div>
