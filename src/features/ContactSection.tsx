@@ -119,15 +119,19 @@ const ContactSection = () => {
           right="10"
           zIndex={10}
           opacity={70}
-          className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80"
+          className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
         />
       </div>
-      <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl">
+      <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl xl:text-7xl">
         Contact Us
       </h2>
-      <div className="relative flex justify-center md:m-6 md:grid md:grid-cols-2 md:gap-4">
-        <div className="w-full max-w-md px-6">
-          <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
+      <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 xl:w-300">
+        <div className="w-full max-w-md px-6 xl:w-xl">
+          <form
+            id="contact-form"
+            onSubmit={handleSubmit}
+            className="space-y-2 xl:ml-16"
+          >
             <div>
               <TextInput
                 id="input-name"
@@ -211,7 +215,7 @@ const ContactSection = () => {
                 top="1"
                 left="12"
                 zIndex={12}
-                className="sm:ml-12 md:ml-2 lg:ml-12"
+                className="sm:ml-12 md:ml-2 lg:ml-12 xl:ml-4"
               />
             </div>
 
@@ -246,8 +250,8 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center">
-          <p className="typography-large px-4 text-center text-xl md:block md:font-normal">
+        <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:ml-6 xl:w-120">
+          <p className="typography-large px-4 text-center text-xl md:block md:font-normal xl:text-2xl">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
             touch however is easiest for you.
