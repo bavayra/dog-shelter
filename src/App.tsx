@@ -23,28 +23,28 @@ function App() {
       <main className="flex-1">
         <section
           id="hero"
-          className="from-primary-300 to-primary-50 border-primary-500 relative h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-29 pb-4 shadow-md"
+          className="from-primary-300 to-primary-50 border-primary-500 relative h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-24 pb-4 shadow-md"
         >
-          <h2 className="text-primary-700 xs:mt-6 xs:text-5xl xs:font-semibold relative z-10 mx-0 mt-4 w-full text-center text-4xl font-bold md:mt-12 md:text-6xl lg:mt-2 lg:mb-2 xl:mt-6 xl:text-7xl">
+          <h2 className="text-primary-700 xs:mt-6 xs:text-5xl relative z-10 mx-0 mt-4 w-full text-center text-3xl font-semibold md:mt-12 md:text-6xl lg:mt-2 lg:mb-2 xl:mt-6 xl:text-7xl">
             {' '}
             {/*I didn't use typography class because this h2 has to be
               different*/}{' '}
             Give a Shelter Dog a Loving Home
           </h2>
           <DecorativeCircle
-            size={58}
+            size={54}
             mdSize={82}
             lgSize={76}
             xlSize={100}
             color="primary-500"
-            top="60"
+            top="42"
             left="-30"
             opacity={70}
             className="xs:mt-6 md:-ml-8 xl:-ml-12"
           />
           <div className="grid-cols-2 grid-rows-2 md:grid md:items-center md:justify-center">
             <div>
-              <div className="glass-card text-primary-700 xs:mt-8 text-md xl:py-6xl:text-xl relative z-10 mx-auto mt-8 max-w-xl rounded-3xl px-0 py-4 text-center font-semibold sm:w-xs sm:text-lg md:font-semibold xl:w-sm xl:px-6">
+              <div className="glass-card text-primary-700 xs:mt-8 xl:py-6xl relative z-10 mx-auto mt-6 max-w-xl rounded-3xl px-0 py-3 text-center text-sm font-semibold sm:w-xs sm:text-lg xl:w-sm xl:px-6">
                 <p className="mb-2">
                   DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
                 </p>
@@ -59,7 +59,7 @@ function App() {
               <div className="flex justify-center">
                 <Button
                   variant="primary"
-                  size="medium"
+                  size="small"
                   className="xs:px-6 xs:py-3 z-10 -mt-4 transition-transform hover:scale-105"
                   onClick={() =>
                     document
@@ -89,49 +89,49 @@ function App() {
               </p>
             </div>
             <SocialLinks
-              size="md"
-              className="xs:mt-14 mt-10 gap-5 sm:mt-10 md:mt-0 md:mb-10 md:grid md:grid-cols-[repeat(2,min-content)] md:grid-rows-2 md:justify-center md:gap-x-10 md:gap-y-6 lg:mt-6 xl:mt-10"
+              size="sm"
+              className="xs:mt-14 mt-6 gap-5 sm:mt-10 md:mt-0 md:mb-10 md:grid md:grid-cols-[repeat(2,min-content)] md:grid-rows-2 md:justify-center md:gap-x-10 md:gap-y-6 lg:mt-6 xl:mt-10"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
           </div>
           <DecorativeCircle
-            size={64}
+            size={58}
             smSize={84}
             mdSize={120}
             lgSize={104}
             xlSize={120}
             color="primary-500"
-            top="150"
-            left="30"
+            top="104"
+            left="34"
             zIndex={2}
             className="xs:mt-8 xs:ml-12 sm:mt-10 sm:ml-20 md:mt-20 md:ml-64 lg:-mt-16 lg:ml-136 xl:-mt-16 xl:ml-220"
           />
           <DecorativeCircle
-            size={40}
+            size={30}
             smSize={52}
             mdSize={70}
             xlSize={80}
             color="primary-300"
-            top="170"
-            left="15"
+            top="120"
+            left="22"
             zIndex={1}
             className="xs:mt-8 xs:ml-12 sm:mt-6 sm:ml-18 md:mt-28 md:ml-54 lg:-mt-18 lg:ml-128 xl:-mt-4 xl:ml-204"
           />
           <DecorativeCircle
-            size={30}
+            size={20}
             smSize={36}
             mdSize={40}
             xlSize={50}
             color="primary-200"
-            top="180"
-            left="8"
+            top="130"
+            left="12"
             zIndex={0}
             className="xs:mt-8 xs:ml-12 sm:mt-8 sm:ml-12 md:mt-42 md:ml-48 lg:-mt-10 lg:ml-120 xl:mt-14 xl:ml-190"
           />
           <img
             src={RottweilerImage}
-            className="xs:h-64 xs:w-64 absolute right-0 bottom-0 z-3 h-56 w-56 object-contain sm:h-72 sm:w-72 md:h-110 md:w-110 xl:mr-10 xl:h-120 xl:w-120"
+            className="xs:h-64 xs:w-64 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-72 sm:w-72 md:h-110 md:w-110 xl:mr-10 xl:h-120 xl:w-120"
             alt="Rottweiler Dog Illustration"
             aria-hidden="true"
           />
