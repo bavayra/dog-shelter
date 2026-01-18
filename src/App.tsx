@@ -167,22 +167,24 @@ function App() {
               size={36}
               mdSize={64}
               lgSize={72}
+              xlSize={86}
               color="primary-300"
               top="14"
               left="-10"
               opacity={40}
               zIndex={10}
-              className="md:ml-10"
+              className="md:ml-10 xl:ml-46"
             />
             <DecorativeCircle
               size={16}
               mdSize={40}
+              xlSize={52}
               color="primary-500"
               top="22"
               left="0"
               opacity={90}
               zIndex={10}
-              className="md:ml-12 lg:mt-6 lg:ml-16"
+              className="md:ml-12 lg:mt-6 lg:ml-16 xl:mt-8 xl:ml-54"
             />
           </div>
           <AboutUs />
