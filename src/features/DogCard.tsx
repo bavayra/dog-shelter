@@ -65,7 +65,7 @@ const DogCard = memo((dog: Dog) => {
         </div>
         <div className="flex min-h-0 flex-1 flex-col p-4">
           <h3 className="typography-h3 mb-1">{name}</h3>
-          <div className="mb-2 flex flex-wrap items-center gap-4 text-base text-neutral-700">
+          <div className="mb-2 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
             <span className="flex items-center gap-1.5">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -85,7 +85,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <p className="typography-small line-clamp-5 sm:text-base lg:mb-2">
+            <p className="typography-small mb-4 line-clamp-5 sm:text-base lg:mb-2">
               {description}
             </p>
           </div>
