@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`typography-small rounded-lg px-3 py-2 font-medium transition-colors md:text-base lg:text-sm ${
+          className={`typography-small rounded-lg px-3 py-2 font-medium transition-colors md:text-base lg:text-sm xl:text-base ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
@@ -107,7 +107,7 @@ const DogFilters = ({
         </div>
       </div>
 
-      <div className="xs:mt-6 mt-2 flex justify-end">
+      <div className="xs:mt-6 mt-2 flex justify-end xl:mt-10">
         <Button
           onClick={onReset}
           aria-label="Reset filters"
