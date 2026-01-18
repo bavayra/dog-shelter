@@ -25,13 +25,13 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-primary-700 bg-primary-500 hover:bg-primary-700 fixed top-19 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 lg:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 fixed top-15 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
       >
         <svg
-          className="h-6 w-6 md:h-10 md:w-10"
+          className="h-4 w-4 md:h-10 md:w-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -53,7 +53,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 fixed top-20 bottom-0 left-0 z-52 w-64 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:top-0 lg:hidden ${
+        className={`bg-primary-500 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
@@ -72,10 +72,10 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="h-6 w-6 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
+                  className="h-4 w-4 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
                   aria-hidden="true"
                 />
-                <span className="text-lg font-semibold md:text-2xl md:font-normal">
+                <span className="text-sm font-semibold md:text-2xl md:font-normal">
                   {item.label}
                 </span>
               </a>
@@ -83,7 +83,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           })}
 
           <div
-            className="paw-pattern bg-primary-200 pointer-events-none absolute top-54 right-2 h-150 w-full overflow-visible sm:top-4 sm:h-250 md:right-4 md:h-250 md:rotate-10"
+            className="paw-pattern bg-primary-200 pointer-events-none absolute top-48 right-2 h-150 w-full overflow-visible sm:top-4 sm:h-250 md:right-4 md:h-250 md:rotate-10"
             style={{ bottom: '0' }}
           ></div>
         </nav>
