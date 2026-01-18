@@ -35,11 +35,12 @@ function App() {
             size={58}
             mdSize={82}
             lgSize={76}
+            xlSize={100}
             color="primary-500"
             top="60"
             left="-30"
             opacity={70}
-            className="xs:mt-6 md:-ml-8"
+            className="xs:mt-6 md:-ml-8 xl:-ml-12"
           />
           <div className="grid-cols-2 grid-rows-2 md:grid md:items-center md:justify-center">
             <div>
@@ -99,31 +100,34 @@ function App() {
             smSize={84}
             mdSize={120}
             lgSize={104}
+            xlSize={120}
             color="primary-500"
             top="150"
             left="30"
             zIndex={2}
-            className="xs:mt-8 xs:ml-12 sm:mt-10 sm:ml-20 md:mt-20 md:ml-64 lg:-mt-16 lg:ml-136"
+            className="xs:mt-8 xs:ml-12 sm:mt-10 sm:ml-20 md:mt-20 md:ml-64 lg:-mt-16 lg:ml-136 xl:-mt-16 xl:ml-220"
           />
           <DecorativeCircle
             size={40}
             smSize={52}
             mdSize={70}
+            xlSize={80}
             color="primary-300"
             top="170"
             left="15"
             zIndex={1}
-            className="xs:mt-8 xs:ml-12 sm:mt-6 sm:ml-18 md:mt-28 md:ml-54 lg:-mt-18 lg:ml-128"
+            className="xs:mt-8 xs:ml-12 sm:mt-6 sm:ml-18 md:mt-28 md:ml-54 lg:-mt-18 lg:ml-128 xl:-mt-4 xl:ml-204"
           />
           <DecorativeCircle
             size={30}
             smSize={36}
             mdSize={40}
+            xlSize={50}
             color="primary-200"
             top="180"
             left="8"
             zIndex={0}
-            className="xs:mt-8 xs:ml-12 sm:mt-8 sm:ml-12 md:mt-42 md:ml-48 lg:-mt-10 lg:ml-120"
+            className="xs:mt-8 xs:ml-12 sm:mt-8 sm:ml-12 md:mt-42 md:ml-48 lg:-mt-10 lg:ml-120 xl:mt-14 xl:ml-190"
           />
           <img
             src={RottweilerImage}
