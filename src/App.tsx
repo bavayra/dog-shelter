@@ -24,12 +24,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 relative flex min-h-[calc(100vh-48px)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
+            className="from-primary-300 to-primary-50 border-primary-500 relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
           >
-            <h2 className="text-primary-700 relative z-10 mx-auto mt-8 w-full text-center text-3xl font-bold sm:text-4xl md:mt-8 md:text-5xl lg:text-6xl">
-              {' '}
-              {/*I didn't use typography class because this h2 has to be
-              different*/}{' '}
+            <h2 className="text-primary-700 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-bold sm:text-4xl md:mt-8 md:text-5xl lg:text-6xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -37,7 +34,7 @@ function App() {
               mdSize={56}
               lgSize={64}
               color="primary-500"
-              top="30"
+              top="32"
               left="-18"
               opacity={70}
               className="md:top-6 lg:top-8"
@@ -85,49 +82,51 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="mt-6 gap-5"
+              className="mt-8 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
-            <DecorativeCircle
-              size={48}
-              smSize={64}
-              mdSize={80}
-              lgSize={96}
-              color="primary-500"
-              top="auto"
-              bottom="16"
-              left="8"
-              zIndex={2}
-              className="sm:bottom-20 md:bottom-24 lg:bottom-32"
-            />
-            <DecorativeCircle
-              size={32}
-              smSize={44}
-              mdSize={56}
-              lgSize={64}
-              color="primary-300"
-              top="auto"
-              bottom="10"
-              left="4"
-              zIndex={1}
-              className="sm:bottom-14 md:bottom-16 lg:bottom-22"
-            />
-            <DecorativeCircle
-              size={20}
-              smSize={28}
-              mdSize={36}
-              lgSize={44}
-              color="primary-200"
-              top="auto"
-              bottom="6"
-              left="2"
-              zIndex={0}
-              className="sm:bottom-8 md:bottom-10 lg:bottom-14"
-            />
+            <div>
+              <DecorativeCircle
+                size={72}
+                smSize={64}
+                mdSize={80}
+                lgSize={96}
+                color="primary-500"
+                top="auto"
+                bottom="0"
+                right="0"
+                zIndex={2}
+                className="translate-x-1/3 translate-y-1/2 sm:bottom-20 md:bottom-24 lg:bottom-32"
+              />
+              <DecorativeCircle
+                size={42}
+                smSize={44}
+                mdSize={56}
+                lgSize={64}
+                color="primary-300"
+                top="auto"
+                bottom="0"
+                right="0"
+                zIndex={1}
+                className="-translate-x-1/2 translate-y-1/2 sm:bottom-14 md:bottom-16 lg:bottom-22"
+              />
+              <DecorativeCircle
+                size={20}
+                smSize={28}
+                mdSize={36}
+                lgSize={44}
+                color="primary-200"
+                top="auto"
+                bottom="0"
+                right="0"
+                zIndex={0}
+                className="-translate-x-[250%] translate-y-1/2 sm:bottom-8 md:bottom-10 lg:bottom-14"
+              />
+            </div>
             <img
               src={RottweilerImage}
-              className="absolute right-0 bottom-0 z-3 h-50 w-50 object-contain sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-80 lg:w-80"
+              className="absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-80 lg:w-80"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
