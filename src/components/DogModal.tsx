@@ -162,7 +162,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             </div>
           </div>
 
-          <div className="typography-small xs:text-base mb-2 flex flex-wrap gap-3 md:text-lg">
+          <div className="xs:text-base mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg">
             <div className="flex items-center gap-2">
               <span role="img" aria-label="birthday cake" className="text-xl">
                 🎂
