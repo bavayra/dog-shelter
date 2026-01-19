@@ -2,6 +2,7 @@ import React, { useId } from 'react';
 
 interface DecorativeCircleProps {
   size: number;
+  xsSize?: number;
   smSize?: number;
   mdSize?: number;
   lgSize?: number;
@@ -25,6 +26,7 @@ interface DecorativeCircleProps {
 
 export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   size,
+  xsSize,
   smSize,
   mdSize,
   lgSize,
@@ -39,6 +41,10 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   className = '',
 }) => {
   const circleId = useId().replace(/:/g, '');
+
+  const xsMediaQuery = xsSize
+    ? `@media (min-width: 360px) { [data-circle-id="${circleId}"] { width: ${xsSize * 0.25}rem !important; height: ${xsSize * 0.25}rem !important; } }`
+    : '';
 
   const smMediaQuery = smSize
     ? `@media (min-width: 425px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem !important; height: ${smSize * 0.25}rem !important; } }`
@@ -56,7 +62,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 1280px) { [data-circle-id="${circleId}"] { width: ${xlSize * 0.25}rem !important; height: ${xlSize * 0.25}rem !important; } }`
     : '';
 
-  const mediaQueryStyles = `${smMediaQuery} ${mdMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
+  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${mdMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
