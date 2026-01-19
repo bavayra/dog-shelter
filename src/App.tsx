@@ -24,22 +24,23 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
+            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
           >
-            <h2 className="text-primary-700 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-bold sm:text-4xl md:mt-8 md:text-5xl lg:text-6xl">
+            <h2 className="text-primary-700 xs:text-4xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold md:mt-8 md:text-5xl lg:text-6xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
               size={40}
+              xsSize={52}
               mdSize={56}
               lgSize={64}
               color="primary-500"
-              top="32"
-              left="-18"
+              top="34"
+              left="0"
               opacity={70}
-              className="md:top-6 lg:top-8"
+              className="-translate-x-1/2 md:top-6 lg:top-8"
             />
-            <div className="glass-card text-primary-700 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold sm:text-base md:mt-6 md:text-lg">
+            <div className="glass-card text-primary-700 xs:text-base xs:mt-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold md:mt-6 md:text-lg">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -82,13 +83,14 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="mt-8 gap-5"
+              className="xs:mt-10 mt-8 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
             <div>
               <DecorativeCircle
                 size={72}
+                xsSize={90}
                 smSize={64}
                 mdSize={80}
                 lgSize={96}
@@ -101,6 +103,7 @@ function App() {
               />
               <DecorativeCircle
                 size={42}
+                xsSize={48}
                 smSize={44}
                 mdSize={56}
                 lgSize={64}
@@ -113,6 +116,7 @@ function App() {
               />
               <DecorativeCircle
                 size={20}
+                xsSize={23}
                 smSize={28}
                 mdSize={36}
                 lgSize={44}
@@ -126,7 +130,7 @@ function App() {
             </div>
             <img
               src={RottweilerImage}
-              className="absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-80 lg:w-80"
+              className="xs:h-68 xs:w-68 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-80 lg:w-80"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
