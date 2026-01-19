@@ -30,7 +30,7 @@ const HowToHelp = () => {
           </p>
         </div>
 
-        <div className="mb-4 flex justify-center sm:mb-0">
+        <div className="mb-2 flex justify-center sm:mb-0">
           <a
             href="https://qr.nspk.ru/example-link"
             target="_blank"
@@ -52,7 +52,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 xs:top-119 pointer-events-none absolute top-123 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:top-123 sm:w-110 md:top-125 md:w-200 md:max-w-3xl lg:top-130 lg:w-130 lg:bg-none xl:w-154"
+        className="from-primary-50 pointer-events-none absolute bottom-0 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 translate-y-1/4 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:w-110 md:w-200 md:max-w-3xl lg:w-130 lg:bg-none xl:w-154"
       />
     </section>
   );
