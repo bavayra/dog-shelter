@@ -9,17 +9,17 @@ const Header = () => {
   );
 
   return (
-    <header className="bg-primary-200 fixed top-0 z-50 w-full shadow-md">
-      <div className="xs:m-0 container py-1 md:px-4 xl:mx-auto">
-        <div className="mx-4 flex flex-row justify-between md:ml-0 md:pr-6 md:pl-2">
-          <div className="flex flex-row">
+    <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
+      <div className="container mx-auto px-2 py-1 md:px-4">
+        <div className="flex flex-row items-center justify-evenly gap-30">
+          <div className="flex min-w-0 flex-row items-center gap-1 sm:gap-2">
             <img
               src={LogoIcon}
               alt="Rotvodom Dog Shelter Logo"
-              className="border-primary-500 h-10 w-10 rounded-full border-2 bg-transparent object-center px-1 py-2 md:h-14 md:w-14"
+              className="border-primary-500 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-10 sm:w-10 md:h-14 md:w-14"
             />
-            <div className="flex items-center">
-              <h1 className="typography-h1 xs:text-2xl w-auto md:mr-0 md:text-xl xl:text-2xl">
+            <div className="flex min-w-0 items-center">
+              <h1 className="text-primary-500 min-w-0 truncate text-sm leading-tight font-bold sm:text-base md:text-xl xl:text-2xl">
                 {APP_NAME}
               </h1>
               <p className="text-primary-500 hidden text-xl font-semibold md:ml-2 md:flex lg:hidden">
@@ -60,11 +60,11 @@ const Header = () => {
           </div>
           <a
             href="#hero"
-            className="flex items-center justify-end md:hidden"
+            className="flex shrink-0 items-center md:hidden"
             aria-label="Go to home section"
           >
             <HomeIcon
-              className="hover:text-primary-700 text-primary-500 xs:h-8 xs:w-8 h-6 w-6 cursor-pointer object-contain transition hover:scale-115"
+              className="hover:text-primary-700 text-primary-500 h-5 w-5 shrink-0 cursor-pointer object-contain transition hover:scale-115 sm:h-6 sm:w-6"
               aria-label="Home"
             />
           </a>
