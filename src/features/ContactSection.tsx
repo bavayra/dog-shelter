@@ -112,14 +112,14 @@ const ContactSection = () => {
     <section id="contact" className="bg-primary-200 pt-8 pb-10">
       <div className="relative">
         <DecorativeCircle
-          size={10}
+          size={8}
           lgSize={12}
           color="primary-50"
-          top="-2"
-          right="12"
+          top="0"
+          right="0"
           zIndex={10}
           opacity={70}
-          className="xs:mr-8 sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
+          className="xs:mr-8 -translate-x-[200%] sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
         />
       </div>
       <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl xl:text-7xl">
@@ -188,7 +188,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-small xs:text-base mb-4 block md:text-lg"
+                className="typography-body xs:text-base mb-4 block md:text-lg"
               >
                 Message
               </label>
