@@ -19,7 +19,7 @@ const AdoptionRules = () => {
           Adoption Rules
         </h2>
 
-        <p className="typography-large mt-2 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight">
+        <p className="typography-body mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
