@@ -69,19 +69,19 @@ html {
   }
 
   .typography-h1 {
-    @apply text-primary-500 text-xl leading-tight font-bold;
+    @apply text-primary-500 text-3xl leading-tight font-bold;
   }
 
   .typography-h2 {
-    @apply text-primary-500 text-4xl leading-snug font-bold;
+    @apply text-primary-500 text-2xl leading-snug font-bold;
   }
 
   .typography-h3 {
-    @apply text-primary-700 text-2xl leading-normal font-bold;
+    @apply text-primary-700 text-xl leading-normal font-bold;
   }
 
   .typography-large {
-    @apply text-primary-500 text-base leading-normal font-medium;
+    @apply text-primary-500 text-lg leading-normal font-medium;
   }
 
   .typography-body {
