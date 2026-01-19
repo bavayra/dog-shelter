@@ -85,7 +85,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <p className="typography-small mb-4 line-clamp-5 sm:text-base lg:mb-2">
+            <p className="typography-small mb-4 line-clamp-5 text-sm sm:text-base lg:mb-2">
               {description}
             </p>
           </div>
