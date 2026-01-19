@@ -113,7 +113,7 @@ const DogFilters = ({
           aria-label="Reset filters"
           variant="filter"
           active={false}
-          className="md:text-base"
+          className="text-xs md:text-base"
         >
           RESET FILTERS
         </Button>

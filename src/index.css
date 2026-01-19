@@ -69,15 +69,15 @@ html {
   }
 
   .typography-h1 {
-    @apply text-primary-500 text-3xl leading-tight font-bold;
+    @apply text-primary-500 text-4xl leading-tight font-bold;
   }
 
   .typography-h2 {
-    @apply text-primary-500 text-2xl leading-snug font-bold;
+    @apply text-primary-500 text-3xl leading-snug font-bold;
   }
 
   .typography-h3 {
-    @apply text-primary-700 text-xl leading-normal font-bold;
+    @apply text-primary-700 text-2xl leading-normal font-bold;
   }
 
   .typography-large {
@@ -89,7 +89,7 @@ html {
   }
 
   .typography-small {
-    @apply text-sm leading-snug tracking-normal text-neutral-700;
+    @apply text-xs leading-snug tracking-normal text-neutral-700;
   }
 
   .z-3 {
