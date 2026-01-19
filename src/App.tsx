@@ -17,180 +17,168 @@ const ContactSection = lazy(() => import('./features/ContactSection'));
 
 function App() {
   return (
-    <div className="flex min-h-screen flex-col overflow-x-hidden">
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <Sidebar />
-      <main className="flex-1">
-        <section
-          id="hero"
-          className="from-primary-300 to-primary-50 border-primary-500 relative h-screen overflow-hidden border-b-3 bg-linear-to-b px-4 pt-24 pb-4 shadow-md"
-        >
-          <h2 className="text-primary-700 xs:mt-6 xs:text-5xl relative z-10 mx-0 mt-4 w-full text-center text-3xl font-semibold md:mt-12 md:text-6xl lg:mt-2 lg:mb-2 xl:mt-6 xl:text-7xl">
-            {' '}
-            {/*I didn't use typography class because this h2 has to be
+      <div className="flex flex-1">
+        <Sidebar className="md:hidden" />
+        <main className="flex-1">
+          <section
+            id="hero"
+            className="from-primary-300 to-primary-50 border-primary-500 relative flex min-h-[calc(100vh-48px)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
+          >
+            <h2 className="text-primary-700 relative z-10 mx-auto mt-8 w-full text-center text-3xl font-bold sm:text-4xl md:mt-8 md:text-5xl lg:text-6xl">
+              {' '}
+              {/*I didn't use typography class because this h2 has to be
               different*/}{' '}
-            Give a Shelter Dog a Loving Home
-          </h2>
-          <DecorativeCircle
-            size={54}
-            mdSize={82}
-            lgSize={76}
-            xlSize={100}
-            color="primary-500"
-            top="42"
-            left="-30"
-            opacity={70}
-            className="xs:mt-6 md:-ml-8 xl:-ml-12"
-          />
-          <div className="grid-cols-2 grid-rows-2 md:grid md:items-center md:justify-center">
-            <div>
-              <div className="glass-card text-primary-700 xs:mt-8 xl:py-6xl relative z-10 mx-auto mt-6 max-w-xl rounded-3xl px-0 py-3 text-center text-sm font-semibold sm:w-xs sm:text-lg xl:w-sm xl:px-6">
-                <p className="mb-2">
-                  DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
-                </p>
-                <p className="mb-2">
-                  DOGS ADOPTED THIS YEAR: {shelterStats.dogsAdoptedThisYear}
-                </p>
-                <p className="mb-2">
-                  TOTAL DOGS ADOPTED: {shelterStats.dogsAdoptedTotal}
-                </p>
-              </div>
-
-              <div className="flex justify-center">
-                <Button
-                  variant="primary"
-                  size="small"
-                  className="xs:px-6 xs:py-3 z-10 -mt-4 transition-transform hover:scale-105"
-                  onClick={() =>
-                    document
-                      .getElementById('pets')
-                      ?.scrollIntoView({ behavior: 'smooth' })
-                  }
-                  ariaLabel="Find Your Best Friend"
-                >
-                  Find Your Best Friend
-                </Button>
-              </div>
+              Give a Shelter Dog a Loving Home
+            </h2>
+            <DecorativeCircle
+              size={40}
+              mdSize={56}
+              lgSize={64}
+              color="primary-500"
+              top="30"
+              left="-18"
+              opacity={70}
+              className="md:top-6 lg:top-8"
+            />
+            <div className="glass-card text-primary-700 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold sm:text-base md:mt-6 md:text-lg">
+              <p className="mb-2">
+                DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
+              </p>
+              <p className="mb-2">
+                DOGS ADOPTED THIS YEAR: {shelterStats.dogsAdoptedThisYear}
+              </p>
+              <p>TOTAL DOGS ADOPTED: {shelterStats.dogsAdoptedTotal}</p>
             </div>
-            <div className="relative z-10 hidden justify-center md:flex">
-              <p className="text-primary-700 glass-card mt-10 rounded-3xl p-6 text-center text-base font-semibold tracking-normal lg:mx-auto lg:mt-4 lg:mr-8 xl:mt-12 xl:mr-36 xl:w-xl xl:text-lg">
-                LEFT BEHIND AND WAITING EACH DAY-MANY GENTLE HEARTS LONG FOR A
-                WARM LAP AND A LOVING HOME. WE ARE AUTONOMOUS NON-PROFIT
-                ORGANIZATION (ANO), WE ONLY SPEND AND NEVER EARN. WE RELY SOLELY
-                ON THE{' '}
+
+            <div className="-mt-2 flex justify-center md:mt-6">
+              <Button
+                variant="primary"
+                size="medium"
+                className="z-10 transition-transform hover:scale-105"
+                onClick={() =>
+                  document
+                    .getElementById('pets')
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                }
+                ariaLabel="Find Your Best Friend"
+              >
+                Find Your Best Friend
+              </Button>
+            </div>
+            <div className="relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4 md:mt-6 md:flex">
+              <p className="typography-large text-center">
+                Left behind and waiting each day—many gentle hearts long for a
+                warm lap and a loving home. We are Autonomous Non-profit
+                Organization (ANO), we only spend and never earn. We rely solely
+                on the{' '}
                 <a
                   href="#help"
-                  className="hover:text-primary-700 text-primary-500 font-bold underline"
+                  className="hover:text-primary-900 text-primary-700 font-bold underline transition-colors"
                   aria-label="Go to How to Help section"
                 >
-                  GENEROSITY
+                  generosity
                 </a>{' '}
-                OF PEOPLE.
+                of people.
               </p>
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-14 mt-6 gap-5 sm:mt-10 md:mt-0 md:mb-10 md:grid md:grid-cols-[repeat(2,min-content)] md:grid-rows-2 md:justify-center md:gap-x-10 md:gap-y-6 lg:mt-6 xl:mt-10"
+              className="mt-6 gap-5"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
-          </div>
-          <DecorativeCircle
-            size={58}
-            smSize={84}
-            mdSize={120}
-            lgSize={104}
-            xlSize={120}
-            color="primary-500"
-            top="104"
-            left="34"
-            zIndex={2}
-            className="xs:mt-8 xs:ml-12 sm:mt-10 sm:ml-20 md:mt-20 md:ml-64 lg:-mt-16 lg:ml-136 xl:-mt-16 xl:ml-220"
-          />
-          <DecorativeCircle
-            size={30}
-            smSize={52}
-            mdSize={70}
-            xlSize={80}
-            color="primary-300"
-            top="120"
-            left="22"
-            zIndex={1}
-            className="xs:mt-8 xs:ml-12 sm:mt-6 sm:ml-18 md:mt-28 md:ml-54 lg:-mt-18 lg:ml-128 xl:-mt-4 xl:ml-204"
-          />
-          <DecorativeCircle
-            size={20}
-            smSize={36}
-            mdSize={40}
-            xlSize={50}
-            color="primary-200"
-            top="130"
-            left="12"
-            zIndex={0}
-            className="xs:mt-8 xs:ml-12 sm:mt-8 sm:ml-12 md:mt-42 md:ml-48 lg:-mt-10 lg:ml-120 xl:mt-14 xl:ml-190"
-          />
-          <img
-            src={RottweilerImage}
-            className="xs:h-64 xs:w-64 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-72 sm:w-72 md:h-110 md:w-110 xl:mr-10 xl:h-120 xl:w-120"
-            alt="Rottweiler Dog Illustration"
-            aria-hidden="true"
-          />
-        </section>
-        <section id="pets" className="bg-primary-50 scroll-mt-10">
-          <div className="container mx-auto px-4">
-            <h2
-              id="pets-heading"
-              className="typography-h2 xs:text-5xl m-0 pt-10 text-center md:text-7xl xl:mb-10 xl:pt-16 xl:text-8xl"
-            >
-              Our Pets
-            </h2>
-          </div>
-          <DogGrid />
-        </section>
-        <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
-          <div className="relative sm:top-2 md:top-18 md:right-8 xl:top-24 xl:right-18">
             <DecorativeCircle
-              size={64}
-              mdSize={88}
-              xlSize={112}
+              size={48}
+              smSize={64}
+              mdSize={80}
+              lgSize={96}
               color="primary-500"
-              top="-8"
-              left="-30"
-              opacity={20}
+              top="auto"
+              bottom="16"
+              left="8"
               zIndex={2}
+              className="sm:bottom-20 md:bottom-24 lg:bottom-32"
             />
-          </div>
-          <HowToHelp />
-          <AdoptionRules />
-          <div className="relative">
             <DecorativeCircle
-              size={36}
-              mdSize={64}
-              lgSize={72}
-              xlSize={86}
+              size={32}
+              smSize={44}
+              mdSize={56}
+              lgSize={64}
               color="primary-300"
-              top="14"
-              left="-10"
-              opacity={40}
-              zIndex={10}
-              className="md:ml-10 xl:ml-46"
+              top="auto"
+              bottom="10"
+              left="4"
+              zIndex={1}
+              className="sm:bottom-14 md:bottom-16 lg:bottom-22"
             />
             <DecorativeCircle
-              size={16}
-              mdSize={40}
-              xlSize={52}
-              color="primary-500"
-              top="22"
-              left="0"
-              opacity={90}
-              zIndex={10}
-              className="md:ml-12 lg:mt-6 lg:ml-16 xl:mt-8 xl:ml-54"
+              size={20}
+              smSize={28}
+              mdSize={36}
+              lgSize={44}
+              color="primary-200"
+              top="auto"
+              bottom="6"
+              left="2"
+              zIndex={0}
+              className="sm:bottom-8 md:bottom-10 lg:bottom-14"
             />
-          </div>
-          <AboutUs />
-          <ContactSection />
-        </Suspense>
-      </main>
+            <img
+              src={RottweilerImage}
+              className="absolute right-0 bottom-0 z-3 h-50 w-50 object-contain sm:h-52 sm:w-52 md:h-64 md:w-64 lg:h-80 lg:w-80"
+              alt="Rottweiler Dog Illustration"
+              aria-hidden="true"
+            />
+          </section>
+          <section id="pets" className="bg-primary-50 scroll-mt-10">
+            <div className="container mx-auto px-4">
+              <h2
+                id="pets-heading"
+                className="typography-h2 xs:text-5xl m-0 pt-10 text-center"
+              >
+                Our Pets
+              </h2>
+            </div>
+            <DogGrid />
+          </section>
+          <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
+            <div className="relative sm:top-2">
+              <DecorativeCircle
+                size={64}
+                color="primary-500"
+                top="-8"
+                left="-30"
+                opacity={20}
+                zIndex={2}
+              />
+            </div>
+            <HowToHelp />
+            <AdoptionRules />
+            <div className="relative">
+              <DecorativeCircle
+                size={36}
+                color="primary-300"
+                top="14"
+                left="-10"
+                opacity={40}
+                zIndex={10}
+              />
+              <DecorativeCircle
+                size={16}
+                color="primary-500"
+                top="22"
+                left="0"
+                opacity={90}
+                zIndex={10}
+              />
+            </div>
+            <AboutUs />
+            <ContactSection />
+          </Suspense>
+        </main>
+      </div>
       <Footer />
     </div>
   );
