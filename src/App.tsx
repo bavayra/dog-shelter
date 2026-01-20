@@ -24,9 +24,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
+            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-8 md:text-5xl lg:text-6xl">
+            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-8 lg:text-6xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -40,7 +40,7 @@ function App() {
               opacity={70}
               className="-translate-x-1/2 translate-y-[80%] md:top-6 lg:top-8"
             />
-            <div className="glass-card text-primary-700 xs:text-base xs:mt-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold sm:text-lg md:mt-6 md:text-lg">
+            <div className="glass-card text-primary-700 xs:text-base xs:mt-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-6 md:text-lg">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -83,7 +83,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 mt-8 gap-5"
+              className="xs:mt-10 mt-8 gap-5 min-[425px]:mt-6"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -99,7 +99,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={2}
-                className="translate-x-1/3 translate-y-1/2 sm:bottom-20 md:bottom-24 lg:bottom-32"
+                className="translate-x-1/3 translate-y-1/2 min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 md:bottom-24 lg:bottom-32"
               />
               <DecorativeCircle
                 size={42}
@@ -112,7 +112,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={1}
-                className="-translate-x-1/2 translate-y-1/2 sm:bottom-14 md:bottom-16 lg:bottom-22"
+                className="-translate-x-1/2 translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] md:bottom-16 lg:bottom-22"
               />
               <DecorativeCircle
                 size={20}
@@ -125,7 +125,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="-translate-x-[250%] translate-y-1/2 sm:bottom-8 md:bottom-10 lg:bottom-14"
+                className="-translate-x-[250%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 md:bottom-10 lg:bottom-14"
               />
             </div>
             <img
