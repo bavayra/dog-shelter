@@ -215,7 +215,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="translate-x-[150%] translate-y-[20%] sm:ml-12 md:ml-2 lg:ml-12 xl:ml-4"
+                className="xs:translate-x-[250%] translate-x-[150%] translate-y-[20%] sm:ml-12 md:ml-2 lg:ml-12 xl:ml-4"
               />
             </div>
 
