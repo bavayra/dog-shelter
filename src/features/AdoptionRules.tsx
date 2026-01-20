@@ -15,11 +15,11 @@ const AdoptionRules = () => {
   return (
     <section id="adoption-rules" className="relative z-1 bg-neutral-50 py-6">
       <div className="container mx-auto px-4 md:mt-4">
-        <h2 className="typography-h2 xs:-mt-4 mb-0 text-center md:text-5xl">
+        <h2 className="typography-h2 xs:text-4xl mb-0 text-center md:text-5xl">
           Adoption Rules
         </h2>
 
-        <p className="typography-body mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight">
+        <p className="typography-body xs:text-lg mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
@@ -31,12 +31,12 @@ const AdoptionRules = () => {
         ))}
       </div>
 
-      <div className="mt-6 text-center">
+      <div className="xs:mb-6 mt-6 text-center">
         <div>
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 xs:text-lg mb-4 inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105 md:mt-3 md:mb-6"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 xs:text-base mb-4 inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105 md:mt-3 md:mb-6"
           >
             See All The Rules
           </a>
@@ -45,7 +45,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 xs:text-lg inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 text-primary-50 xs:text-base inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105"
           >
             See The Contract Template
           </a>
