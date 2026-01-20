@@ -8,7 +8,7 @@ const HowToHelp = () => {
       className="bg-primary-50 border-b-primary-500 relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:pt-10 lg:min-h-[90vh] xl:min-h-[80vh]"
     >
       <div className="z-10 container mx-auto px-4">
-        <h2 className="typography-h2 mb-6 text-center md:mt-6 md:text-5xl xl:text-7xl">
+        <h2 className="typography-h2 xs:text-4xl mb-6 text-center md:mt-6 md:text-5xl xl:text-7xl">
           How to Help ROTVODOM
         </h2>
         <div className="mx-auto mb-6 max-w-3xl text-center md:mb-6 md:px-12">
