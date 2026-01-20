@@ -59,7 +59,7 @@ const DogGrid = () => {
       />
       {!isLoading && (
         <p
-          className="typography-body mb-4 text-center md:mb-8 md:text-2xl"
+          className="typography-body mb-4 text-center sm:text-xl md:mb-8 md:text-2xl"
           aria-live="polite"
         >
           Found {filteredDogs.length}{' '}
