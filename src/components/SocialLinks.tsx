@@ -27,7 +27,7 @@ const SocialLinks = ({
   ];
 
   const sizeClasses = {
-    sm: 'w-10 h-10 xs:w-12 xs:h-12',
+    sm: 'w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14',
     md: 'w-12  h-12 xs:w-14 xs:h-14 md:w-18 md:h-18',
     lg: 'w-14 h-14',
   };
