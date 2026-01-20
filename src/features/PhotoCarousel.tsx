@@ -42,7 +42,7 @@ const PhotoCarousel = () => {
           }}
         />
         <div className="absolute right-0 bottom-0 left-0 bg-black/40 p-2 backdrop-blur-sm">
-          <p className="text-center text-xs leading-snug text-neutral-50 md:text-lg">
+          <p className="xs:text-base text-center text-xs leading-snug text-neutral-50 md:text-lg">
             {currentImage.caption}
           </p>
         </div>
