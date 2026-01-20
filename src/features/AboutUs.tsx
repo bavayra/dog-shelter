@@ -5,11 +5,11 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="bg-primary-50 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="typography-h2 z-12 mb-4 text-center md:mb-8 md:text-5xl xl:text-8xl">
+        <h2 className="typography-h2 xs:text-5xl z-12 mb-4 text-center md:mb-8 md:text-5xl xl:text-8xl">
           About Us
         </h2>
 
-        <div className="bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto md:text-xl lg:max-w-3xl xl:text-2xl">
+        <div className="bg-primary-100 typography-body xs:text-lg border-primary-300 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto md:text-xl lg:max-w-3xl xl:text-2xl">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one
@@ -33,6 +33,7 @@ const AboutUs = () => {
         <div className="relative">
           <DecorativeCircle
             size={44}
+            xsSize={40}
             mdSize={64}
             lgSize={76}
             xlSize={92}
