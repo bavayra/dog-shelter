@@ -31,7 +31,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
         aria-expanded={isOpen}
       >
         <svg
-          className="h-4 w-4 md:h-10 md:w-10"
+          className="h-4 w-4 sm:h-8 sm:w-8 md:h-10 md:w-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -53,7 +53,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 lg:hidden ${
+        className={`bg-primary-500 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
