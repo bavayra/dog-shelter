@@ -11,18 +11,24 @@ const Footer = () => {
       <div className="md:flex-cols-2 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-76">
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
-            <h3 className="mb-2 text-center text-xs font-bold">{APP_NAME}</h3>
-            <p className="mb-2 text-center text-xs text-neutral-300 md:w-64 md:text-base xl:w-100 xl:text-lg">
+            <h3 className="xs:text-base mb-2 text-center text-xs font-bold">
+              {APP_NAME}
+            </h3>
+            <p className="xs:text-sm mb-2 text-center text-xs text-neutral-300 md:w-64 md:text-base xl:w-100 xl:text-lg">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
           <div className="mb-6 text-center md:hidden md:text-right">
-            <h3 className="mb-2 text-center text-xs font-bold">CONTACT US</h3>
+            <h3 className="xs:text-base mb-2 text-center text-xs font-bold">
+              CONTACT US
+            </h3>
             <ContactInfo />
           </div>
         </div>
         <div>
-          <h3 className="mb-3 text-center text-xs font-bold">FOLLOW US</h3>
+          <h3 className="xs:text-base mb-3 text-center text-xs font-bold">
+            FOLLOW US
+          </h3>
           <SocialLinks size="sm" />
         </div>
       </div>
