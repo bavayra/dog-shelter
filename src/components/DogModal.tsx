@@ -187,7 +187,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
           <div className="mb-4">
             <div
-              className="xs:text-lg px-2 text-justify text-sm leading-normal font-semibold text-neutral-700"
+              className="xs:text-lg px-2 text-justify text-sm leading-tight font-semibold text-neutral-700"
               dangerouslySetInnerHTML={{ __html: sanitized }}
             />
           </div>
