@@ -25,7 +25,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-primary-700 bg-primary-500 hover:bg-primary-700 fixed top-15 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 lg:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 xs:top-20 fixed top-15 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
@@ -68,14 +68,14 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 key={item.id}
                 href={item.href}
                 aria-label={`Go to ${item.label} section`}
-                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-50 transition-colors hover:scale-110"
+                className="hover:bg-primary-200 hover:text-primary-700 group xs:gap-3 relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-50 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
-                  className="h-4 w-4 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
+                  className="xs:w-5 xs:h-5 h-4 w-4 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
                   aria-hidden="true"
                 />
-                <span className="text-sm font-semibold md:text-2xl md:font-normal">
+                <span className="xs:text-lg text-sm font-semibold md:text-2xl md:font-normal">
                   {item.label}
                 </span>
               </a>
