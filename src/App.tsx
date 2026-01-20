@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md md:min-h-[calc(100vh-64px)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold md:mt-8 md:text-5xl lg:text-6xl">
+            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold md:mt-8 md:text-5xl lg:text-6xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -35,10 +35,10 @@ function App() {
               mdSize={56}
               lgSize={64}
               color="primary-500"
-              top="34"
+              top="0"
               left="0"
               opacity={70}
-              className="-translate-x-1/2 md:top-6 lg:top-8"
+              className="-translate-x-1/2 translate-y-[80%] md:top-6 lg:top-8"
             />
             <div className="glass-card text-primary-700 xs:text-base xs:mt-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold md:mt-6 md:text-lg">
               <p className="mb-2">
