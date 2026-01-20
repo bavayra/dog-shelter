@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`typography-small rounded-lg px-3 py-2 font-medium transition-colors md:text-base lg:text-sm xl:text-base ${
+          className={`typography-small rounded-lg px-3 py-2 font-medium transition-colors sm:text-sm md:text-base lg:text-sm xl:text-base ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
@@ -61,14 +61,16 @@ const DogFilters = ({
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label className="typography-body mb-2 block md:text-xl">Age:</label>
+          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
+            Age:
+          </label>
           <div className="flex flex-wrap gap-2">
             {renderFilterButtons(AGE_FILTER_OPTIONS, filters.age, onAgeChange)}
           </div>
         </div>
 
         <div>
-          <label className="typography-body mb-2 block md:text-xl">
+          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
             Gender:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -81,7 +83,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body mb-2 block md:text-xl">
+          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
             Breed:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -94,7 +96,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body mb-2 block md:text-xl">
+          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
             Health:
           </label>
           <div className="flex flex-wrap gap-2">
