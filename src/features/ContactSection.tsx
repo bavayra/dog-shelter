@@ -119,10 +119,10 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[275%] -translate-x-[200%] sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
+          className="xs:-translate-x-[130%] xs:translate-y-1/4 -translate-x-[200%] sm:mr-14 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
         />
       </div>
-      <h2 className="typography-h2 relative z-11 mb-4 text-center md:text-5xl xl:text-7xl">
+      <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-5xl xl:text-7xl">
         Contact Us
       </h2>
       <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300">
@@ -199,7 +199,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="placeholder:text-primary-900 focus:border-primary-500 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="placeholder:text-primary-900 focus:border-primary-500 xs:text-lg mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">
