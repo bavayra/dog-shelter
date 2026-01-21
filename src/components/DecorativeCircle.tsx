@@ -49,11 +49,11 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     : '';
 
   const smMediaQuery = smSize
-    ? `@media (min-width: 425px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem !important; height: ${smSize * 0.25}rem !important; } }`
+    ? `@media (min-width: 412px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem !important; height: ${smSize * 0.25}rem !important; } }`
     : '';
 
   const tabletSmMediaQuery = tabletSmSize
-    ? `@media (min-width: 640px) { [data-circle-id="${circleId}"] { width: ${tabletSmSize * 0.25}rem !important; height: ${tabletSmSize * 0.25}rem !important; } }`
+    ? `@media (min-width: 480px) { [data-circle-id="${circleId}"] { width: ${tabletSmSize * 0.25}rem !important; height: ${tabletSmSize * 0.25}rem !important; } }`
     : '';
 
   const mdMediaQuery = mdSize
