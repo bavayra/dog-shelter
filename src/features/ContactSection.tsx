@@ -122,7 +122,7 @@ const ContactSection = () => {
           className="xs:-translate-x-[130%] xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
         />
       </div>
-      <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-5xl xl:text-7xl">
+      <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-7xl">
         Contact Us
       </h2>
       <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300">

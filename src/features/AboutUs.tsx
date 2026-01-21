@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="bg-primary-50 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="typography-h2 xs:text-5xl z-12 mb-4 text-center md:mb-8 xl:text-8xl">
+        <h2 className="typography-h2 xs:text-5xl z-12 mb-4 text-center md:mb-8 md:text-7xl xl:text-8xl">
           About Us
         </h2>
 
