@@ -157,8 +157,8 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             <div
               className={`absolute top-74 right-4 md:static ${genderBadgeColor} flex items-center gap-1 rounded-full px-3 py-2 font-semibold tracking-normal text-white shadow-lg`}
             >
-              <span className="text-sm md:text-xl">{genderSymbol}</span>
-              <span className="text-xs md:text-lg">{gender}</span>
+              <span className="tablet-sm:text-lg text-sm">{genderSymbol}</span>
+              <span className="tablet-sm:text-lg text-xs">{gender}</span>
             </div>
           </div>
 
