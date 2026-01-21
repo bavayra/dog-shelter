@@ -57,7 +57,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
-        <nav className="relative p-4 sm:mt-4 md:pl-12">
+        <nav className="relative p-4 sm:mt-4 md:pl-6">
           <h2 className="tablet-sm:text-3xl mb-4 text-lg font-bold text-neutral-50 md:text-2xl">
             NAVIGATION
           </h2>
