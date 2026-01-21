@@ -41,7 +41,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-full -translate-x-1/2 translate-y-[80%] md:top-6 lg:top-8"
             />
-            <div className="glass-card text-primary-700 xs:text-base xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-6 md:text-lg">
+            <div className="glass-card text-primary-700 xs:text-base xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-6 md:text-lg">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
