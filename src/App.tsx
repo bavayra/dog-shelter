@@ -20,7 +20,7 @@ function App() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1">
-        <Sidebar className="md:hidden" />
+        <Sidebar className="lg:hidden" />
         <main className="flex-1">
           <section
             id="hero"
@@ -142,7 +142,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h1 xs:text-5xl m-0 pt-10 text-center"
+                className="typography-h1 xs:text-5xl m-0 pt-10 text-center md:pb-8 md:text-7xl"
               >
                 Our Pets
               </h2>
