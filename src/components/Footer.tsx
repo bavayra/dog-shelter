@@ -14,7 +14,7 @@ const Footer = () => {
             <h3 className="xs:text-base mb-2 text-center text-xs font-bold">
               {APP_NAME}
             </h3>
-            <p className="xs:text-sm mb-2 text-center text-xs text-neutral-300 md:w-64 md:text-base xl:w-100 xl:text-lg">
+            <p className="xs:text-sm tablet-sm:text-base mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100 xl:text-lg">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
