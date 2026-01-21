@@ -65,6 +65,13 @@ html {
     mask-position: left center;
   }
 
+  @media (min-width: 480px) {
+    .paw-pattern {
+      -webkit-mask-size: 320px 960px;
+      mask-size: 320px 960px;
+    }
+  }
+
   .glass-card {
     background: rgba(255, 255, 255, 0.05);
     -webkit-backdrop-filter: blur(1px) saturate(100%);
