@@ -25,7 +25,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-primary-700 bg-primary-500 hover:bg-primary-700 xs:top-20 tablet-sm:top-26 fixed top-15 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 lg:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 xs:top-20 tablet-sm:top-26 fixed top-15 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 md:ml-8 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
@@ -53,11 +53,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 tablet-sm:w-72 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 lg:hidden ${
+        className={`bg-primary-500 tablet-sm:w-72 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
-        <nav className="relative p-4 sm:mt-4">
+        <nav className="relative p-4 sm:mt-4 md:pl-12">
           <h2 className="tablet-sm:text-3xl mb-4 text-lg font-bold text-neutral-50 md:text-2xl">
             NAVIGATION
           </h2>
