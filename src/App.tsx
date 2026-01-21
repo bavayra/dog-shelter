@@ -24,7 +24,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-8rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
+            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-4rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
           >
             <h2 className="text-primary-700 xs:text-4xl xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:text-6xl">
               Give a Shelter Dog a Loving Home
@@ -66,7 +66,7 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4 md:mt-6 md:flex md:max-w-xl">
+            <div className="relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4 md:mt-8 md:flex md:max-w-xl">
               <p className="typography-large text-center md:text-xl">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
@@ -94,46 +94,47 @@ function App() {
                 xsSize={90}
                 smSize={68}
                 tabletSmSize={94}
-                mdSize={80}
+                mdSize={92}
                 lgSize={96}
                 color="primary-500"
                 top="auto"
                 bottom="0"
                 right="0"
                 zIndex={2}
-                className="tablet-sm:translate-x-[20%] tablet-sm:translate-y-1/4 translate-x-1/3 translate-y-1/2 min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 lg:bottom-32"
+                className="tablet-sm:translate-x-[20%] tablet-sm:translate-y-1/4 translate-x-1/3 translate-y-1/2 min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 md:-mb-6 lg:bottom-32"
               />
               <DecorativeCircle
                 size={42}
                 xsSize={48}
                 smSize={44}
                 tabletSmSize={64}
+                mdSize={64}
                 lgSize={64}
                 color="primary-300"
                 top="auto"
                 bottom="0"
                 right="0"
                 zIndex={1}
-                className="tablet-sm:-translate-x-[50%] tablet-sm:translate-y-[35%] -translate-x-1/2 translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] md:-mr-8 lg:bottom-22"
+                className="tablet-sm:-translate-x-[50%] tablet-sm:translate-y-[35%] -translate-x-1/2 translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] lg:bottom-22"
               />
               <DecorativeCircle
                 size={20}
                 xsSize={23}
                 smSize={28}
                 tabletSmSize={32}
-                mdSize={36}
+                mdSize={40}
                 lgSize={44}
                 color="primary-200"
                 top="auto"
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] -translate-x-[250%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 md:-translate-x-[190%] lg:bottom-14"
+                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] -translate-x-[250%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 md:-translate-x-[180%] lg:bottom-14"
               />
             </div>
             <img
               src={RottweilerImage}
-              className="xs:h-68 xs:w-68 tablet-sm:w-96 tablet-sm:h-96 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-70 sm:w-70 md:h-78 md:w-78 lg:h-80 lg:w-80"
+              className="xs:h-68 xs:w-68 tablet-sm:w-96 tablet-sm:h-96 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-70 sm:w-70 md:h-90 md:w-90 lg:h-80 lg:w-80"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
@@ -165,19 +166,23 @@ function App() {
             <div className="relative">
               <DecorativeCircle
                 size={36}
+                mdSize={48}
                 color="primary-300"
                 top="14"
                 left="-10"
                 opacity={40}
                 zIndex={10}
+                className="md:translate-x-1/4"
               />
               <DecorativeCircle
                 size={16}
+                mdSize={24}
                 color="primary-500"
                 top="22"
                 left="0"
                 opacity={90}
                 zIndex={10}
+                className="md:translate-x-3/5 md:md:translate-y-1/7"
               />
             </div>
             <AboutUs />
