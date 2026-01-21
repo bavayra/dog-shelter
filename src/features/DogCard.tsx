@@ -40,7 +40,7 @@ const DogCard = memo((dog: Dog) => {
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="group relative h-64 overflow-hidden">
+        <div className="group relative h-64 overflow-hidden md:h-60">
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
@@ -85,7 +85,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <p className="typography-small tablet-sm:text-lg mb-4 line-clamp-5 text-sm sm:text-base lg:mb-2">
+            <p className="typography-small tablet-sm:text-lg mb-4 line-clamp-5 text-sm sm:text-base md:text-base lg:mb-2">
               {description}
             </p>
           </div>
