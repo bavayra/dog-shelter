@@ -119,7 +119,7 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] xs:translate-y-1/4 -translate-x-[200%] sm:mr-6 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
+          className="xs:-translate-x-[130%] xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mt-3 md:mr-50 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-5xl xl:text-7xl">
@@ -215,7 +215,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[250%] translate-x-[150%] translate-y-[20%] sm:ml-2 md:ml-2 lg:ml-12 xl:ml-4"
+                className="xs:translate-x-[250%] tablet-sm:translate-x-[300%] translate-x-[150%] translate-y-[20%] sm:ml-2 md:ml-2 lg:ml-12 xl:ml-4"
               />
             </div>
 
