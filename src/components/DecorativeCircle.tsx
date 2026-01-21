@@ -4,6 +4,7 @@ interface DecorativeCircleProps {
   size: number;
   xsSize?: number;
   smSize?: number;
+  tabletSmSize?: number;
   mdSize?: number;
   lgSize?: number;
   xlSize?: number;
@@ -28,6 +29,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   size,
   xsSize,
   smSize,
+  tabletSmSize,
   mdSize,
   lgSize,
   xlSize,
@@ -50,6 +52,10 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 425px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem !important; height: ${smSize * 0.25}rem !important; } }`
     : '';
 
+  const tabletSmMediaQuery = tabletSmSize
+    ? `@media (min-width: 640px) { [data-circle-id="${circleId}"] { width: ${tabletSmSize * 0.25}rem !important; height: ${tabletSmSize * 0.25}rem !important; } }`
+    : '';
+
   const mdMediaQuery = mdSize
     ? `@media (min-width: 768px) { [data-circle-id="${circleId}"] { width: ${mdSize * 0.25}rem !important; height: ${mdSize * 0.25}rem !important; } }`
     : '';
@@ -62,7 +68,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 1280px) { [data-circle-id="${circleId}"] { width: ${xlSize * 0.25}rem !important; height: ${xlSize * 0.25}rem !important; } }`
     : '';
 
-  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${mdMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
+  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
@@ -93,7 +99,9 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
 
   return (
     <>
-      {(smSize || mdSize || lgSize) && <style>{mediaQueryStyles}</style>}
+      {(xsSize || smSize || tabletSmSize || mdSize || lgSize || xlSize) && (
+        <style>{mediaQueryStyles}</style>
+      )}
       <div
         data-circle-id={circleId}
         className={`pointer-events-none absolute rounded-full ${className}`}
