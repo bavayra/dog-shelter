@@ -155,11 +155,13 @@ function App() {
             <div className="relative sm:top-2">
               <DecorativeCircle
                 size={64}
+                tabletLgSize={78}
                 color="primary-500"
                 top="-8"
                 left="-30"
                 opacity={20}
                 zIndex={2}
+                className="tablet-lg:mt-26 tablet-lg:-ml-12"
               />
             </div>
             <HowToHelp />
@@ -168,22 +170,24 @@ function App() {
               <DecorativeCircle
                 size={36}
                 mdSize={48}
+                tabletLgSize={56}
                 color="primary-300"
                 top="14"
                 left="-10"
                 opacity={40}
                 zIndex={10}
-                className="md:translate-x-1/4"
+                className="tablet-lg:translate-x-[10%] tablet-lg:mt-4 md:translate-x-1/4"
               />
               <DecorativeCircle
                 size={16}
                 mdSize={24}
+                tabletLgSize={30}
                 color="primary-500"
                 top="22"
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="md:translate-x-3/5 md:md:translate-y-1/7"
+                className="tablet-lg:translate-x-[30%] tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7"
               />
             </div>
             <AboutUs />
