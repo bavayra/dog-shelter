@@ -156,12 +156,13 @@ function App() {
               <DecorativeCircle
                 size={64}
                 tabletLgSize={78}
+                lgSize={88}
                 color="primary-500"
                 top="-8"
                 left="-30"
                 opacity={20}
                 zIndex={2}
-                className="tablet-lg:mt-26 tablet-lg:-ml-12"
+                className="tablet-lg:mt-26 tablet-lg:-ml-12 lg:mt-36"
               />
             </div>
             <HowToHelp />
