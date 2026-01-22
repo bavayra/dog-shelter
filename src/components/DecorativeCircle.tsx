@@ -6,6 +6,7 @@ interface DecorativeCircleProps {
   smSize?: number;
   tabletSmSize?: number;
   mdSize?: number;
+  tabletLgSize?: number;
   lgSize?: number;
   xlSize?: number;
   color:
@@ -31,6 +32,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   smSize,
   tabletSmSize,
   mdSize,
+  tabletLgSize,
   lgSize,
   xlSize,
   color,
@@ -60,6 +62,10 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 768px) { [data-circle-id="${circleId}"] { width: ${mdSize * 0.25}rem !important; height: ${mdSize * 0.25}rem !important; } }`
     : '';
 
+  const tabletLgMediaQuery = tabletLgSize
+    ? `@media (min-width: 820px) { [data-circle-id="${circleId}"] { width: ${tabletLgSize * 0.25}rem !important; height: ${tabletLgSize * 0.25}rem !important; } }`
+    : '';
+
   const lgMediaQuery = lgSize
     ? `@media (min-width: 1024px) { [data-circle-id="${circleId}"] { width: ${lgSize * 0.25}rem !important; height: ${lgSize * 0.25}rem !important; } }`
     : '';
@@ -68,7 +74,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 1280px) { [data-circle-id="${circleId}"] { width: ${xlSize * 0.25}rem !important; height: ${xlSize * 0.25}rem !important; } }`
     : '';
 
-  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
+  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
@@ -99,9 +105,13 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
 
   return (
     <>
-      {(xsSize || smSize || tabletSmSize || mdSize || lgSize || xlSize) && (
-        <style>{mediaQueryStyles}</style>
-      )}
+      {(xsSize ||
+        smSize ||
+        tabletSmSize ||
+        mdSize ||
+        tabletLgSize ||
+        lgSize ||
+        xlSize) && <style>{mediaQueryStyles}</style>}
       <div
         data-circle-id={circleId}
         className={`pointer-events-none absolute rounded-full ${className}`}

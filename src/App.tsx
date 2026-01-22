@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-4rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:text-6xl">
+            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -34,6 +34,7 @@ function App() {
               xsSize={52}
               tabletSmSize={60}
               mdSize={72}
+              tabletLgSize={82}
               lgSize={64}
               color="primary-500"
               top="0"
@@ -41,7 +42,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-full -translate-x-1/2 translate-y-[80%] md:translate-y-2/3 lg:top-8"
             />
-            <div className="glass-card text-primary-700 xs:text-base xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-10">
+            <div className="glass-card text-primary-700 xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-10">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -66,8 +67,8 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4 md:mt-8 md:flex md:max-w-xl">
-              <p className="typography-large text-center md:text-xl">
+            <div className="tablet-lg:max-w-2xl relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4 md:mt-8 md:flex md:max-w-xl">
+              <p className="typography-large tablet-lg:text-2xl text-center md:text-xl">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -84,7 +85,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 mt-8 gap-5 min-[425px]:mt-6 md:mt-8"
+              className="xs:mt-10 tablet-sm:mt-12 tablet-lg:mt-6 mt-8 gap-5 min-[425px]:mt-6 md:mt-8"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
