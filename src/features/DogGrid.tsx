@@ -85,7 +85,7 @@ const DogGrid = () => {
                 onClick={() => setShowAll(true)}
                 aria-label="View all pets"
                 variant="outline"
-                size="medium"
+                size="large"
               >
                 View All Pets
               </Button>
