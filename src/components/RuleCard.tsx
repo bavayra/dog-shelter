@@ -10,7 +10,7 @@ const RuleCard = ({ number, text }: RuleCardProps) => {
         <span className="text-primary-500 bg-primary-100 tablet-sm:h-8 tablet-sm:w-8 -ml-3 flex h-5 w-5 shrink-0 items-center justify-center rounded-full font-bold">
           {number}
         </span>
-        <p className="typography-small xs:text-base tablet-sm:text-lg text-sm font-normal md:text-xl lg:px-2 lg:text-lg">
+        <p className="typography-small xs:text-base tablet-sm:text-lg text-sm font-normal md:text-xl lg:px-2 lg:text-xl">
           {text}
         </p>
       </div>
