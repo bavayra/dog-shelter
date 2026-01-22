@@ -114,13 +114,12 @@ const ContactSection = () => {
         <DecorativeCircle
           size={8}
           mdSize={12}
-          lgSize={12}
           color="primary-50"
           top="0"
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] tablet-lg:mr-15 xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-2 xl:mt-5"
+          className="xs:-translate-x-[130%] tablet-lg:mr-15 xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-0 lg:-translate-x-[440%] xl:mt-5"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-7xl">
