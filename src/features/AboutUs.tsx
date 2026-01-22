@@ -45,7 +45,7 @@ const AboutUs = () => {
             className="md:mr-10 lg:-mt-20 xl:-mt-28 xl:mr-28"
           />
         </div>
-        <h3 className="typography-h3 text-primary-500 my-6 text-center md:py-2 md:text-3xl xl:text-5xl">
+        <h3 className="typography-h3 text-primary-500 my-6 text-center md:py-2 md:text-3xl lg:text-5xl">
           Moments from Rotvodom
         </h3>
         <PhotoCarousel />
