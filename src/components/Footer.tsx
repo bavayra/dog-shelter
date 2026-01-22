@@ -8,7 +8,7 @@ import ContactInfo from './ContactInfo';
 const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
-      <div className="md:flex-cols-2 tablet-lg:gap-20 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-76">
+      <div className="md:flex-cols-2 tablet-lg:gap-20 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-54">
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
             <h3 className="xs:text-base tablet-lg:text-lg mb-2 text-center text-xs font-bold">
