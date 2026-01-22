@@ -120,7 +120,7 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-2 lg:mr-80 xl:mt-5 xl:mr-119"
+          className="xs:-translate-x-[130%] tablet-lg:mr-15 xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-2 xl:mt-5"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-7xl">
@@ -189,7 +189,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base mb-4 block sm:text-lg md:text-lg"
+                className="typography-body xs:text-base tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg"
               >
                 Message
               </label>
@@ -211,12 +211,12 @@ const ContactSection = () => {
             <div className="relative">
               <DecorativeCircle
                 size={8}
-                lgSize={10}
+                tabletLgSize={10}
                 color="primary-500"
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[250%] tablet-sm:translate-x-[300%] translate-x-[150%] translate-y-[20%] sm:ml-2 md:translate-x-[110%] lg:ml-12 xl:ml-4"
+                className="xs:translate-x-[250%] tablet-sm:translate-x-[300%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-2 md:translate-x-[110%] lg:ml-12 xl:ml-4"
               />
             </div>
 
@@ -224,6 +224,7 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 variant="outline"
+                size="large"
                 disabled={isSubmitting}
                 ariaLabel="Submit this form"
                 className="w-auto text-center font-semibold"
@@ -252,7 +253,7 @@ const ContactSection = () => {
           </form>
         </div>
         <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:ml-6 xl:w-120">
-          <p className="typography-large px-4 text-center text-xl md:block md:font-normal xl:text-2xl">
+          <p className="typography-large tablet-lg:text-2xl px-4 text-center text-xl md:block md:font-normal">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
             touch however is easiest for you.
