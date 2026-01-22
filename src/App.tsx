@@ -172,6 +172,7 @@ function App() {
                 size={36}
                 mdSize={48}
                 tabletLgSize={56}
+                lgSize={66}
                 color="primary-300"
                 top="14"
                 left="-10"
@@ -183,6 +184,7 @@ function App() {
                 size={16}
                 mdSize={24}
                 tabletLgSize={30}
+                lgSize={36}
                 color="primary-500"
                 top="22"
                 left="0"
