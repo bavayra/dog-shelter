@@ -144,7 +144,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h1 xs:text-5xl m-0 pt-10 text-center md:pb-8 md:text-7xl"
+                className="typography-h1 xs:text-5xl m-0 pt-10 text-center md:pb-8 md:text-7xl lg:text-8xl"
               >
                 Our Pets
               </h2>
