@@ -8,13 +8,13 @@ import ContactInfo from './ContactInfo';
 const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
-      <div className="md:flex-cols-2 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-76">
+      <div className="md:flex-cols-2 tablet-lg:gap-20 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-76">
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
-            <h3 className="xs:text-base mb-2 text-center text-xs font-bold">
+            <h3 className="xs:text-base tablet-lg:text-lg mb-2 text-center text-xs font-bold">
               {APP_NAME}
             </h3>
-            <p className="xs:text-sm tablet-sm:text-base mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100 xl:text-lg">
+            <p className="xs:text-sm tablet-sm:text-base tablet-lg:text-lg tablet-lg:w-100 mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
@@ -26,14 +26,14 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="xs:text-base mb-3 text-center text-xs font-bold">
+          <h3 className="xs:text-base tablet-lg:text-lg mb-3 text-center text-xs font-bold">
             FOLLOW US
           </h3>
-          <SocialLinks size="sm" />
+          <SocialLinks size="lg" />
         </div>
       </div>
 
-      <div className="border-primary-900 mt-2 border-t pt-2 text-center text-xs text-neutral-300 md:mt-0">
+      <div className="border-primary-900 tablet-lg:text-lg mt-2 border-t pt-2 text-center text-xs text-neutral-300 md:mt-0">
         <p>
           Made with
           <HeartIcon
@@ -43,7 +43,7 @@ const Footer = () => {
           for dogs in need
         </p>
       </div>
-      <p className="text-center text-xs text-neutral-300">
+      <p className="tablet-lg:text-md text-center text-xs text-neutral-300">
         © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
       </p>
     </footer>
