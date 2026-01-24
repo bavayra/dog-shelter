@@ -8,10 +8,10 @@ const HowToHelp = () => {
       className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[80vh] tablet-lg:min-h-[60vh] relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:pt-10 md:min-h-[72vh] lg:min-h-[85vh] xl:min-h-screen"
     >
       <div className="z-10 container mx-auto px-4">
-        <h2 className="typography-h2 xs:text-4xl tablet-sm:text-5xl tablet-sm:mt-0 xl2:mb-10 mb-6 text-center lg:text-7xl">
+        <h2 className="typography-h2 xs:text-4xl tablet-sm:text-5xl xl3:mt-10 tablet-sm:mt-0 xl2:mb-10 mb-6 text-center lg:text-7xl">
           How to Help ROTVODOM
         </h2>
-        <div className="tablet-sm:px-4 mx-auto mb-6 max-w-3xl text-center md:mb-6 md:px-12">
+        <div className="tablet-sm:px-4 xl3:max-w-4xl mx-auto mb-6 max-w-3xl text-center md:mb-6 md:px-12">
           <p className="typography-body xs:text-lg tablet-sm:text-2xl mb-2 leading-relaxed lg:text-3xl">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
