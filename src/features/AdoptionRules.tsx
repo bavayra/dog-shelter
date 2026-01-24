@@ -15,7 +15,7 @@ const AdoptionRules = () => {
   return (
     <section id="adoption-rules" className="relative z-1 bg-neutral-50 py-6">
       <div className="container mx-auto px-4 sm:mt-4">
-        <h2 className="typography-h2 xs:text-4xl tablet-sm:text-5xl mb-0 text-center md:text-7xl">
+        <h2 className="typography-h2 xs:text-4xl tablet-sm:text-5xl xl3:mt-10 mb-0 text-center md:text-7xl">
           Adoption Rules
         </h2>
 
@@ -25,7 +25,7 @@ const AdoptionRules = () => {
         </p>
       </div>
 
-      <div className="xl2:gap-x-16 mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-x-6">
+      <div className="xl2:gap-x-16 xl3:gap-x-0 xl3:max-w-7xl mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-x-6">
         {rules.map((rule, index) => (
           <RuleCard key={index} number={index + 1} text={rule} />
         ))}
