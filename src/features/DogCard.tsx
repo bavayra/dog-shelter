@@ -36,11 +36,11 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150"
+        className="xl2:h-215 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="group relative h-64 overflow-hidden md:h-60">
+        <div className="group xl2:h-80 relative h-64 overflow-hidden md:h-60">
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
@@ -64,7 +64,7 @@ const DogCard = memo((dog: Dog) => {
           )}
         </div>
         <div className="flex min-h-0 flex-1 flex-col p-4">
-          <h3 className="typography-h3 mb-1">{name}</h3>
+          <h3 className="typography-h3 xl2:text-3xl mb-1">{name}</h3>
           <div className="tablet-sm:text-lg mb-2 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
@@ -85,10 +85,11 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <p className="typography-small tablet-sm:text-lg tablet-lg:text-lg mb-4 line-clamp-5 text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7">
+            <p className="typography-small tablet-sm:text-lg tablet-lg:text-lg xl2:p-4 xl2:line-clamp-none mb-4 line-clamp-5 text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7">
               {description}
             </p>
           </div>
+
           <Button
             variant={isAdopted ? 'secondary' : 'primary'}
             size="medium"
