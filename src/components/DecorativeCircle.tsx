@@ -9,6 +9,8 @@ interface DecorativeCircleProps {
   tabletLgSize?: number;
   lgSize?: number;
   xlSize?: number;
+  xl2Size?: number;
+  Size?: number;
   color:
     | 'primary-50'
     | 'primary-200'
@@ -35,6 +37,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   tabletLgSize,
   lgSize,
   xlSize,
+  xl2Size,
   color,
   top,
   bottom,
@@ -74,7 +77,11 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 1280px) { [data-circle-id="${circleId}"] { width: ${xlSize * 0.25}rem !important; height: ${xlSize * 0.25}rem !important; } }`
     : '';
 
-  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery}`;
+  const xl2MediaQuery = xl2Size
+    ? `@media (min-width: 1440px) { [data-circle-id="${circleId}"] { width: ${xl2Size * 0.25}rem !important; height: ${xl2Size * 0.25}rem !important; } }`
+    : '';
+
+  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery} ${xl2MediaQuery}`;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
