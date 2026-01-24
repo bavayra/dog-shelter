@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="xl2:h-215 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150"
+        className="xl2:h-215 xl3:h-225 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -85,7 +85,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <p className="typography-small tablet-sm:text-lg tablet-lg:text-lg xl2:p-4 xl2:line-clamp-none mb-4 line-clamp-5 text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7">
+            <p className="typography-small xl3:text-xl tablet-sm:text-lg tablet-lg:text-lg xl2:p-4 xl2:line-clamp-none mb-4 line-clamp-5 text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7">
               {description}
             </p>
           </div>
