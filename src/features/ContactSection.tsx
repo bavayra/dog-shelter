@@ -119,19 +119,15 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] tablet-lg:mr-15 xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-0 lg:-translate-x-[440%] xl:mt-5"
+          className="xs:-translate-x-[130%] tablet-lg:mr-15 xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-0 lg:-translate-x-[440%] xl:mt-5 xl:-translate-x-[600%]"
         />
       </div>
-      <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-7xl">
+      <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
-      <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300">
-        <div className="w-full max-w-md px-6 xl:w-xl">
-          <form
-            id="contact-form"
-            onSubmit={handleSubmit}
-            className="space-y-2 xl:ml-16"
-          >
+      <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300 xl:gap-10">
+        <div className="w-full max-w-md px-6 xl:mx-6 xl:max-w-lg">
+          <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
               <TextInput
                 id="input-name"
@@ -215,7 +211,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[250%] tablet-sm:translate-x-[300%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-2 md:translate-x-[110%] lg:ml-12 xl:ml-4"
+                className="xs:translate-x-[250%] tablet-sm:translate-x-[300%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-2 md:translate-x-[110%] lg:ml-12 xl:ml-18"
               />
             </div>
 
@@ -251,7 +247,7 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:ml-6 xl:w-120">
+        <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:w-120">
           <p className="typography-large tablet-lg:text-2xl px-4 text-center text-xl md:block md:font-normal">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
