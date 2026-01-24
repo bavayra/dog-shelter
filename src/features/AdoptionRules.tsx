@@ -19,13 +19,13 @@ const AdoptionRules = () => {
           Adoption Rules
         </h2>
 
-        <p className="typography-body xs:text-lg tablet-sm:text-xl mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight">
+        <p className="typography-body xs:text-lg tablet-sm:text-xl mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight xl:px-34 xl:text-3xl">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
       </div>
 
-      <div className="mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-4">
+      <div className="mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-x-6">
         {rules.map((rule, index) => (
           <RuleCard key={index} number={index + 1} text={rule} />
         ))}
