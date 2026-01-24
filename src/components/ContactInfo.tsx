@@ -14,7 +14,7 @@ const ContactInfo = ({ className = '' }: ContactInfoProps) => {
       className={`not-italic ${className}`}
       aria-label="Contact information"
     >
-      <div className="md:text-primary-700 flex flex-col items-center space-y-1 text-neutral-500 md:text-lg">
+      <div className="md:text-primary-700 xl3:space-y-3 flex flex-col items-center space-y-1 text-neutral-500 md:text-lg">
         <p className="flex items-center gap-2">
           <EmailIcon
             className="xs:h-5 xs:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
@@ -23,7 +23,7 @@ const ContactInfo = ({ className = '' }: ContactInfoProps) => {
           <a
             rel="noopener noreferrer"
             href={`mailto:${CONTACT_EMAIL}`}
-            className="hover:text-primary-500 xs:text-base tablet-lg:text-lg text-xs transition-colors"
+            className="hover:text-primary-500 xs:text-base tablet-lg:text-lg xl3:text-2xl text-xs transition-colors"
             aria-label={`Email us at ${CONTACT_EMAIL}`}
           >
             {CONTACT_EMAIL}
@@ -37,13 +37,13 @@ const ContactInfo = ({ className = '' }: ContactInfoProps) => {
           <a
             href={`tel:${CONTACT_PHONE.replace(/\s+/g, '')}`}
             rel="noopener noreferrer"
-            className="hover:text-primary-500 xs:text-base tablet-lg:text-lg text-xs transition-colors"
+            className="hover:text-primary-500 xs:text-base tablet-lg:text-lg xl3:text-2xl text-xs transition-colors"
             aria-label={`Call us at ${CONTACT_PHONE}`}
           >
             {CONTACT_PHONE}
           </a>
         </p>
-        <p className="xs:text-base tablet-lg:text-lg flex items-center gap-2 text-xs">
+        <p className="xs:text-base tablet-lg:text-lg xl3:text-2xl flex items-center gap-2 text-xs">
           <LocationIcon
             className="xs:h-5 xs:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
             aria-hidden="true"

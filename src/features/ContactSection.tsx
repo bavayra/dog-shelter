@@ -110,7 +110,7 @@ const ContactSection = () => {
   };
   return (
     <section id="contact" className="bg-primary-200 pt-8 pb-10 md:px-6">
-      <div className="xl2:mr-20 relative">
+      <div className="xl2:mr-20 xl3:mr-32 relative">
         <DecorativeCircle
           size={8}
           mdSize={12}
@@ -247,8 +247,8 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:w-120">
-          <p className="typography-large tablet-lg:text-2xl px-4 text-center text-xl md:block md:font-normal">
+        <div className="glass-card xl3:w-150 mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:w-120">
+          <p className="typography-large tablet-lg:text-2xl xl3:text-3xl px-4 text-center text-xl md:block md:font-normal">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
             touch however is easiest for you.
