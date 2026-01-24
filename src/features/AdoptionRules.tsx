@@ -19,13 +19,13 @@ const AdoptionRules = () => {
           Adoption Rules
         </h2>
 
-        <p className="typography-body xs:text-lg tablet-sm:text-xl mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight xl:px-34 xl:text-3xl">
+        <p className="typography-body xs:text-lg tablet-sm:text-xl xl2:w-5xl xl2:my-8 mx-auto mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight xl:px-34 xl:text-3xl">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
       </div>
 
-      <div className="mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-x-6">
+      <div className="xl2:gap-x-16 mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 xl:gap-x-6">
         {rules.map((rule, index) => (
           <RuleCard key={index} number={index + 1} text={rule} />
         ))}
@@ -36,7 +36,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base mb-4 inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105 md:mt-3 md:mb-6"
+            className="bg-primary-500 hover:text-primary-200 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base xl2:px-8 xl2:text-2xl mb-4 inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105 md:mt-3 md:mb-6"
           >
             See All The Rules
           </a>
@@ -45,7 +45,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105"
+            className="bg-primary-500 hover:text-primary-200 tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xl2:text-2xl xl2:px-8 xs:text-base inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105"
           >
             See The Contract Template
           </a>
