@@ -110,7 +110,7 @@ const ContactSection = () => {
   };
   return (
     <section id="contact" className="bg-primary-200 pt-8 pb-10 md:px-6">
-      <div className="relative">
+      <div className="xl2:mr-20 relative">
         <DecorativeCircle
           size={8}
           mdSize={12}
@@ -184,7 +184,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg"
+                className="typography-body xs:text-base tablet-lg:text-xl xl2:text-2xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg"
               >
                 Message
               </label>
