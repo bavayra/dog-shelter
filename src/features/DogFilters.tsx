@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`typography-small tablet-sm:text-base rounded-lg px-3 py-2 font-medium transition-colors sm:text-sm lg:text-base ${
+          className={`typography-small tablet-sm:text-base xl3:text-lg rounded-lg px-3 py-2 font-medium transition-colors sm:text-sm lg:text-base ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
@@ -56,12 +56,12 @@ const DogFilters = ({
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-2">
-        <h3 className="typography-h3 md:text-3xl">Filter Dogs</h3>
+        <h3 className="typography-h3 xl3:text-4xl md:text-3xl">Filter Dogs</h3>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body xl3:text-2xl mb-2 block sm:text-lg md:text-xl">
             Age:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -70,7 +70,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body xl3:text-2xl mb-2 block sm:text-lg md:text-xl">
             Gender:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -83,7 +83,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body xl3:text-2xl mb-2 block sm:text-lg md:text-xl">
             Breed:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -96,7 +96,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body xl3:text-2xl mb-2 block sm:text-lg md:text-xl">
             Health:
           </label>
           <div className="flex flex-wrap gap-2">
