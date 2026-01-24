@@ -24,9 +24,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-4rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)]"
+            className="from-primary-300 to-primary-50 border-primary-500 xs:min-h-[calc(100vh-4rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] md:min-h-[calc(100vh-4rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-2">
+            <h2 className="text-primary-700 xs:text-4xl xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-2 xl:mt-0">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -42,7 +42,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-full -translate-x-1/2 translate-y-[80%] md:translate-y-2/3 lg:-mt-10"
             />
-            <div className="glass-card text-primary-700 xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-10">
+            <div className="glass-card text-primary-700 xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-10 xl:text-xl">
               <p className="mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -85,7 +85,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 tablet-lg:mt-6 mt-8 gap-5 min-[425px]:mt-6 md:mt-8 lg:mt-24 lg:-translate-x-60"
+              className="xs:mt-10 tablet-sm:mt-12 tablet-lg:mt-6 mt-8 gap-5 min-[425px]:mt-6 md:mt-8 lg:mt-24 lg:-translate-x-60 xl:mt-2 xl:mr-40"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -173,24 +173,26 @@ function App() {
                 mdSize={48}
                 tabletLgSize={56}
                 lgSize={66}
+                xlSize={84}
                 color="primary-300"
                 top="14"
                 left="-10"
                 opacity={40}
                 zIndex={10}
-                className="tablet-lg:translate-x-[10%] tablet-lg:mt-4 md:translate-x-1/4"
+                className="tablet-lg:translate-x-[10%] tablet-lg:mt-4 md:translate-x-1/4 xl:translate-x-1/3"
               />
               <DecorativeCircle
                 size={16}
                 mdSize={24}
                 tabletLgSize={30}
                 lgSize={36}
+                xlSize={48}
                 color="primary-500"
                 top="22"
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[30%] tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7"
+                className="tablet-lg:translate-x-[30%] tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7 xl:translate-x-[75%]"
               />
             </div>
             <AboutUs />
