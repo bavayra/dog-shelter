@@ -19,7 +19,7 @@ const Header = () => {
               className="border-primary-500 xs:w-10 xs:h-10 tablet-sm:w-16 tablet-sm:h-16 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-12 sm:w-12 md:h-14 md:w-14"
             />
             <div className="flex min-w-0 items-center">
-              <h1 className="text-primary-500 xs:text-base tablet-sm:text-3xl min-w-0 truncate text-sm leading-tight font-bold sm:text-2xl lg:text-2xl xl:text-2xl">
+              <h1 className="text-primary-500 xs:text-base tablet-sm:text-3xl xl4:text-3xl min-w-0 truncate text-sm leading-tight font-bold sm:text-2xl lg:text-2xl xl:text-2xl">
                 {APP_NAME}
               </h1>
             </div>
