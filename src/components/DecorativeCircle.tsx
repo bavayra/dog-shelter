@@ -10,6 +10,7 @@ interface DecorativeCircleProps {
   lgSize?: number;
   xlSize?: number;
   xl2Size?: number;
+  xl4Size?: number;
   Size?: number;
   color:
     | 'primary-50'
@@ -38,6 +39,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   lgSize,
   xlSize,
   xl2Size,
+  xl4Size,
   color,
   top,
   bottom,
@@ -81,7 +83,11 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     ? `@media (min-width: 1440px) { [data-circle-id="${circleId}"] { width: ${xl2Size * 0.25}rem !important; height: ${xl2Size * 0.25}rem !important; } }`
     : '';
 
-  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery} ${xl2MediaQuery}`;
+  const xl4MediaQuery = xl4Size
+    ? `@media (min-width: 1920px) { [data-circle-id="${circleId}"] { width: ${xl4Size * 0.25}rem !important; height: ${xl4Size * 0.25}rem !important; } }`
+    : '';
+
+  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery} ${xl2MediaQuery} ${xl4MediaQuery}`;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
