@@ -16,24 +16,24 @@ const Header = () => {
             <img
               src={LogoIcon}
               alt="Rotvodom Dog Shelter Logo"
-              className="border-primary-500 xs:w-10 xs:h-10 tablet-sm:w-16 tablet-sm:h-16 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-12 sm:w-12 md:h-14 md:w-14"
+              className="border-primary-500 xs:w-10 xs:h-10 tablet-sm:w-16 4xl:w-20 4xl:h-20 tablet-sm:h-16 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-12 sm:w-12 md:h-14 md:w-14"
             />
             <div className="flex min-w-0 items-center">
-              <h1 className="text-primary-500 xs:text-base tablet-sm:text-3xl xl4:text-3xl min-w-0 truncate text-sm leading-tight font-bold sm:text-2xl lg:text-2xl xl:text-2xl">
+              <h1 className="text-primary-500 xs:text-base tablet-sm:text-3xl 4xl:text-5xl min-w-0 truncate text-sm leading-tight font-bold sm:text-2xl lg:text-2xl xl:text-2xl">
                 {APP_NAME}
               </h1>
             </div>
           </div>
 
           <nav
-            className="hidden items-center gap-8 text-center lg:flex lg:flex-row lg:gap-0"
+            className="4xl:gap-10 hidden items-center gap-8 text-center lg:flex lg:flex-row lg:gap-0"
             aria-label="Main navigation"
           >
             {headerLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
-                className="hover:text-primary-900 hover:bg-primary-200 mx-0 py-3 text-lg font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
+                className="hover:text-primary-900 hover:bg-primary-200 4xl:text-2xl mx-0 py-3 text-lg font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
                 aria-label={`Go to ${link.label} section`}
               >
                 {link.label.toUpperCase()}
@@ -51,7 +51,7 @@ const Header = () => {
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
               ariaLabel="Go to contact form"
-              className="lg:w-40"
+              className="4xl:w-50 lg:w-40"
             >
               CONTACT US
             </Button>
