@@ -110,7 +110,7 @@ const ContactSection = () => {
   };
   return (
     <section id="contact" className="bg-primary-200 pt-8 pb-10 md:px-6">
-      <div className="xl2:mr-20 xl3:mr-32 relative">
+      <div className="xl2:mr-20 3xl:mr-32 relative">
         <DecorativeCircle
           size={8}
           mdSize={12}
@@ -184,7 +184,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base tablet-lg:text-xl xl2:text-2xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg"
+                className="typography-body xs:text-base tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg 2xl:text-2xl"
               >
                 Message
               </label>
@@ -247,8 +247,8 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card xl3:w-150 mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:w-120">
-          <p className="typography-large tablet-lg:text-2xl xl3:text-3xl px-4 text-center text-xl md:block md:font-normal">
+        <div className="glass-card 3xl:w-150 mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:w-120">
+          <p className="typography-large tablet-lg:text-2xl 3xl:text-3xl px-4 text-center text-xl md:block md:font-normal">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
             touch however is easiest for you.
