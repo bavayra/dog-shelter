@@ -36,7 +36,7 @@ function App() {
               mdSize={72}
               tabletLgSize={82}
               lgSize={86}
-              xl4Size={120}
+              xl4Size={124}
               color="primary-500"
               top="0"
               left="0"
