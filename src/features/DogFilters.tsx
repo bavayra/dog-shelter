@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`typography-small tablet-sm:text-base 3xl:text-lg rounded-lg px-3 py-2 font-medium transition-colors sm:text-sm lg:text-base ${
+          className={`typography-small tablet-sm:text-base 3xl:text-lg 4xl:text-xl rounded-lg px-3 py-2 font-medium transition-colors sm:text-sm lg:text-base ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
@@ -52,16 +52,18 @@ const DogFilters = ({
 
   return (
     <section
-      className="mb-8 rounded-lg bg-white px-4 py-6 shadow-md sm:mx-4 md:px-8"
+      className="4xl:w-400 4xl:mx-auto mb-8 rounded-lg bg-white px-4 py-6 shadow-md sm:mx-4 md:px-8"
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-2">
-        <h3 className="typography-h3 3xl:text-4xl md:text-3xl">Filter Dogs</h3>
+        <h3 className="typography-h3 3xl:text-4xl 4xl:text-5xl md:text-3xl">
+          Filter Dogs
+        </h3>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label className="typography-body 3xl:text-2xl mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body 3xl:text-2xl 4xl:text-3xl 4xl:font-semibold mb-2 block sm:text-lg md:text-xl">
             Age:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -70,7 +72,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body 3xl:text-2xl mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body 3xl:text-2xl 4xl:text-3xl 4xl:font-semibold mb-2 block sm:text-lg md:text-xl">
             Gender:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -83,7 +85,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body 3xl:text-2xl mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body 3xl:text-2xl 4xl:text-3xl 4xl:font-semibold mb-2 block sm:text-lg md:text-xl">
             Breed:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -96,7 +98,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body 3xl:text-2xl mb-2 block sm:text-lg md:text-xl">
+          <label className="typography-body 3xl:text-2xl 4xl:text-3xl 4xl:font-semibold mb-2 block sm:text-lg md:text-xl">
             Health:
           </label>
           <div className="flex flex-wrap gap-2">
@@ -115,7 +117,7 @@ const DogFilters = ({
           aria-label="Reset filters"
           variant="filter"
           active={false}
-          className="tablet-sm:text-base text-xs"
+          className="tablet-sm:text-base 4xl:py-4 4xl:px-8 text-xs"
         >
           RESET FILTERS
         </Button>
