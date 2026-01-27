@@ -48,7 +48,7 @@ const DogGrid = () => {
   const hasMoreDogs = filteredDogs.length > initialDisplayCount;
 
   return (
-    <div className="container mx-auto px-4 py-4 md:px-10">
+    <div className="4xl:px-26 container mx-auto px-4 py-4 md:px-10">
       <DogFilters
         filters={filters}
         onAgeChange={setAgeFilter}
@@ -59,7 +59,7 @@ const DogGrid = () => {
       />
       {!isLoading && (
         <p
-          className="typography-body mb-4 text-center sm:text-xl md:mb-8 md:text-2xl"
+          className="typography-body 4xl:text-4xl mb-4 text-center sm:text-xl md:mb-8 md:text-2xl"
           aria-live="polite"
         >
           Found {filteredDogs.length}{' '}
@@ -74,7 +74,7 @@ const DogGrid = () => {
         </div>
       ) : filteredDogs.length > 0 ? (
         <>
-          <div className="grid grid-cols-1 gap-6 transition-all md:grid-cols-2 lg:grid-cols-3 lg:gap-x-2 lg:gap-y-10">
+          <div className="4xl:gap-x-0 4xl:gap-y-12 grid grid-cols-1 gap-6 transition-all md:grid-cols-2 lg:grid-cols-3 lg:gap-x-2 lg:gap-y-10">
             {displayedDogs.map((dog) => (
               <DogCard key={dog.id} {...dog} />
             ))}
