@@ -25,7 +25,7 @@ const PhotoCarousel = () => {
   const resolvedImageUrl = getGalleryImage(currentImage.imageUrl);
 
   return (
-    <div className="bg-primary-50 relative z-10 mx-auto max-w-5xl rounded-2xl md:max-w-xl">
+    <div className="bg-primary-50 4xl:max-w-4xl 4xl:mb-14 relative z-10 mx-auto max-w-5xl rounded-2xl md:max-w-xl">
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         Slide {currentIndex + 1} of {shelterGallery.length}:{' '}
         {currentImage.caption}
@@ -34,7 +34,7 @@ const PhotoCarousel = () => {
         <img
           src={resolvedImageUrl}
           alt={currentImage.caption}
-          className="h-64 w-full object-cover transition-opacity duration-500 md:h-80 lg:h-100"
+          className="4xl:h-120 h-64 w-full object-cover transition-opacity duration-500 md:h-80 lg:h-100"
           loading="lazy"
           onError={(e) => {
             e.currentTarget.src =
@@ -42,7 +42,7 @@ const PhotoCarousel = () => {
           }}
         />
         <div className="absolute right-0 bottom-0 left-0 bg-black/40 p-2 backdrop-blur-sm">
-          <p className="xs:text-base text-center text-xs leading-snug text-neutral-50 md:text-lg">
+          <p className="xs:text-base 4xl:text-xl text-center text-xs leading-snug text-neutral-50 md:text-lg">
             {currentImage.caption}
           </p>
         </div>
