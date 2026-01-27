@@ -8,13 +8,13 @@ import ContactInfo from './ContactInfo';
 const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
-      <div className="md:flex-cols-2 tablet-lg:gap-20 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-54">
+      <div className="md:flex-cols-2 tablet-lg:gap-20 4xl:gap-80 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-54">
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
-            <h3 className="xs:text-base tablet-lg:text-lg mb-2 text-center text-xs font-bold">
+            <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl mb-2 text-center text-xs font-bold">
               {APP_NAME}
             </h3>
-            <p className="xs:text-sm tablet-sm:text-base tablet-lg:text-lg tablet-lg:w-100 mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100">
+            <p className="xs:text-sm tablet-sm:text-base tablet-lg:text-lg tablet-lg:w-100 4xl:text-2xl 4xl:w-120 mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100">
               Find your perfect companion and give a shelter dog a loving home.
             </p>
           </div>
@@ -26,10 +26,10 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="xs:text-base tablet-lg:text-lg mb-3 text-center text-xs font-bold">
+          <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl mb-3 text-center text-xs font-bold">
             FOLLOW US
           </h3>
-          <SocialLinks size="lg" />
+          <SocialLinks size="md" />
         </div>
       </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
           for dogs in need
         </p>
       </div>
-      <p className="tablet-lg:text-md text-center text-xs text-neutral-300">
+      <p className="tablet-lg:text-md 4xl:text-lg text-center text-xs text-neutral-300">
         © {new Date().getFullYear()} {APP_NAME}. All rights reserved.
       </p>
     </footer>

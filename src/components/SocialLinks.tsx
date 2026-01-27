@@ -28,7 +28,7 @@ const SocialLinks = ({
 
   const sizeClasses = {
     sm: 'w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 tablet-lg:w-20 tablet-lg:h-20 4xl:w-24 4xl:h-24',
-    md: 'w-12  h-12 xs:w-14 xs:h-14 md:w-18 md:h-18',
+    md: 'w-12  h-12 xs:w-14 xs:h-14 md:w-18 md:h-18 4xl:w-16 4xl:h-16',
     lg: 'w-14 h-14',
   };
 
