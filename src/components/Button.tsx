@@ -39,7 +39,7 @@ const Button = ({
     small: 'px-3 py-1.5 text-sm',
     medium:
       'px-4 py-2 text-base xs:text-sm sm:text-lg sm:px-6 sm:py-2 tablet-lg:text-lg 4xl:text-2xl',
-    large: 'px-5 py-3 text-lg',
+    large: 'px-5 py-3 text-lg 4xl:text-4xl',
   };
   return (
     <button
