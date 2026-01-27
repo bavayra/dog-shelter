@@ -114,15 +114,16 @@ const ContactSection = () => {
         <DecorativeCircle
           size={8}
           mdSize={12}
+          xl4Size={16}
           color="primary-50"
           top="0"
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] tablet-lg:mr-15 xs:translate-y-1/4 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-0 lg:-translate-x-[440%] xl:mt-5 xl:-translate-x-[600%]"
+          className="xs:-translate-x-[130%] 4xl:mt-6 tablet-lg:mr-15 xs:translate-y-1/4 4xl:mr-16 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-0 lg:-translate-x-[440%] xl:mt-5 xl:-translate-x-[600%]"
         />
       </div>
-      <h2 className="typography-h2 xs:text-5xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
+      <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
       <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300 xl:gap-10">
@@ -195,7 +196,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="placeholder:text-primary-900 focus:border-primary-500 xs:text-lg mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="placeholder:text-primary-900 4xl:text-xl focus:border-primary-500 xs:text-lg 4xl:min-h-40 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">
@@ -219,7 +220,7 @@ const ContactSection = () => {
               <Button
                 type="submit"
                 variant="outline"
-                size="large"
+                size="medium"
                 disabled={isSubmitting}
                 ariaLabel="Submit this form"
                 className="w-auto text-center font-semibold"
