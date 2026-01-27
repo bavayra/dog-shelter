@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-225 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-215"
+        className="3xl:h-56 4xl:h-auto 4xl:w-lg flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-215"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -64,8 +64,10 @@ const DogCard = memo((dog: Dog) => {
           )}
         </div>
         <div className="flex min-h-0 flex-1 flex-col p-4">
-          <h3 className="typography-h3 mb-1 2xl:text-3xl">{name}</h3>
-          <div className="tablet-sm:text-lg mb-2 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
+          <h3 className="typography-h3 4xl:text-4xl 4xl:pl-3 mb-1 2xl:text-3xl">
+            {name}
+          </h3>
+          <div className="tablet-sm:text-lg 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -80,7 +82,7 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 mb-2 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
+            <div className="bg-color-accent-200 text-primary-700 4xl:text-xl 4xl:mt-4 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
               <span>{health}</span>
             </div>
           )}
@@ -95,7 +97,7 @@ const DogCard = memo((dog: Dog) => {
             size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="mt-auto w-full"
+            className="4xl:w-sm 4xl:mx-auto 4xl:text-[1.6rem] 4xl:mb-4 mt-auto w-full"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home ❤️' : 'ADOPT ME'}
