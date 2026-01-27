@@ -105,7 +105,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-primary-200 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
+        className="bg-primary-200 4xl:max-h-[82vh] relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
@@ -115,7 +115,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           className="text-primary-500 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
           <svg
-            className="h-5 w-5"
+            className="4xl:w-10 4xl:h-10 h-5 w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -151,20 +151,27 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
         <div className="p-4 sm:px-6 sm:py-2">
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
-            <h3 id="modal-title" className="typography-h3 sm:text-3xl md:mt-2">
+            <h3
+              id="modal-title"
+              className="typography-h3 4xl:text-4xl sm:text-3xl md:mt-2"
+            >
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} flex items-center gap-1 rounded-full px-3 py-2 font-semibold tracking-normal text-white shadow-lg`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 4xl:px-5 flex items-center gap-1 rounded-full px-3 py-2 font-semibold tracking-normal text-white shadow-lg`}
             >
               <span className="tablet-sm:text-lg text-sm">{genderSymbol}</span>
               <span className="tablet-sm:text-lg text-xs">{gender}</span>
             </div>
           </div>
 
-          <div className="xs:text-base mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg">
+          <div className="xs:text-base 4xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg">
             <div className="flex items-center gap-2">
-              <span role="img" aria-label="birthday cake" className="text-xl">
+              <span
+                role="img"
+                aria-label="birthday cake"
+                className="4xl:text-2xl text-xl"
+              >
                 🎂
               </span>
               <span className="font-medium">{getAgeLabel(age)}</span>
@@ -185,19 +192,19 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             )}
           </div>
 
-          <div className="mb-4">
+          <div className="4xl:mb-8 mb-4">
             <div
-              className="xs:text-lg px-2 text-justify text-sm leading-tight font-semibold text-neutral-700 lg:text-xl lg:font-normal"
+              className="xs:text-lg 4xl:leading-tighter px-2 text-justify text-sm leading-tight font-semibold text-neutral-700 lg:text-xl lg:font-normal"
               dangerouslySetInnerHTML={{ __html: sanitized }}
             />
           </div>
 
           <Button
             variant={isAdopted ? 'secondary' : 'primary'}
-            size="medium"
+            size="small"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="w-full md:mb-6"
+            className="4xl:w-xs 4xl:mx-auto flex w-full justify-center md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
