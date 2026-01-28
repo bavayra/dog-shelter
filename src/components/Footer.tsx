@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="md:flex-cols-2 tablet-lg:gap-20 4xl:gap-80 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-54">
         <div className="grid grid-cols-1 justify-items-center gap-4">
           <div>
-            <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl mb-2 text-center text-xs font-bold">
+            <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-2 text-center text-xs font-bold">
               {APP_NAME}
             </h3>
             <p className="xs:text-sm tablet-sm:text-base tablet-lg:text-lg tablet-lg:w-100 4xl:text-2xl 4xl:w-120 mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100">
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl mb-3 text-center text-xs font-bold">
+          <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-3 text-center text-xs font-bold">
             FOLLOW US
           </h3>
           <SocialLinks size="md" />
