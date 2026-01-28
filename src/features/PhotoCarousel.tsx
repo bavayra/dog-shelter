@@ -42,7 +42,7 @@ const PhotoCarousel = () => {
           }}
         />
         <div className="absolute right-0 bottom-0 left-0 bg-black/40 p-2 backdrop-blur-sm">
-          <p className="xs:text-base 4xl:text-xl text-center text-xs leading-snug text-neutral-50 md:text-lg">
+          <p className="xs:text-base 4xl:text-xl 5xl:text-3xl text-center text-xs leading-snug text-neutral-50 md:text-lg">
             {currentImage.caption}
           </p>
         </div>
@@ -53,7 +53,7 @@ const PhotoCarousel = () => {
         aria-label="Previous image"
       >
         <svg
-          className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8"
+          className="text-primary-500 5xl:h-12 5xl:w-12 h-6 w-6 lg:h-8 lg:w-8"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ const PhotoCarousel = () => {
         aria-label="Next image"
       >
         <svg
-          className="text-primary-500 h-6 w-6 lg:h-8 lg:w-8"
+          className="text-primary-500 5xl:h-12 5xl:w-12 h-6 w-6 lg:h-8 lg:w-8"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
