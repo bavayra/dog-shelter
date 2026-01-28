@@ -126,8 +126,8 @@ const ContactSection = () => {
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
-      <div className="relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300 xl:gap-10">
-        <div className="w-full max-w-md px-6 xl:mx-6 xl:max-w-lg">
+      <div className="5xl:gap-40 5xl:w-400 relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300 xl:gap-10">
+        <div className="5xl:max-w-180 w-full max-w-md px-6 xl:mx-6 xl:max-w-lg">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
               <TextInput
@@ -185,7 +185,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg 2xl:text-2xl"
+                className="typography-body xs:text-base 5xl:text-3xl tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg 2xl:text-2xl"
               >
                 Message
               </label>
@@ -196,7 +196,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="placeholder:text-primary-900 4xl:text-xl focus:border-primary-500 xs:text-lg 4xl:min-h-40 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="placeholder:text-primary-900 4xl:text-xl 5xl:text-2xl focus:border-primary-500 xs:text-lg 4xl:min-h-40 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">
@@ -208,11 +208,12 @@ const ContactSection = () => {
               <DecorativeCircle
                 size={8}
                 tabletLgSize={10}
+                xl5Size={12}
                 color="primary-500"
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[250%] tablet-sm:translate-x-[300%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-2 md:translate-x-[110%] lg:ml-12 xl:ml-18"
+                className="xs:translate-x-[250%] 5xl:ml-26 tablet-sm:translate-x-[300%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-2 md:translate-x-[110%] lg:ml-12 xl:ml-18"
               />
             </div>
 
@@ -223,7 +224,7 @@ const ContactSection = () => {
                 size="medium"
                 disabled={isSubmitting}
                 ariaLabel="Submit this form"
-                className="w-auto text-center font-semibold"
+                className="5xl:py-4 5xl:px-10 w-auto text-center font-semibold"
               >
                 {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
