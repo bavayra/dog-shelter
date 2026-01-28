@@ -15,11 +15,11 @@ const AdoptionRules = () => {
   return (
     <section id="adoption-rules" className="relative z-1 bg-neutral-50 py-6">
       <div className="container mx-auto px-4 sm:mt-4">
-        <h2 className="typography-h2 xs:text-4xl 4xl:text-9xl tablet-sm:text-5xl 3xl:mt-10 mb-0 text-center md:text-7xl">
+        <h2 className="typography-h2 xs:text-4xl 4xl:text-9xl tablet-sm:text-5xl 4xl:mt-6 3xl:mt-10 mb-0 text-center md:text-7xl">
           Adoption Rules
         </h2>
 
-        <p className="typography-body 4xl:mt-4 xs:text-lg tablet-sm:text-xl mx-auto mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight xl:px-34 xl:text-3xl 2xl:my-8 2xl:w-5xl">
+        <p className="typography-body 4xl:mt-4 xs:text-lg 5xl:text-5xl tablet-sm:text-xl 5xl:w-auto 5xl:px-60 mx-auto mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight xl:px-34 xl:text-3xl 2xl:my-8 2xl:w-5xl">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
