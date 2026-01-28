@@ -188,6 +188,7 @@ function App() {
                 lgSize={66}
                 xlSize={84}
                 xl4Size={104}
+                xl5Size={120}
                 color="primary-300"
                 top="14"
                 left="-10"
@@ -202,12 +203,13 @@ function App() {
                 lgSize={36}
                 xlSize={48}
                 xl4Size={60}
+                xl5Size={68}
                 color="primary-500"
                 top="22"
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[30%] 4xl:-ml-11 4xl:mt-8 tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7 xl:translate-x-[75%] 2xl:translate-x-[135%]"
+                className="tablet-lg:translate-x-[30%] 5xl:-ml-8 4xl:-ml-11 4xl:mt-8 tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7 xl:translate-x-[75%] 2xl:translate-x-[135%]"
               />
             </div>
             <AboutUs />
