@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
-      <div className="xs:py-2 container mx-auto px-2 py-1 md:px-0 lg:px-4">
+      <div className="xs:py-2 5xl:py-6 container mx-auto px-2 py-1 md:px-0 lg:px-4">
         <div className="flex flex-row items-center justify-evenly gap-30 md:gap-50 lg:gap-6">
           <div className="flex min-w-0 flex-row items-center gap-1 sm:gap-2">
             <img
@@ -33,7 +33,7 @@ const Header = () => {
               <a
                 key={link.id}
                 href={link.href}
-                className="hover:text-primary-900 hover:bg-primary-200 4xl:text-2xl mx-0 py-3 text-lg font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
+                className="hover:text-primary-900 hover:bg-primary-200 5xl:text-3xl 4xl:text-2xl mx-0 py-3 text-lg font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
                 aria-label={`Go to ${link.label} section`}
               >
                 {link.label.toUpperCase()}
