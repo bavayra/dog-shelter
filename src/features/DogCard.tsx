@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-56 4xl:h-auto 4xl:w-lg flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-215"
+        className="3xl:h-56 4xl:h-auto 4xl:w-lg 5xl:h-220 4xl:mx-auto flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-215"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -52,10 +52,12 @@ const DogCard = memo((dog: Dog) => {
             }}
           />
           <div
-            className={`absolute top-3 right-3 ${genderBadgeColor} flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold tracking-wider text-white shadow-lg`}
+            className={`absolute top-3 right-3 ${genderBadgeColor} 5xl:px-5 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold tracking-wider text-white shadow-lg`}
           >
-            <span className="tablet-sm:text-lg text-sm">{genderSymbol}</span>
-            <span className="tablet-sm:text-lg">{gender}</span>
+            <span className="tablet-sm:text-lg 5xl:text-2xl text-sm">
+              {genderSymbol}
+            </span>
+            <span className="tablet-sm:text-lg 5xl:text-2xl">{gender}</span>
           </div>
           {isAdopted && (
             <div className="bg-primary-700 absolute top-3 left-3 rounded-full px-4 py-2 text-sm font-bold text-white shadow-lg">
@@ -67,7 +69,7 @@ const DogCard = memo((dog: Dog) => {
           <h3 className="typography-h3 4xl:text-4xl 4xl:pl-3 mb-1 2xl:text-3xl">
             {name}
           </h3>
-          <div className="tablet-sm:text-lg 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
+          <div className="tablet-sm:text-lg 5xl:text-2xl 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -82,14 +84,18 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 4xl:text-xl 4xl:mt-4 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
+            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:mt-4 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
               <span>{health}</span>
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <p className="typography-small 3xl:text-xl tablet-sm:text-lg tablet-lg:text-lg mb-4 line-clamp-5 text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:line-clamp-none 2xl:p-4">
-              {description}
-            </p>
+            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 mb-4 line-clamp-5 overflow-y-hidden text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:line-clamp-none 2xl:p-4">
+              {description.map((line, index) => (
+                <p key={index} className="mb-1">
+                  {line}
+                </p>
+              ))}
+            </div>
           </div>
 
           <Button

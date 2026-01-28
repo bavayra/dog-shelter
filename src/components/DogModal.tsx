@@ -7,7 +7,6 @@ import {
   getGenderBadgeColor,
   getGenderSymbol,
 } from '@/utils/dogHelpers';
-import { sanitizeInput } from '@/utils/sanitize';
 
 interface DogModalProps {
   dog: Dog;
@@ -94,7 +93,6 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-  const sanitized = sanitizeInput(description || '');
 
   return (
     <div
@@ -193,10 +191,13 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div
-              className="xs:text-lg 4xl:leading-tighter px-2 text-justify text-sm leading-tight font-semibold text-neutral-700 lg:text-xl lg:font-normal"
-              dangerouslySetInnerHTML={{ __html: sanitized }}
-            />
+            <div className="xs:text-lg 4xl:leading-tighter px-2 text-justify text-sm leading-tight font-semibold text-neutral-700 lg:text-xl lg:font-normal">
+              {description.map((line, index) => (
+                <p key={index} className="mb-2">
+                  {line}
+                </p>
+              ))}
+            </div>
           </div>
 
           <Button
