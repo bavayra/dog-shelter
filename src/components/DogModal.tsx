@@ -103,14 +103,14 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-primary-200 4xl:max-h-[82vh] relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
+        className="bg-primary-200 4xl:max-h-[82vh] 5xl:max-w-2xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
         <button
           onClick={onClose}
           aria-label="Close dog details modal"
-          className="text-primary-500 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
+          className="text-primary-500 5xl:h-14 5xl:w-14 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
           <svg
             className="4xl:w-10 4xl:h-10 h-5 w-5"
@@ -151,31 +151,39 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3
               id="modal-title"
-              className="typography-h3 4xl:text-4xl sm:text-3xl md:mt-2"
+              className="typography-h3 4xl:text-4xl 5xl:text-5xl sm:text-3xl md:mt-2"
             >
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 4xl:px-5 flex items-center gap-1 rounded-full px-3 py-2 font-semibold tracking-normal text-white shadow-lg`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 4xl:px-5 5xl:px-5 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-2 font-semibold tracking-normal text-white shadow-lg`}
             >
-              <span className="tablet-sm:text-lg text-sm">{genderSymbol}</span>
-              <span className="tablet-sm:text-lg text-xs">{gender}</span>
+              <span className="tablet-sm:text-lg 5xl:text-2xl text-sm">
+                {genderSymbol}
+              </span>
+              <span className="tablet-sm:text-lg 5xl:text-2xl text-xs">
+                {gender}
+              </span>
             </div>
           </div>
 
           <div className="xs:text-base 4xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg">
-            <div className="flex items-center gap-2">
+            <div className="5xl:text-2xl flex items-center gap-2">
               <span
                 role="img"
                 aria-label="birthday cake"
-                className="4xl:text-2xl text-xl"
+                className="4xl:text-2xl 5xl:text-3xl text-xl"
               >
                 🎂
               </span>
               <span className="font-medium">{getAgeLabel(age)}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span role="img" aria-label="dog" className="text-xl">
+            <div className="5xl:text-2xl flex items-center gap-2">
+              <span
+                role="img"
+                aria-label="dog"
+                className="5xl:text-3xl text-xl"
+              >
                 🐕
               </span>
               <span className="font-medium">{breed}</span>
@@ -191,7 +199,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-lg 4xl:leading-tighter px-2 text-justify text-sm leading-tight font-semibold text-neutral-700 lg:text-xl lg:font-normal">
+            <div className="xs:text-lg 4xl:leading-tighter 5xl:text-3xl px-2 text-justify text-sm leading-tight font-semibold text-neutral-700 lg:text-xl lg:font-normal">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
@@ -205,7 +213,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="small"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-xs 4xl:mx-auto flex w-full justify-center md:mb-6"
+            className="4xl:w-xs 4xl:mx-auto 5xl:w-md 5xl:py-4 flex w-full justify-center md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
