@@ -69,7 +69,7 @@ const DogCard = memo((dog: Dog) => {
           <h3 className="typography-h3 4xl:text-4xl 4xl:pl-3 mb-1 2xl:text-3xl">
             {name}
           </h3>
-          <div className="tablet-sm:text-lg 5xl:text-2xl 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
+          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -89,7 +89,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 mb-4 line-clamp-5 overflow-y-hidden text-sm sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:line-clamp-none 2xl:p-4">
+            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 mb-4 line-clamp-5 overflow-y-hidden text-sm tracking-wide sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:line-clamp-none 2xl:p-4">
               {description.map((line, index) => (
                 <p key={index} className="mb-1">
                   {line}
