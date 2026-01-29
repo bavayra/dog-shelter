@@ -90,7 +90,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     : '';
 
   const xl5MediaQuery = xl5Size
-    ? `@media (min-width: 2048px) { [data-circle-id="${circleId}"] { width: ${xl5Size * 0.25}rem !important; height: ${xl5Size * 0.25}rem !important; } }`
+    ? `@media (min-width: 2048px) { [data-circle-id="${circleId}"] { width: ${xl5Size * 0.25}rem !important; height: ${xl5Size * 0.25}rem !important; circle-5xl-mid} }`
     : '';
 
   const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery} ${xl2MediaQuery} ${xl4MediaQuery} ${xl5MediaQuery} `;

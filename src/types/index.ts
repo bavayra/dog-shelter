@@ -5,7 +5,7 @@ export interface Dog {
   age: '' | 'under-1' | '1-3' | '4-7' | '8-plus';
   gender: 'Boy' | 'Girl';
   health: 'Healthy' | 'Special needs';
-  description: string;
+  description: string[];
   imageUrl: string;
   isAdopted: boolean;
 }
