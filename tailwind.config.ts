@@ -15,12 +15,6 @@ export default {
         '3xl': '1536px',
         '4xl': '1920px',
         '5xl': '2048px',
-        '5xl-mid': {
-          raw: '(min-width: 2048px) and (min-height: 1152px) and (max-height: 1536px)',
-        },
-        '5xl-tall': {
-          raw: '(min-width: 2048px) and (min-height: 1537px)',
-        },
       },
     },
   },
