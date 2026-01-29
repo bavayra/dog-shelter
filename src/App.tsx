@@ -190,11 +190,11 @@ function App() {
                 xl4Size={104}
                 xl5Size={120}
                 color="primary-300"
-                top="14"
-                left="-10"
+                top="0"
+                left="0"
                 opacity={40}
                 zIndex={10}
-                className="tablet-lg:translate-x-[10%] tablet-lg:mt-4 4xl:-ml-12 md:translate-x-1/4 xl:translate-x-1/3 2xl:translate-x-2/3"
+                className="xs:translate-y-2/5 xs:-translate-x-1/3 tablet-lg:translate-x-[10%] tablet-lg:mt-4 4xl:-ml-12 md:translate-x-1/4 xl:translate-x-1/3 2xl:translate-x-2/3"
               />
               <DecorativeCircle
                 size={16}
@@ -205,11 +205,11 @@ function App() {
                 xl4Size={60}
                 xl5Size={68}
                 color="primary-500"
-                top="22"
+                top="0"
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[30%] 5xl:-ml-8 4xl:-ml-11 4xl:mt-8 tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7 xl:translate-x-[75%] 2xl:translate-x-[135%]"
+                className="tablet-lg:translate-x-[30%] xs:translate-y-[145%] xs:-translate-x-[5%] 5xl:-ml-8 4xl:-ml-11 4xl:mt-8 tablet-lg:mt-4 md:translate-x-3/5 md:translate-y-1/7 xl:translate-x-[75%] 2xl:translate-x-[135%]"
               />
             </div>
             <AboutUs />
