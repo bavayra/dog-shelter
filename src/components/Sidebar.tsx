@@ -68,14 +68,14 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 key={item.id}
                 href={item.href}
                 aria-label={`Go to ${item.label} section`}
-                className="hover:bg-primary-200 hover:text-primary-700 group xs:gap-3 relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-50 transition-colors hover:scale-110"
+                className="hover:bg-primary-200 hover:text-primary-700 group xs:gap-2 relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-50 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
                   className="xs:w-5 xs:h-5 tablet-sm:w-7 tablet-sm:h-7 h-4 w-4 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
                   aria-hidden="true"
                 />
-                <span className="xs:text-lg tablet-sm:text-2xl text-sm font-semibold md:font-normal">
+                <span className="xs:text-lg xs:font-normal tablet-sm:text-2xl text-sm font-semibold md:font-normal">
                   {item.label}
                 </span>
               </a>
