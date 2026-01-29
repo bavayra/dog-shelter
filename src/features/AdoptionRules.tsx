@@ -15,7 +15,7 @@ const AdoptionRules = () => {
   return (
     <section id="adoption-rules" className="relative z-1 bg-neutral-50 py-6">
       <div className="container mx-auto px-4 sm:mt-4">
-        <h2 className="typography-h2 xs:text-4xl 4xl:text-9xl tablet-sm:text-5xl 4xl:mt-6 3xl:mt-10 mb-0 text-center md:text-7xl">
+        <h2 className="typography-h2 xs:text-4xl xs:pt-4 4xl:text-9xl tablet-sm:text-5xl 4xl:mt-6 3xl:mt-10 mb-0 text-center md:text-7xl">
           Adoption Rules
         </h2>
 
@@ -36,7 +36,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 4xl:text-3xl 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base mb-4 inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105 md:mt-3 md:mb-6 2xl:px-8 2xl:text-2xl"
+            className="bg-primary-500 hover:text-primary-100 4xl:text-3xl 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base mb-4 inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 md:mt-3 md:mb-6 2xl:px-8 2xl:text-2xl"
           >
             See All The Rules
           </a>
@@ -45,7 +45,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-200 4xl:text-3xl 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-5 py-3 text-xs font-semibold transition-transform hover:scale-105 2xl:px-8 2xl:text-2xl"
+            className="bg-primary-500 hover:text-primary-100 4xl:text-3xl 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 2xl:px-8 2xl:text-2xl"
           >
             See The Contract Template
           </a>
