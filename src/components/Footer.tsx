@@ -29,7 +29,7 @@ const Footer = () => {
           <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-3 text-center text-xs font-bold">
             FOLLOW US
           </h3>
-          <SocialLinks size="md" />
+          <SocialLinks size="sm" />
         </div>
       </div>
 
