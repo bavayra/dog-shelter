@@ -5,7 +5,7 @@ const HowToHelp = () => {
   return (
     <section
       id="help"
-      className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[80vh] tablet-lg:min-h-[60vh] 5xl:min-h-[82vh] relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[68vh] sm:pt-10 md:min-h-[72vh] lg:min-h-[85vh] xl:min-h-screen"
+      className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[85vh] tablet-lg:min-h-[60vh] 5xl:min-h-[82vh] relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[68vh] sm:pt-10 md:min-h-[72vh] lg:min-h-[85vh] xl:min-h-screen"
     >
       <div className="z-10 container mx-auto px-4">
         <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 tablet-sm:mt-0 4xl:text-8xl mb-6 text-center lg:text-7xl 2xl:mb-10">
