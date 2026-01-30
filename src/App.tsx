@@ -34,7 +34,7 @@ function App() {
               xsSize={52}
               tabletSmSize={60}
               mdSize={80}
-              tabletLgSize={82}
+              tabletLgSize={86}
               lgSize={86}
               xl4Size={124}
               xl5Size={150}
@@ -42,7 +42,7 @@ function App() {
               top="0"
               left="0"
               opacity={70}
-              className="tablet-sm:translate-y-full 4xl:translate-y-[40%] 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-10"
+              className="tablet-sm:translate-y-full 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-10"
             />
             <div className="glass-card text-primary-700 text-stats-5xl-mid 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 xl:text-xl 2xl:mt-16">
               <p className="4xl:mb-4 mb-2">
@@ -56,7 +56,7 @@ function App() {
               </p>
             </div>
 
-            <div className="4xl:-mt-6 -mt-4 flex justify-center">
+            <div className="4xl:-mt-6 tablet-lg:-mt-6 -mt-4 flex justify-center">
               <Button
                 variant="primary"
                 size="large"
@@ -89,7 +89,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 mt-5xl-mid 5xl:mt-24 tablet-lg:mt-6 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-14 lg:mt-24 lg:-translate-x-60 xl:mt-2 xl:mr-40 2xl:mt-10"
+              className="xs:mt-10 tablet-sm:mt-12 mt-5xl-mid 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-14 lg:mt-24 lg:-translate-x-60 xl:mt-2 xl:mr-40 2xl:mt-10"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
