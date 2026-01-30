@@ -113,7 +113,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           className="text-primary-500 5xl:h-14 5xl:w-14 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
           <svg
-            className="4xl:w-10 4xl:h-10 h-5 w-5"
+            className="4xl:w-10 4xl:h-10 tablet-lg:w-10 tablet-lg:h-10 h-5 w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
