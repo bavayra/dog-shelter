@@ -38,7 +38,7 @@ const SocialLinks = ({
 
   return (
     <div
-      className={`flex items-center justify-center gap-4 ${className || ''}`}
+      className={`flex items-center justify-center gap-4 md:gap-2 ${className || ''}`}
     >
       {socialNetworks.map((social) => (
         <a
