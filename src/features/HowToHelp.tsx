@@ -5,10 +5,10 @@ const HowToHelp = () => {
   return (
     <section
       id="help"
-      className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[85vh] tablet-lg:min-h-[60vh] 5xl:min-h-[82vh] relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[68vh] sm:pt-10 md:min-h-[65vh] lg:min-h-[85vh] xl:min-h-screen"
+      className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[85vh] tablet-lg:min-h-[56vh] 5xl:min-h-[82vh] relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[68vh] sm:pt-10 md:min-h-[65vh] lg:min-h-[85vh] xl:min-h-screen"
     >
       <div className="z-10 container mx-auto px-4">
-        <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 tablet-sm:mt-0 4xl:text-8xl mb-6 text-center md:text-5xl lg:text-7xl 2xl:mb-10">
+        <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl tablet-lg:text-6xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 tablet-sm:mt-0 4xl:text-8xl mb-6 text-center md:text-5xl lg:text-7xl 2xl:mb-10">
           How to Help ROTVODOM
         </h2>
         <div className="tablet-sm:px-4 3xl:max-w-4xl 4xl:max-w-5xl 5xl:max-w-7xl 5xl:px-6 5xl:mb-14 mx-auto mb-6 max-w-3xl text-center md:mb-6 md:px-12">
@@ -40,7 +40,7 @@ const HowToHelp = () => {
             <Button
               variant="outline"
               size="large"
-              className="4xl:py-5 4xl:px-10 flex items-center md:mt-4 xl:mt-2"
+              className="4xl:py-5 4xl:px-10 tablet-lg:mt-0 flex items-center md:mt-4 xl:mt-2"
               ariaLabel="Donate to help our pets button"
             >
               Help Our Pets Now
