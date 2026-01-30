@@ -8,22 +8,20 @@ import ContactInfo from './ContactInfo';
 const Footer = () => {
   return (
     <footer className="bg-primary-900 py-6 text-neutral-50">
-      <div className="md:flex-cols-2 tablet-lg:gap-20 4xl:gap-80 container mx-auto px-4 md:mb-2 md:flex md:justify-center md:gap-36 lg:gap-54">
-        <div className="grid grid-cols-1 justify-items-center gap-4">
-          <div>
-            <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-2 text-center text-xs font-bold">
-              {APP_NAME}
-            </h3>
-            <p className="xs:text-sm tablet-sm:text-base tablet-lg:text-lg tablet-lg:w-100 4xl:text-2xl 4xl:w-120 mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100">
-              Find your perfect companion and give a shelter dog a loving home.
-            </p>
-          </div>
-          <div className="mb-6 text-center md:hidden md:text-right">
-            <h3 className="xs:text-base mb-2 text-center text-xs font-bold">
-              CONTACT US
-            </h3>
-            <ContactInfo />
-          </div>
+      <div className="tablet-lg:gap-20 4xl:gap-80 container mx-auto mb-6 grid grid-cols-1 justify-items-center gap-6 px-4 md:grid-cols-3 md:gap-8 lg:gap-12">
+        <div>
+          <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-2 text-center text-xs font-bold">
+            {APP_NAME}
+          </h3>
+          <p className="xs:text-sm tablet-sm:text-base tablet-lg:text-lg tablet-lg:w-100 4xl:text-2xl 4xl:w-120 mb-2 text-center text-xs text-neutral-300 md:w-64 xl:w-100">
+            Find your perfect companion and give a shelter dog a loving home.
+          </p>
+        </div>
+        <div className="text-center">
+          <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-2 text-xs font-bold">
+            CONTACT US
+          </h3>
+          <ContactInfo />
         </div>
         <div>
           <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-3 text-center text-xs font-bold">
