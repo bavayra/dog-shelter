@@ -14,7 +14,7 @@ const ContactInfo = ({ className = '' }: ContactInfoProps) => {
       className={`not-italic ${className}`}
       aria-label="Contact information"
     >
-      <div className="3xl:space-y-3 flex flex-col items-center space-y-1 text-neutral-500 md:text-lg">
+      <div className="3xl:space-y-3 tablet-lg:text-primary-700 flex flex-col items-center space-y-1 text-neutral-500 md:text-lg">
         <p className="flex items-center gap-2">
           <EmailIcon
             className="xs:h-5 xs:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
