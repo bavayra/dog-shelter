@@ -113,20 +113,20 @@ const ContactSection = () => {
       <div className="xl2:mr-20 3xl:mr-32 relative">
         <DecorativeCircle
           size={8}
-          mdSize={12}
+          mdSize={10}
           xl4Size={16}
           color="primary-50"
           top="0"
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] 4xl:mt-6 tablet-lg:mr-15 xs:translate-y-1/4 4xl:mr-16 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:mr-8 lg:mt-0 lg:-translate-x-[440%] xl:mt-5 xl:-translate-x-[600%] [@media(min-height:1152px)]:mr-32"
+          className="xs:-translate-x-[130%] 4xl:mt-6 tablet-lg:mr-15 xs:translate-y-1/4 4xl:mr-16 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[440%] xl:mt-5 xl:-translate-x-[600%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
-      <div className="5xl:gap-40 5xl:w-400 relative flex justify-center md:m-6 md:mx-auto md:grid md:grid-cols-2 md:gap-4 lg:w-240 xl:w-300 xl:gap-10">
+      <div className="5xl:gap-40 5xl:w-400 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 relative flex justify-center md:m-6 md:mx-auto lg:w-240 xl:w-300 xl:gap-10">
         <div className="5xl:max-w-180 w-full max-w-md px-6 xl:mx-6 xl:max-w-lg">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
@@ -185,7 +185,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base 5xl:text-3xl tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-lg 2xl:text-2xl"
+                className="typography-body xs:text-base 5xl:text-3xl tablet-lg:text-xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-xl 2xl:text-2xl"
               >
                 Message
               </label>
@@ -213,7 +213,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[200%] 5xl:ml-26 tablet-sm:translate-x-[280%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[110%] lg:ml-12 xl:ml-18"
+                className="xs:translate-x-[200%] 5xl:ml-26 tablet-sm:translate-x-[280%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[200%] lg:ml-12 xl:ml-18"
               />
             </div>
 
@@ -249,7 +249,7 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card 3xl:w-150 mb-10 hidden rounded-2xl py-8 md:flex md:flex-col md:gap-4 md:self-center xl:w-120">
+        <div className="glass-card 3xl:w-150 tablet-lg:flex tablet-lg:flex-col tablet-lg:gap-4 tablet-lg:self-center mb-10 hidden rounded-2xl py-8 xl:w-120">
           <p className="typography-large tablet-lg:text-2xl 3xl:text-3xl px-4 text-center text-xl md:block md:font-normal">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
