@@ -213,7 +213,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[200%] 5xl:ml-26 tablet-sm:translate-x-[300%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[110%] lg:ml-12 xl:ml-18"
+                className="xs:translate-x-[200%] 5xl:ml-26 tablet-sm:translate-x-[280%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[110%] lg:ml-12 xl:ml-18"
               />
             </div>
 
