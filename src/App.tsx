@@ -24,7 +24,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-200 section-5xl-h-mid to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
+            className="from-primary-200 tablet-lg:min-h-[calc(100vh-4rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
             <h2 className="text-primary-700 xs:text-4xl mt-5xl-mid text-5xl-h-mid text-5xl-h-tall 5xl:mt-16 xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-2 xl:mt-0 2xl:mt-4">
               Give a Shelter Dog a Loving Home
