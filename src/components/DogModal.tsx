@@ -132,7 +132,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-116 md:w-auto md:rounded-2xl md:object-contain"
+            className="h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-116 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
@@ -151,7 +151,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3
               id="modal-title"
-              className="typography-h3 4xl:text-4xl 5xl:text-5xl tablet-lg:text-4xl sm:text-3xl md:mt-2"
+              className="typography-h3 4xl:text-4xl 5xl:text-5xl tablet-lg:text-4xl sm:text-3xl md:mt-2 xl:pl-2"
             >
               {name}
             </h3>
@@ -167,7 +167,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             </div>
           </div>
 
-          <div className="xs:text-base 4xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg">
+          <div className="xs:text-base 4xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg xl:pl-2">
             <div className="5xl:text-2xl flex items-center gap-2">
               <span
                 role="img"
@@ -199,7 +199,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-lg 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-normal 5xl:text-3xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 lg:text-xl lg:font-normal">
+            <div className="xs:text-lg 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-normal 5xl:text-3xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 lg:text-xl lg:font-normal xl:tracking-tighter">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
