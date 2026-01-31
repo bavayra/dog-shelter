@@ -36,11 +36,11 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-56 4xl:h-auto 4xl:w-lg 5xl:h-220 4xl:mx-auto flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-215"
+        className="3xl:h-56 4xl:h-auto 4xl:w-lg 5xl:h-220 4xl:mx-auto flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-150"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="group relative h-64 overflow-hidden md:h-60 2xl:h-80">
+        <div className="group relative h-64 overflow-hidden md:h-60 2xl:h-60">
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
@@ -89,7 +89,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 mb-4 line-clamp-5 overflow-y-hidden text-sm tracking-wide sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:line-clamp-none 2xl:p-4">
+            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 2xl:line-clamp-auto mb-4 line-clamp-5 overflow-y-hidden text-sm tracking-wide sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:p-2">
               {description.map((line, index) => (
                 <p key={index} className="mb-1">
                   {line}
