@@ -35,7 +35,7 @@ function App() {
               tabletSmSize={60}
               mdSize={80}
               tabletLgSize={86}
-              lgSize={86}
+              lgSize={104}
               xl4Size={124}
               xl5Size={150}
               color="primary-500"
@@ -89,7 +89,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 mt-5xl-mid 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-14 lg:mt-12 lg:-translate-x-50 xl:mt-10 xl:mr-40 2xl:mt-10"
+              className="xs:mt-10 tablet-sm:mt-12 mt-5xl-mid 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-14 lg:mt-12 lg:-translate-x-50 xl:mt-10 xl:mr-40 2xl:mt-14"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -100,7 +100,7 @@ function App() {
                 tabletSmSize={94}
                 mdSize={104}
                 lgSize={102}
-                xl2Size={114}
+                xl2Size={112}
                 xl4Size={130}
                 xl5Size={168}
                 color="primary-500"
@@ -115,7 +115,7 @@ function App() {
                 xsSize={52}
                 tabletSmSize={64}
                 mdSize={72}
-                lgSize={68}
+                lgSize={64}
                 xl2Size={76}
                 xl4Size={92}
                 xl5Size={112}
@@ -124,14 +124,14 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={1}
-                className="tablet-sm:-translate-x-[50%] 5xl:-mr-12 tablet-sm:translate-y-[35%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:bottom-22 2xl:-mr-2"
+                className="tablet-sm:-translate-x-[50%] 5xl:-mr-12 tablet-sm:translate-y-[35%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:bottom-22"
               />
               <DecorativeCircle
                 size={20}
                 xsSize={26}
                 tabletSmSize={32}
                 mdSize={44}
-                lgSize={40}
+                lgSize={36}
                 xl2Size={50}
                 xl4Size={60}
                 xl5Size={76}
@@ -140,7 +140,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] 5xl:-mr-30 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-4"
+                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] 5xl:-mr-30 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-4 2xl:-mb-6 2xl:-translate-x-[160%]"
               />
             </div>
             <img
