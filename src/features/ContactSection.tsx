@@ -120,14 +120,14 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] 4xl:mt-6 tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] xs:translate-y-1/4 4xl:mr-16 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[440%] xl:mt-5 xl:-translate-x-[600%] [@media(min-height:1152px)]:mr-32"
+          className="xs:-translate-x-[130%] 4xl:mt-6 tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] xs:translate-y-1/4 4xl:mr-16 tablet-sm:-translate-x-[240%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:mt-5 xl:-translate-x-[600%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
-      <div className="5xl:gap-40 5xl:w-400 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 relative flex justify-center md:m-6 md:mx-auto lg:w-240 xl:w-300 xl:gap-10">
-        <div className="5xl:max-w-180 w-full max-w-md px-6 xl:mx-6 xl:max-w-lg">
+      <div className="5xl:gap-40 5xl:w-400 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 relative flex justify-center md:m-6 md:mx-auto lg:w-200 xl:w-300 xl:gap-10">
+        <div className="5xl:max-w-180 w-full max-w-md px-6 lg:max-w-sm xl:mx-6 xl:max-w-lg">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
               <TextInput
@@ -208,12 +208,13 @@ const ContactSection = () => {
               <DecorativeCircle
                 size={8}
                 tabletLgSize={10}
+                lgSize={8}
                 xl5Size={12}
                 color="primary-500"
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[200%] 5xl:ml-26 tablet-sm:translate-x-[280%] tablet-lg:translate-x-[120%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[200%] lg:ml-12 xl:ml-18"
+                className="xs:translate-x-[200%] 5xl:ml-26 tablet-sm:translate-x-[280%] tablet-lg:translate-x-[120%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[200%] lg:-mt-1 lg:ml-9 xl:ml-18"
               />
             </div>
 
@@ -226,7 +227,7 @@ const ContactSection = () => {
                 ariaLabel="Submit this form"
                 className="5xl:py-4 5xl:px-10 w-auto text-center font-semibold"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Sending...' : 'SEND MESSAGE'}
               </Button>
             </div>
 
