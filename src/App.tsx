@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="from-primary-200 tablet-lg:min-h-[calc(100vh-4rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl mt-5xl-mid text-5xl-h-mid text-5xl-h-tall 5xl:mt-16 xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-2 xl:mt-0 2xl:mt-4">
+            <h2 className="text-primary-700 xs:text-4xl mt-5xl-mid text-5xl-h-mid text-5xl-h-tall 5xl:mt-16 xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-0 xl:mt-0 2xl:mt-4">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -44,7 +44,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-full 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-10"
             />
-            <div className="glass-card text-primary-700 text-stats-5xl-mid 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 xl:text-xl 2xl:mt-16">
+            <div className="glass-card text-primary-700 text-stats-5xl-mid 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-xl 2xl:mt-16">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -72,7 +72,7 @@ function App() {
               </Button>
             </div>
             <div className="tablet-lg:max-w-2xl mt-5xl-mid 4xl:max-w-6xl 5xl:mt-14 tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4">
-              <p className="typography-large text-body-5xl-mid tablet-lg:text-2xl 4xl:text-4xl text-center md:text-xl">
+              <p className="typography-large text-body-5xl-mid tablet-lg:text-2xl 4xl:text-4xl text-center md:text-xl lg:hidden">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -89,7 +89,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 mt-5xl-mid 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-14 lg:mt-24 lg:-translate-x-60 xl:mt-2 xl:mr-40 2xl:mt-10"
+              className="xs:mt-10 tablet-sm:mt-12 mt-5xl-mid 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-14 lg:mt-12 lg:-translate-x-50 xl:mt-2 xl:mr-40 2xl:mt-10"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -99,7 +99,7 @@ function App() {
                 xsSize={96}
                 tabletSmSize={94}
                 mdSize={104}
-                lgSize={96}
+                lgSize={102}
                 xl2Size={114}
                 xl4Size={130}
                 xl5Size={168}
@@ -115,6 +115,7 @@ function App() {
                 xsSize={52}
                 tabletSmSize={64}
                 mdSize={72}
+                lgSize={68}
                 xl2Size={76}
                 xl4Size={92}
                 xl5Size={112}
@@ -130,7 +131,7 @@ function App() {
                 xsSize={26}
                 tabletSmSize={32}
                 mdSize={44}
-                lgSize={44}
+                lgSize={40}
                 xl2Size={50}
                 xl4Size={60}
                 xl5Size={76}
@@ -139,12 +140,12 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] 5xl:-mr-30 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:-mr-12"
+                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] 5xl:-mr-30 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-4"
               />
             </div>
             <img
               src={RottweilerImage}
-              className="xs:h-72 xs:w-72 xs:-mr-10 5xl:h-176 image-5xl-mid tablet-sm:w-96 tablet-sm:h-96 4xl:h-130 4xl:w-130 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 2xl:h-110 2xl:w-110"
+              className="xs:h-72 xs:w-72 xs:-mr-10 5xl:h-176 image-5xl-mid tablet-sm:w-96 tablet-sm:h-96 4xl:h-130 4xl:w-130 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-100 lg:w-100 2xl:h-110 2xl:w-110"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
