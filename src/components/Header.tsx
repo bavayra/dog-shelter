@@ -33,7 +33,7 @@ const Header = () => {
               <a
                 key={link.id}
                 href={link.href}
-                className="hover:text-primary-900 hover:bg-primary-200 5xl:text-3xl 4xl:text-2xl mx-0 py-3 text-lg font-medium text-neutral-700 underline transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
+                className="hover:text-primary-900 hover:bg-primary-200 5xl:text-3xl 4xl:text-2xl mx-0 py-3 text-lg font-medium text-neutral-700 transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
                 aria-label={`Go to ${link.label} section`}
               >
                 {link.label.toUpperCase()}
