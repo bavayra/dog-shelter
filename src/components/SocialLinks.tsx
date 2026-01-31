@@ -46,13 +46,13 @@ const SocialLinks = ({
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 flex shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110`}
+          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 border-primary-200 flex shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110`}
           aria-label={social.name}
         >
           <Icon
             as={social.icon}
             size={iconSizeMap[size]}
-            className={`${iconColor} xs:w-6 xs:h-6 5xl:w-16 5xl:h-16 tablet-lg:w-10 tablet-lg:h-10 4xl:w-12 4xl:h-12 sm:h-10 sm:w-10 md:h-6 md:w-6`}
+            className={`${iconColor} xs:w-6 xs:h-6 5xl:w-16 5xl:h-16 tablet-lg:w-10 tablet-lg:h-10 4xl:w-12 4xl:h-12 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-6 md:w-6`}
             aria-hidden="true"
           />
         </a>
