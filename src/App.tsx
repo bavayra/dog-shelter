@@ -71,8 +71,8 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="tablet-lg:max-w-2xl mt-5xl-mid 4xl:max-w-6xl 5xl:mt-14 tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4">
-              <p className="typography-large text-body-5xl-mid tablet-lg:text-2xl 4xl:text-4xl text-center md:text-xl lg:hidden xl:block">
+            <div className="tablet-lg:max-w-2xl mt-5xl-mid 4xl:max-w-4xl 4xl:mt-10 5xl:mt-14 tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden max-w-2xl justify-center px-4">
+              <p className="typography-large text-body-5xl-mid tablet-lg:text-2xl 4xl:text-3xl text-center md:text-xl lg:hidden xl:block">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
