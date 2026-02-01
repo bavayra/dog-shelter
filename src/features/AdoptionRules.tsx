@@ -25,7 +25,7 @@ const AdoptionRules = () => {
         </p>
       </div>
 
-      <div className="xl2:gap-x-16 3xl:gap-x-0 3xl:max-w-5xl mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-x-6">
+      <div className="xl2:gap-x-16 3xl:gap-x-0 3xl:max-w-5xl 4xl:max-w-6xl mx-auto max-w-4xl space-y-4 lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-x-6">
         {rules.map((rule, index) => (
           <RuleCard key={index} number={index + 1} text={rule} />
         ))}
