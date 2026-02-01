@@ -9,7 +9,7 @@ const AboutUs = () => {
           About Us
         </h2>
 
-        <div className="bg-primary-100 4xl:max-w-6xl 5xl:text-4xl 4xl:text-3xl typography-body xs:text-lg border-primary-300 tablet-sm:text-xl tablet-lg:text-2xl tablet-lg:max-w-2xl tablet-lg:px-6 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto lg:max-w-3xl xl:text-2xl 2xl:p-10">
+        <div className="bg-primary-100 4xl:max-w-5xl 5xl:text-4xl 4xl:text-2xl typography-body xs:text-lg border-primary-300 tablet-sm:text-xl tablet-lg:text-2xl tablet-lg:max-w-2xl tablet-lg:px-6 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto lg:max-w-3xl xl:text-2xl 2xl:p-10">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one
