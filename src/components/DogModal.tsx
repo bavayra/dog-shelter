@@ -132,7 +132,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-116 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
+            className="5xl:max-h-140 h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-116 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
@@ -167,7 +167,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             </div>
           </div>
 
-          <div className="xs:text-base 4xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg xl:pl-2">
+          <div className="xs:text-base 4xl:text-xl 5xl:mb-4 mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg xl:pl-2">
             <div className="5xl:text-2xl flex items-center gap-2">
               <span
                 role="img"
@@ -193,7 +193,9 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
                 <span role="img" aria-label="medical" className="text-2xl">
                   💊
                 </span>
-                <span className="text-accent-600 font-medium">{health}</span>
+                <span className="text-accent-600 5xl:text-2xl font-medium">
+                  {health}
+                </span>
               </div>
             )}
           </div>
