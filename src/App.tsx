@@ -193,7 +193,7 @@ function App() {
                 left="0"
                 opacity={40}
                 zIndex={10}
-                className="xs:translate-y-2/5 xs:-translate-x-1/3 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 4xl:-ml-12 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-2/3"
+                className="xs:translate-y-2/5 xs:-translate-x-1/3 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 4xl:-ml-12 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
               />
               <DecorativeCircle
                 size={16}
