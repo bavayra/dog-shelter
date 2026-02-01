@@ -37,7 +37,7 @@ const TextInput = ({
     <div>
       <label
         htmlFor={id}
-        className="typography-body xs:text-base 5xl:text-3xl 5xl:mb-4 tablet-lg:text-xl tablet-lg:font-semibold block sm:text-lg md:text-xl 2xl:text-2xl"
+        className="typography-body xs:text-base 5xl:text-3xl 5xl:mb-4 tablet-lg:font-semibold block sm:text-lg md:text-xl"
       >
         {label}
       </label>
