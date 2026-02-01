@@ -121,7 +121,7 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] 4xl:mt-0 tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] xs:translate-y-1/4 4xl:mr-20 tablet-sm:-translate-x-[240%] 3xl:-translate-x-[700%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
+          className="xs:-translate-x-[130%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] xs:translate-y-1/4 4xl:mr-20 tablet-sm:-translate-x-[240%] 3xl:-translate-x-[700%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
@@ -186,7 +186,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base 5xl:text-3xl tablet-lg:font-semibold mb-4 block sm:text-lg md:text-xl"
+                className="typography-body xs:text-base 5xl:text-3xl tablet-lg:font-semibold 5xl:font-normal mb-4 block sm:text-lg md:text-xl"
               >
                 Message
               </label>
@@ -216,7 +216,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[200%] 3xl:ml-14 5xl:ml-26 tablet-sm:translate-x-[280%] tablet-lg:translate-x-[120%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[200%] lg:-mt-1 lg:ml-9 xl:ml-18"
+                className="xs:translate-x-[200%] 3xl:ml-14 5xl:ml-22 tablet-sm:translate-x-[280%] tablet-lg:translate-x-[120%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[200%] lg:-mt-1 lg:ml-9 xl:ml-18"
               />
             </div>
 
@@ -252,8 +252,8 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card 3xl:w-120 tablet-lg:flex tablet-lg:w-80 tablet-lg:flex-col tablet-lg:gap-4 tablet-lg:self-center tablet-lg:ml-8 mb-10 hidden rounded-2xl py-8 xl:w-120">
-          <p className="typography-large tablet-lg:text-xl 3xl:text-2xl px-4 text-center text-xl md:block md:font-normal xl:text-2xl">
+        <div className="glass-card 3xl:w-120 tablet-lg:flex 5xl:px-6 tablet-lg:w-80 5xl:w-180 tablet-lg:flex-col tablet-lg:gap-4 tablet-lg:self-center tablet-lg:ml-8 mb-10 hidden rounded-2xl py-8 xl:w-120">
+          <p className="typography-large tablet-lg:text-xl 3xl:text-2xl 5xl:text-4xl px-4 text-center text-xl md:block md:font-normal xl:text-2xl">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in
             touch however is easiest for you.
