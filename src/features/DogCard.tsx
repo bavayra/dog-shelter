@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-156 4xl:h-auto 4xl:w-lg 5xl:h-220 4xl:mx-auto flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-150"
+        className="3xl:h-156 4xl:h-auto 4xl:w-md 5xl:h-220 4xl:mx-auto flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-150"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -84,12 +84,12 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:mt-4 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
+            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
               <span>{health}</span>
             </div>
           )}
           <div className="min-h-0 flex-1">
-            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 2xl:line-clamp-auto mb-4 line-clamp-5 overflow-y-hidden text-sm tracking-wide sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:p-2">
+            <div className="typography-small 3xl:text-xl 5xl:h-64 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-lg 5xl:line-clamp-7 2xl:line-clamp-auto 4xl:line-clamp-11 mb-4 line-clamp-5 overflow-y-hidden text-sm tracking-wide sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:p-2">
               {description.map((line, index) => (
                 <p key={index} className="mb-1">
                   {line}
