@@ -115,20 +115,20 @@ const ContactSection = () => {
           size={8}
           mdSize={10}
           xlSize={12}
-          xl4Size={16}
+          xl4Size={14}
           color="primary-50"
           top="0"
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] 4xl:mt-6 tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] xs:translate-y-1/4 4xl:mr-16 tablet-sm:-translate-x-[240%] 3xl:-translate-x-[700%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
+          className="xs:-translate-x-[130%] 4xl:mt-0 tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] xs:translate-y-1/4 4xl:mr-20 tablet-sm:-translate-x-[240%] 3xl:-translate-x-[700%] translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
-      <div className="5xl:gap-40 5xl:w-400 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 xl:w-250 xl:gap-10">
-        <div className="5xl:max-w-180 w-full max-w-md px-6 lg:max-w-sm xl:mx-6 xl:max-w-lg">
+      <div className="5xl:gap-40 4xl:gap-50 5xl:w-400 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 xl:w-250 xl:gap-10">
+        <div className="5xl:max-w-180 4xl:w-4xl 4xl:pr-10 w-full max-w-md px-6 lg:max-w-sm xl:mx-6 xl:max-w-lg">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
               <TextInput
