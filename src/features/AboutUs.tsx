@@ -5,7 +5,7 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="bg-primary-50 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="typography-h2 xs:text-5xl tablet-lg:text-8xl 4xl:mt-6 5xl:mb-12 xs:pt-2 4xl:text-9xl z-12 mb-4 text-center md:mb-8 md:text-7xl xl:text-8xl">
+        <h2 className="typography-h2 xs:text-5xl 3xl:mt-10 tablet-lg:text-8xl 4xl:mt-6 5xl:mb-12 xs:pt-2 4xl:text-9xl z-12 mb-4 text-center md:mb-8 md:text-7xl xl:text-8xl">
           About Us
         </h2>
 
@@ -43,7 +43,7 @@ const AboutUs = () => {
             right="-12"
             opacity={30}
             zIndex={5}
-            className="4xl:-mt-42 4xl:mr-40 md:mr-10 lg:-mt-20 xl:-mt-28 xl:mr-28"
+            className="4xl:-mt-42 4xl:mr-40 3xl:-translate-x-1/3 md:mr-10 lg:-mt-20 xl:-mt-28 xl:mr-28"
           />
         </div>
         <h3 className="typography-h3 4xl:text-6xl text-primary-500 tablet-lg:text-4xl my-6 text-center md:py-2 md:text-3xl lg:text-5xl">
