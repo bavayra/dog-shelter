@@ -52,7 +52,7 @@ const SocialLinks = ({
           <Icon
             as={social.icon}
             size={iconSizeMap[size]}
-            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-16 5xl:h-16 tablet-lg:w-10 tablet-lg:h-10 4xl:w-14 4xl:h-14 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-6 md:w-6`}
+            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-16 5xl:h-16 tablet-lg:w-10 tablet-lg:h-10 4xl:w-14 4xl:h-14 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-10 md:w-10`}
             aria-hidden="true"
           />
         </a>
