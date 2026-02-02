@@ -38,7 +38,7 @@ const SocialLinks = ({
 
   return (
     <div
-      className={`3xl:gap-4 xs:gap-2 flex items-center justify-center gap-4 ${className || ''}`}
+      className={`3xl:gap-4 xs:gap-2 tablet-lg:gap-4 flex items-center justify-center gap-4 ${className || ''}`}
     >
       {socialNetworks.map((social) => (
         <a
@@ -52,7 +52,7 @@ const SocialLinks = ({
           <Icon
             as={social.icon}
             size={iconSizeMap[size]}
-            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-16 5xl:h-16 tablet-lg:w-10 tablet-lg:h-10 4xl:w-14 4xl:h-14 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-8 md:w-8`}
+            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-16 5xl:h-16 tablet-lg:w-9 tablet-lg:h-9 4xl:w-14 4xl:h-14 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-8 md:w-8`}
             aria-hidden="true"
           />
         </a>
