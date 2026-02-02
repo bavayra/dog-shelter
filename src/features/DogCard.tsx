@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 lg:h-150 2xl:h-150"
+        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-150 2xl:h-150"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -57,7 +57,9 @@ const DogCard = memo((dog: Dog) => {
             <span className="tablet-sm:text-lg 5xl:text-2xl text-sm">
               {genderSymbol}
             </span>
-            <span className="tablet-sm:text-lg 5xl:text-2xl">{gender}</span>
+            <span className="tablet-sm:text-lg 5xl:text-2xl md:text-base">
+              {gender}
+            </span>
           </div>
           {isAdopted && (
             <div className="bg-primary-700 absolute top-3 left-3 rounded-full px-4 py-2 text-sm font-bold text-white shadow-lg">
@@ -69,7 +71,7 @@ const DogCard = memo((dog: Dog) => {
           <h3 className="typography-h3 4xl:text-4xl tablet-sm:text-3xl 4xl:pl-3 mb-1">
             {name}
           </h3>
-          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700">
+          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700 md:text-base">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -84,7 +86,7 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium">
+            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2">
               <span>{health}</span>
             </div>
           )}
