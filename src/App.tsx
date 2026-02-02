@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="from-primary-200 tablet-lg:min-h-[calc(100vh-4rem)] 5xl:min-h-[calc(100vh-8rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl 5xl:mt-6 5xl:mb-4 5xl:text-9xl 5xl:w-450 xs:mt-16 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-0 xl:mt-0 2xl:mt-4">
+            <h2 className="text-primary-700 xs:text-4xl xs:max-w-xs 5xl:mt-6 5xl:mb-4 5xl:text-9xl 5xl:w-450 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-0 xl:mt-0 2xl:mt-4">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -96,7 +96,7 @@ function App() {
             <div>
               <DecorativeCircle
                 size={72}
-                xsSize={96}
+                xsSize={104}
                 tabletSmSize={94}
                 mdSize={104}
                 lgSize={102}
@@ -145,7 +145,7 @@ function App() {
             </div>
             <img
               src={RottweilerImage}
-              className="xs:h-72 xs:w-72 xs:-mr-10 5xl:h-180 5xl:w-180 tablet-sm:w-96 tablet-sm:h-96 4xl:h-130 4xl:w-130 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-100 lg:w-100 2xl:h-110 2xl:w-110"
+              className="xs:h-80 xs:w-80 xs:-mr-10 5xl:h-180 5xl:w-180 tablet-sm:w-96 tablet-sm:h-96 4xl:h-130 4xl:w-130 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-100 lg:w-100 2xl:h-110 2xl:w-110"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
@@ -202,13 +202,13 @@ function App() {
                 lgSize={36}
                 xlSize={48}
                 xl4Size={60}
-                xl5Size={68}
+                xl5Size={64}
                 color="primary-500"
                 top="0"
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:-ml-8 4xl:-ml-2 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[85%] xl:translate-y-[75%] 2xl:translate-x-[135%]"
+                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:-ml-2 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[85%] xl:translate-y-[75%] 2xl:translate-x-[135%]"
               />
             </div>
             <AboutUs />
