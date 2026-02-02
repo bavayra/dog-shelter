@@ -53,11 +53,11 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 tablet-sm:w-72 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
+        className={`bg-primary-500 tablet-sm:w-72 xs:w-50 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
-        <nav className="tablet-lg:mt-8 relative p-4 sm:mt-4 md:pl-12">
+        <nav className="tablet-lg:mt-8 xs:mt-4 relative p-4 md:pl-12">
           <h2 className="tablet-sm:text-3xl mb-4 text-lg font-bold text-neutral-50 md:text-2xl">
             NAVIGATION
           </h2>
@@ -68,7 +68,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                 key={item.id}
                 href={item.href}
                 aria-label={`Go to ${item.label} section`}
-                className="hover:bg-primary-200 hover:text-primary-700 group xs:gap-2 relative z-10 flex items-center gap-2 rounded-lg px-2 py-3 text-neutral-50 transition-colors hover:scale-110"
+                className="hover:bg-primary-200 hover:text-primary-700 group relative z-10 flex items-center gap-2 rounded-lg px-2 py-2 text-neutral-50 transition-colors hover:scale-110"
                 onClick={() => setIsOpen(false)}
               >
                 <IconComponent
