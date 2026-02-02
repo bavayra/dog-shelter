@@ -186,7 +186,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base 5xl:text-3xl tablet-lg:font-semibold 5xl:font-normal mb-4 block sm:text-lg md:text-xl"
+                className="typography-body xs:text-base 5xl:text-3xl 5xl:font-normal mb-4 block sm:text-lg md:text-xl"
               >
                 Message
               </label>
@@ -208,7 +208,7 @@ const ContactSection = () => {
             <div className="relative">
               <DecorativeCircle
                 size={8}
-                tabletLgSize={10}
+                tabletLgSize={9}
                 lgSize={8}
                 xlSize={9}
                 xl5Size={12}
@@ -216,7 +216,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[185%] 3xl:ml-14 5xl:ml-22 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-2 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:-mt-1 lg:ml-9 xl:ml-18"
+                className="xs:translate-x-[185%] 3xl:ml-14 5xl:ml-22 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:-mt-1 lg:ml-9 xl:ml-18"
               />
             </div>
 
