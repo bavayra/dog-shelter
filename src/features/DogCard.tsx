@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-150 2xl:h-150"
+        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-150"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
