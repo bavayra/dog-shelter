@@ -167,6 +167,7 @@ function App() {
                 size={64}
                 tabletLgSize={80}
                 lgSize={88}
+                xlSize={96}
                 xl2Size={120}
                 xl4Size={150}
                 color="primary-500"
@@ -174,7 +175,7 @@ function App() {
                 left="-30"
                 opacity={20}
                 zIndex={2}
-                className="tablet-lg:mt-36 tablet-lg:-ml-14 4xl:-ml-40 lg:mt-50 2xl:-ml-30"
+                className="tablet-lg:mt-36 tablet-lg:-ml-14 4xl:-ml-40 lg:mt-50 xl:mt-36 2xl:-ml-30"
               />
             </div>
             <HowToHelp />
