@@ -154,7 +154,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h1 xs:text-5xl tablet-lg:text-8xl tablet-sm:text-7xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl lg:text-8xl"
+                className="typography-h1 xs:text-5xl tablet-lg:text-8xl tablet-sm:text-6xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl lg:text-8xl"
               >
                 Our Pets
               </h2>
@@ -182,6 +182,7 @@ function App() {
             <div className="relative">
               <DecorativeCircle
                 size={36}
+                tabletSmSize={40}
                 mdSize={54}
                 tabletLgSize={64}
                 lgSize={66}
@@ -197,6 +198,7 @@ function App() {
               />
               <DecorativeCircle
                 size={16}
+                tabletSmSize={20}
                 mdSize={30}
                 tabletLgSize={36}
                 lgSize={36}
@@ -208,7 +210,7 @@ function App() {
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:-ml-2 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[85%] xl:translate-y-[75%] 2xl:translate-x-[135%]"
+                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] tablet-sm:-translate-x-[10%] tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:-ml-2 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[85%] xl:translate-y-[75%] 2xl:translate-x-[135%]"
               />
             </div>
             <AboutUs />
