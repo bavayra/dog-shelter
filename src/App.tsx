@@ -35,16 +35,16 @@ function App() {
               tabletSmSize={62}
               mdSize={80}
               tabletLgSize={86}
-              lgSize={104}
+              lgSize={90}
               xl4Size={124}
               xl5Size={150}
               color="primary-500"
               top="0"
               left="0"
               opacity={70}
-              className="tablet-sm:translate-y-4/5 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-10"
+              className="tablet-sm:translate-y-4/5 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 3xl:mt-12 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-xl 2xl:mt-16">
+            <div className="glass-card text-primary-700 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 3xl:mt-12 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg 2xl:mt-16">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -89,7 +89,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-12 lg:mt-12 lg:-translate-x-50 xl:mt-10 xl:mr-40 2xl:mt-14"
+              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-12 lg:mt-20 lg:-translate-x-60 xl:mt-10 xl:mr-40 2xl:mt-14"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -108,7 +108,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={2}
-                className="tablet-sm:translate-x-[20%] 5xl:mr-8 5xl:translate-y-1/4 tablet-sm:translate-y-1/4 translate-x-[40%] translate-y-[45%] min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 sm:translate-x-[30%] sm:translate-y-[40%] md:-mb-6 lg:bottom-32"
+                className="tablet-sm:translate-x-[20%] 5xl:mr-8 5xl:translate-y-1/4 tablet-sm:translate-y-1/4 translate-x-[40%] translate-y-[45%] min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 sm:translate-x-[30%] sm:translate-y-[40%] md:-mb-6"
               />
               <DecorativeCircle
                 size={42}
@@ -124,7 +124,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={1}
-                className="tablet-sm:-translate-x-1/2 5xl:mr-6 5xl:translate-y-1/5 tablet-sm:translate-y-[40%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:bottom-22"
+                className="tablet-sm:-translate-x-1/2 5xl:mr-6 5xl:translate-y-1/5 tablet-sm:translate-y-[40%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:mr-6"
               />
               <DecorativeCircle
                 size={20}
@@ -140,7 +140,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-1/2 5xl:-mr-8 5xl:translate-y-1/2 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-4 2xl:-mb-6 2xl:-translate-x-[160%]"
+                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-1/2 5xl:-mr-8 5xl:translate-y-1/2 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-16 2xl:-mb-6 2xl:-translate-x-[160%]"
               />
             </div>
             <img
