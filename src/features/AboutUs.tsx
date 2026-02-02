@@ -9,7 +9,7 @@ const AboutUs = () => {
           About Us
         </h2>
 
-        <div className="bg-primary-100 4xl:max-w-5xl 5xl:text-4xl 4xl:text-2xl typography-body xs:text-lg border-primary-300 tablet-sm:text-xl tablet-lg:text-2xl tablet-lg:max-w-2xl tablet-lg:px-6 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto lg:max-w-3xl xl:text-2xl 2xl:p-10">
+        <div className="bg-primary-100 4xl:max-w-5xl 5xl:text-4xl 4xl:text-2xl typography-body xs:text-lg border-primary-300 tablet-sm:text-xl tablet-lg:max-w-2xl tablet-lg:px-6 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto lg:max-w-3xl xl:text-2xl 2xl:p-10">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one
@@ -43,7 +43,7 @@ const AboutUs = () => {
             right="-12"
             opacity={30}
             zIndex={5}
-            className="4xl:-mt-42 4xl:mr-40 3xl:-translate-x-1/3 md:mr-10 lg:-mt-20 xl:-mt-28 xl:mr-28"
+            className="4xl:-mt-42 4xl:mr-40 3xl:-translate-x-1/3 tablet-lg:-translate-y-1/5 md:mr-10 lg:-mt-20 xl:-mt-28 xl:mr-28"
           />
         </div>
         <h3 className="typography-h3 4xl:text-6xl text-primary-500 tablet-lg:text-4xl my-6 text-center md:py-2 md:text-3xl lg:text-5xl">
