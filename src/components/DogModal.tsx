@@ -132,7 +132,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="5xl:max-h-140 h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-116 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
+            className="5xl:max-h-140 h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-92 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
