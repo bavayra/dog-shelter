@@ -24,15 +24,15 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-200 tablet-lg:min-h-[calc(100vh-4rem)] 5xl:min-h-[calc(100vh-8rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-4rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
+            className="from-primary-200 tablet-lg:min-h-[calc(100vh-4rem)] 5xl:min-h-[calc(100vh-8rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-6rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl xs:max-w-xs 5xl:mt-6 5xl:mb-4 5xl:text-9xl 5xl:w-450 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-26 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-0 xl:mt-0 2xl:mt-4">
+            <h2 className="text-primary-700 xs:text-4xl xs:max-w-xs 5xl:mt-6 5xl:mb-4 5xl:text-9xl 5xl:w-450 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 tablet-lg:text-7xl 4xl:text-8xl relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-10 md:text-6xl lg:mt-0 xl:mt-0 2xl:mt-4">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
               size={40}
               xsSize={52}
-              tabletSmSize={60}
+              tabletSmSize={62}
               mdSize={80}
               tabletLgSize={86}
               lgSize={104}
@@ -42,9 +42,9 @@ function App() {
               top="0"
               left="0"
               opacity={70}
-              className="tablet-sm:translate-y-full 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-10"
+              className="tablet-sm:translate-y-4/5 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-10"
             />
-            <div className="glass-card text-primary-700 text-stats-5xl-mid 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-12 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 3xl:mt-12 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-xl 2xl:mt-16">
+            <div className="glass-card text-primary-700 text-stats-5xl-mid 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-2xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:py-6 3xl:mt-12 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-xl 2xl:mt-16">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -97,7 +97,7 @@ function App() {
               <DecorativeCircle
                 size={72}
                 xsSize={104}
-                tabletSmSize={94}
+                tabletSmSize={90}
                 mdSize={104}
                 lgSize={102}
                 xl2Size={112}
@@ -113,7 +113,7 @@ function App() {
               <DecorativeCircle
                 size={42}
                 xsSize={52}
-                tabletSmSize={64}
+                tabletSmSize={60}
                 mdSize={72}
                 lgSize={64}
                 xl2Size={76}
@@ -124,12 +124,12 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={1}
-                className="tablet-sm:-translate-x-[50%] 5xl:mr-6 5xl:translate-y-1/5tablet-sm:translate-y-[35%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:bottom-22"
+                className="tablet-sm:-translate-x-1/2 5xl:mr-6 5xl:translate-y-1/5 tablet-sm:translate-y-[40%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:bottom-22"
               />
               <DecorativeCircle
                 size={20}
                 xsSize={26}
-                tabletSmSize={32}
+                tabletSmSize={30}
                 mdSize={44}
                 lgSize={36}
                 xl2Size={50}
@@ -140,7 +140,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-[35%] 5xl:-mr-8 5xl:translate-y-1/2 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-4 2xl:-mb-6 2xl:-translate-x-[160%]"
+                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-1/2 5xl:-mr-8 5xl:translate-y-1/2 -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-4 2xl:-mb-6 2xl:-translate-x-[160%]"
               />
             </div>
             <img
