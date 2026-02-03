@@ -74,7 +74,7 @@ const DogGrid = () => {
         </div>
       ) : filteredDogs.length > 0 ? (
         <>
-          <div className="4xl:gap-x-0 4xl:px-16 grid grid-cols-1 gap-6 transition-all md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-2 lg:gap-y-10">
+          <div className="4xl:gap-x-0 4xl:px-16 grid grid-cols-1 gap-6 transition-all md:grid-cols-2 md:gap-x-2 lg:grid-cols-3 lg:gap-x-2 lg:gap-y-10 2xl:px-10">
             {displayedDogs.map((dog) => (
               <DogCard key={dog.id} {...dog} />
             ))}
