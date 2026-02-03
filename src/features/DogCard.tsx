@@ -71,7 +71,7 @@ const DogCard = memo((dog: Dog) => {
           <h3 className="typography-h3 4xl:text-4xl tablet-sm:text-3xl tablet-lg:text-2xl 4xl:pl-3 mb-1">
             {name}
           </h3>
-          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 4xl:text-xl 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700 md:text-base">
+          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 4xl:text-xl 3xl:pb-0 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700 md:text-base">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -86,7 +86,7 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2 2xl:pb-0">
+            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 3xl:pt-2 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2 2xl:pb-0">
               <span>{health}</span>
             </div>
           )}
