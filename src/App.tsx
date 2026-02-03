@@ -212,7 +212,7 @@ function App() {
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] tablet-sm:-translate-x-[10%] tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:-ml-2 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[135%]"
+                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] tablet-sm:-translate-x-[10%] tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:-ml-2 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
               />
             </div>
             <AboutUs />
