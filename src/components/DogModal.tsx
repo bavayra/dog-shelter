@@ -156,7 +156,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 4xl:px-5 5xl:px-5 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 4xl:px-5 5xl:px-5 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg 2xl:px-5`}
             >
               <span className="tablet-sm:text-lg 5xl:text-2xl text-base">
                 {genderSymbol}
@@ -201,7 +201,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-lg xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-3xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:text-xl lg:font-normal xl:px-3">
+            <div className="xs:text-lg xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-3xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:text-xl lg:font-normal xl:px-3 2xl:text-lg">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
