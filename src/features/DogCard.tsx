@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-150"
+        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-138 2xl:w-84"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -86,7 +86,7 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2">
+            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 4xl:text-xl 4xl:pl-4 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2 2xl:pb-0">
               <span>{health}</span>
             </div>
           )}
