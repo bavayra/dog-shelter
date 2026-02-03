@@ -48,7 +48,7 @@ const DogGrid = () => {
   const hasMoreDogs = filteredDogs.length > initialDisplayCount;
 
   return (
-    <div className="4xl:px-26 5xl:px-40 container mx-auto px-4 py-4 md:px-10 xl:max-w-280 2xl:px-24">
+    <div className="4xl:px-26 5xl:px-40 container mx-auto px-4 py-4 md:px-10 xl:max-w-280 2xl:max-w-full 2xl:px-24">
       <DogFilters
         filters={filters}
         onAgeChange={setAgeFilter}
