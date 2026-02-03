@@ -45,7 +45,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-4/5 4xl:translate-y-[40%] tablet-lg:mt-2 5xl:-mt-4 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 3xl:mt-12 4xl:text-3xl 4xl:py-8 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:mt-10 2xl:text-2xl">
+            <div className="glass-card text-primary-700 5xl:text-4xl 5xl:px-20 5xl:py-10 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-3xl 4xl:py-8 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -90,7 +90,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 mt-8 gap-5 min-[425px]:mt-6 md:mt-12 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-120 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 md:mt-12 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
