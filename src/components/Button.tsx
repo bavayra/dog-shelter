@@ -32,8 +32,8 @@ const Button = ({
     outline:
       'bg-primary-200 border-2 border-primary-500 text-primary-700  5xl:text-4xl hover:scale-105 hover:bg-primary-100 focus:ring-primary-200 shadow-md active:bg-primary-300',
     filter: active
-      ? 'bg-primary-500 text-primary-700  focus:ring-primary-500 font-semibold'
-      : 'bg-primary-200 sm:text-sm text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm font-semibold focus:ring-primary-500',
+      ? 'bg-primary-500 text-primary-700  focus:ring-primary-500 font-semibold 4xl:text-xl'
+      : 'bg-primary-200 sm:text-sm text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm font-semibold focus:ring-primary-500 4xl:text-xl',
   };
   const sizeStyles: Record<ButtonSize, string> = {
     small: 'px-3 py-1.5 text-sm xs:text-base 4xl:text-xl 5xl:text-3xl',
