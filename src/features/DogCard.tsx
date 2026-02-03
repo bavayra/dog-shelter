@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-156 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-138 2xl:w-84"
+        className="3xl:h-164 4xl:h-auto 4xl:w-md 4xl:mx-auto tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-138 2xl:w-84"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -90,15 +90,13 @@ const DogCard = memo((dog: Dog) => {
               <span>{health}</span>
             </div>
           )}
-          <div className="min-h-0 flex-1">
-            <div className="typography-small 3xl:text-xl 5xl:text-2xl tablet-sm:text-lg tablet-lg:text-base 5xl:line-clamp-7 2xl:line-clamp-auto 4xl:line-clamp-11 mb-4 line-clamp-5 overflow-y-hidden text-sm tracking-wide sm:text-base md:text-base lg:mb-4 lg:line-clamp-7 2xl:p-2">
-              {description.map((line, index) => (
-                <p key={index} className="mb-1">
-                  {line}
-                </p>
-              ))}
+          <div className="min-h-0">
+            <div className="typography-small 3xl:text-lg 3xl:tracking-tighter 3xl:px-3 3xl:leading-relaxed 5xl:text-2xl 5xl:leading-relaxed tablet-sm:text-lg 3xl:line-clamp-9 tablet-lg:text-base 5xl:line-clamp-7 2xl:line-clamp-auto 4xl:line-clamp-11 4xl:leading-relaxed line-clamp-5 overflow-hidden text-justify text-sm tracking-wide sm:text-base md:text-base lg:line-clamp-7 2xl:p-2">
+              {description.join(' ')}
             </div>
           </div>
+
+          <div className="3xl:min-h-6 4xl:min-h-8 5xl:min-h-10 min-h-4 flex-1"></div>
 
           <Button
             variant={isAdopted ? 'secondary' : 'primary'}
