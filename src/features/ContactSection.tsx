@@ -127,7 +127,7 @@ const ContactSection = () => {
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl relative z-11 mb-4 text-center md:text-7xl xl:text-8xl">
         Contact Us
       </h2>
-      <div className="5xl:gap-40 4xl:gap-50 5xl:w-400 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 lg:gap-10 xl:w-250">
+      <div className="5xl:gap-40 4xl:gap-30 5xl:w-400 4xl:w-300 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 lg:gap-10 xl:w-250">
         <div className="5xl:max-w-180 4xl:w-4xl 4xl:pr-10 w-full max-w-md px-6 lg:max-w-sm xl:mx-6 xl:max-w-lg">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
@@ -216,7 +216,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[185%] 3xl:ml-14 5xl:ml-22 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:ml-9 xl:ml-18"
+                className="xs:translate-x-[185%] 3xl:ml-14 4xl:ml-18 5xl:ml-22 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:ml-9 xl:ml-18"
               />
             </div>
 
