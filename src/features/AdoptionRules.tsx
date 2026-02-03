@@ -36,7 +36,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-100 4xl:text-3xl 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base mb-4 inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 md:mt-3 md:mb-6 lg:px-10 2xl:px-8 2xl:text-xl"
+            className="bg-primary-500 hover:text-primary-100 4xl:text-3xl 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base 3xl:text-2xl mb-4 inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 md:mt-3 md:mb-6 lg:px-10 2xl:px-8 2xl:text-xl"
           >
             See All The Rules
           </a>
@@ -45,7 +45,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-100 4xl:text-3xl 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 lg:px-8 2xl:text-xl"
+            className="bg-primary-500 hover:text-primary-100 4xl:text-3xl 3xl:text-2xl 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 lg:px-8 2xl:text-xl"
           >
             See The Contract Template
           </a>
