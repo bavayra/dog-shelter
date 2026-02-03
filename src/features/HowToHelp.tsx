@@ -11,7 +11,7 @@ const HowToHelp = () => {
         <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl tablet-lg:text-6xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 tablet-sm:mt-0 4xl:text-8xl mb-6 text-center sm:mt-0 sm:pt-0 md:text-5xl lg:mt-12 lg:text-7xl 2xl:mb-10">
           How to Help ROTVODOM
         </h2>
-        <div className="tablet-sm:px-4 3xl:max-w-4xl tablet-lg:mb-6 4xl:max-w-5xl 5xl:max-w-7xl 5xl:px-6 5xl:mb-14 mx-auto mb-6 max-w-3xl text-center sm:px-6 md:mb-4 md:px-22 xl:max-w-240">
+        <div className="tablet-sm:px-4 3xl:max-w-4xl tablet-lg:mb-6 4xl:max-w-5xl 5xl:max-w-7xl 5xl:px-6 5xl:mb-14 mx-auto mb-6 max-w-3xl text-center sm:px-6 md:mb-4 md:px-22 xl:max-w-240 2xl:max-w-264">
           <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-4xl 5xl:text-5xl mb-2 leading-relaxed">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
@@ -52,7 +52,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 tablet-sm:w-120 tablet-lg:max-w-170 4xl:w-250 pointer-events-none absolute bottom-0 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 translate-y-1/4 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:w-110 md:w-150 md:max-w-3xl md:bg-none lg:w-160 xl:w-154 2xl:w-200 2xl:max-w-none"
+        className="from-primary-50 tablet-sm:w-120 tablet-lg:max-w-170 4xl:w-250 pointer-events-none absolute bottom-0 left-1/2 z-3 h-auto w-full max-w-2xl -translate-x-1/2 translate-y-1/4 overflow-visible bg-linear-to-b to-neutral-50 object-contain sm:w-110 md:w-150 md:max-w-3xl md:bg-none lg:w-160 xl:w-154 2xl:w-170 2xl:max-w-none"
       />
     </section>
   );
