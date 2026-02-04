@@ -10,16 +10,16 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
-      <div className="xs:py-2 5xl:py-6 container mx-auto px-2 py-1 md:px-0 lg:px-4">
+      <div className="xs:py-2 5xl:py-4 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:px-4">
         <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50 lg:gap-6">
           <div className="flex min-w-0 flex-row items-center gap-1 sm:gap-2">
             <img
               src={LogoIcon}
               alt="Rotvodom Dog Shelter Logo"
-              className="border-primary-500 xs:w-10 xs:h-10 tablet-sm:w-16 4xl:w-16 4xl:h-16 tablet-sm:h-16 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-12 sm:w-12 md:h-14 md:w-14"
+              className="border-primary-500 xs:w-10 xs:h-10 tablet-sm:w-16 4xl:w-16 4xl:h-16 5xl:w-22 5xl:h-22 tablet-sm:h-16 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-12 sm:w-12 md:h-14 md:w-14"
             />
             <div className="flex min-w-0 items-center">
-              <h1 className="text-primary-500 xs:text-xl tablet-sm:text-3xl 4xl:text-3xl min-w-0 truncate text-sm leading-tight font-bold sm:text-2xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
+              <h1 className="text-primary-500 xs:text-xl tablet-sm:text-3xl 4xl:text-3xl 5xl:text-5xl min-w-0 truncate text-sm leading-tight font-bold sm:text-2xl lg:text-2xl xl:text-2xl 2xl:text-3xl">
                 {APP_NAME}
               </h1>
             </div>

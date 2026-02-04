@@ -16,6 +16,7 @@ export default {
         '4xl': '1920px',
         '5xl': '2048px',
       },
+      container: { center: true, padding: '0' },
     },
   },
   plugins: [],
