@@ -36,7 +36,7 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:h-164 4xl:auto 4xl:w-sm 4xl:mx-auto 5xl:w-md 5xl:h-180 tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-138 2xl:w-84"
+        className="3xl:h-164 4xl:h-auto 4xl:w-sm 5xl:w-md 5xl:h-180 tablet-sm:mx-10 tablet-lg:w-86 flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:h-auto lg:w-74 2xl:h-138 2xl:w-84"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
@@ -71,7 +71,7 @@ const DogCard = memo((dog: Dog) => {
           <h3 className="typography-h3 4xl:text-4xl tablet-sm:text-3xl tablet-lg:text-2xl 4xl:pl-3 mb-1">
             {name}
           </h3>
-          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 4xl:text-lg 3xl:pb-0 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700 md:text-base">
+          <div className="tablet-sm:text-lg 5xl:text-2xl xs:pb-2 3xl:pb-0 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700 md:text-base">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -91,7 +91,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="3xl:mb-8 4xl:mb-6 5xl:mb-2 mb-4 shrink overflow-hidden">
-            <div className="typography-small 3xl:text-lg 3xl:tracking-tighter 3xl:px-3 3xl:leading-relaxed 5xl:text-2xl 5xl:leading-relaxed tablet-sm:text-lg 3xl:line-clamp-8 tablet-lg:text-base 5xl:line-clamp-6 2xl:line-clamp-auto 4xl:line-clamp-10 4xl:leading-relaxed line-clamp-5 text-left text-sm tracking-wide sm:text-base md:text-base lg:line-clamp-7 2xl:p-2">
+            <div className="typography-small 3xl:text-lg 3xl:tracking-tighter 3xl:px-3 3xl:leading-relaxed 5xl:text-2xl tablet-sm:text-lg 3xl:line-clamp-8 5xl:line-clamp-6 2xl:line-clamp-auto 4xl:line-clamp-10 line-clamp-5 text-left text-sm tracking-wide sm:text-base md:text-base lg:line-clamp-7 2xl:p-2">
               {description.join(' ')}
             </div>
           </div>
