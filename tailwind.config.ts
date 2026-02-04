@@ -15,6 +15,7 @@ export default {
         '3xl': '1536px',
         '4xl': '1920px',
         '5xl': '2048px',
+        '6xl': '2560px',
       },
       container: { center: true, padding: '0' },
     },
