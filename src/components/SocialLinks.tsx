@@ -27,7 +27,7 @@ const SocialLinks = ({
   ];
 
   const sizeClasses = {
-    sm: 'w-10 h-10  xs:w-14 xs:h-14 sm:w-16 sm:h-16 4xl:w-24 lg:w-18 lg:h-18 4xl:h-24 5xl:w-30 5xl:h-30',
+    sm: 'w-10 h-10  xs:w-14 xs:h-14 sm:w-16 sm:h-16  lg:w-18 lg:h-18 4xl:h-24 4xl:w-24 5xl:w-30 5xl:h-30',
     md: 'w-12  h-12  md:w-8 md:h-8 lg:w-10 lg:h-10 4xl:w-10 4xl:h-10',
   };
 
@@ -52,7 +52,7 @@ const SocialLinks = ({
           <Icon
             as={social.icon}
             size={iconSizeMap[size]}
-            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-16 5xl:h-16 tablet-lg:w-9 tablet-lg:h-9 4xl:w-10 4xl:h-10 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-8 md:w-8 lg:h-10 lg:w-10`}
+            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-16 5xl:h-16 tablet-lg:w-9 tablet-lg:h-9 4xl:w-16 4xl:h-16 border-primary-200 rounded-full border sm:h-10 sm:w-10 md:h-8 md:w-8 lg:h-10 lg:w-10`}
             aria-hidden="true"
           />
         </a>
