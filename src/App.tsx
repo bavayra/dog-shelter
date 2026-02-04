@@ -24,9 +24,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-200 tablet-lg:min-h-[calc(100vh-10rem)] 5xl:min-h-[calc(100vh-6rem)] 4xl:min-h-[calc(100vh-5rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-6rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:pt-10 md:pb-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
+            className="from-primary-200 tablet-lg:min-h-[calc(100vh-10rem)] 5xl:min-h-[calc(100vh-6rem)] 4xl:min-h-[calc(100vh-5rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-6rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:p-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl xs:max-w-xs 5xl:mt-10 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:text-8xl 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
+            <h2 className="text-primary-700 xs:text-4xl xs:max-w-xs 5xl:mt-10 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -57,7 +57,7 @@ function App() {
               </p>
             </div>
 
-            <div className="4xl:-mt-6 tablet-lg:-mt-6 -mt-4 flex justify-center">
+            <div className="tablet-lg:-mt-6 -mt-4 flex justify-center">
               <Button
                 variant="primary"
                 size="large"
@@ -73,7 +73,7 @@ function App() {
               </Button>
             </div>
             <div className="tablet-lg:max-w-xl 4xl:max-w-3xl 4xl:mt-12 5xl:mt-18 5xl:max-w-5xl tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180">
-              <p className="typography-large tablet-lg:text-xl 4xl:text-2xl 5xl:text-4xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
+              <p className="typography-large tablet-lg:text-xl 5xl:text-4xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -90,7 +90,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 md:mt-12 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -155,7 +155,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h1 xs:text-5xl tablet-lg:text-8xl 5xl:text-[10rem] tablet-sm:text-6xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl lg:text-8xl"
+                className="typography-h1 xs:text-5xl tablet-lg:text-8xl 5xl:text-[10rem] tablet-sm:text-6xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl"
               >
                 Our Pets
               </h2>
