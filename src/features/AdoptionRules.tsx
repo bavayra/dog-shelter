@@ -19,7 +19,7 @@ const AdoptionRules = () => {
           Adoption Rules
         </h2>
 
-        <p className="typography-body 4xl:mt-4 xs:text-lg 4xl:text-3xl 5xl:text-5xl tablet-sm:text-xl tablet-lg:w-180 5xl:w-420 5xl:px-60 mx-auto mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight lg:text-2xl xl:px-4 2xl:mb-8 2xl:w-3xl">
+        <p className="typography-body 4xl:mt-4 xs:text-lg 4xl:text-3xl 5xl:text-4xl tablet-sm:text-xl tablet-lg:w-180 5xl:w-380 5xl:px-60 mx-auto mt-4 mb-6 text-center sm:text-lg md:px-16 md:text-2xl md:tracking-tight lg:text-2xl xl:px-4 2xl:mb-8 2xl:w-3xl">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
@@ -36,7 +36,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-100 4xl:text-2xl 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base 3xl:text-2xl mb-4 inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 md:mt-3 md:mb-6 lg:px-10 2xl:px-8 2xl:text-xl"
+            className="bg-primary-500 hover:text-primary-100 4xl:text-2xl 5xl:text-3xl 5xl:px-14 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base 3xl:text-2xl mb-4 inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 md:mt-3 md:mb-6 lg:px-10 2xl:px-8 2xl:text-xl"
           >
             See All The Rules
           </a>
@@ -45,7 +45,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-100 4xl:text-2xl 3xl:text-2xl 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 lg:px-8 2xl:text-xl"
+            className="bg-primary-500 hover:text-primary-100 4xl:text-2xl 3xl:text-2xl 5xl:text-3xl 5xl:px-14 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 lg:px-8 2xl:text-xl"
           >
             See The Contract Template
           </a>
