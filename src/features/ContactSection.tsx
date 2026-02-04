@@ -208,9 +208,6 @@ const ContactSection = () => {
             <div className="relative">
               <DecorativeCircle
                 size={8}
-                tabletLgSize={9}
-                lgSize={8}
-                xlSize={9}
                 xl5Size={12}
                 color="primary-500"
                 top="0"

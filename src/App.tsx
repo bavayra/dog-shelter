@@ -203,7 +203,6 @@ function App() {
                 tabletSmSize={20}
                 mdSize={30}
                 tabletLgSize={36}
-                lgSize={36}
                 xlSize={44}
                 xl4Size={52}
                 xl5Size={60}
