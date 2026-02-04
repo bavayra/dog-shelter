@@ -2,14 +2,12 @@ import type { ComponentType, SVGProps } from 'react';
 
 export interface IconProps extends SVGProps<SVGSVGElement> {
   title?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md';
 }
 
 const sizeMap = {
   sm: 'w-4 h-4',
   md: 'w-5 h-5',
-  lg: 'w-6 h-6',
-  xl: 'w-8 h-8',
 };
 
 const Icon = ({
