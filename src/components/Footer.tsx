@@ -13,7 +13,7 @@ const Footer = () => {
           <h3 className="xs:text-base tablet-lg:text-lg 4xl:text-2xl 5xl:mb-4 mb-2 text-center text-xs font-bold">
             {APP_NAME}
           </h3>
-          <p className="xs:text-sm tablet-sm:text-base tablet-sm:w-60 tablet-lg:text-lg tablet-lg:w-80 5xl:text-xl 4xl:text-lg 4xl:w-100 text-center text-xs text-neutral-300 md:w-50 md:text-sm xl:w-100">
+          <p className="xs:text-sm tablet-sm:text-base tablet-sm:w-60 tablet-lg:text-lg tablet-lg:w-80 5xl:text-xl text-center text-xs text-neutral-300 md:w-50 md:text-sm xl:w-100">
             Find your perfect companion and give a shelter dog a loving home.
           </p>
         </div>
