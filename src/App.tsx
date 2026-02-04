@@ -155,7 +155,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h1 xs:text-5xl tablet-lg:text-8xl tablet-sm:text-6xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl lg:text-8xl"
+                className="typography-h1 xs:text-5xl tablet-lg:text-8xl 5xl:text-[10rem] tablet-sm:text-6xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl lg:text-8xl"
               >
                 Our Pets
               </h2>
@@ -190,13 +190,13 @@ function App() {
                 lgSize={66}
                 xlSize={86}
                 xl4Size={98}
-                xl5Size={120}
+                xl5Size={116}
                 color="primary-300"
                 top="0"
                 left="0"
                 opacity={40}
                 zIndex={10}
-                className="xs:translate-y-2/5 xs:-translate-x-1/3 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
+                className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
               />
               <DecorativeCircle
                 size={16}
@@ -206,13 +206,13 @@ function App() {
                 lgSize={36}
                 xlSize={44}
                 xl4Size={52}
-                xl5Size={64}
+                xl5Size={60}
                 color="primary-500"
                 top="0"
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] tablet-sm:-translate-x-[10%] tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
+                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] tablet-sm:-translate-x-[10%] 5xl:mt-10 tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
               />
             </div>
             <AboutUs />
