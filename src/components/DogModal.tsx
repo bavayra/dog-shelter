@@ -113,7 +113,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           className="text-primary-500 5xl:h-14 5xl:w-14 absolute top-4 right-4 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-50 p-0 text-2xl"
         >
           <svg
-            className="4xl:w-10 4xl:h-10 tablet-lg:w-10 tablet-lg:h-10 h-5 w-5"
+            className="tablet-lg:w-10 tablet-lg:h-10 h-5 w-5"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -132,7 +132,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="5xl:max-h-140 h-full w-full object-cover md:mx-auto md:mt-8 md:max-h-92 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
+            className="5xl:max-h-140 mx-auto h-full w-full object-cover md:mt-8 md:max-h-92 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
@@ -151,12 +151,12 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3
               id="modal-title"
-              className="typography-h3 4xl:text-4xl 5xl:text-5xl tablet-lg:text-4xl sm:text-3xl md:mt-2 xl:pl-2"
+              className="typography-h3 5xl:text-5xl tablet-lg:text-4xl sm:text-3xl md:mt-2 xl:pl-2"
             >
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 4xl:px-5 5xl:px-5 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg 2xl:px-5`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg 2xl:px-5`}
             >
               <span className="tablet-sm:text-lg 5xl:text-2xl text-base">
                 {genderSymbol}
@@ -201,7 +201,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-lg xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.75rem] 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:text-xl lg:font-normal xl:px-3 2xl:text-lg">
+            <div className="xs:text-lg xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.65rem] 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:font-normal xl:px-3 2xl:text-lg">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
@@ -215,7 +215,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="small"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-xs 4xl:mx-auto 5xl:w-md 5xl:py-4 flex w-full justify-center md:mb-6"
+            className="4xl:w-xs 5xl:w-md 5xl:py-4 mx-auto flex w-full justify-center md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
