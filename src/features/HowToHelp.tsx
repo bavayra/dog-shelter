@@ -11,8 +11,8 @@ const HowToHelp = () => {
         <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl tablet-lg:text-6xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 4xl:text-8xl 3xl:mb-6 mb-6 text-center sm:mt-0 sm:pt-0 lg:mt-12 lg:text-7xl 2xl:mb-10">
           How to Help ROTVODOM
         </h2>
-        <div className="3xl:max-w-4xl tablet-lg:mb-6 4xl:max-w-6xl 5xl:max-w-7xl 5xl:px-6 5xl:mb-14 mx-auto mb-6 max-w-3xl text-center sm:px-6 md:mb-4 md:px-22 xl:max-w-240 2xl:max-w-264">
-          <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-3xl 5xl:text-4xl mb-2 leading-relaxed">
+        <div className="3xl:max-w-4xl tablet-lg:mb-6 4xl:max-w-6xl 5xl:max-w-7xl 6xl:max-w-6xl 5xl:px-6 5xl:mb-14 6xl:mb-6 mx-auto mb-6 max-w-3xl text-center sm:px-6 md:mb-4 md:px-22 xl:max-w-240 2xl:max-w-264">
+          <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-3xl 6xl:text-[2rem] 5xl:text-4xl mb-2 leading-relaxed">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
             the kindness and generosity of people like{' '}
@@ -20,7 +20,7 @@ const HowToHelp = () => {
             donation helps us provide food, medical care, and a safe home for
             dogs in need.
           </p>
-          <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-3xl 5xl:text-4xl leading-relaxed">
+          <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-3xl 6xl:text-[2rem] 5xl:text-4xl leading-relaxed">
             Your support makes a{' '}
             <span className="text-primary-500 font-semibold">
               real difference
@@ -30,7 +30,7 @@ const HowToHelp = () => {
           </p>
         </div>
 
-        <div className="mb-2 flex justify-center sm:mb-0 lg:mb-20">
+        <div className="6xl:mb-30 mb-2 flex justify-center sm:mb-0 lg:mb-20">
           <a
             href="https://qr.nspk.ru/example-link"
             target="_blank"
