@@ -103,7 +103,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-primary-200 4xl:max-h-[82vh] 5xl:max-w-2xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
+        className="bg-primary-200 4xl:max-h-[82vh] 5xl:max-w-2xl 6xl:max-w-xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
@@ -132,7 +132,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="5xl:max-h-140 mx-auto h-full w-full object-cover md:mt-8 md:max-h-92 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
+            className="5xl:max-h-140 6xl:max-h-100 mx-auto h-full w-full object-cover md:mt-8 md:max-h-92 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
@@ -156,9 +156,9 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg 2xl:px-5`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg 2xl:px-5`}
             >
-              <span className="tablet-sm:text-lg 5xl:text-2xl text-base">
+              <span className="tablet-sm:text-lg 5xl:text-2xl 6xl:text-xl text-base">
                 {genderSymbol}
               </span>
               <span className="tablet-sm:text-lg 5xl:text-2xl text-base">
@@ -167,22 +167,22 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             </div>
           </div>
 
-          <div className="xs:text-base 4xl:text-xl 5xl:mb-4 mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg xl:pl-2">
-            <div className="5xl:text-2xl flex items-center gap-2">
+          <div className="xs:text-base 4xl:text-xl 5xl:mb-4 6xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg xl:pl-2">
+            <div className="5xl:text-2xl 6xl:text-xl flex items-center gap-2">
               <span
                 role="img"
                 aria-label="birthday cake"
-                className="4xl:text-2xl 5xl:text-3xl text-xl"
+                className="4xl:text-2xl 5xl:text-3xl 6xl:text-2xl"
               >
                 🎂
               </span>
               <span className="font-medium">{getAgeLabel(age)}</span>
             </div>
-            <div className="5xl:text-2xl flex items-center gap-2">
+            <div className="5xl:text-2xl 6xl:text-xl flex items-center gap-2">
               <span
                 role="img"
                 aria-label="dog"
-                className="5xl:text-3xl text-xl"
+                className="5xl:text-3xl 6xl:text-2xl"
               >
                 🐕
               </span>
@@ -190,10 +190,14 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             </div>
             {showHealthBadge && (
               <div className="flex items-center gap-2">
-                <span role="img" aria-label="medical" className="text-2xl">
+                <span
+                  role="img"
+                  aria-label="medical"
+                  className="6xl:text-xl text-2xl"
+                >
                   💊
                 </span>
-                <span className="text-accent-600 5xl:text-2xl font-medium">
+                <span className="text-accent-600 5xl:text-2xl 6xl:text-xl font-medium">
                   {health}
                 </span>
               </div>
@@ -201,7 +205,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-lg xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.65rem] 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:font-normal xl:px-3 2xl:text-lg">
+            <div className="xs:text-lg xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.65rem] 6xl:text-2xl 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:font-normal xl:px-3 2xl:text-lg">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
@@ -215,7 +219,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="small"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-xs 5xl:w-md 5xl:py-4 mx-auto flex w-full justify-center md:mb-6"
+            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm mx-auto flex w-full justify-center md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
