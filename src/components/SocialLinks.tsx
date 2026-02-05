@@ -28,7 +28,7 @@ const SocialLinks = ({
 
   const sizeClasses = {
     sm: 'w-10 h-10  xs:w-14 xs:h-14 sm:w-16 sm:h-16  lg:w-18 lg:h-18 4xl:h-24 4xl:w-24 social-link-6xl-sm 5xl:w-30 5xl:h-30 6xl:w-22 6xl:h-22  ',
-    md: 'w-12  h-12  md:w-8 md:h-8 lg:w-10 lg:h-10 4xl:w-16 4xl:h-16 5xl:w-21 5xl:h-21 6xl:w-12 6xl:h-12',
+    md: 'w-12  h-12  md:w-8 md:h-8 lg:w-10 lg:h-10 4xl:w-16 4xl:h-16 5xl:w-21 5xl:h-21 social-link-6xl-sm 6xl:w-12 6xl:h-12',
   };
 
   const iconSizeMap = {
