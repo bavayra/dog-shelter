@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="from-primary-200 tablet-lg:min-h-[calc(100vh-10rem)] 6xl:min-h-[calc(100vh-5.5rem)] 5xl:min-h-[calc(100vh-6rem)] 4xl:min-h-[calc(100vh-5rem)] to-primary-50 border-primary-500 xs:min-h-[calc(100vh-3rem)] tablet-sm:min-h-[calc(100vh-6rem)] relative flex min-h-[calc(100vh-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100vh-4rem)] md:min-h-[calc(100vh-9rem)] md:p-10 lg:min-h-[calc(100vh-72px)] xl:h-[calc(100vh-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
+            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -45,7 +45,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-4/5 4xl:translate-y-[35%] 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl">
+            <div className="glass-card text-primary-700 mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -72,8 +72,8 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="tablet-lg:max-w-xl 4xl:max-w-3xl 4xl:mt-12 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180">
-              <p className="typography-large tablet-lg:text-xl 5xl:text-4xl 6xl:text-3xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
+            <div className="tablet-lg:max-w-xl container-w-6xl-sm 4xl:max-w-3xl 4xl:mt-12 mt-6xl-sm 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180">
+              <p className="typography-large tablet-lg:text-xl font-6xl-sm 5xl:text-4xl 6xl:text-3xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -90,7 +90,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="xs:mt-10 tablet-sm:mt-12 mt-6xl-sm 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
