@@ -110,7 +110,7 @@ const ContactSection = () => {
   };
   return (
     <section id="contact" className="bg-primary-200 pt-8 pb-10 md:px-6">
-      <div className="xl2:mr-20 3xl:mr-32 6xl:mr-110 relative">
+      <div className="xl2:mr-20 3xl:mr-32 mr-6xl-sm 6xl:mr-110 relative">
         <DecorativeCircle
           size={8}
           mdSize={10}
