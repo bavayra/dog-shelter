@@ -1,11 +1,5 @@
 /* Custom breakpoints for specific screen dimensions */
 
-@media (min-width: 2560px) and (min-height: 1080px) {
-  .h-6xl-sm {
-    min-height: calc(100vh - 7.5rem);
-  }
-}
-
 /*@media (min-width: 2048px) and (min-height: 1152px) and (max-height: 1350px) {
   .text-5xl-h-mid {
     font-size: 7rem;
