@@ -196,7 +196,7 @@ function App() {
                 left="0"
                 opacity={40}
                 zIndex={10}
-                className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
+                className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 6xl:translate-x-full 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
               />
               <DecorativeCircle
                 size={16}
@@ -211,7 +211,7 @@ function App() {
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] tablet-sm:-translate-x-[10%] 5xl:mt-10 tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
+                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 6xl:translate-x-[245%] tablet-sm:-translate-x-[10%] 5xl:mt-10 tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
               />
             </div>
             <AboutUs />
