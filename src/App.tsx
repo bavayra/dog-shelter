@@ -45,7 +45,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-4/5 4xl:translate-y-[35%] 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl">
+            <div className="glass-card text-primary-700 mt-6xl-md mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl [@media(min-height:1600px)]:text-4xl">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -72,8 +72,8 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="tablet-lg:max-w-xl container-w-6xl-sm 4xl:max-w-3xl 4xl:mt-12 mt-6xl-sm 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180">
-              <p className="typography-large tablet-lg:text-xl font-6xl-sm 5xl:text-4xl 6xl:text-3xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
+            <div className="tablet-lg:max-w-xl container-w-6xl-sm mt-6xl-md 4xl:max-w-3xl 4xl:mt-12 mt-6xl-sm 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180 [@media(min-height:1600px)]:max-w-5xl">
+              <p className="typography-large tablet-lg:text-xl font-6xl-sm 5xl:text-4xl font-6xl-md 6xl:text-3xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -90,7 +90,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 mt-6xl-sm 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="xs:mt-10 tablet-sm:mt-12 mt-6xl-sm mt-6xl-md 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-20 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
