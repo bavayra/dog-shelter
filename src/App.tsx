@@ -43,9 +43,9 @@ function App() {
               top="0"
               left="0"
               opacity={70}
-              className="tablet-sm:translate-y-4/5 4xl:translate-y-[35%] 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
+              className="tablet-sm:translate-y-4/5 circle-position-6xl-md 4xl:translate-y-[35%] 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 mt-6xl-md mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl [@media(min-height:1600px)]:text-4xl">
+            <div className="glass-card text-primary-700 mt-6xl-md mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-xl xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl [@media(min-height:1600px)]:text-3xl">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
