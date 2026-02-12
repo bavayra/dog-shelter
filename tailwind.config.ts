@@ -9,6 +9,7 @@ export default {
         sm: '412px',
         'tablet-sm': '480px',
         md: '768px',
+        'tablet-lg': '820px',
         lg: '1024px',
         xl: '1280px',
         '2xl': '1440px',
