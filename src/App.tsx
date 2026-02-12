@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="hero-vh from-primary-200 tablet-lg:min-h-[calc(var(--vph)-10rem)] 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 tablet-sm:min-h-[calc(var(--vph)-6rem)] relative flex min-h-[calc(var(--vph)-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] sm:min-h-[calc(var(--vph)-4rem)] md:min-h-[calc(var(--vph)-9rem)] md:p-10 lg:min-h-[calc(var(--vph)-72px)] xl:h-[calc(var(--vph)-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-18 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
+            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
