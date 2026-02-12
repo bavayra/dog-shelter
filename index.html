@@ -26,11 +26,11 @@
     <div id="root"></div>
     <script>
       (function () {
-        var maxVh = window.innerHeight;
-        var locked = false;
+        let maxVh = window.innerHeight;
+        let locked = false;
 
         function measureAndLock() {
-          var current = window.innerHeight;
+          let current = window.innerHeight;
           if (current > maxVh) maxVh = current;
           document.documentElement.style.setProperty(
             '--vh',
@@ -39,32 +39,28 @@
         }
 
         measureAndLock();
-
-        // Measure multiple times after load to capture max viewport (when address bar hides)
         window.addEventListener('load', function () {
           setTimeout(measureAndLock, 100);
           setTimeout(measureAndLock, 300);
           setTimeout(measureAndLock, 800);
           setTimeout(function () {
             measureAndLock();
-            locked = true; // Lock after final measurement
+            locked = true;
           }, 1500);
         });
 
         window.addEventListener('pageshow', function () {
           if (!locked) setTimeout(measureAndLock, 50);
         });
-
-        // Only recalc on orientation change (not resize to avoid jumping on scroll)
         window.addEventListener('orientationchange', function () {
           locked = false;
           maxVh = window.innerHeight;
           setTimeout(function () {
-            measureAndLock();
-            setTimeout(measureAndLock, 300);
+            let maxVh = window.innerHeight;
+            let locked = false;
             setTimeout(function () {
               measureAndLock();
-              locked = true;
+              const current = window.innerHeight;
             }, 800);
           }, 100);
         });
