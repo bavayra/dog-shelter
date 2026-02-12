@@ -121,10 +121,10 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[130%] xs:translate-y-1/4 tablet-sm:-translate-x-[240%] tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] 3xl:-translate-x-[700%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 4xl:mr-20 translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
+          className="xs:-translate-x-[180%] xs:translate-y-1/5 tablet-sm:-translate-x-[240%] tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] 3xl:-translate-x-[700%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 4xl:mr-20 translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
-      <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl relative z-11 mb-4 text-center md:text-7xl">
+      <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl xs:mb-8 relative z-11 mb-4 text-center md:text-7xl">
         Contact Us
       </h2>
       <div className="4xl:gap-30 5xl:w-400 4xl:w-300 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:gap-4 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 lg:gap-10 xl:w-250">
@@ -197,7 +197,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="placeholder:text-primary-900 4xl:text-xl 5xl:text-2xl focus:border-primary-500 xs:text-lg 4xl:min-h-40 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="4xl:text-xl 5xl:text-2xl focus:border-primary-500 xs:text-lg 4xl:min-h-40 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs placeholder:opacity-100 focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">
@@ -213,7 +213,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[185%] 3xl:ml-14 4xl:ml-18 5xl:ml-32 5xl:-mt-2 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:ml-9 xl:ml-18"
+                className="xs:translate-x-[220%] 3xl:ml-14 4xl:ml-18 5xl:ml-32 5xl:-mt-2 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:ml-9 xl:ml-18"
               />
             </div>
 

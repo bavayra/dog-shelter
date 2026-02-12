@@ -155,4 +155,10 @@ html {
   .z-3 {
     z-index: 3;
   }
+
+  textarea::placeholder {
+    color: #747787 !important;
+    opacity: 1 !important;
+    font-size: 1rem !important;
+  }
 }
