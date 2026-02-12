@@ -31,6 +31,15 @@ const SocialLinks = ({
     md: 'w-12  h-12  md:w-8 md:h-8 lg:w-10 lg:h-10 4xl:w-16 4xl:h-16 social-link-6xl-md 5xl:w-21 5xl:h-21 social-link-6xl-sm 6xl:w-12 6xl:h-12',
   };
 
+  const iconClasses = [
+    iconColor,
+    'xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-9 tablet-lg:h-9 4xl:w-16 4xl:h-16',
+    size === 'md'
+      ? 'border-1 border-primary-100'
+      : 'border-primary-500 border-2',
+    'rounded-full',
+  ].join(' ');
+
   const iconSizeMap = {
     sm: 'sm' as const,
     md: 'md' as const,
@@ -52,7 +61,7 @@ const SocialLinks = ({
           <Icon
             as={social.icon}
             size={iconSizeMap[size]}
-            className={`${iconColor} xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-9 tablet-lg:h-9 4xl:w-16 4xl:h-16 border-primary-500 rounded-full border-2 sm:h-10 sm:w-10 md:h-8 md:w-8 lg:h-10 lg:w-10`}
+            className={`${iconColor} ${iconClasses}`}
             aria-hidden="true"
           />
         </a>
