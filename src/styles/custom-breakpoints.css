@@ -41,7 +41,6 @@
 
 :root {
   --vh: 1vh;
-  /* --vph = viewport height in CSS pixels (100 * --vh). Use as var(--vph) */
   --vph: calc(var(--vh, 1vh) * 100);
 }
 
