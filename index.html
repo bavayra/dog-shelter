@@ -26,27 +26,47 @@
     <div id="root"></div>
     <script>
       (function () {
-        function setVh() {
-          // Use the largest viewport height to avoid jumping when browser chrome shows/hides
-          var vh = Math.max(window.innerHeight, document.documentElement.clientHeight || 0);
-          document.documentElement.style.setProperty('--vh', vh * 0.01 + 'px');
-          void document.documentElement.getBoundingClientRect();
+        var maxVh = window.innerHeight;
+        var locked = false;
+
+        function measureAndLock() {
+          var current = window.innerHeight;
+          if (current > maxVh) maxVh = current;
+          document.documentElement.style.setProperty(
+            '--vh',
+            maxVh * 0.01 + 'px'
+          );
         }
 
-        setVh();
+        measureAndLock();
 
+        // Measure multiple times after load to capture max viewport (when address bar hides)
         window.addEventListener('load', function () {
-          setTimeout(setVh, 150);
-          setTimeout(setVh, 600);
+          setTimeout(measureAndLock, 100);
+          setTimeout(measureAndLock, 300);
+          setTimeout(measureAndLock, 800);
+          setTimeout(function () {
+            measureAndLock();
+            locked = true; // Lock after final measurement
+          }, 1500);
         });
 
         window.addEventListener('pageshow', function () {
-          setTimeout(setVh, 50);
+          if (!locked) setTimeout(measureAndLock, 50);
         });
 
-        window.addEventListener('resize', setVh);
+        // Only recalc on orientation change (not resize to avoid jumping on scroll)
         window.addEventListener('orientationchange', function () {
-          setTimeout(setVh, 100);
+          locked = false;
+          maxVh = window.innerHeight;
+          setTimeout(function () {
+            measureAndLock();
+            setTimeout(measureAndLock, 300);
+            setTimeout(function () {
+              measureAndLock();
+              locked = true;
+            }, 800);
+          }, 100);
         });
       })();
     </script>

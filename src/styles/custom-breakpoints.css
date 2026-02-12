@@ -45,6 +45,8 @@
 
 #hero.hero-vh {
   /* Use dynamic viewport height for mobile devices */
+  /* Prefer lvh (large viewport height) if supported, fallback to --vh */
+  min-height: 100lvh;
   min-height: calc(var(--vh, 1vh) * 100);
   padding-bottom: env(safe-area-inset-bottom);
 }
