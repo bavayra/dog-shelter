@@ -39,15 +39,10 @@
   }
 }
 
-/* Fix mobile Safari/Vh issues: use dynamic --vh variable set from JS */
 :root {
   --vh: 1vh;
 }
 
-/* Apply dynamic viewport-based min-height to hero section.
-   The existing Tailwind classes use calc(100vh - ...); on iOS that
-   can produce wrong results because of the dynamic browser chrome.
-   Using var(--vh) aligns layout with the actual visible area. */
 #hero.hero-vh {
   min-height: calc(var(--vh, 1vh) * 100);
   padding-bottom: env(safe-area-inset-bottom);

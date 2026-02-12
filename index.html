@@ -25,18 +25,39 @@
   <body>
     <div id="root"></div>
     <script>
-      // Set a CSS variable that reflects the real viewport height on mobile
-      // Usage: height: calc(var(--vh, 1vh) * 100)
       (function () {
+        let scrollHandled = false;
         function setVh() {
           document.documentElement.style.setProperty(
             '--vh',
-            `${window.innerHeight * 0.01}px`
+            window.innerHeight * 0.01 + 'px'
           );
+          void document.documentElement.getBoundingClientRect();
         }
         setVh();
+        window.addEventListener('load', function () {
+          setTimeout(setVh, 150);
+          setTimeout(setVh, 600);
+        });
+        window.addEventListener('pageshow', function () {
+          setTimeout(setVh, 50);
+        });
         window.addEventListener('resize', setVh);
-        window.addEventListener('orientationchange', setVh);
+        window.addEventListener('orientationchange', function () {
+          setTimeout(setVh, 80);
+        });
+
+        window.addEventListener(
+          'scroll',
+          function onScroll() {
+            if (!scrollHandled) {
+              scrollHandled = true;
+              setTimeout(setVh, 80);
+              window.removeEventListener('scroll', onScroll);
+            }
+          },
+          { passive: true }
+        );
       })();
     </script>
     <script type="module" src="/src/main.tsx"></script>
