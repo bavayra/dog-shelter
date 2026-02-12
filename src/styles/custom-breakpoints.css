@@ -41,12 +41,12 @@
 
 :root {
   --vh: 1vh;
+  /* --vph = viewport height in CSS pixels (100 * --vh). Use as var(--vph) */
+  --vph: calc(var(--vh, 1vh) * 100);
 }
 
 #hero.hero-vh {
-  /* Use dynamic viewport height for mobile devices */
-  /* Prefer lvh (large viewport height) if supported, fallback to --vh */
   min-height: 100lvh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: var(--vph);
   padding-bottom: env(safe-area-inset-bottom);
 }
