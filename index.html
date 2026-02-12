@@ -27,6 +27,7 @@
     <script>
       (function () {
         let scrollHandled = false;
+
         function setVh() {
           document.documentElement.style.setProperty(
             '--vh',
@@ -34,17 +35,43 @@
           );
           void document.documentElement.getBoundingClientRect();
         }
+
+        function setHeaderHeight() {
+          var header = document.querySelector('header');
+          var h = header ? header.offsetHeight : 0;
+          document.documentElement.style.setProperty('--header-h', h + 'px');
+        }
+
         setVh();
+        setHeaderHeight();
+
         window.addEventListener('load', function () {
-          setTimeout(setVh, 150);
-          setTimeout(setVh, 600);
+          setTimeout(function () {
+            setVh();
+            setHeaderHeight();
+          }, 150);
+          setTimeout(function () {
+            setVh();
+            setHeaderHeight();
+          }, 600);
         });
+
         window.addEventListener('pageshow', function () {
-          setTimeout(setVh, 50);
+          setTimeout(function () {
+            setVh();
+            setHeaderHeight();
+          }, 50);
         });
-        window.addEventListener('resize', setVh);
+
+        window.addEventListener('resize', function () {
+          setVh();
+          setHeaderHeight();
+        });
         window.addEventListener('orientationchange', function () {
-          setTimeout(setVh, 80);
+          setTimeout(function () {
+            setVh();
+            setHeaderHeight();
+          }, 80);
         });
 
         window.addEventListener(
@@ -52,7 +79,10 @@
           function onScroll() {
             if (!scrollHandled) {
               scrollHandled = true;
-              setTimeout(setVh, 80);
+              setTimeout(function () {
+                setVh();
+                setHeaderHeight();
+              }, 80);
               window.removeEventListener('scroll', onScroll);
             }
           },
