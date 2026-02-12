@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'filter';
+type ButtonVariant = 'primary' | 'secondary' | 'outline';
 type ButtonSize = 'small' | 'medium' | 'large';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -19,7 +19,6 @@ const Button = ({
   className = '',
   disabled,
   ariaLabel,
-  active = false,
   ...props
 }: ButtonProps) => {
   const baseStyles =
@@ -31,13 +30,10 @@ const Button = ({
       'bg-primary-200 text-primary-700 hover:bg-primary-300 md:border-2 md:border-primary-700 hover:scale-105 md:bg-primary-300 md:px-6 focus:ring-gray-500 active:bg-gray-800',
     outline:
       'bg-primary-200 border-2 border-primary-500 text-primary-700 hover:scale-105 hover:bg-primary-100 focus:ring-primary-200 shadow-md active:bg-primary-300',
-    filter: active
-      ? 'bg-primary-500 text-primary-700  focus:ring-primary-500 font-semibold 4xl:text-xl'
-      : 'bg-primary-200 sm:text-sm text-primary-700 hover:scale-105 hover:bg-neutral-300 text-sm font-semibold focus:ring-primary-500 4xl:text-xl',
   };
   const sizeStyles: Record<ButtonSize, string> = {
     small:
-      'px-3 py-1.5 text-sm xs:text-base 4xl:text-xl tablet-lg:text-2xl md:text-lg 5xl:text-3xl 6xl:text-2xl 6xl:py-2',
+      'px-3 py-1.5 text-sm xs:text-sm 4xl:text-xl tablet-lg:text-2xl md:text-lg 5xl:text-3xl 6xl:text-2xl 6xl:py-2',
     medium:
       'px-4 py-2 text-base xs:text-lg sm:px-6 sm:py-2 tablet-lg:text-lg md:text-xl lg:text-base 3xl:text-xl 5xl:text-2xl',
     large:
