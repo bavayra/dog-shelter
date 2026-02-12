@@ -2,11 +2,7 @@ import { useEffect, useRef } from 'react';
 import type { Dog } from '@/types';
 import Button from '@/components/Button';
 import { getDogImage } from '@/utils/images';
-import {
-  getAgeLabel,
-  getGenderBadgeColor,
-  getGenderSymbol,
-} from '@/utils/dogHelpers';
+import { getAgeLabel, getGenderBadgeColor } from '@/utils/dogHelpers';
 
 interface DogModalProps {
   dog: Dog;
@@ -83,7 +79,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
     dog;
   const resolvedImageUrl = getDogImage(imageUrl);
   const genderBadgeColor = getGenderBadgeColor(gender);
-  const genderSymbol = getGenderSymbol(gender);
+
   const showHealthBadge = health !== 'Healthy';
 
   const handleAdoptClick = () => {
@@ -156,11 +152,8 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-3 py-2 tracking-wide text-white shadow-lg 2xl:px-5`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-4 py-1 tracking-wide text-white shadow-lg 2xl:px-5`}
             >
-              <span className="tablet-sm:text-lg 5xl:text-2xl 6xl:text-xl text-base">
-                {genderSymbol}
-              </span>
               <span className="tablet-sm:text-lg 5xl:text-2xl text-base">
                 {gender}
               </span>

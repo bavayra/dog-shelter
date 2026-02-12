@@ -4,11 +4,7 @@ import { getDogImage } from '@/utils/images';
 import { useState, memo } from 'react';
 import type { MouseEvent } from 'react';
 import DogModal from '@/components/DogModal';
-import {
-  getAgeLabel,
-  getGenderBadgeColor,
-  getGenderSymbol,
-} from '@/utils/dogHelpers';
+import { getAgeLabel, getGenderBadgeColor } from '@/utils/dogHelpers';
 
 const DogCard = memo((dog: Dog) => {
   const { name, breed, age, gender, health, description, imageUrl, isAdopted } =
@@ -29,7 +25,6 @@ const DogCard = memo((dog: Dog) => {
 
   const resolvedImageUrl = getDogImage(imageUrl);
   const genderBadgeColor = getGenderBadgeColor(gender);
-  const genderSymbol = getGenderSymbol(gender);
 
   const showHealthBadge = health !== 'Healthy';
 
@@ -52,12 +47,9 @@ const DogCard = memo((dog: Dog) => {
             }}
           />
           <div
-            className={`absolute top-3 right-3 ${genderBadgeColor} 5xl:px-5 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-semibold tracking-wider text-white shadow-lg`}
+            className={`absolute top-3 right-3 ${genderBadgeColor} 5xl:px-5 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-4 py-1 text-sm font-semibold tracking-wider text-white shadow-lg`}
           >
-            <span className="tablet-sm:text-lg 5xl:text-2xl text-sm">
-              {genderSymbol}
-            </span>
-            <span className="tablet-sm:text-lg 5xl:text-2xl 6xl:text-xl md:text-base">
+            <span className="tablet-sm:text-lg 5xl:text-2xl 6xl:text-xl text-base md:text-base">
               {gender}
             </span>
           </div>
