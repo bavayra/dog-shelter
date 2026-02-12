@@ -36,42 +36,20 @@
           void document.documentElement.getBoundingClientRect();
         }
 
-        function setHeaderHeight() {
-          var header = document.querySelector('header');
-          var h = header ? header.offsetHeight : 0;
-          document.documentElement.style.setProperty('--header-h', h + 'px');
-        }
-
         setVh();
-        setHeaderHeight();
 
         window.addEventListener('load', function () {
-          setTimeout(function () {
-            setVh();
-            setHeaderHeight();
-          }, 150);
-          setTimeout(function () {
-            setVh();
-            setHeaderHeight();
-          }, 600);
+          setTimeout(setVh, 150);
+          setTimeout(setVh, 600);
         });
 
         window.addEventListener('pageshow', function () {
-          setTimeout(function () {
-            setVh();
-            setHeaderHeight();
-          }, 50);
+          setTimeout(setVh, 50);
         });
 
-        window.addEventListener('resize', function () {
-          setVh();
-          setHeaderHeight();
-        });
+        window.addEventListener('resize', setVh);
         window.addEventListener('orientationchange', function () {
-          setTimeout(function () {
-            setVh();
-            setHeaderHeight();
-          }, 80);
+          setTimeout(setVh, 80);
         });
 
         window.addEventListener(
@@ -79,10 +57,7 @@
           function onScroll() {
             if (!scrollHandled) {
               scrollHandled = true;
-              setTimeout(function () {
-                setVh();
-                setHeaderHeight();
-              }, 80);
+              setTimeout(setVh, 80);
               window.removeEventListener('scroll', onScroll);
             }
           },

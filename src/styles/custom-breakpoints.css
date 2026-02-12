@@ -44,8 +44,7 @@
 }
 
 #hero.hero-vh {
-  /* Subtract header height so hero doesn't sit under sticky header */
-  min-height: calc(var(--vh, 1vh) * 100 - var(--header-h, 0px));
-  padding-top: var(--header-h, 0px);
+  /* Use dynamic viewport height for mobile devices */
+  min-height: calc(var(--vh, 1vh) * 100);
   padding-bottom: env(safe-area-inset-bottom);
 }
