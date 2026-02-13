@@ -10,7 +10,7 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   #hero.hero-vh {
-    min-height: calc(100vh - 4rem) !important;
+    max-height: calc(var(--vph) - 4rem) !important;
   }
 }
 @media (min-width: 2560px) and (min-height: 1440px) {
