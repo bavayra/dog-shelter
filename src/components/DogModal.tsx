@@ -99,7 +99,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-primary-200 4xl:max-h-[82vh] 5xl:max-w-2xl 6xl:max-w-xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
+        className="bg-primary-200 4xl:max-h-[82vh] 5xl:max-w-2xl tablet-lg:max-w-lg tablet-lg:px-4 6xl:max-w-xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
@@ -152,9 +152,9 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-4 py-1 tracking-wide text-white shadow-lg 2xl:px-5`}
+              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 6xl:py-2 tablet-lg:px-6 flex items-center gap-1 rounded-full px-4 py-1 tracking-wide text-white shadow-lg 2xl:px-5`}
             >
-              <span className="tablet-sm:text-lg 5xl:text-2xl text-base">
+              <span className="tablet-sm:text-lg tablet-lg:text-xl 5xl:text-2xl text-base">
                 {gender}
               </span>
             </div>
@@ -212,7 +212,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm xs:px-16 mx-auto flex w-auto justify-center md:mb-6 lg:w-xs"
+            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm xs:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
