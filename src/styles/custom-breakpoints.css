@@ -13,6 +13,7 @@
     max-height: calc(var(--vph) - 4rem) !important;
   }
 }
+
 @media (min-width: 2560px) and (min-height: 1440px) {
   .mt-6xl-sm {
     margin-top: 4.5rem;
