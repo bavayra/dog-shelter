@@ -27,15 +27,15 @@ const SocialLinks = ({
   ];
 
   const sizeClasses = {
-    sm: 'w-10 h-10  xs:w-12 xs:h-12 sm:w-16 sm:h-16  lg:w-18 lg:h-18 4xl:h-24 4xl:w-24  social-link-6xl-sm 5xl:w-30 5xl:h-30 6xl:w-22 6xl:h-22  ',
-    md: 'w-12  h-12  md:w-8 md:h-8 lg:w-10 lg:h-10 4xl:w-16 4xl:h-16 social-link-6xl-md 5xl:w-21 5xl:h-21 social-link-6xl-sm 6xl:w-12 6xl:h-12',
+    sm: 'w-10 h-10  xs:w-12 xs:h-12 sm:w-16 sm:h-16 lg:w-18 lg:h-18 4xl:h-24 4xl:w-24  tablet-lg:w-16 tablet-lg:h-16 social-link-6xl-sm 5xl:w-30 5xl:h-30 6xl:w-22 6xl:h-22  ',
+    md: 'w-12  h-12  md:w-8 md:h-8 lg:w-6 lg:h-6 4xl:w-16 4xl:h-16 social-link-6xl-md 5xl:w-21 5xl:h-21 social-link-6xl-sm 6xl:w-12 6xl:h-12',
   };
 
   const iconClasses = [
     iconColor,
-    'xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-9 tablet-lg:h-9 4xl:w-16 4xl:h-16 lg:w-18 lg:h-18',
+    'xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-16 tablet-lg:h-16 4xl:w-16 4xl:h-16 lg:w-18 lg:h-18',
     size === 'md'
-      ? 'border-1 border-primary-100'
+      ? 'border-1 border-primary-100 lg:w-6 lg:h-6'
       : 'border-primary-500 border-2',
     'rounded-full',
   ].join(' ');

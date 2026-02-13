@@ -2,8 +2,8 @@
 
 @media (max-width: 1023px) {
   #hero.hero-vh {
-    min-height: 100lvh;
-    min-height: var(--vph);
+    max-height: 100lvh;
+    max-height: var(--vph);
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
