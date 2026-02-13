@@ -56,11 +56,10 @@
           locked = false;
           maxVh = window.innerHeight;
           setTimeout(function () {
-            let maxVh = window.innerHeight;
-            let locked = false;
+            maxVh = window.innerHeight;
             setTimeout(function () {
               measureAndLock();
-              const current = window.innerHeight;
+              locked = true;
             }, 800);
           }, 100);
         });
