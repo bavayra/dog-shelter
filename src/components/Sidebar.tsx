@@ -53,12 +53,12 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 tablet-sm:w-72 xs:w-50 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
+        className={`bg-primary-500 tablet-sm:w-72 xs:w-50 tablet-lg:w-88 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
         <nav className="tablet-lg:mt-8 xs:mt-4 relative p-4 md:pl-12">
-          <h2 className="tablet-sm:text-2xl mb-4 text-lg font-bold text-neutral-50">
+          <h2 className="tablet-sm:text-2xl tablet-lg:text-3xl mb-4 text-lg font-bold text-neutral-50">
             NAVIGATION
           </h2>
           {NAVIGATION_ITEMS.map((item) => {
@@ -75,7 +75,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
                   className="xs:w-5 xs:h-5 tablet-sm:w-7 tablet-sm:h-7 h-4 w-4 text-neutral-50 transition-transform group-hover:scale-110 md:h-8 md:w-8 md:pr-2"
                   aria-hidden="true"
                 />
-                <span className="xs:text-lg xs:font-normal tablet-sm:text-xl text-sm font-semibold md:font-normal">
+                <span className="xs:text-lg xs:font-normal tablet-lg:text-2xl tablet-sm:text-xl text-sm font-semibold md:font-normal">
                   {item.label}
                 </span>
               </a>
