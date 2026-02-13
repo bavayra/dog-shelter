@@ -72,7 +72,7 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="tablet-lg:max-w-xl container-w-6xl-sm mt-6xl-md 4xl:max-w-3xl 4xl:mt-12 mt-6xl-sm 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-8 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180 [@media(min-height:1600px)]:max-w-5xl">
+            <div className="tablet-lg:max-w-lg container-w-6xl-sm mt-6xl-md 4xl:max-w-3xl 4xl:mt-12 mt-6xl-sm 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-12 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180 [@media(min-height:1600px)]:max-w-5xl">
               <p className="typography-large tablet-lg:text-xl font-6xl-sm 5xl:text-4xl font-6xl-md 6xl:text-3xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
