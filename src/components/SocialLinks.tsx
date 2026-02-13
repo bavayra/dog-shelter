@@ -33,7 +33,7 @@ const SocialLinks = ({
 
   const iconClasses = [
     iconColor,
-    'xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-9 tablet-lg:h-9 4xl:w-16 4xl:h-16',
+    'xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-9 tablet-lg:h-9 4xl:w-16 4xl:h-16 lg:w-18 lg:h-18',
     size === 'md'
       ? 'border-1 border-primary-100'
       : 'border-primary-500 border-2',

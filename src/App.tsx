@@ -24,9 +24,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="hero-vh from-primary-200 tablet-lg:min-h-[calc(var(--vph)-10rem)] 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 tablet-sm:min-h-[calc(var(--vph)-6rem)] relative flex min-h-[calc(var(--vph)-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] sm:min-h-[calc(var(--vph)-4rem)] md:min-h-[calc(var(--vph)-9rem)] md:p-10 lg:min-h-[calc(var(--vph)-72px)] xl:h-[calc(var(--vph)-10rem)]"
+            className="hero-vh from-primary-200 tablet-lg:min-h-[calc(var(--vph)-10rem)] 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 tablet-sm:min-h-[calc(var(--vph)-6rem)] relative flex min-h-[calc(var(--vph)-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] sm:min-h-[calc(var(--vph)-4rem)] md:min-h-[calc(var(--vph)-9rem)] md:p-10 lg:min-h-[calc(var(--vph)-10rem)] xl:h-[calc(var(--vph)-10rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
+            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 lg:text-7xl xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -100,7 +100,7 @@ function App() {
                 xsSize={104}
                 tabletSmSize={90}
                 mdSize={104}
-                lgSize={102}
+                lgSize={120}
                 xl2Size={112}
                 xl4Size={152}
                 xl5Size={190}
@@ -116,7 +116,7 @@ function App() {
                 xsSize={52}
                 tabletSmSize={60}
                 mdSize={72}
-                lgSize={64}
+                lgSize={80}
                 xl2Size={76}
                 xl4Size={104}
                 xl5Size={120}
@@ -132,7 +132,7 @@ function App() {
                 xsSize={26}
                 tabletSmSize={30}
                 mdSize={44}
-                lgSize={36}
+                lgSize={46}
                 xl2Size={50}
                 xl4Size={68}
                 xl5Size={86}
@@ -146,7 +146,7 @@ function App() {
             </div>
             <img
               src={RottweilerImage}
-              className="xs:h-80 xs:w-80 xs:-mr-10 5xl:h-190 5xl:w-190 tablet-sm:w-96 tablet-sm:h-96 4xl:h-150 4xl:w-150 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-100 lg:w-100 2xl:h-110 2xl:w-110"
+              className="xs:h-80 xs:w-80 xs:-mr-10 5xl:h-190 5xl:w-190 tablet-sm:w-96 tablet-sm:h-96 4xl:h-150 4xl:w-150 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-120 lg:w-120 2xl:h-110 2xl:w-110"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
