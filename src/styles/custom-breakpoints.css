@@ -44,8 +44,10 @@
   --vph: calc(var(--vh, 1vh) * 100);
 }
 
-#hero.hero-vh {
-  min-height: 100lvh;
-  min-height: var(--vph);
-  padding-bottom: env(safe-area-inset-bottom);
+@media (max-width: 1023px) {
+  #hero.hero-vh {
+    min-height: 100lvh;
+    min-height: var(--vph);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
