@@ -3,14 +3,15 @@
 @media (max-width: 1023px) {
   #hero.hero-vh {
     max-height: 100lvh;
-    max-height: var(--vph);
-    padding-bottom: env(safe-area-inset-bottom);
+    max-height: var(--vph, 100lvh);
+    padding-bottom: env(safe-area-inset-bottom, 0);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   #hero.hero-vh {
-    max-height: calc(var(--vph) - 4rem) !important;
+    max-height: calc(100vh - 4rem);
+    max-height: calc(var(--vph, 100vh) - 4rem);
   }
 }
 
