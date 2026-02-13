@@ -198,7 +198,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-base xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.65rem] 6xl:text-2xl 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:font-normal xl:px-3 2xl:text-lg">
+            <div className="xs:text-base xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.65rem] 6xl:text-2xl 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:text-lg lg:font-normal xl:px-3 2xl:text-lg">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
@@ -212,7 +212,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm xs:px-16 mx-auto flex w-auto justify-center md:mb-6"
+            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm xs:px-16 mx-auto flex w-auto justify-center md:mb-6 lg:w-xs"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}

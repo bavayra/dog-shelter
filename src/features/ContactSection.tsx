@@ -121,7 +121,7 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[180%] xs:translate-y-1/5 tablet-sm:-translate-x-[240%] tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] 3xl:-translate-x-[700%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 4xl:mr-20 translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[540%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
+          className="xs:-translate-x-[180%] xs:translate-y-1/5 tablet-sm:-translate-x-[240%] tablet-lg:-translate-x-[20%] tablet-lg:translate-y-[70%] 3xl:-translate-x-[700%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 4xl:mr-20 translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[700%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
       <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl xs:mb-8 relative z-11 mb-4 text-center md:text-7xl">
@@ -249,7 +249,7 @@ const ContactSection = () => {
             )}
           </form>
         </div>
-        <div className="glass-card tablet-lg:flex 5xl:px-6 tablet-lg:w-80 5xl:w-160 tablet-lg:flex-col tablet-lg:gap-4 tablet-lg:self-center tablet-lg:ml-8 mb-10 hidden rounded-2xl py-8 xl:w-120">
+        <div className="glass-card tablet-lg:flex 5xl:px-6 tablet-lg:w-80 5xl:w-160 tablet-lg:flex-col tablet-lg:gap-4 tablet-lg:self-center tablet-lg:ml-8 mb-10 hidden rounded-2xl py-8 lg:w-92 xl:w-120">
           <p className="typography-large tablet-lg:text-xl 5xl:text-3xl px-4 text-center text-xl md:block md:font-normal xl:text-2xl">
             Visits to the shelter are by appointment only. If you have any
             questions about adopting proccesses or volunteering, just get in

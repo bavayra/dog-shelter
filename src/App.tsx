@@ -24,7 +24,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 relative flex min-h-[calc(var(--vph)-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 pt-6 pb-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] md:p-10 lg:min-h-[calc(var(--vph)-7rem)] xl:h-[calc(var(--vph)-10rem)]"
+            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 relative flex min-h-[calc(var(--vph)-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 py-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] md:p-10 lg:min-h-[calc(var(--vph)-6rem)] xl:h-[calc(var(--vph)-10rem)]"
           >
             <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:pt-6 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 lg:text-7xl xl:text-7xl 2xl:max-w-220 2xl:text-8xl">
               Give a Shelter Dog a Loving Home
@@ -90,7 +90,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-10 tablet-sm:mt-12 mt-6xl-sm mt-6xl-md 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-12 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="xs:mt-10 tablet-sm:mt-12 mt-6xl-sm mt-6xl-md 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-6 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -196,7 +196,7 @@ function App() {
                 left="0"
                 opacity={40}
                 zIndex={10}
-                className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 6xl:translate-x-full 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[5%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
+                className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 6xl:translate-x-full 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[25%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
               />
               <DecorativeCircle
                 size={16}
@@ -211,7 +211,7 @@ function App() {
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 6xl:translate-x-[245%] tablet-sm:-translate-x-[10%] 5xl:mt-10 tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[50%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
+                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 6xl:translate-x-[245%] tablet-sm:-translate-x-[10%] 5xl:mt-10 tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[85%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
               />
             </div>
             <AboutUs />

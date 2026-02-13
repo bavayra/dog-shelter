@@ -44,7 +44,7 @@ const AboutUs = () => {
             right="-12"
             opacity={30}
             zIndex={5}
-            className="4xl:mr-40 5xl:mr-46 3xl:-translate-x-1/3 6xl:-translate-x-[90%] tablet-lg:-translate-y-1/5 md:mr-10 lg:-mt-20 xl:-mt-8 xl:mr-26"
+            className="4xl:mr-40 5xl:mr-46 3xl:-translate-x-1/3 6xl:-translate-x-[90%] tablet-lg:-translate-y-1/5 md:mr-10 lg:-mt-6 xl:-mt-8 xl:mr-26"
           />
         </div>
         <h3 className="typography-h3 4xl:text-6xl text-primary-500 tablet-lg:text-4xl my-6 text-center md:py-2 md:text-3xl lg:text-5xl">
