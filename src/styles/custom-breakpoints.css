@@ -1,5 +1,18 @@
 /* Custom breakpoints for specific screen dimensions */
 
+@media (max-width: 1023px) {
+  #hero.hero-vh {
+    min-height: 100lvh;
+    min-height: var(--vph);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  #hero.hero-vh {
+    min-height: calc(100vh - 4rem) !important;
+  }
+}
 @media (min-width: 2560px) and (min-height: 1440px) {
   .mt-6xl-sm {
     margin-top: 4.5rem;
@@ -42,12 +55,4 @@
 :root {
   --vh: 1vh;
   --vph: calc(var(--vh, 1vh) * 100);
-}
-
-@media (max-width: 1023px) {
-  #hero.hero-vh {
-    min-height: 100lvh;
-    min-height: var(--vph);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
 }
