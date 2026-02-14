@@ -99,7 +99,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
       aria-labelledby="modal-title"
     >
       <div
-        className="bg-primary-200 4xl:max-h-[82vh] 5xl:max-w-2xl tablet-lg:max-w-lg tablet-lg:px-4 6xl:max-w-xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
+        className="bg-primary-200 4xl:max-h-[calc(var(--vph,82vh)*0.82)] 5xl:max-w-2xl tablet-lg:max-w-lg tablet-lg:px-4 6xl:max-w-xl 5xl:tracking-tight 5xl:px-4 relative mx-4 max-h-[calc(var(--vph,90vh)*0.9)] w-full max-w-3xl overflow-y-auto rounded-2xl md:max-w-md"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
