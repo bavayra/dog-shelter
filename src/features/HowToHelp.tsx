@@ -5,7 +5,7 @@ const HowToHelp = () => {
   return (
     <section
       id="help"
-      className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[70vh] 5xl:min-h-[65vh] 4xl:min-h-[84vh] relative z-1 min-h-[75vh] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[68vh] sm:pt-10 md:min-h-[60vh] lg:min-h-screen xl:min-h-[70vh] [@media(min-height:1600px)]:min-h-[50vh]"
+      className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[calc(var(--vph)*0.70)] 5xl:min-h-[calc(var(--vph)*0.65)] 4xl:min-h-[calc(var(--vph)*0.84)] relative z-1 min-h-[calc(var(--vph)*0.75)] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[calc(var(--vph)*0.68)] sm:pt-10 md:min-h-[calc(var(--vph)*0.60)] lg:min-h-[calc(var(--vph))] xl:min-h-[calc(var(--vph)*0.70)] [@media(min-height:1600px)]:min-h-[50vh]"
     >
       <div className="z-10 container mx-auto px-4">
         <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl tablet-lg:text-6xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 4xl:text-8xl 3xl:mb-6 mb-6 text-center sm:mt-0 sm:pt-0 lg:mt-12 lg:text-7xl 2xl:mb-10">
