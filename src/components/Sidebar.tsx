@@ -53,7 +53,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
-        className={`bg-primary-500 tablet-sm:w-72 xs:w-50 tablet-lg:w-88 fixed top-0 bottom-0 left-0 z-52 w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
+        className={`bg-primary-500 tablet-sm:w-72 xs:w-50 tablet-lg:w-88 fixed top-0 bottom-0 left-0 z-52 h-[calc(var(--vph))] w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 sm:w-54 md:w-80 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
