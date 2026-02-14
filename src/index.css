@@ -85,6 +85,12 @@
     sans-serif;
 }
 
+@supports not (--css: variables) {
+  .hero-vh {
+    min-height: 100vh !important;
+  }
+}
+
 body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
