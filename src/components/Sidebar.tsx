@@ -25,13 +25,13 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-primary-700 bg-primary-500 hover:bg-primary-700 xs:top-20 tablet-sm:top-26 fixed top-15 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 md:ml-8 lg:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 xs:top-20 tablet-sm:top-26 fixed top-12 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 md:ml-8 lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}
       >
         <svg
-          className="h-4 w-4 sm:h-8 sm:w-8 md:h-10 md:w-10"
+          className="h-3 w-3 sm:h-8 sm:w-8 md:h-10 md:w-10"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
