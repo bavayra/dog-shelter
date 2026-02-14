@@ -24,9 +24,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 relative flex min-h-[calc(var(--vph)-2rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 py-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] md:p-10 lg:pb-20 xl:max-h-[calc(var(--vph)-6rem)]"
+            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 relative flex min-h-[calc(var(--vph)-9rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 py-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] md:p-10 lg:pb-20 xl:min-h-[calc(var(--vph)-6rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:mt-10 4xl:mt-6 relative z-10 mx-auto mt-10 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 lg:text-7xl xl:max-w-200 xl:text-5xl 2xl:max-w-220 2xl:text-8xl">
+            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:mt-10 4xl:mt-6 relative z-10 mx-auto mt-8 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 lg:text-7xl xl:max-w-200 xl:text-5xl 2xl:max-w-220 2xl:text-8xl">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -45,7 +45,7 @@ function App() {
               opacity={70}
               className="tablet-sm:translate-y-4/5 circle-position-6xl-md 4xl:translate-y-[35%] 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 mt-6xl-md mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-lg xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-6 max-w-xl rounded-3xl p-4 text-center text-xs font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl [@media(min-height:1600px)]:text-3xl">
+            <div className="glass-card text-primary-700 mt-6xl-md mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-lg xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-4 max-w-xl rounded-3xl p-4 text-center text-[0.65rem] font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl [@media(min-height:1600px)]:text-3xl">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -90,13 +90,13 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-8 tablet-sm:mt-12 mt-6xl-sm mt-6xl-md 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-8 gap-5 min-[425px]:mt-6 lg:mt-6 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="xs:mt-8 tablet-sm:mt-12 mt-6xl-sm mt-6xl-md 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-4 gap-2 min-[425px]:mt-6 lg:mt-6 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
             <div>
               <DecorativeCircle
-                size={72}
+                size={68}
                 xsSize={104}
                 tabletSmSize={90}
                 mdSize={104}
@@ -112,7 +112,7 @@ function App() {
                 className="tablet-sm:translate-x-[20%] 5xl:mr-8 5xl:translate-y-1/4 tablet-sm:translate-y-1/4 translate-x-[40%] translate-y-[45%] min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 sm:translate-x-[30%] sm:translate-y-[40%] md:-mb-6"
               />
               <DecorativeCircle
-                size={42}
+                size={36}
                 xsSize={52}
                 tabletSmSize={60}
                 mdSize={72}
@@ -141,12 +141,12 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-1/2 5xl:-mr-2 5xl:translate-y-[40%] -translate-x-[220%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-16 2xl:-mb-6 2xl:-translate-x-[160%]"
+                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-1/2 5xl:-mr-2 5xl:translate-y-[40%] -translate-x-[200%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-16 2xl:-mb-6 2xl:-translate-x-[160%]"
               />
             </div>
             <img
               src={RottweilerImage}
-              className="xs:h-80 xs:w-80 xs:-mr-10 5xl:h-190 5xl:w-190 tablet-sm:w-96 tablet-sm:h-96 4xl:h-150 4xl:w-150 absolute right-0 bottom-0 z-3 h-54 w-54 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-120 lg:w-120 2xl:h-110 2xl:w-110"
+              className="xs:h-80 xs:w-80 xs:-mr-10 5xl:h-190 5xl:w-190 tablet-sm:w-96 tablet-sm:h-96 4xl:h-150 4xl:w-150 absolute right-0 bottom-0 z-3 -mr-6 h-50 w-50 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-120 lg:w-120 2xl:h-110 2xl:w-110"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
