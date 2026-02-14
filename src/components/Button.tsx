@@ -25,7 +25,7 @@ const Button = ({
     ' rounded-full transform transition-all duration-200 px-6 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-primary-700 text-white text-xs 5xl:px-14 hover:bg-primary-900 hover:scale-105 focus:ring-primary-500 active:bg-primary-800',
+      'bg-primary-700 text-white  5xl:px-14 hover:bg-primary-900 hover:scale-105 focus:ring-primary-500 active:bg-primary-800',
     secondary:
       'bg-primary-200 text-primary-700 hover:bg-primary-300 md:border-2 md:border-primary-700 hover:scale-105 md:bg-primary-300 md:px-6 focus:ring-gray-500 active:bg-gray-800',
     outline:
@@ -37,7 +37,7 @@ const Button = ({
     medium:
       'px-4 py-2 text-base xs:text-lg sm:px-6 sm:py-2 tablet-lg:text-lg md:text-xl lg:text-lg 3xl:text-xl 5xl:text-2xl',
     large:
-      'px-4 py-1 text-lg 5xl:text-3xl 6xl:py-3 6xl:text-[1.5rem] xs:text-base md:text-lg xs:py-2 3xl:text-2xl xs:px-8 tablet-sm:text-xl tablet-lg:text-xl 4xl:text-2xl',
+      'px-4 py-1 text-xs 5xl:text-3xl 6xl:py-3 6xl:text-[1.5rem] xs:text-base md:text-lg xs:py-2 3xl:text-2xl xs:px-8 tablet-sm:text-xl tablet-lg:text-xl 4xl:text-2xl',
   };
   return (
     <button
