@@ -2,10 +2,13 @@
 
 > A modern responsive web application for dog shelter adoption built with React, TypeScript, and Tailwind CSS
 
+[![CI](https://github.com/bavayra/Dog-Shelter/workflows/CI/badge.svg)](https://github.com/bavayra/Dog-Shelter/actions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.2-61dafb.svg)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.2-646cff.svg)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8.svg)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## 📋 About
 
@@ -148,6 +151,9 @@ npm run preview
 - `npm run format` — Format code with Prettier
 - `npm run format:check` — Check code formatting
 - `npm run type-check` — Run TypeScript type checking
+- `npm run test` — Run tests in watch mode
+- `npm run test:ui` — Run tests with Vitest UI
+- `npm run test:coverage` — Generate test coverage report
 - `npm run optimize:svg` — Optimize SVG files with SVGO
 
 ## 🎨 Design System
@@ -193,7 +199,15 @@ Contributions are welcome! Please follow these steps:
 
 ## 📝 License
 
-MIT License — see [LICENSE](LICENSE) for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## 👤 Author
 
