@@ -33,7 +33,7 @@ const SocialLinks = ({
 
   const iconClasses = [
     iconColor,
-    'xs:w-12 xs:h-12 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-16 tablet-lg:h-16 4xl:w-16 4xl:h-16 lg:w-18 lg:h-18',
+    'xs:w-12 xs:h-12 w-10 h-10 5xl:w-20 5xl:h-20 social-link-6xl-md icon-size-6xl-sm 6xl:w-12 6xl:h-12 tablet-lg:w-16 tablet-lg:h-16 4xl:w-16 4xl:h-16 lg:w-18 lg:h-18',
     size === 'md'
       ? 'border-1 border-primary-100 lg:w-6 lg:h-6'
       : 'border-primary-500 border-2',
@@ -47,7 +47,7 @@ const SocialLinks = ({
 
   return (
     <div
-      className={`3xl:gap-4 xs:gap-2 tablet-lg:gap-4 flex items-center justify-center gap-4 lg:gap-2 ${className || ''}`}
+      className={`3xl:gap-4 xs:gap-2 tablet-lg:gap-4 flex items-center justify-center lg:gap-2 ${className || ''}`}
     >
       {socialNetworks.map((social) => (
         <a

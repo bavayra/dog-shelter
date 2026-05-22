@@ -25,7 +25,7 @@ const Button = ({
     ' rounded-full transform transition-all duration-200 px-6 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
     primary:
-      'bg-primary-700 text-white  5xl:px-14 hover:bg-primary-900 hover:scale-105 focus:ring-primary-500 active:bg-primary-800',
+      'bg-primary-700 text-white 5xl:px-14 hover:bg-primary-900 hover:scale-105 focus:ring-primary-500 active:bg-primary-800',
     secondary:
       'bg-primary-200 text-primary-700 hover:bg-primary-300 md:border-2 md:border-primary-700 hover:scale-105 md:bg-primary-300 md:px-6 focus:ring-gray-500 active:bg-gray-800',
     outline:
