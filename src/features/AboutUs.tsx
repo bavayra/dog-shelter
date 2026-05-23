@@ -32,13 +32,7 @@ const AboutUs = () => {
         </div>
         <div className="relative">
           <DecorativeCircle
-            size={44}
-            xsSize={40}
-            mdSize={64}
-            lgSize={76}
-            xlSize={88}
-            xl4Size={96}
-            xl5Size={108}
+            sizeVariant="md"
             color="neutral-500"
             top="-32"
             right="-12"

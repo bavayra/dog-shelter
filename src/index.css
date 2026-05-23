@@ -134,14 +134,6 @@ html {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
   }
 
-  .typography-h1 {
-    @apply text-primary-500 text-4xl leading-tight font-bold;
-  }
-
-  .typography-h2 {
-    @apply text-primary-500 text-3xl leading-snug font-bold;
-  }
-
   .typography-h3 {
     @apply text-primary-700 text-2xl leading-normal font-bold;
   }
@@ -160,6 +152,86 @@ html {
 
   .z-3 {
     z-index: 3;
+  }
+
+  @layer utilities {
+    .heading-fluid-hero {
+      font-size: clamp(1.875rem, 4.09vw + 0.955rem, 7.5rem);
+    }
+    .text-fluid-glass-card {
+      font-size: clamp(0.65rem, 1.14vw + 0.246rem, 1.875rem);
+    }
+    .text-fluid-section-heading {
+      font-size: clamp(3rem, 7.16vw + 0.425rem, 10rem);
+    }
+    .text-fluid-contact-heading {
+      font-size: clamp(3rem, 6.25vw + 0.5rem, 8rem);
+    }
+    .text-fluid-logo {
+      font-size: clamp(0.875rem, 2.05vw + 0.218rem, 3rem);
+    }
+    .text-fluid-nav {
+      font-size: clamp(1.125rem, 0.69vw + 0.875rem, 1.875rem);
+    }
+    .btn-text-small {
+      font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.875rem);
+    }
+    .btn-text-medium {
+      font-size: clamp(1rem, 0.58vw + 0.813rem, 1.5rem);
+    }
+    .btn-text-large {
+      font-size: clamp(0.75rem, 1.27vw + 0.344rem, 1.875rem);
+    }
+    .text-fluid-card-title {
+      font-size: clamp(1.5rem, 0.69vw + 1.278rem, 2.25rem);
+    }
+    .text-fluid-card-info {
+      font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.5rem);
+    }
+    .text-fluid-modal-title {
+      font-size: clamp(1.875rem, 1.39vw + 1.406rem, 3rem);
+    }
+    .text-fluid-modal-desc {
+      font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.65rem);
+    }
+    .px-fluid-hero {
+      padding-inline: clamp(1rem, 1.5vw + 0.52rem, 2.5rem);
+    }
+    .py-fluid-hero-top {
+      padding-top: clamp(1.5rem, 2vw + 0.86rem, 2.5rem);
+    }
+    .py-fluid-hero-bottom {
+      padding-bottom: clamp(1.5rem, 4vw + 0.34rem, 5rem);
+    }
+    .img-fluid-hero-dog {
+      width: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
+      height: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
+    }
+    /* DecorativeCircle sizes based on original values */
+    .circle-xxs {
+      width: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);
+      height: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);
+    }
+    .circle-xs {
+      width: clamp(4rem, 10.42vw + 1.655rem, 15rem);
+      height: clamp(4rem, 10.42vw + 1.655rem, 15rem);
+    }
+    .circle-sm {
+      width: clamp(5rem, 15.64vw + 1.481rem, 21.5rem);
+      height: clamp(5rem, 15.64vw + 1.481rem, 21.5rem);
+    }
+    .circle-md {
+      width: clamp(9rem, 19.9vw + 4.522rem, 30rem);
+      height: clamp(9rem, 19.9vw + 4.522rem, 30rem);
+    }
+    .circle-lg {
+      width: clamp(10rem, 28.43vw + 3.603rem, 40rem);
+      height: clamp(10rem, 28.43vw + 3.603rem, 40rem);
+    }
+    .circle-xl {
+      width: clamp(16rem, 29.86vw + 9.281rem, 47.5rem);
+      height: clamp(16rem, 29.86vw + 9.281rem, 47.5rem);
+    }
   }
 
   textarea::placeholder {

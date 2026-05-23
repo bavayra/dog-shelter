@@ -147,7 +147,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3
               id="modal-title"
-              className="typography-h3 5xl:text-5xl tablet-lg:text-4xl xs:text-3xl md:mt-2 xl:pl-2"
+              className="text-fluid-modal-title 5xl:text-5xl text-primary-700 leading-normal font-bold md:mt-2 xl:pl-2"
             >
               {name}
             </h3>
@@ -198,7 +198,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="xs:text-base xs:px-3 4xl:leading-tighter tablet-lg:text-xl tablet-lg:leading-tight 5xl:text-[1.65rem] 6xl:text-2xl 3xl:text-xl px-2 text-justify text-sm leading-tight tracking-tight text-neutral-700 sm:px-1 lg:text-lg lg:font-normal xl:px-3 2xl:text-lg">
+            <div className="text-fluid-modal-desc xs:px-3 4xl:leading-tighter tablet-lg:leading-tight px-2 text-justify leading-tight tracking-tight text-neutral-700 sm:px-1 lg:font-normal xl:px-3">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}

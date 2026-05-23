@@ -112,10 +112,7 @@ const ContactSection = () => {
     <section id="contact" className="bg-primary-200 pt-8 pb-10 md:px-6">
       <div className="xl2:mr-20 3xl:mr-32 mr-6xl-sm 6xl:mr-110 relative">
         <DecorativeCircle
-          size={8}
-          mdSize={10}
-          xlSize={12}
-          xl4Size={14}
+          sizeVariant="xxs"
           color="primary-50"
           top="0"
           right="0"
@@ -124,7 +121,7 @@ const ContactSection = () => {
           className="xs:-translate-x-[180%] xs:translate-y-1/5 tablet-sm:-translate-x-[240%] tablet-lg:-translate-x-[280%] tablet-lg:translate-y-[70%] 3xl:-translate-x-[700%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 4xl:mr-20 translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[700%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
         />
       </div>
-      <h2 className="typography-h2 xs:text-5xl 4xl:text-9xl tablet-lg:text-8xl xs:mb-8 relative z-11 mb-4 text-center md:text-7xl">
+      <h2 className="text-fluid-contact-heading xs:mb-8 text-primary-500 relative z-11 mb-4 text-center leading-snug font-bold">
         Contact Us
       </h2>
       <div className="4xl:gap-30 5xl:w-400 4xl:w-300 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:px-8 tablet-lg:gap-2 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 lg:gap-10 xl:w-250">
@@ -207,8 +204,7 @@ const ContactSection = () => {
             </div>
             <div className="relative">
               <DecorativeCircle
-                size={8}
-                xl5Size={12}
+                sizeVariant="xxs"
                 color="primary-500"
                 top="0"
                 left="0"

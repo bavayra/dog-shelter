@@ -32,12 +32,9 @@ const Button = ({
       'bg-primary-200 border-2 border-primary-500 text-primary-700 hover:scale-105 hover:bg-primary-100 focus:ring-primary-200 shadow-md active:bg-primary-300',
   };
   const sizeStyles: Record<ButtonSize, string> = {
-    small:
-      'px-3 py-1.5 text-sm lg:text-sm 4xl:text-xl tablet-lg:text-base md:text-lg 5xl:text-3xl 6xl:text-2xl 6xl:py-2',
-    medium:
-      'px-4 py-2 text-base xs:text-lg sm:px-6 sm:py-2 tablet-lg:text-lg md:text-xl lg:text-lg 3xl:text-xl 5xl:text-2xl',
-    large:
-      'px-4 py-1 text-xs 5xl:text-3xl 6xl:py-3 6xl:text-[1.5rem] xs:text-base md:text-lg xs:py-2 3xl:text-2xl xs:px-8 tablet-sm:text-xl tablet-lg:text-xl 4xl:text-2xl',
+    small: 'px-3 py-1.5 btn-text-small 6xl:py-2',
+    medium: 'px-4 py-2 btn-text-medium sm:px-6 sm:py-2',
+    large: 'px-4 py-1 btn-text-large xs:py-2 xs:px-8',
   };
   return (
     <button

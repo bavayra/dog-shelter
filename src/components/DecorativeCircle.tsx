@@ -1,18 +1,7 @@
-import React, { useId } from 'react';
+import React from 'react';
 
 interface DecorativeCircleProps {
-  size: number;
-  xsSize?: number;
-  smSize?: number;
-  tabletSmSize?: number;
-  mdSize?: number;
-  tabletLgSize?: number;
-  lgSize?: number;
-  xlSize?: number;
-  xl2Size?: number;
-  xl4Size?: number;
-  xl5Size?: number;
-  Size?: number;
+  sizeVariant: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   color:
     | 'primary-50'
     | 'primary-200'
@@ -31,17 +20,7 @@ interface DecorativeCircleProps {
 }
 
 export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
-  size,
-  xsSize,
-  smSize,
-  tabletSmSize,
-  mdSize,
-  tabletLgSize,
-  lgSize,
-  xlSize,
-  xl2Size,
-  xl4Size,
-  xl5Size,
+  sizeVariant,
   color,
   top,
   bottom,
@@ -51,49 +30,6 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   zIndex,
   className = '',
 }) => {
-  const circleId = useId().replace(/:/g, '');
-
-  const xsMediaQuery = xsSize
-    ? `@media (min-width: 360px) { [data-circle-id="${circleId}"] { width: ${xsSize * 0.25}rem !important; height: ${xsSize * 0.25}rem !important; } }`
-    : '';
-
-  const smMediaQuery = smSize
-    ? `@media (min-width: 412px) { [data-circle-id="${circleId}"] { width: ${smSize * 0.25}rem !important; height: ${smSize * 0.25}rem !important; } }`
-    : '';
-
-  const tabletSmMediaQuery = tabletSmSize
-    ? `@media (min-width: 480px) { [data-circle-id="${circleId}"] { width: ${tabletSmSize * 0.25}rem !important; height: ${tabletSmSize * 0.25}rem !important; } }`
-    : '';
-
-  const mdMediaQuery = mdSize
-    ? `@media (min-width: 768px) { [data-circle-id="${circleId}"] { width: ${mdSize * 0.25}rem !important; height: ${mdSize * 0.25}rem !important; } }`
-    : '';
-
-  const tabletLgMediaQuery = tabletLgSize
-    ? `@media (min-width: 820px) { [data-circle-id="${circleId}"] { width: ${tabletLgSize * 0.25}rem !important; height: ${tabletLgSize * 0.25}rem !important; } }`
-    : '';
-
-  const lgMediaQuery = lgSize
-    ? `@media (min-width: 1024px) { [data-circle-id="${circleId}"] { width: ${lgSize * 0.25}rem !important; height: ${lgSize * 0.25}rem !important; } }`
-    : '';
-
-  const xlMediaQuery = xlSize
-    ? `@media (min-width: 1280px) { [data-circle-id="${circleId}"] { width: ${xlSize * 0.25}rem !important; height: ${xlSize * 0.25}rem !important; } }`
-    : '';
-
-  const xl2MediaQuery = xl2Size
-    ? `@media (min-width: 1440px) { [data-circle-id="${circleId}"] { width: ${xl2Size * 0.25}rem !important; height: ${xl2Size * 0.25}rem !important; } }`
-    : '';
-
-  const xl4MediaQuery = xl4Size
-    ? `@media (min-width: 1920px) { [data-circle-id="${circleId}"] { width: ${xl4Size * 0.25}rem !important; height: ${xl4Size * 0.25}rem !important; } }`
-    : '';
-
-  const xl5MediaQuery = xl5Size
-    ? `@media (min-width: 2048px) { [data-circle-id="${circleId}"] { width: ${xl5Size * 0.25}rem !important; height: ${xl5Size * 0.25}rem !important; circle-5xl-mid} }`
-    : '';
-
-  const mediaQueryStyles = ` ${xsMediaQuery} ${smMediaQuery} ${tabletSmMediaQuery} ${mdMediaQuery} ${tabletLgMediaQuery} ${lgMediaQuery} ${xlMediaQuery} ${xl2MediaQuery} ${xl4MediaQuery} ${xl5MediaQuery} `;
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
@@ -104,15 +40,12 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     'neutral-500': 'var(--color-neutral-500)',
   };
 
-  const sizeInRem = `${size * 0.25}rem`;
   const parsePosition = (value: string) => {
     const num = parseFloat(value);
     return `${num * 0.25}rem`;
   };
 
   const style: React.CSSProperties = {
-    width: sizeInRem,
-    height: sizeInRem,
     backgroundColor: colorMap[color],
     top: top !== undefined ? parsePosition(top) : undefined,
     bottom: bottom !== undefined ? parsePosition(bottom) : undefined,
@@ -122,24 +55,13 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     zIndex: zIndex,
   };
 
+  const sizeClass = `circle-${sizeVariant}`;
+
   return (
-    <>
-      {(xsSize ||
-        smSize ||
-        tabletSmSize ||
-        mdSize ||
-        tabletLgSize ||
-        lgSize ||
-        xlSize ||
-        xl2Size ||
-        xl4Size ||
-        xl5Size) && <style>{mediaQueryStyles}</style>}
-      <div
-        data-circle-id={circleId}
-        className={`pointer-events-none absolute rounded-full ${className}`}
-        style={style}
-        aria-hidden="true"
-      />
-    </>
+    <div
+      className={`pointer-events-none absolute rounded-full ${sizeClass} ${className}`}
+      style={style}
+      aria-hidden="true"
+    />
   );
 };

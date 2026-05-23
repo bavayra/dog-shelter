@@ -24,28 +24,20 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 relative flex min-h-[calc(var(--vph)-9rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b px-4 py-6 shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] md:p-10 lg:pb-20 xl:min-h-[calc(var(--vph)-6rem)]"
+            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 px-fluid-hero py-fluid-hero-top py-fluid-hero-bottom relative flex min-h-[calc(var(--vph)-9rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] xl:min-h-[calc(var(--vph)-6rem)]"
           >
-            <h2 className="text-primary-700 xs:text-4xl mt-6xl-sm 6xl:mt-4 6xl:text-[7.5rem] xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:text-9xl 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:mt-10 4xl:mt-6 relative z-10 mx-auto mt-8 w-full text-center text-3xl font-semibold sm:text-5xl md:mt-12 md:max-w-160 md:text-6xl lg:mt-0 lg:text-7xl xl:max-w-200 xl:text-5xl 2xl:max-w-220 2xl:text-8xl">
+            <h2 className="text-primary-700 heading-fluid-hero mt-6xl-sm 6xl:mt-4 xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:mt-10 4xl:mt-6 relative z-10 mx-auto mt-8 w-full text-center font-semibold md:mt-12 md:max-w-160 lg:mt-0 xl:max-w-200 2xl:max-w-220">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
-              size={40}
-              xsSize={52}
-              tabletSmSize={62}
-              mdSize={80}
-              tabletLgSize={86}
-              lgSize={90}
-              xl2Size={104}
-              xl4Size={130}
-              xl5Size={160}
+              sizeVariant="lg"
               color="primary-500"
               top="0"
               left="0"
               opacity={70}
               className="tablet-sm:translate-y-4/5 circle-position-6xl-md 4xl:translate-y-[35%] 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 -translate-x-1/2 translate-y-[80%] sm:translate-y-[110%] md:translate-y-[50%] lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 mt-6xl-md mt-6xl-sm 5xl:text-3xl 6xl:text-[1.6rem] 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:text-base tablet-lg:text-lg xs:mt-8 tablet-sm:mt-10 tablet-sm:text-xl tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:text-2xl 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-4 max-w-xl rounded-3xl p-4 text-center text-[0.65rem] font-semibold min-[425px]:mt-4 sm:text-lg md:mt-12 lg:mt-10 lg:text-lg xl:mt-8 2xl:text-xl [@media(min-height:1600px)]:text-3xl">
+            <div className="glass-card text-primary-700 text-fluid-glass-card mt-6xl-md mt-6xl-sm 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:mt-8 tablet-sm:mt-10 tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-4 max-w-xl rounded-3xl p-4 text-center font-semibold min-[425px]:mt-4 md:mt-12 lg:mt-10 xl:mt-8">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -96,14 +88,7 @@ function App() {
             />
             <div>
               <DecorativeCircle
-                size={68}
-                xsSize={104}
-                tabletSmSize={90}
-                mdSize={104}
-                lgSize={120}
-                xl2Size={112}
-                xl4Size={152}
-                xl5Size={190}
+                sizeVariant="xl"
                 color="primary-500"
                 top="auto"
                 bottom="0"
@@ -112,14 +97,7 @@ function App() {
                 className="tablet-sm:translate-x-[20%] 5xl:mr-8 5xl:translate-y-1/4 tablet-sm:translate-y-1/4 translate-x-[40%] translate-y-[45%] min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 sm:translate-x-[30%] sm:translate-y-[40%] md:-mb-6"
               />
               <DecorativeCircle
-                size={36}
-                xsSize={52}
-                tabletSmSize={60}
-                mdSize={72}
-                lgSize={80}
-                xl2Size={76}
-                xl4Size={104}
-                xl5Size={120}
+                sizeVariant="md"
                 color="primary-300"
                 top="auto"
                 bottom="0"
@@ -128,14 +106,7 @@ function App() {
                 className="tablet-sm:-translate-x-1/2 5xl:mr-12 5xl:translate-y-1/3 tablet-sm:translate-y-[40%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:mr-6"
               />
               <DecorativeCircle
-                size={20}
-                xsSize={26}
-                tabletSmSize={30}
-                mdSize={44}
-                lgSize={46}
-                xl2Size={50}
-                xl4Size={68}
-                xl5Size={86}
+                sizeVariant="sm"
                 color="primary-200"
                 top="auto"
                 bottom="0"
@@ -146,7 +117,7 @@ function App() {
             </div>
             <img
               src={RottweilerImage}
-              className="xs:h-80 xs:w-80 xs:-mr-10 5xl:h-190 5xl:w-190 tablet-sm:w-96 tablet-sm:h-96 4xl:h-150 4xl:w-150 absolute right-0 bottom-0 z-3 -mr-6 h-50 w-50 object-contain sm:h-84 sm:w-84 md:h-104 md:w-104 lg:h-120 lg:w-120 2xl:h-110 2xl:w-110"
+              className="img-fluid-hero-dog absolute right-0 bottom-0 z-3 -mr-6 object-contain"
               alt="Rottweiler Dog Illustration"
               aria-hidden="true"
             />
@@ -155,7 +126,7 @@ function App() {
             <div className="container mx-auto px-4">
               <h2
                 id="pets-heading"
-                className="typography-h1 xs:text-5xl tablet-lg:text-8xl 5xl:text-[10rem] tablet-sm:text-6xl 4xl:text-9xl 5xl:py-20 m-0 pt-10 text-center md:pb-8 md:text-7xl"
+                className="text-fluid-section-heading text-primary-500 5xl:py-20 m-0 pt-10 text-center leading-tight font-bold md:pb-8"
               >
                 Our Pets
               </h2>
@@ -165,12 +136,7 @@ function App() {
           <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
             <div className="relative sm:top-2">
               <DecorativeCircle
-                size={64}
-                tabletLgSize={80}
-                lgSize={88}
-                xlSize={96}
-                xl2Size={120}
-                xl4Size={150}
+                sizeVariant="xl"
                 color="primary-500"
                 top="-8"
                 left="-30"
@@ -183,14 +149,7 @@ function App() {
             <AdoptionRules />
             <div className="relative">
               <DecorativeCircle
-                size={36}
-                tabletSmSize={40}
-                mdSize={54}
-                tabletLgSize={64}
-                lgSize={66}
-                xlSize={86}
-                xl4Size={98}
-                xl5Size={116}
+                sizeVariant="md"
                 color="primary-300"
                 top="0"
                 left="0"
@@ -199,13 +158,7 @@ function App() {
                 className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 6xl:translate-x-full 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[25%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
               />
               <DecorativeCircle
-                size={16}
-                tabletSmSize={20}
-                mdSize={30}
-                tabletLgSize={36}
-                xlSize={44}
-                xl4Size={52}
-                xl5Size={60}
+                sizeVariant="xs"
                 color="primary-500"
                 top="0"
                 left="0"
