@@ -207,7 +207,24 @@ html {
       width: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
       height: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
     }
-    /* DecorativeCircle sizes based on original values */
+    .text-fluid-about-heading {
+      font-size: clamp(3rem, 6.64vw + 1.506rem, 10rem);
+    }
+    .text-fluid-about-body {
+      font-size: clamp(1.125rem, 0.71vw + 0.965rem, 1.875rem);
+    }
+    .text-fluid-rules-heading {
+      font-size: clamp(2.25rem, 5.9vw + 0.923rem, 8rem);
+    }
+    .text-fluid-rules-intro {
+      font-size: clamp(1.125rem, 1.07vw + 0.884rem, 2.25rem);
+    }
+    .text-fluid-help-heading {
+      font-size: clamp(2.25rem, 3.31vw + 1.456rem, 5rem);
+    }
+    .text-fluid-help-body {
+      font-size: clamp(1.125rem, 1.07vw + 0.884rem, 2.25rem);
+    }
     .circle-xxs {
       width: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);
       height: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);

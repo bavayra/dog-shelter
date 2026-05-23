@@ -8,11 +8,11 @@ const HowToHelp = () => {
       className="bg-primary-50 border-b-primary-500 tablet-sm:min-h-[calc(var(--vph)*0.70)] 5xl:min-h-[calc(var(--vph)*0.65)] 4xl:min-h-[calc(var(--vph)*0.84)] relative z-1 min-h-[calc(var(--vph)*0.75)] scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30 sm:min-h-[calc(var(--vph)*0.68)] sm:pt-10 md:min-h-[calc(var(--vph)*0.60)] lg:min-h-[calc(var(--vph))] xl:min-h-[calc(var(--vph)*0.70)] [@media(min-height:1600px)]:min-h-[50vh]"
     >
       <div className="z-10 container mx-auto px-4">
-        <h2 className="typography-h2 xs:text-4xl xs:pt-4 tablet-sm:text-5xl tablet-lg:text-6xl 4xl:pt-10 4xl:pb-4 3xl:mt-10 4xl:text-8xl 3xl:mb-6 mb-6 text-center sm:mt-0 sm:pt-0 lg:mt-12 lg:text-7xl 2xl:mb-10">
+        <h2 className="text-fluid-help-heading text-primary-500 xs:pt-4 4xl:pt-10 4xl:pb-4 3xl:mt-10 3xl:mb-6 mb-6 text-center font-bold sm:mt-0 sm:pt-0 lg:mt-12 2xl:mb-10">
           How to Help ROTVODOM
         </h2>
         <div className="3xl:max-w-4xl tablet-lg:mb-6 4xl:max-w-6xl 5xl:max-w-7xl 6xl:max-w-6xl 5xl:px-6 5xl:mb-14 6xl:mb-6 mx-auto mb-6 max-w-3xl text-center sm:px-6 md:mb-4 md:px-22 xl:max-w-240 2xl:max-w-264">
-          <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-3xl 6xl:text-[2rem] 5xl:text-4xl mb-2 leading-relaxed">
+          <p className="text-fluid-help-body mb-2 leading-normal text-neutral-700">
             Our shelter relies{' '}
             <span className="text-primary-500 font-semibold">entirely</span> on
             the kindness and generosity of people like{' '}

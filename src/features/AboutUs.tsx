@@ -5,11 +5,11 @@ const AboutUs = () => {
   return (
     <section id="about-us" className="bg-primary-50 py-8">
       <div className="container mx-auto px-4">
-        <h2 className="typography-h2 xs:text-5xl 3xl:mt-10 tablet-lg:text-8xl 4xl:mt-6 5xl:mb-12 xs:pt-2 5xl:text-[10rem] 4xl:text-9xl z-12 mb-4 text-center md:mb-8 md:text-7xl">
+        <h2 className="text-fluid-about-heading text-primary-500 3xl:mt-10 4xl:mt-6 5xl:mb-12 xs:pt-2 z-12 mb-4 text-center leading-tight font-bold md:mb-8">
           About Us
         </h2>
 
-        <div className="bg-primary-100 4xl:max-w-5xl 5xl:text-3xl 4xl:text-2xl typography-body xs:text-lg border-primary-300 tablet-sm:text-xl tablet-lg:max-w-2xl tablet-lg:px-6 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto lg:max-w-3xl xl:px-10 2xl:p-10">
+        <div className="bg-primary-100 text-fluid-about-body 4xl:max-w-5xl typography-body border-primary-300 tablet-lg:max-w-2xl tablet-lg:px-6 relative z-10 mx-auto my-2 max-w-xl rounded-2xl border-2 px-3 py-6 text-center sm:mx-4 md:mx-auto lg:max-w-3xl xl:px-10 2xl:p-10">
           <p>
             Rotvodom was founded in 2010 by Rotvomama, who started building a
             shelter in her own backyard by herself. She started taking in one
