@@ -302,10 +302,9 @@ html {
       padding-bottom: clamp(0rem, -1.19vw + 1.714rem, 0.5rem);
     }
     .dog-card-button {
-      width: clamp(20rem, -20.45vw + 139.09%, 100%);
-      padding-inline: clamp(1rem, 5.11vw + -8.182rem, 5rem);
-      margin-inline: clamp(0rem, 1.03vw + -1.977rem, auto);
-      margin-bottom: clamp(0rem, 1.03vw + -1.977rem, 1rem);
+      width: 100%;
+      max-width: 100%;
+      margin-inline: 0;
       font-size: clamp(1rem, 0.12vw + 0.773rem, 1.2rem);
     }
     .text-fluid-about-heading {

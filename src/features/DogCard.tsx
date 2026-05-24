@@ -58,7 +58,9 @@ const DogCard = memo((dog: Dog) => {
           )}
         </div>
         <div className="flex min-h-0 flex-1 flex-col p-4">
-          <h3 className="text-fluid-card-title 4xl:pl-3 mb-1">{name}</h3>
+          <h3 className="text-fluid-card-title 4xl:pl-3 text-primary-700 mb-1 font-semibold">
+            {name}
+          </h3>
           <div className="dog-card-info flex flex-wrap items-center gap-4 text-neutral-700">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
@@ -79,7 +81,7 @@ const DogCard = memo((dog: Dog) => {
             </div>
           )}
           <div className="dog-card-desc-spacing shrink overflow-hidden">
-            <div className="dog-card-desc-text text-left text-neutral-700">
+            <div className="dog-card-desc-text text-primary-700 text-left">
               {description.join(' ')}
             </div>
           </div>
