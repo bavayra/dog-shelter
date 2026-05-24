@@ -31,11 +31,11 @@ const DogCard = memo((dog: Dog) => {
   return (
     <>
       <article
-        className="3xl:min-h-41rem 4xl:w-sm 5xl:w-md 5xl:min-h-45rem tablet-sm:mx-10 tablet-lg:w-86 2xl:min-h-35rem flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl sm:mx-4 md:mx-auto md:w-74 lg:w-74 2xl:w-84"
+        className="dog-card-container flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl md:mx-auto"
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="group 5xl:h-80 relative h-64 overflow-hidden md:h-60 2xl:h-60">
+        <div className="dog-card-image-height group relative overflow-hidden">
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
@@ -47,11 +47,9 @@ const DogCard = memo((dog: Dog) => {
             }}
           />
           <div
-            className={`absolute top-3 right-3 ${genderBadgeColor} 5xl:px-5 5xl:py-4 6xl:py-2 flex items-center gap-1 rounded-full px-4 py-1 text-sm font-semibold tracking-wider text-white shadow-lg`}
+            className={`dog-card-gender-badge absolute top-3 right-3 ${genderBadgeColor} flex items-center gap-1 rounded-full font-semibold tracking-wider text-white shadow-lg`}
           >
-            <span className="tablet-sm:text-lg 5xl:text-2xl 6xl:text-xl text-base md:text-base">
-              {gender}
-            </span>
+            <span className="dog-card-gender-text">{gender}</span>
           </div>
           {isAdopted && (
             <div className="bg-primary-700 absolute top-3 left-3 rounded-full px-4 py-2 text-sm font-bold text-white shadow-lg">
@@ -61,7 +59,7 @@ const DogCard = memo((dog: Dog) => {
         </div>
         <div className="flex min-h-0 flex-1 flex-col p-4">
           <h3 className="text-fluid-card-title 4xl:pl-3 mb-1">{name}</h3>
-          <div className="tablet-sm:text-lg 5xl:text-2xl 6xl:text-xl xs:pb-2 3xl:pb-0 4xl:pl-3 flex flex-wrap items-center gap-4 text-sm text-neutral-700 md:text-base">
+          <div className="dog-card-info flex flex-wrap items-center gap-4 text-neutral-700">
             <span className="flex items-center gap-1.5 lg:gap-1">
               <span role="img" aria-label="birthday cake">
                 🎂
@@ -76,7 +74,7 @@ const DogCard = memo((dog: Dog) => {
             </span>
           </div>
           {showHealthBadge && (
-            <div className="bg-color-accent-200 text-primary-700 5xl:text-2xl 6xl:text-xl 4xl:text-xl 4xl:pl-4 3xl:pt-2 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2 2xl:pb-0">
+            <div className="dog-card-health-badge bg-color-accent-200 text-primary-700 inline-flex items-center gap-2 self-start rounded-full p-0 text-base font-medium md:pb-2 2xl:pb-0">
               <span>{health}</span>
             </div>
           )}

@@ -158,6 +158,10 @@ html {
     .heading-fluid-hero {
       font-size: clamp(1.875rem, 4.09vw + 0.955rem, 7.5rem);
     }
+    .circle-hero-transform {
+      transform: translateY(clamp(35%, 5.21vw + 22.828%, 110%))
+        translateX(clamp(-50%, 0vw + -50%, -50%));
+    }
     .text-fluid-glass-card {
       font-size: clamp(0.65rem, 1.14vw + 0.246rem, 1.875rem);
     }
@@ -176,11 +180,23 @@ html {
     .btn-text-small {
       font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.875rem);
     }
+    .btn-padding-small {
+      padding: clamp(0.375rem, 0.03vw + 0.367rem, 0.5rem)
+        clamp(0.75rem, 0rem + 0.75rem, 0.75rem);
+    }
     .btn-text-medium {
       font-size: clamp(1rem, 0.58vw + 0.813rem, 1.5rem);
     }
+    .btn-padding-medium {
+      padding: clamp(0.5rem, 0rem + 0.5rem, 0.5rem)
+        clamp(1rem, 0.35vw + 0.906rem, 1.5rem);
+    }
     .btn-text-large {
       font-size: clamp(0.75rem, 1.27vw + 0.344rem, 1.875rem);
+    }
+    .btn-padding-large {
+      padding: clamp(0.25rem, 0.07vw + 0.234rem, 0.5rem)
+        clamp(1rem, 0.49vw + 0.844rem, 2rem);
     }
     .text-fluid-card-title {
       font-size: clamp(1.5rem, 0.69vw + 1.278rem, 2.25rem);
@@ -207,11 +223,54 @@ html {
       width: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
       height: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
     }
+    .dog-grid-layout {
+      column-gap: clamp(0rem, -1.54vw + 2.35rem, 1.5rem);
+      row-gap: clamp(1.5rem, 1.03vw + 1.25rem, 2.5rem);
+      padding-inline: clamp(0rem, 6.67vw + -7.27rem, 9rem);
+    }
+    .dog-grid-container {
+      padding-inline: clamp(1rem, 14.49vw + -36.04rem, 20rem);
+      max-width: clamp(70rem, 22.73vw + 40.91rem, 100%);
+    }
+    .dog-grid-counter {
+      font-size: clamp(1rem, 1.28vw + 0.536rem, 2.25rem);
+      margin-bottom: clamp(1rem, 1.11vw + 0.6rem, 2rem);
+    }
+    .dog-card-container {
+      width: clamp(18.5rem, 5.68vw + 14.91rem, 28rem);
+      min-height: clamp(35rem, 5.45vw + 31.36rem, 45rem);
+      margin-inline: clamp(1rem, 1.36vw + 0.345rem, 2.5rem);
+    }
+    .dog-card-image-height {
+      height: clamp(15rem, 3.64vw + 11.73rem, 20rem);
+    }
+    .dog-card-gender-badge {
+      padding: clamp(0.25rem, 0.68vw + 0.005rem, 1rem)
+        clamp(1rem, 0.18vw + 0.935rem, 1.25rem);
+    }
+    .dog-card-gender-text {
+      font-size: clamp(1rem, 0.45vw + 0.838rem, 1.5rem);
+    }
+    .dog-card-info {
+      font-size: clamp(0.875rem, 0.45vw + 0.713rem, 1.5rem);
+      padding-bottom: clamp(0rem, -0.68vw + 0.818rem, 0.5rem);
+      padding-left: clamp(0rem, 0.77vw + -1.477rem, 0.75rem);
+    }
+    .dog-card-health-badge {
+      font-size: clamp(1rem, 0.36vw + 0.909rem, 1.5rem);
+      padding-top: clamp(0rem, 0.68vw + -1.045rem, 0.5rem);
+      padding-left: clamp(0rem, 1.03vw + -1.977rem, 1rem);
+      padding-bottom: clamp(0rem, -1.19vw + 1.714rem, 0.5rem);
+    }
     .text-fluid-about-heading {
       font-size: clamp(3rem, 6.64vw + 1.506rem, 10rem);
     }
     .text-fluid-about-body {
       font-size: clamp(1.125rem, 0.71vw + 0.965rem, 1.875rem);
+    }
+    .circle-decorative-about {
+      transform: translateX(clamp(-90%, -4.17vw + -33.33%, -33.33%))
+        translateY(clamp(-20%, -0.69vw + -15%, -10%));
     }
     .text-fluid-rules-heading {
       font-size: clamp(2.25rem, 5.9vw + 0.923rem, 8rem);
@@ -219,11 +278,46 @@ html {
     .text-fluid-rules-intro {
       font-size: clamp(1.125rem, 1.07vw + 0.884rem, 2.25rem);
     }
+    .rules-heading-spacing {
+      padding-top: clamp(0rem, -0.29vw + 1rem, 1rem);
+      margin-top: clamp(1.5rem, 0.75vw + 0.875rem, 3rem);
+    }
+    .rules-grid {
+      column-gap: clamp(0rem, 1.39vw + -0.844rem, 4rem);
+      row-gap: clamp(1rem, 0.35vw + 0.906rem, 1.5rem);
+    }
     .text-fluid-help-heading {
       font-size: clamp(2.25rem, 3.31vw + 1.456rem, 5rem);
     }
     .text-fluid-help-body {
       font-size: clamp(1.125rem, 1.07vw + 0.884rem, 2.25rem);
+    }
+    .heading-help-spacing {
+      padding-top: clamp(1rem, 0.58vw + 0.813rem, 2.5rem);
+      padding-bottom: clamp(1.5rem, 0.29vw + 1.406rem, 1rem);
+      margin-top: clamp(0rem, 0.69vw + -0.125rem, 3rem);
+      margin-bottom: clamp(1.5rem, 0.29vw + 1.406rem, 2.5rem);
+    }
+    .help-content-width {
+      max-width: clamp(48rem, 10.42vw + 45.655rem, 96rem);
+      padding-inline: clamp(1.5rem, 1.04vw + 1.281rem, 3.75rem);
+    }
+    .help-section-height {
+      min-height: clamp(
+        calc(var(--vph) * 0.6),
+        calc(var(--vph) * (0.17vw + 0.52)),
+        calc(var(--vph) * 1)
+      );
+    }
+    .puppy-image {
+      width: clamp(27.5rem, 12.15vw + 22.172rem, 50rem);
+      max-width: clamp(42.5rem, 6.25vw + 40rem, 50rem);
+    }
+    .filters-container {
+      width: clamp(62.5rem, 5.21vw + 60.828rem, 100rem);
+    }
+    .filters-grid {
+      gap: clamp(1.5rem, 0.69vw + 1.278rem, 3rem);
     }
     .circle-xxs {
       width: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);

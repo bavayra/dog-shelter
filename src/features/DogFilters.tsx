@@ -52,7 +52,7 @@ const DogFilters = ({
 
   return (
     <section
-      className="3xl:w-300 4xl:w-350 5xl:w-400 mb-8 rounded-lg bg-white px-4 py-6 shadow-md sm:mx-4 md:px-8 xl:mx-auto xl:w-250 2xl:mx-auto 2xl:w-280"
+      className="filters-container mb-8 rounded-lg bg-white px-4 py-6 shadow-md sm:mx-4 md:px-8 xl:mx-auto 2xl:mx-auto"
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-2">
@@ -61,7 +61,7 @@ const DogFilters = ({
         </h3>
       </div>
 
-      <div className="5xl:gap-12 4xl:gap-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="filters-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <label className="typography-body 4xl:text-2xl 5xl:text-3xl mb-2 block sm:text-lg md:text-xl">
             Age:
