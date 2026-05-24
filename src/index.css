@@ -157,7 +157,8 @@ html {
   @layer utilities {
     .heading-fluid-hero {
       font-size: clamp(1.875rem, 4.09vw + 0.955rem, 7.5rem);
-      margin-top: clamp(0rem, -2.27vw + 5rem, 5rem);
+      line-height: 1;
+      margin-top: clamp(2.75rem, 0.06vw + 2.53rem, 4rem);
       margin-bottom: clamp(0rem, 1.52vw + -2.909rem, 1rem);
       max-width: clamp(20rem, 72.73vw + -240rem, 100rem);
       padding-inline: clamp(0rem, 1.33vw + -0.639rem, 1rem);
@@ -167,8 +168,12 @@ html {
       max-width: clamp(32rem, 10.23vw + 19.09rem, 64rem);
 
       & p {
-        font-size: clamp(1.125rem, 1.14vw + 0.655rem, 2.25rem);
+        font-size: clamp(1rem, 0.76vw + 0.709rem, 1.875rem);
+        line-height: clamp(1.375, 0.05vw + 1.345, 1.5);
       }
+    }
+    .hero-height {
+      height: calc(100dvh - clamp(3rem, 0.91vw + 2.773rem, 6rem));
     }
     .hero-social-position {
       margin-top: clamp(1rem, 4.32vw + -3.273rem, 6rem);
@@ -176,11 +181,12 @@ html {
       transform: translateX(clamp(-31rem, -13.64vw + 7.273rem, 0rem));
     }
     .circle-hero-transform {
-      transform: translateY(clamp(35%, 5.21vw + 22.828%, 110%))
+      transform: translateY(clamp(78%, 4.55vw + 64.52%, 153%))
         translateX(clamp(-50%, 0vw + -50%, -50%));
     }
     .glass-card {
-      font-size: clamp(0.65rem, 1.14vw + 0.246rem, 1.875rem);
+      font-size: clamp(0.875rem, 1.02vw + 0.435rem, 1.75rem);
+      line-height: clamp(1.25, 0.03vw + 1.227, 1.375);
       margin-top: clamp(1rem, 1.36vw + -0.545rem, 3rem);
       padding-inline: clamp(1rem, 3.64vw + -3.455rem, 5rem);
       padding-block: clamp(1rem, 1.36vw + -0.545rem, 2.5rem);
@@ -238,8 +244,8 @@ html {
       padding-bottom: clamp(1.5rem, 4vw + 0.34rem, 5rem);
     }
     .img-fluid-hero-dog {
-      width: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
-      height: clamp(12.5rem, 32.41vw + 2.13rem, 47.5rem);
+      width: clamp(14.625rem, 1.83vw + 8.775rem, 55.575rem);
+      height: clamp(14.625rem, 1.83vw + 8.775rem, 55.575rem);
     }
     .dog-grid-layout {
       column-gap: clamp(0rem, -1.54vw + 2.35rem, 1.5rem);
@@ -536,10 +542,6 @@ html {
     .social-link-md {
       width: clamp(1.5rem, -0.68vw + 2.318rem, 5.25rem);
       height: clamp(1.5rem, -0.68vw + 2.318rem, 5.25rem);
-    }
-    .social-icon-size {
-      width: clamp(2.5rem, 0.91vw + 2.409rem, 5rem);
-      height: clamp(2.5rem, 0.91vw + 2.409rem, 5rem);
     }
 
     /* Modal */

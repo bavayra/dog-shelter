@@ -31,14 +31,7 @@ const SocialLinks = ({
     md: 'social-link-md',
   };
 
-  const iconClasses = [
-    iconColor,
-    'social-icon-size',
-    size === 'md'
-      ? 'border-1 border-primary-100 lg:w-6 lg:h-6'
-      : 'border-primary-500 border-2',
-    'rounded-full',
-  ].join(' ');
+  const iconClasses = [iconColor, 'rounded-full'].join(' ');
 
   const iconSizeMap = {
     sm: 'sm' as const,
@@ -55,13 +48,13 @@ const SocialLinks = ({
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110`}
+          className={`${sizeClasses[size]} ${bgColor} hover:bg-primary-500 flex shrink-0 items-center justify-center rounded-full transition-transform hover:scale-110`}
           aria-label={social.name}
         >
           <Icon
             as={social.icon}
             size={iconSizeMap[size]}
-            className={`${iconColor} ${iconClasses}`}
+            className={`${iconColor} ${iconClasses} h-full w-full p-[5%]`}
             aria-hidden="true"
           />
         </a>

@@ -24,7 +24,7 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 px-fluid-hero py-fluid-hero-top py-fluid-hero-bottom relative flex min-h-[calc(var(--vph)-9rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] xl:min-h-[calc(var(--vph)-6rem)]"
+            className="from-primary-200 to-primary-50 hero-height border-primary-500 px-fluid-hero py-fluid-hero-top py-fluid-hero-bottom relative flex flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md"
           >
             <h2 className="heading-fluid-hero text-primary-700 relative z-10 mx-auto w-full text-center font-semibold">
               Give a Shelter Dog a Loving Home
@@ -65,7 +65,7 @@ function App() {
               </Button>
             </div>
             <div className="hero-cta-section relative z-10 mt-6 max-w-2xl px-4">
-              <p className="text-center lg:hidden xl:block">
+              <p className="text-primary-700 text-center font-semibold lg:hidden xl:block">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
