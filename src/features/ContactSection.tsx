@@ -118,14 +118,14 @@ const ContactSection = () => {
           right="0"
           zIndex={10}
           opacity={70}
-          className="xs:-translate-x-[180%] xs:translate-y-1/5 tablet-sm:-translate-x-[240%] tablet-lg:-translate-x-[280%] tablet-lg:translate-y-[70%] 3xl:-translate-x-[700%] 4xl:mt-0 5xl:-translate-x-[725%] 5xl:-mt-1 4xl:mr-20 translate-x-[200%] sm:mr-6 md:-translate-x-[355%] lg:mt-0 lg:-translate-x-[700%] xl:-mt-3 xl:-translate-x-[695%] 2xl:-translate-x-[860%] [@media(min-height:1152px)]:mr-32"
+          className="circle-contact-xxs"
         />
       </div>
-      <h2 className="text-fluid-contact-heading xs:mb-8 text-primary-500 relative z-11 mb-4 text-center leading-snug font-bold">
+      <h2 className="contact-heading text-fluid-contact-heading text-primary-500 relative z-11 text-center leading-snug font-bold">
         Contact Us
       </h2>
-      <div className="4xl:gap-30 5xl:w-400 4xl:w-300 tablet-lg:grid tablet-lg:grid-cols-2 tablet-lg:px-8 tablet-lg:gap-2 3xl:gap-20 relative flex justify-center md:m-6 md:mx-auto lg:w-200 lg:gap-10 xl:w-250">
-        <div className="5xl:max-w-180 4xl:w-4xl 4xl:pr-10 w-full max-w-md px-6 lg:max-w-sm xl:mx-6 xl:max-w-lg">
+      <div className="contact-grid tablet-lg:grid tablet-lg:grid-cols-2 relative flex justify-center md:mx-auto">
+        <div className="contact-form-wrapper w-full px-6">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
             <div>
               <TextInput
@@ -183,7 +183,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="typography-body xs:text-base 5xl:text-2xl 5xl:font-normal mb-4 block sm:text-lg md:text-xl"
+                className="contact-label mb-4 block"
               >
                 Message
               </label>
@@ -194,7 +194,7 @@ const ContactSection = () => {
                 placeholder="Write your message..."
                 required
                 disabled={isSubmitting}
-                className="4xl:text-xl 5xl:text-2xl focus:border-primary-500 xs:text-lg 4xl:min-h-40 mb-2 min-h-24 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 text-xs placeholder:opacity-100 focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+                className="contact-textarea focus:border-primary-500 mb-2 w-full resize-none rounded-md border-2 border-neutral-500 bg-transparent px-4 py-3 placeholder:opacity-100 focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
               />
               {errors.message && (
                 <p className="-mt-6 text-sm text-red-600" role="alert">

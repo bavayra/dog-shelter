@@ -128,7 +128,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="5xl:max-h-140 6xl:max-h-100 mx-auto h-full w-full object-cover md:mt-8 md:max-h-92 md:w-auto md:rounded-2xl md:object-contain xl:max-h-96"
+            className="modal-image mx-auto h-full w-full object-cover md:w-auto md:rounded-2xl md:object-contain"
             loading="lazy"
             onError={(e) => {
               e.currentTarget.src =
@@ -147,50 +147,40 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3
               id="modal-title"
-              className="text-fluid-modal-title 5xl:text-5xl text-primary-700 leading-normal font-bold md:mt-2 xl:pl-2"
+              className="modal-title text-fluid-modal-title text-primary-700 leading-normal font-bold"
             >
               {name}
             </h3>
             <div
-              className={`absolute top-74 right-4 md:static ${genderBadgeColor} 5xl:py-4 6xl:py-2 tablet-lg:px-6 flex items-center gap-1 rounded-full px-4 py-1 tracking-wide text-white shadow-lg 2xl:px-5`}
+              className={`modal-gender-badge ${genderBadgeColor} absolute top-74 right-4 flex items-center gap-1 rounded-full tracking-wide text-white shadow-lg md:static`}
             >
-              <span className="tablet-sm:text-lg tablet-lg:text-xl 5xl:text-2xl text-base">
-                {gender}
-              </span>
+              <span className="modal-gender-text">{gender}</span>
             </div>
           </div>
 
-          <div className="xs:text-base 4xl:text-xl 5xl:mb-4 6xl:text-xl mb-2 flex flex-wrap gap-3 text-sm text-neutral-700 md:text-lg xl:pl-2">
-            <div className="5xl:text-2xl 6xl:text-xl flex items-center gap-2">
+          <div className="modal-info-container flex flex-wrap gap-3 text-neutral-700">
+            <div className="modal-info-item flex items-center gap-2">
               <span
                 role="img"
                 aria-label="birthday cake"
-                className="4xl:text-2xl 5xl:text-3xl 6xl:text-2xl"
+                className="modal-emoji"
               >
                 🎂
               </span>
               <span>{getAgeLabel(age)}</span>
             </div>
-            <div className="5xl:text-2xl 6xl:text-xl flex items-center gap-2">
-              <span
-                role="img"
-                aria-label="dog"
-                className="5xl:text-3xl 6xl:text-2xl"
-              >
+            <div className="modal-info-item flex items-center gap-2">
+              <span role="img" aria-label="dog" className="modal-emoji">
                 🐕
               </span>
               <span>{breed}</span>
             </div>
             {showHealthBadge && (
               <div className="flex items-center gap-2">
-                <span
-                  role="img"
-                  aria-label="medical"
-                  className="6xl:text-xl text-2xl"
-                >
+                <span role="img" aria-label="medical" className="modal-emoji">
                   💊
                 </span>
-                <span className="text-accent-600 5xl:text-2xl 6xl:text-xl font-medium">
+                <span className="text-accent-600 modal-info-item font-medium">
                   {health}
                 </span>
               </div>

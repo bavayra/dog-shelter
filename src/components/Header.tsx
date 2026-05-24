@@ -16,7 +16,7 @@ const Header = () => {
             <img
               src={LogoIcon}
               alt="Rotvodom Dog Shelter Logo"
-              className="border-primary-500 xs:w-10 xs:h-10 tablet-sm:w-16 4xl:w-16 4xl:h-16 6xl:w-18 6xl:h-18 5xl:w-22 5xl:h-22 tablet-sm:h-16 h-8 w-8 shrink-0 rounded-full border-2 bg-transparent object-center sm:h-12 sm:w-12 md:h-14 md:w-14"
+              className="header-logo border-primary-500 shrink-0 rounded-full border-2 bg-transparent object-center"
             />
             <div className="flex min-w-0 items-center">
               <h1 className="text-primary-500 text-fluid-logo min-w-0 truncate leading-tight font-bold">
@@ -51,7 +51,7 @@ const Header = () => {
                   ?.scrollIntoView({ behavior: 'smooth' })
               }
               ariaLabel="Go to contact form"
-              className="4xl:w-50 3xl:w-44 lg:w-40"
+              className="header-contact-button"
             >
               CONTACT US
             </Button>

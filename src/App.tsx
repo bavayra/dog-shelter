@@ -26,7 +26,7 @@ function App() {
             id="hero"
             className="hero-vh from-primary-200 6xl:min-h-[calc(var(--vph)-5.5rem)] 5xl:min-h-[calc(var(--vph)-6rem)] 4xl:min-h-[calc(var(--vph)-5rem)] to-primary-50 border-primary-500 px-fluid-hero py-fluid-hero-top py-fluid-hero-bottom relative flex min-h-[calc(var(--vph)-9rem)] flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md min-[425px]:min-h-[calc(var(--vph)-5rem)] xl:min-h-[calc(var(--vph)-6rem)]"
           >
-            <h2 className="text-primary-700 heading-fluid-hero mt-6xl-sm 6xl:mt-4 xs:max-w-xs 5xl:mt-10 6xl:mb-0 5xl:mb-4 5xl:max-w-400 xs:mt-12 tablet-sm:px-4 tablet-sm:mt-20 tablet-sm:max-w-120 tablet-lg:mt-10 4xl:mt-6 relative z-10 mx-auto mt-8 w-full text-center font-semibold md:mt-12 md:max-w-160 lg:mt-0 xl:max-w-200 2xl:max-w-220">
+            <h2 className="heading-fluid-hero text-primary-700 relative z-10 mx-auto w-full text-center font-semibold">
               Give a Shelter Dog a Loving Home
             </h2>
             <DecorativeCircle
@@ -37,7 +37,7 @@ function App() {
               opacity={70}
               className="circle-hero-transform circle-position-6xl-md 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 lg:-mt-16"
             />
-            <div className="glass-card text-primary-700 text-fluid-glass-card mt-6xl-md mt-6xl-sm 6xl:py-8 5xl:px-20 5xl:py-10 4xl:mt-10 6xl:mt-6 5xl:max-w-5xl xs:mt-8 tablet-sm:mt-10 tablet-sm:px-8 tablet-lg:px-12 tablet-lg:mt-8 tablet-lg:py-6 4xl:py-6 3xl:mt-6 relative z-10 mx-auto mt-4 max-w-xl rounded-3xl p-4 text-center font-semibold min-[425px]:mt-4 md:mt-12 lg:mt-10 xl:mt-8">
+            <div className="glass-card text-primary-700 relative z-10 mx-auto rounded-3xl text-center font-semibold">
               <p className="4xl:mb-4 mb-2">
                 DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
               </p>
@@ -64,8 +64,8 @@ function App() {
                 Find Your Best Friend
               </Button>
             </div>
-            <div className="tablet-lg:max-w-lg container-w-6xl-sm mt-6xl-md 4xl:max-w-3xl 4xl:mt-12 mt-6xl-sm 5xl:mt-18 6xl:mt-10 5xl:max-w-5xl 6xl:max-w-4xl tablet-lg:mt-12 tablet-lg:flex relative z-10 mx-auto mt-4 hidden justify-center px-4 2xl:max-w-180 [@media(min-height:1600px)]:max-w-5xl">
-              <p className="typography-large tablet-lg:text-xl font-6xl-sm 5xl:text-4xl font-6xl-md 6xl:text-3xl text-center md:text-xl lg:hidden xl:block 2xl:text-2xl">
+            <div className="hero-cta-section relative z-10 mt-6 max-w-2xl px-4">
+              <p className="text-center lg:hidden xl:block">
                 Left behind and waiting each day—many gentle hearts long for a
                 warm lap and a loving home. We are Autonomous Non-profit
                 Organization (ANO), we only spend and never earn. We rely solely
@@ -82,7 +82,7 @@ function App() {
             </div>
             <SocialLinks
               size="sm"
-              className="xs:mt-8 tablet-sm:mt-12 mt-6xl-sm mt-6xl-md 5xl:mt-24 6xl:mt-8 6xl:mr-60 tablet-lg:mt-8 4xl:-translate-x-124 3xl:mr-20 mt-4 gap-2 min-[425px]:mt-6 lg:mt-6 lg:-translate-x-60 xl:mt-6 xl:-translate-x-90 2xl:-translate-x-100"
+              className="hero-social-position gap-2"
               iconColor="text-neutral-50"
               bgColor="bg-primary-500"
             />
@@ -94,7 +94,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={2}
-                className="tablet-sm:translate-x-[20%] 5xl:mr-8 5xl:translate-y-1/4 tablet-sm:translate-y-1/4 translate-x-[40%] translate-y-[45%] min-[425px]:translate-x-1/5 min-[425px]:translate-y-1/3 sm:translate-x-[30%] sm:translate-y-[40%] md:-mb-6"
+                className="hero-circle-xl"
               />
               <DecorativeCircle
                 sizeVariant="md"
@@ -103,7 +103,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={1}
-                className="tablet-sm:-translate-x-1/2 5xl:mr-12 5xl:translate-y-1/3 tablet-sm:translate-y-[40%] -translate-x-[45%] translate-y-1/2 min-[425px]:-translate-x-[60%] min-[425px]:translate-y-[40%] sm:-translate-x-[60%] sm:translate-y-[35%] lg:mr-6"
+                className="hero-circle-md"
               />
               <DecorativeCircle
                 sizeVariant="sm"
@@ -112,7 +112,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="tablet-sm:-translate-x-[240%] tablet-sm:translate-y-1/2 5xl:-mr-2 5xl:translate-y-[40%] -translate-x-[200%] translate-y-1/2 min-[425px]:-translate-x-[200%] min-[425px]:translate-y-1/2 sm:-translate-x-[260%] sm:translate-y-[45%] md:-translate-x-[180%] lg:mr-16 2xl:-mb-6 2xl:-translate-x-[160%]"
+                className="hero-circle-sm"
               />
             </div>
             <img
@@ -142,7 +142,7 @@ function App() {
                 left="-30"
                 opacity={20}
                 zIndex={2}
-                className="tablet-lg:mt-36 tablet-lg:-ml-14 4xl:-ml-40 lg:mt-50 xl:mt-36 2xl:-ml-30"
+                className="circle-after-dogs"
               />
             </div>
             <HowToHelp />
@@ -155,7 +155,7 @@ function App() {
                 left="0"
                 opacity={40}
                 zIndex={10}
-                className="xs:translate-y-2/5 xs:-translate-x-1/3 5xl:mt-12 6xl:translate-x-full 5xl:ml-8 4xl:ml-12 tablet-lg:-translate-x-[10%] tablet-lg:mt-4 3xl:ml-4 3xl:mt-4 md:translate-x-[5%] lg:-mt-2 lg:translate-x-[25%] xl:translate-x-1/4 xl:translate-y-[20%] 2xl:translate-x-1/2"
+                className="circle-about-md"
               />
               <DecorativeCircle
                 sizeVariant="xs"
@@ -164,7 +164,7 @@ function App() {
                 left="0"
                 opacity={90}
                 zIndex={10}
-                className="tablet-lg:translate-x-[25%] xs:translate-y-[145%] 6xl:translate-x-[245%] tablet-sm:-translate-x-[10%] 5xl:mt-10 tablet-sm:translate-y-[130%] 3xl:ml-6 3xl:mt-4 xs:-translate-x-[5%] 5xl:ml-6 4xl:ml-8 4xl:mt-2 tablet-lg:mt-4 md:translate-x-[50%] md:translate-y-[110%] lg:-mt-2 lg:translate-x-[85%] xl:translate-x-[95%] xl:translate-y-[85%] 2xl:translate-x-[145%]"
+                className="circle-about-xs"
               />
             </div>
             <AboutUs />

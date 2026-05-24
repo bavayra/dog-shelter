@@ -78,8 +78,8 @@ const DogCard = memo((dog: Dog) => {
               <span>{health}</span>
             </div>
           )}
-          <div className="3xl:mb-8 4xl:mb-6 5xl:mb-2 mb-4 shrink overflow-hidden">
-            <div className="text-fluid-card-info 3xl:tracking-tighter 3xl:px-3 3xl:leading-relaxed 3xl:line-clamp-8 5xl:line-clamp-6 2xl:line-clamp-auto 4xl:line-clamp-10 line-clamp-5 text-left leading-snug tracking-normal text-neutral-700 lg:line-clamp-7 2xl:p-2">
+          <div className="dog-card-desc-spacing shrink overflow-hidden">
+            <div className="dog-card-desc-text text-left text-neutral-700">
               {description.join(' ')}
             </div>
           </div>
@@ -91,7 +91,7 @@ const DogCard = memo((dog: Dog) => {
             size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-auto 4xl:px-20 4xl:mx-auto 5xl:w-80 4xl:text-[1.2rem] 4xl:mb-4 mt-auto w-full"
+            className="dog-card-button mt-auto"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home ❤️' : 'ADOPT ME'}

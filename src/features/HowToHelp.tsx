@@ -20,7 +20,7 @@ const HowToHelp = () => {
             donation helps us provide food, medical care, and a safe home for
             dogs in need.
           </p>
-          <p className="typography-body xs:text-lg tablet-sm:text-xl tablet-lg:text-2xl 4xl:text-3xl 6xl:text-[2rem] 5xl:text-4xl leading-relaxed">
+          <p className="help-support-text leading-relaxed">
             Your support makes a{' '}
             <span className="text-primary-500 font-semibold">
               real difference
@@ -30,7 +30,7 @@ const HowToHelp = () => {
           </p>
         </div>
 
-        <div className="6xl:mb-30 mb-2 flex justify-center sm:mb-0 lg:mb-20">
+        <div className="help-button-container flex justify-center">
           <a
             href="https://qr.nspk.ru/example-link"
             target="_blank"
@@ -40,7 +40,7 @@ const HowToHelp = () => {
             <Button
               variant="outline"
               size="large"
-              className="4xl:py-5 4xl:px-10 tablet-lg:mt-0 flex items-center md:mt-4 xl:mt-2"
+              className="help-donate-button flex items-center"
               ariaLabel="Donate to help our pets button"
             >
               Help Our Pets Now

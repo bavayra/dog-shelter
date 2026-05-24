@@ -19,13 +19,13 @@ const AdoptionRules = () => {
           Adoption Rules
         </h2>
 
-        <p className="text-fluid-rules-intro 4xl:mt-4 tablet-lg:w-180 5xl:w-380 5xl:px-60 mx-auto mt-4 mb-6 text-center leading-normal text-neutral-700 md:px-16 md:tracking-tight xl:px-4 2xl:mb-8 2xl:w-3xl">
+        <p className="rules-intro text-fluid-rules-intro mx-auto text-center leading-normal text-neutral-700 md:tracking-tight">
           Please read our adoption guidelines carefully to ensure the best match
           for both you and your future companion.
         </p>
       </div>
 
-      <div className="rules-grid 3xl:max-w-5xl 4xl:max-w-6xl 5xl:max-w-7xl mx-auto max-w-4xl space-y-4 md:max-w-xl lg:grid lg:max-w-220 lg:grid-cols-2">
+      <div className="rules-grid mx-auto space-y-4 lg:grid lg:grid-cols-2">
         {rules.map((rule, index) => (
           <RuleCard key={index} number={index + 1} text={rule} />
         ))}
@@ -36,7 +36,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115975"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-100 5xl:text-3xl 5xl:px-14 4xl:font-normal 4xl:py-5 4xl:px-10 hover:bg-primary-700 tablet-sm:text-lg tablet-lg:text-xl text-primary-50 xs:text-base 3xl:text-2xl mb-4 inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 md:mt-3 md:mb-6 lg:px-10 2xl:px-8"
+            className="rules-button bg-primary-500 hover:text-primary-100 hover:bg-primary-700 text-primary-50 inline-block rounded-full transition-transform hover:scale-105"
           >
             See All The Rules
           </a>
@@ -45,7 +45,7 @@ const AdoptionRules = () => {
           <a
             href="https://vk.com/topic-215318612_49115985"
             rel="noopener noreferrer"
-            className="bg-primary-500 hover:text-primary-100 3xl:text-2xl 5xl:text-3xl 5xl:px-14 4xl:py-5 4xl:px-10 4xl:font-normal tablet-sm:text-lg hover:bg-primary-700 tablet-lg:text-xl text-primary-50 xs:text-base inline-block rounded-full px-6 py-2 text-xs transition-transform hover:scale-105 lg:px-8"
+            className="rules-button bg-primary-500 hover:text-primary-100 hover:bg-primary-700 text-primary-50 inline-block rounded-full transition-transform hover:scale-105"
           >
             See The Contract Template
           </a>

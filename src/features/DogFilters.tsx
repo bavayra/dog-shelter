@@ -36,7 +36,7 @@ const DogFilters = ({
         <button
           key={option.value}
           onClick={() => onChange(option.value)}
-          className={`typography-small tablet-sm:text-base 3xl:text-base 5xl:text-xl rounded-lg px-3 py-2 font-medium transition-colors sm:text-sm md:text-sm ${
+          className={`filter-button rounded-lg px-3 py-2 font-medium transition-colors ${
             isActive
               ? 'bg-primary-500 text-white'
               : 'bg-neutral-200 text-neutral-700 hover:bg-neutral-300'
@@ -56,25 +56,19 @@ const DogFilters = ({
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-2">
-        <h3 className="typography-h3 3xl:text-4xl 5xl:my-4 5xl:text-5xl 4xl:text-4xl md:text-3xl">
-          Filter Dogs
-        </h3>
+        <h3 className="filters-heading text-primary-700">Filter Dogs</h3>
       </div>
 
       <div className="filters-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label className="typography-body 4xl:text-2xl 5xl:text-3xl mb-2 block sm:text-lg md:text-xl">
-            Age:
-          </label>
+          <label className="filter-label mb-2 block">Age:</label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(AGE_FILTER_OPTIONS, filters.age, onAgeChange)}
           </div>
         </div>
 
         <div>
-          <label className="typography-body 4xl:text-2xl 5xl:text-3xl mb-2 block sm:text-lg md:text-xl">
-            Gender:
-          </label>
+          <label className="filter-label mb-2 block">Gender:</label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               GENDER_FILTER_OPTIONS,
@@ -85,9 +79,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body 4xl:text-2xl 5xl:text-3xl mb-2 block sm:text-lg md:text-xl">
-            Breed:
-          </label>
+          <label className="filter-label mb-2 block">Breed:</label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               BREED_FILTER_OPTIONS,
@@ -98,9 +90,7 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="typography-body 4xl:text-2xl 5xl:text-3xl mb-2 block sm:text-lg md:text-xl">
-            Health:
-          </label>
+          <label className="filter-label mb-2 block">Health:</label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               HEALTH_FILTER_OPTIONS,

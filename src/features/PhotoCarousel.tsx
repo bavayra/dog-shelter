@@ -25,7 +25,7 @@ const PhotoCarousel = () => {
   const resolvedImageUrl = getGalleryImage(currentImage.imageUrl);
 
   return (
-    <div className="bg-primary-50 4xl:max-w-4xl 4xl:mb-14 relative z-10 mx-auto max-w-5xl rounded-2xl md:max-w-xl">
+    <div className="carousel-container bg-primary-50 relative z-10 mx-auto rounded-2xl">
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         Slide {currentIndex + 1} of {shelterGallery.length}:{' '}
         {currentImage.caption}
@@ -34,7 +34,7 @@ const PhotoCarousel = () => {
         <img
           src={resolvedImageUrl}
           alt={currentImage.caption}
-          className="4xl:h-120 h-64 w-full object-cover transition-opacity duration-500 md:h-80 lg:h-100"
+          className="carousel-image w-full object-cover transition-opacity duration-500"
           loading="lazy"
           onError={(e) => {
             e.currentTarget.src =
@@ -53,7 +53,7 @@ const PhotoCarousel = () => {
         aria-label="Previous image"
       >
         <svg
-          className="text-primary-500 5xl:h-12 5xl:w-12 h-6 w-6 lg:h-8 lg:w-8"
+          className="carousel-arrow text-primary-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ const PhotoCarousel = () => {
         aria-label="Next image"
       >
         <svg
-          className="text-primary-500 5xl:h-12 5xl:w-12 h-6 w-6 lg:h-8 lg:w-8"
+          className="carousel-arrow text-primary-500"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
