@@ -49,6 +49,10 @@ coverage/
 # OS
 Thumbs.db
 
+# Project files
+todo
+changes
+
 # Temporary files
 *.tmp
 *.temp

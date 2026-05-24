@@ -52,7 +52,7 @@ const DogFilters = ({
 
   return (
     <section
-      className="filters-container mb-8 rounded-lg bg-white px-4 py-6 shadow-md sm:mx-4 md:px-8 xl:mx-auto 2xl:mx-auto"
+      className="filters-container mx-auto mb-8 rounded-lg bg-white px-4 py-6 shadow-md md:px-8"
       aria-label="Filter dogs by age, gender, breed, and health"
     >
       <div className="mb-2">
@@ -61,14 +61,18 @@ const DogFilters = ({
 
       <div className="filters-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <label className="filter-label mb-2 block">Age:</label>
+          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+            Age:
+          </label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(AGE_FILTER_OPTIONS, filters.age, onAgeChange)}
           </div>
         </div>
 
         <div>
-          <label className="filter-label mb-2 block">Gender:</label>
+          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+            Gender:
+          </label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               GENDER_FILTER_OPTIONS,
@@ -79,7 +83,9 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="filter-label mb-2 block">Breed:</label>
+          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+            Breed:
+          </label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               BREED_FILTER_OPTIONS,
@@ -90,7 +96,9 @@ const DogFilters = ({
         </div>
 
         <div>
-          <label className="filter-label mb-2 block">Health:</label>
+          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+            Health:
+          </label>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               HEALTH_FILTER_OPTIONS,

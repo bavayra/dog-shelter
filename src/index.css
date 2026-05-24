@@ -394,9 +394,6 @@ html {
       width: clamp(27.5rem, 12.15vw + 22.172rem, 50rem);
       max-width: clamp(42.5rem, 6.25vw + 40rem, 50rem);
     }
-    .filters-container {
-      width: clamp(62.5rem, 5.21vw + 60.828rem, 100rem);
-    }
     .filters-grid {
       gap: clamp(1.5rem, 0.69vw + 1.278rem, 3rem);
     }
