@@ -188,7 +188,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="text-fluid-modal-desc xs:px-3 4xl:leading-tighter tablet-lg:leading-tight px-2 text-justify leading-tight tracking-tight text-neutral-700 sm:px-1 lg:font-normal xl:px-3">
+            <div className="text-fluid-modal-desc xs:px-3 4xl:leading-tighter tablet-lg:leading-tight text-primary-700 px-2 text-justify leading-tight tracking-tight sm:px-1 lg:font-normal xl:px-3">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}

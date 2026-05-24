@@ -232,7 +232,7 @@ html {
       font-size: clamp(1.875rem, 1.39vw + 1.406rem, 3rem);
     }
     .text-fluid-modal-desc {
-      font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.65rem);
+      font-size: clamp(1rem, 0.58vw + 0.813rem, 1.875rem);
     }
     .px-fluid-hero {
       padding-inline: clamp(1rem, 1.5vw + 0.52rem, 2.5rem);
