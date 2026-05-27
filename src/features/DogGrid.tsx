@@ -16,16 +16,8 @@ const DogGrid = () => {
   } = useDogFilters();
 
   const [showAll, setShowAll] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
   const [initialDisplayCount, setInitialDisplayCount] = useState(4);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 800);
-
-    return () => clearTimeout(timer);
-  }, []);
   useEffect(() => {
     const updateDisplayCount = () => {
       if (window.innerWidth >= 1024) {
@@ -57,22 +49,14 @@ const DogGrid = () => {
         onBreedChange={setBreedFilter}
         onReset={resetFilters}
       />
-      {!isLoading && (
-        <p
-          className="dog-grid-counter mb-4 text-center leading-normal text-neutral-700 md:mb-8"
-          aria-live="polite"
-        >
-          Found {filteredDogs.length}{' '}
-          {filteredDogs.length === 1 ? 'dog' : 'dogs'}
-        </p>
-      )}
+      <p
+        className="dog-grid-counter mb-4 text-center leading-normal text-neutral-700 md:mb-8"
+        aria-live="polite"
+      >
+        Found {filteredDogs.length} {filteredDogs.length === 1 ? 'dog' : 'dogs'}
+      </p>
 
-      {isLoading ? (
-        <div className="flex min-h-64 items-center justify-center">
-          <div className="border-primary-500 h-12 w-12 animate-spin rounded-full border-4 border-t-transparent"></div>
-          <p className="text-primary-700 ml-4 text-lg">Loading pets...</p>
-        </div>
-      ) : filteredDogs.length > 0 ? (
+      {filteredDogs.length > 0 ? (
         <>
           <div className="dog-grid-layout grid grid-cols-1 transition-all md:grid-cols-2 lg:grid-cols-3">
             {displayedDogs.map((dog) => (

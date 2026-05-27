@@ -11,6 +11,7 @@ const DogCard = memo((dog: Dog) => {
     dog;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleAdoptClick = (e: MouseEvent) => {
     e.stopPropagation();
@@ -35,15 +36,20 @@ const DogCard = memo((dog: Dog) => {
         aria-label={`Dog card ${name}`}
         onClick={() => setIsModalOpen(true)}
       >
-        <div className="dog-card-image-height group relative overflow-hidden">
+        <div className="dog-card-image-height group relative overflow-hidden bg-neutral-200">
+          {!isImageLoaded && (
+            <div className="absolute inset-0 animate-pulse bg-neutral-200" />
+          )}
           <img
             src={resolvedImageUrl}
             alt={`${name} - ${breed}`}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`h-full w-full object-cover transition-all duration-500 group-hover:scale-105 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`}
             loading="lazy"
+            onLoad={() => setIsImageLoaded(true)}
             onError={(e) => {
               e.currentTarget.src =
                 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23ddd" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" fill="%23999"%3EImage not found%3C/text%3E%3C/svg%3E';
+              setIsImageLoaded(true);
             }}
           />
           <div
