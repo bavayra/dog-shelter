@@ -19,11 +19,13 @@ Dog Shelter is a fully responsive web application designed to help visitors brow
 ### Core Functionality
 
 - 🐶 **Browse Dogs:** View available dogs for adoption with detailed profiles, photos, and stories
-- 🔍 **Advanced Filtering:** Filter dogs by breed, age, gender, health status, and training level
+- 🔍 **Advanced Filtering:** Filter dogs by breed, age, gender, and health status
 - 🎴 **Dog Details Modal:** Interactive modal with full dog information and adoption details
 - 📊 **Shelter Statistics:** Real-time display of shelter stats (total dogs, adopted, volunteers)
 - 🖼️ **Photo Gallery:** Carousel showcasing shelter life and activities
-- 📞 **Contact Form:** Fully validated contact form with sanitization and rate limiting
+- 📞 **Contact Form:** Fully validated contact form with client-side sanitization and rate limiting
+
+> **Note:** The contact form submits to a mock endpoint (httpbin.org) for demo purposes. In a production environment this would connect to a real backend service (e.g. Formspree, EmailJS, or a custom API).
 
 ### User Experience
 
@@ -47,9 +49,9 @@ Dog Shelter is a fully responsive web application designed to help visitors brow
 - **Frontend:** React 19.2 with TypeScript 5.9
 - **Build Tool:** Vite 7.2 with hot module replacement
 - **Styling:** Tailwind CSS 4.1 with custom theme and PostCSS
-- **Code Quality:** ESLint, Prettier, TypeScript strict mode
-- **Version Control:** Git with Husky pre-commit hooks and lint-staged
-- **Additional Libraries:** DOMPurify for sanitization
+- **Testing:** Vitest + Testing Library (unit tests for hooks and utilities)
+- **Code Quality:** ESLint, Prettier, Husky pre-commit hooks, lint-staged
+- **Additional Libraries:** DOMPurify (installed for sanitization)
 
 ## 📁 Project Structure
 
@@ -156,15 +158,36 @@ npm run preview
 - `npm run test:coverage` — Generate test coverage report
 - `npm run optimize:svg` — Optimize SVG files with SVGO
 
+## 🧪 Tests
+
+```bash
+npm run test             # Run tests in watch mode
+npm run test:ui          # Run tests with Vitest UI
+npm run test:coverage    # Generate coverage report
+```
+
+Unit tests cover:
+
+- `useDogFilters` hook — filter state and dog filtering logic
+- `dogHelpers` utilities — age labels, gender badge colors
+- `sanitizeFormData` — form data normalization
+
 ## 🎨 Design System
 
 ### Breakpoints
 
-- **xs:** 375px — Small phones
-- **sm:** 425px — Large phones
-- **md:** 768px — Tablets
-- **lg:** 1024px — Laptops
-- **xl:** 1280px — Desktops
+| Name      | Width  | Target          |
+| --------- | ------ | --------------- |
+| xs        | 360px  | Small phones    |
+| sm        | 412px  | Standard phones |
+| tablet-sm | 480px  | Large phones    |
+| md        | 768px  | Tablets         |
+| tablet-lg | 820px  | Large tablets   |
+| lg        | 1024px | Laptops         |
+| xl        | 1280px | Desktops        |
+| 2xl       | 1440px | Large desktops  |
+| 4xl       | 1920px | Full HD         |
+| 6xl       | 2560px | 2K+ monitors    |
 
 ### Color Palette
 
@@ -178,14 +201,6 @@ npm run preview
 - **H2:** Large, bold headings
 - **Body:** Neutral-700, medium weight
 - **Small:** Labels and captions
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes and commit (`git commit -m 'feat: add amazing feature'`)
 
 ## 🤝 Contributing
 
