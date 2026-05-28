@@ -43,13 +43,9 @@ const Header = () => {
 
           <div className="hidden transition-transform hover:scale-105 md:block md:px-0">
             <Button
+              href="#contact"
               variant="secondary"
               size="medium"
-              onClick={() =>
-                document
-                  .getElementById('contact')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
               ariaLabel="Go to contact form"
               className="header-contact-button"
             >

@@ -2,7 +2,6 @@ import type { Dog } from '@/types';
 import Button from '@/components/Button';
 import { getDogImage } from '@/utils/images';
 import { useState, memo } from 'react';
-import type { MouseEvent } from 'react';
 import DogModal from '@/components/DogModal';
 import { getAgeLabel, getGenderBadgeColor } from '@/utils/dogHelpers';
 
@@ -12,17 +11,6 @@ const DogCard = memo((dog: Dog) => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-  const handleAdoptClick = (e: MouseEvent) => {
-    e.stopPropagation();
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-  };
 
   const resolvedImageUrl = getDogImage(imageUrl);
   const genderBadgeColor = getGenderBadgeColor(gender);
@@ -95,9 +83,10 @@ const DogCard = memo((dog: Dog) => {
           <div className="flex-1 shrink-0"></div>
 
           <Button
+            href={isAdopted ? undefined : '#contact'}
             variant={isAdopted ? 'secondary' : 'primary'}
             size="medium"
-            onClick={handleAdoptClick}
+            onClick={(e) => e.stopPropagation()}
             disabled={isAdopted}
             className="dog-card-button mt-auto"
             ariaLabel={`Adopt ${name}`}

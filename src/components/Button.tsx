@@ -1,4 +1,8 @@
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from 'react';
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline';
 type ButtonSize = 'small' | 'medium' | 'large';
@@ -9,6 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   className?: string;
   ariaLabel?: string;
+  href?: string;
 }
 
 const Button = ({
@@ -18,6 +23,7 @@ const Button = ({
   className = '',
   disabled,
   ariaLabel,
+  href,
   ...props
 }: ButtonProps) => {
   const baseStyles =
@@ -35,9 +41,25 @@ const Button = ({
     medium: 'btn-padding-medium btn-text-medium',
     large: 'btn-padding-large btn-text-large',
   };
+
+  const sharedClass = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={sharedClass}
+        aria-label={ariaLabel}
+        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+      className={sharedClass}
       disabled={disabled}
       aria-label={ariaLabel}
       {...props}

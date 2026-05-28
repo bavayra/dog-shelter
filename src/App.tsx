@@ -51,14 +51,10 @@ function App() {
 
             <div className="tablet-lg:-mt-6 -mt-4 flex justify-center">
               <Button
+                href="#pets"
                 variant="primary"
                 size="large"
                 className="4xl:py-4 4xl:px-10 z-10 transition-transform hover:scale-105"
-                onClick={() =>
-                  document
-                    .getElementById('pets')
-                    ?.scrollIntoView({ behavior: 'smooth' })
-                }
                 ariaLabel="Find Your Best Friend"
               >
                 Find Your Best Friend
