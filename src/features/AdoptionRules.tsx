@@ -14,7 +14,7 @@ const AdoptionRules = () => {
 
   return (
     <section id="adoption-rules" className="relative z-1 bg-neutral-50 py-6">
-      <div className="container mx-auto px-4 sm:mt-4">
+      <div className="phone:mt-4 container mx-auto px-4">
         <h2 className="text-fluid-rules-heading rules-heading-spacing text-primary-500 text-center font-bold">
           Adoption Rules
         </h2>
@@ -31,7 +31,7 @@ const AdoptionRules = () => {
         ))}
       </div>
 
-      <div className="xs:mb-6 4xl:mt-10 mt-6 text-center">
+      <div className="phone-sm:mb-6 4xl:mt-10 mt-6 text-center">
         <div>
           <a
             href="https://vk.com/topic-215318612_49115975"

@@ -209,7 +209,7 @@ const ContactSection = () => {
                 top="0"
                 left="0"
                 zIndex={12}
-                className="xs:translate-x-[220%] 3xl:ml-14 4xl:ml-18 5xl:ml-32 5xl:-mt-2 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 translate-x-[150%] translate-y-[20%] sm:ml-5 md:translate-x-[220%] lg:ml-9 xl:ml-18"
+                className="phone-sm:translate-x-[220%] 3xl:ml-14 4xl:ml-18 5xl:ml-32 5xl:-mt-2 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 phone:ml-5 translate-x-[150%] translate-y-[20%] md:translate-x-[220%] lg:ml-9 xl:ml-18"
               />
             </div>
 

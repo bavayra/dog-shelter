@@ -19,8 +19,8 @@
   --color-neutral-500: #979cb0;
   --color-neutral-700: #747787;
 
-  --breakpoint-xs: 360px;
-  --breakpoint-sm: 412px;
+  --breakpoint-phone-sm: 360px;
+  --breakpoint-phone: 412px;
   --breakpoint-tablet-sm: 480px;
   --breakpoint-md: 768px;
   --breakpoint-tablet-lg: 820px;

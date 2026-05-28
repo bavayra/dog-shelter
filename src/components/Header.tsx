@@ -10,9 +10,9 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
-      <div className="xs:py-2 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:px-4">
+      <div className="phone-sm:py-2 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:px-4">
         <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50 lg:gap-6">
-          <div className="flex min-w-0 flex-row items-center gap-1 sm:gap-2">
+          <div className="phone:gap-2 flex min-w-0 flex-row items-center gap-1">
             <img
               src={LogoIcon}
               alt="Rotvodom Dog Shelter Logo"
@@ -62,7 +62,7 @@ const Header = () => {
             aria-label="Go to home section"
           >
             <HomeIcon
-              className="hover:text-primary-700 text-primary-500 xs:w-7 xs:h-7 h-5 w-5 shrink-0 cursor-pointer object-contain transition hover:scale-115 sm:h-8 sm:w-8"
+              className="hover:text-primary-700 text-primary-500 phone-sm:w-7 phone-sm:h-7 phone:h-8 phone:w-8 h-5 w-5 shrink-0 cursor-pointer object-contain transition hover:scale-115"
               aria-label="Home"
             />
           </a>

@@ -92,7 +92,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
   return (
     <div
-      className="fixed inset-0 z-53 flex items-center justify-center bg-black/60 backdrop-blur-sm sm:px-4"
+      className="phone:px-4 fixed inset-0 z-53 flex items-center justify-center bg-black/60 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -143,7 +143,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           )}
         </div>
 
-        <div className="p-4 sm:px-6 sm:py-2">
+        <div className="phone:px-6 phone:py-2 p-4">
           <div className="mb-2 flex flex-col items-start gap-2 md:flex-row md:items-center md:justify-between">
             <h3
               id="modal-title"
@@ -188,7 +188,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
           </div>
 
           <div className="4xl:mb-8 mb-4">
-            <div className="text-fluid-modal-desc xs:px-3 4xl:leading-tighter tablet-lg:leading-tight text-primary-700 px-2 text-justify leading-tight tracking-tight sm:px-1 lg:font-normal xl:px-3">
+            <div className="text-fluid-modal-desc phone-sm:px-3 4xl:leading-tighter tablet-lg:leading-tight text-primary-700 phone:px-1 px-2 text-justify leading-tight tracking-tight lg:font-normal xl:px-3">
               {description.map((line, index) => (
                 <p key={index} className="mb-2">
                   {line}
@@ -202,7 +202,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             size="medium"
             onClick={handleAdoptClick}
             disabled={isAdopted}
-            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm xs:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
+            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm phone-sm:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
             ariaLabel={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}

@@ -40,7 +40,7 @@ const SocialLinks = ({
 
   return (
     <div
-      className={`3xl:gap-4 xs:gap-2 tablet-lg:gap-4 flex items-center justify-center lg:gap-2 ${className || ''}`}
+      className={`3xl:gap-4 phone-sm:gap-2 tablet-lg:gap-4 flex items-center justify-center lg:gap-2 ${className || ''}`}
     >
       {socialNetworks.map((social) => (
         <a

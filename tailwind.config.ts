@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        xs: '360px',
-        sm: '412px',
+        'phone-sm': '360px',
+        phone: '412px',
         'tablet-sm': '480px',
         md: '768px',
         'tablet-lg': '820px',

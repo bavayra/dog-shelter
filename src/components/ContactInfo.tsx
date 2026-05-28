@@ -17,13 +17,13 @@ const ContactInfo = ({ className = '' }: ContactInfoProps) => {
       <div className="3xl:space-y-3 tablet-lg:text-primary-700 flex flex-col items-center space-y-1 text-neutral-500 md:text-lg">
         <p className="flex items-center gap-2">
           <EmailIcon
-            className="xs:h-5 xs:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
+            className="phone-sm:h-5 phone-sm:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
             aria-hidden="true"
           />
           <a
             rel="noopener noreferrer"
             href={`mailto:${CONTACT_EMAIL}`}
-            className="hover:text-primary-500 xs:text-base tablet-lg:text-lg 3xl:text-2xl text-xs transition-colors md:text-sm"
+            className="hover:text-primary-500 phone-sm:text-base tablet-lg:text-lg 3xl:text-2xl text-xs transition-colors md:text-sm"
             aria-label={`Email us at ${CONTACT_EMAIL}`}
           >
             {CONTACT_EMAIL}
@@ -31,21 +31,21 @@ const ContactInfo = ({ className = '' }: ContactInfoProps) => {
         </p>
         <p className="flex items-center gap-2">
           <PhoneIcon
-            className="xs:h-5 xs:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
+            className="phone-sm:h-5 phone-sm:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
             aria-hidden="true"
           />
           <a
             href={`tel:${CONTACT_PHONE.replace(/\s+/g, '')}`}
             rel="noopener noreferrer"
-            className="hover:text-primary-500 xs:text-base tablet-lg:text-lg 3xl:text-2xl text-xs transition-colors md:text-sm"
+            className="hover:text-primary-500 phone-sm:text-base tablet-lg:text-lg 3xl:text-2xl text-xs transition-colors md:text-sm"
             aria-label={`Call us at ${CONTACT_PHONE}`}
           >
             {CONTACT_PHONE}
           </a>
         </p>
-        <p className="xs:text-base tablet-lg:text-lg 3xl:text-2xl flex items-center gap-2 text-xs md:text-sm">
+        <p className="phone-sm:text-base tablet-lg:text-lg 3xl:text-2xl flex items-center gap-2 text-xs md:text-sm">
           <LocationIcon
-            className="xs:h-5 xs:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
+            className="phone-sm:h-5 phone-sm:w-5 tablet-lg:w-7 tablet-lg:h-7 h-3 w-3"
             aria-hidden="true"
           />
           <span>{CONTACT_ADDRESS}</span>
