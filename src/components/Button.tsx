@@ -9,7 +9,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   className?: string;
   ariaLabel?: string;
-  active?: boolean;
 }
 
 const Button = ({
