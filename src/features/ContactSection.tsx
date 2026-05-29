@@ -83,7 +83,7 @@ const ContactSection = () => {
 
     setIsSubmitting(true);
     try {
-      const resp = await fetch('https://httpbin.org/post', {
+      const resp = await fetch(import.meta.env.VITE_CONTACT_API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(sanitizedData),
