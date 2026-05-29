@@ -1,4 +1,4 @@
-export function sanitizeFormData(data: {
+export function normalizeFormData(data: {
   name: string;
   email: string;
   phone: string;

@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { sanitizeFormData } from '@/utils/sanitize';
+import { normalizeFormData } from '@/utils/sanitize';
 
 import Button from '@/components/Button';
 import TextInput from '@/components/TextInput';
@@ -79,7 +79,7 @@ const ContactSection = () => {
 
     if (!validateAll(rawData)) return;
 
-    const sanitizedData = sanitizeFormData(rawData);
+    const sanitizedData = normalizeFormData(rawData);
 
     setIsSubmitting(true);
     try {

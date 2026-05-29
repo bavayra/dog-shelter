@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { sanitizeFormData } from './sanitize';
+import { normalizeFormData } from './sanitize';
 
 describe('sanitizeFormData', () => {
   it('trims whitespace from all fields', () => {
@@ -10,7 +10,7 @@ describe('sanitizeFormData', () => {
       message: '  Hello world  ',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.name).toBe('John Doe');
     expect(result.email).toBe('john@example.com');
@@ -26,7 +26,7 @@ describe('sanitizeFormData', () => {
       message: 'Test',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.email).toBe('john@example.com');
   });
@@ -39,7 +39,7 @@ describe('sanitizeFormData', () => {
       message: 'Test',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.phone).toBe('+1 (555) 123-4567');
   });
@@ -52,7 +52,7 @@ describe('sanitizeFormData', () => {
       message: '',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.name).toBe('');
     expect(result.email).toBe('');
@@ -68,7 +68,7 @@ describe('sanitizeFormData', () => {
       message: '   ',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.name).toBe('');
     expect(result.email).toBe('');
@@ -84,7 +84,7 @@ describe('sanitizeFormData', () => {
       message: '  I want to adopt  a dog.\nPlease contact me.  ',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.message).toBe('I want to adopt  a dog.\nPlease contact me.');
   });
@@ -98,7 +98,7 @@ describe('sanitizeFormData', () => {
     };
 
     const inputCopy = { ...input };
-    sanitizeFormData(input);
+    normalizeFormData(input);
 
     expect(input).toEqual(inputCopy);
   });
@@ -111,7 +111,7 @@ describe('sanitizeFormData', () => {
       message: 'Test',
     };
 
-    const result = sanitizeFormData(input);
+    const result = normalizeFormData(input);
 
     expect(result.name).toBe('José García-López');
   });

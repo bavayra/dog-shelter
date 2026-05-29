@@ -169,7 +169,7 @@ Unit tests cover:
 
 - `useDogFilters` hook — filter state and dog filtering logic
 - `dogHelpers` utilities — age labels, gender badge colors
-- `sanitizeFormData` — form data normalization
+- `normalizeFormData` — form data normalization
 
 ## 🎨 Design System
 

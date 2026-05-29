@@ -27,5 +27,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Tailwind CSS 4.1 styling
 - ESLint + Prettier + Husky pre-commit hooks
 - Vitest testing framework with unit tests
-- DOMPurify for form input sanitization
+- Form data normalization utility (`normalizeFormData`)
 - Rate limiting on form submissions
