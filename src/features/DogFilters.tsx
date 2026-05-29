@@ -60,19 +60,19 @@ const DogFilters = ({
       </div>
 
       <div className="filters-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+        <fieldset className="m-0 border-0 p-0">
+          <legend className="filter-label text-primary-700 mb-2 block font-semibold">
             Age:
-          </label>
+          </legend>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(AGE_FILTER_OPTIONS, filters.age, onAgeChange)}
           </div>
-        </div>
+        </fieldset>
 
-        <div>
-          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+        <fieldset className="m-0 border-0 p-0">
+          <legend className="filter-label text-primary-700 mb-2 block font-semibold">
             Gender:
-          </label>
+          </legend>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               GENDER_FILTER_OPTIONS,
@@ -80,12 +80,12 @@ const DogFilters = ({
               onGenderChange
             )}
           </div>
-        </div>
+        </fieldset>
 
-        <div>
-          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+        <fieldset className="m-0 border-0 p-0">
+          <legend className="filter-label text-primary-700 mb-2 block font-semibold">
             Breed:
-          </label>
+          </legend>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               BREED_FILTER_OPTIONS,
@@ -93,12 +93,12 @@ const DogFilters = ({
               onBreedChange
             )}
           </div>
-        </div>
+        </fieldset>
 
-        <div>
-          <label className="filter-label text-primary-700 mb-2 block font-semibold">
+        <fieldset className="m-0 border-0 p-0">
+          <legend className="filter-label text-primary-700 mb-2 block font-semibold">
             Health:
-          </label>
+          </legend>
           <div className="5xl:gap-4 flex flex-wrap gap-2">
             {renderFilterButtons(
               HEALTH_FILTER_OPTIONS,
@@ -106,7 +106,7 @@ const DogFilters = ({
               onHealthChange
             )}
           </div>
-        </div>
+        </fieldset>
       </div>
 
       <div className="5xl:mt-16 mt-5 flex justify-end xl:mt-10">
