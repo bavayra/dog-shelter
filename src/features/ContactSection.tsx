@@ -81,9 +81,19 @@ const ContactSection = () => {
 
     const sanitizedData = normalizeFormData(rawData);
 
+    const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
+    if (!apiUrl) {
+      setSuccessMessage('Thank you! (Demo mode: form submission is disabled)');
+      setName('');
+      setPhone('');
+      setEmail('');
+      setMessage('');
+      return;
+    }
+
     setIsSubmitting(true);
     try {
-      const resp = await fetch(import.meta.env.VITE_CONTACT_API_URL, {
+      const resp = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(sanitizedData),
