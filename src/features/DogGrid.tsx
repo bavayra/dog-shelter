@@ -60,7 +60,7 @@ const DogGrid = () => {
         <>
           <div className="dog-grid-layout grid grid-cols-1 transition-all md:grid-cols-2 lg:grid-cols-3">
             {displayedDogs.map((dog) => (
-              <DogCard key={dog.id} {...dog} />
+              <DogCard key={dog.id} dog={dog} />
             ))}
           </div>
           {!showAll && hasMoreDogs && (

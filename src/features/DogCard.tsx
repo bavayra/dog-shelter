@@ -5,7 +5,7 @@ import { useState, memo } from 'react';
 import DogModal from '@/components/DogModal';
 import { getAgeLabel, getGenderBadgeColor } from '@/utils/dogHelpers';
 
-const DogCard = memo((dog: Dog) => {
+const DogCard = memo(({ dog }: { dog: Dog }) => {
   const { name, breed, age, gender, health, description, imageUrl, isAdopted } =
     dog;
 
