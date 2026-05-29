@@ -219,7 +219,7 @@ const ContactSection = () => {
                 variant="outline"
                 size="medium"
                 disabled={isSubmitting}
-                ariaLabel="Submit this form"
+                aria-label="Submit this form"
                 className="5xl:py-4 5xl:px-10 w-auto text-center font-semibold"
               >
                 {isSubmitting ? 'Sending...' : 'SEND MESSAGE'}

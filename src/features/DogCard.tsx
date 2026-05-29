@@ -94,7 +94,7 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
             onClick={(e) => e.stopPropagation()}
             disabled={isAdopted}
             className="dog-card-button mt-auto"
-            ariaLabel={`Adopt ${name}`}
+            aria-label={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home ❤️' : 'ADOPT ME'}
           </Button>

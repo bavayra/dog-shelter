@@ -46,7 +46,7 @@ const Header = () => {
               href="#contact"
               variant="secondary"
               size="medium"
-              ariaLabel="Go to contact form"
+              aria-label="Go to contact form"
               className="header-contact-button"
             >
               CONTACT US

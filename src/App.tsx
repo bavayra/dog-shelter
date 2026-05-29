@@ -55,7 +55,7 @@ function App() {
                 variant="primary"
                 size="large"
                 className="4xl:py-4 4xl:px-10 z-10 transition-transform hover:scale-105"
-                ariaLabel="Find Your Best Friend"
+                aria-label="Find Your Best Friend"
               >
                 Find Your Best Friend
               </Button>

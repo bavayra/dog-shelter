@@ -41,7 +41,7 @@ const HowToHelp = () => {
               variant="outline"
               size="large"
               className="help-donate-button flex items-center"
-              ariaLabel="Donate to help our pets button"
+              aria-label="Donate to help our pets button"
             >
               Help Our Pets Now
             </Button>

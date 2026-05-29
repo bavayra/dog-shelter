@@ -12,7 +12,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
-  ariaLabel?: string;
   href?: string;
 }
 
@@ -22,7 +21,6 @@ const Button = ({
   size = 'medium',
   className = '',
   disabled,
-  ariaLabel,
   href,
   ...props
 }: ButtonProps) => {
@@ -49,7 +47,6 @@ const Button = ({
       <a
         href={href}
         className={sharedClass}
-        aria-label={ariaLabel}
         {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
         {children}
@@ -58,12 +55,7 @@ const Button = ({
   }
 
   return (
-    <button
-      className={sharedClass}
-      disabled={disabled}
-      aria-label={ariaLabel}
-      {...props}
-    >
+    <button className={sharedClass} disabled={disabled} {...props}>
       {children}
     </button>
   );

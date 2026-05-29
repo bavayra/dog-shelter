@@ -196,7 +196,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             onClick={isAdopted ? undefined : onClose}
             disabled={isAdopted}
             className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm phone-sm:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
-            ariaLabel={`Adopt ${name}`}
+            aria-label={`Adopt ${name}`}
           >
             {isAdopted ? 'Already found home' : 'ADOPT ME'}
           </Button>
