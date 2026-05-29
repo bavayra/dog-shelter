@@ -88,9 +88,9 @@ const PhotoCarousel = () => {
         </svg>
       </button>
       <div className="mt-6 flex justify-center gap-2">
-        {shelterGallery.map((_, index) => (
+        {shelterGallery.map((image, index) => (
           <button
-            key={index}
+            key={image.imageUrl}
             onClick={() => goToSlide(index)}
             className={`h-3 rounded-full transition-all ${
               index === currentIndex
