@@ -37,7 +37,7 @@ Dog Shelter is a fully responsive web application designed to help visitors brow
 
 ### Technical Features
 
-- 🛡️ **Input Sanitization:** DOMPurify integration for secure form handling
+- 🛡️ **Input Sanitization:** Form fields are trimmed and normalized before submission. DOMPurify is intentionally not used here — form data is sent as a JSON payload via `fetch` and never rendered into the DOM, so there is no XSS surface to protect against at this layer. DOMPurify would be applied if any user-supplied content were injected into the DOM (e.g. via `innerHTML` or `dangerouslySetInnerHTML`)
 - 🔒 **Form Validation:** Client-side validation with user-friendly error messages
 - ⏱️ **Rate Limiting:** 30-second cooldown between form submissions
 - 🧩 **Component Architecture:** Modular, reusable components with TypeScript
@@ -51,7 +51,6 @@ Dog Shelter is a fully responsive web application designed to help visitors brow
 - **Styling:** Tailwind CSS 4.1 with custom theme and PostCSS
 - **Testing:** Vitest + Testing Library (unit tests for hooks and utilities)
 - **Code Quality:** ESLint, Prettier, Husky pre-commit hooks, lint-staged
-- **Additional Libraries:** DOMPurify (installed for sanitization)
 
 ## 📁 Project Structure
 
