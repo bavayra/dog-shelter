@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { NAVIGATION_ITEMS } from '@/constants';
 
 import ContactsIcon from '@/assets/icons/contacts-nav-icon.svg?react';
@@ -13,6 +13,14 @@ interface SidebarProps {
 
 const Sidebar = ({ className = '' }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isOpen) setIsOpen(false);
+    };
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [isOpen]);
 
   const iconMap = {
     pets: PetPawIcon,
