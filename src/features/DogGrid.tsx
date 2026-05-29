@@ -1,7 +1,7 @@
 import useDogFilters from './useDogFilters';
 import DogFilters from './DogFilters';
 import DogCard from './DogCard';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Button from '@/components/Button';
 
 const DogGrid = () => {
@@ -16,22 +16,27 @@ const DogGrid = () => {
   } = useDogFilters();
 
   const [showAll, setShowAll] = useState(false);
-  const [initialDisplayCount, setInitialDisplayCount] = useState(4);
+  const [initialDisplayCount, setInitialDisplayCount] = useState(() =>
+    window.innerWidth >= 1024 ? 6 : 4
+  );
+
+  const updateDisplayCount = useCallback(() => {
+    setInitialDisplayCount(window.innerWidth >= 1024 ? 6 : 4);
+  }, []);
 
   useEffect(() => {
-    const updateDisplayCount = () => {
-      if (window.innerWidth >= 1024) {
-        setInitialDisplayCount(6);
-      } else {
-        setInitialDisplayCount(4);
-      }
+    let timeoutId: ReturnType<typeof setTimeout>;
+    const handleResize = () => {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(updateDisplayCount, 300);
     };
 
-    updateDisplayCount();
-    window.addEventListener('resize', updateDisplayCount);
-
-    return () => window.removeEventListener('resize', updateDisplayCount);
-  }, []);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [updateDisplayCount]);
 
   const displayedDogs = showAll
     ? filteredDogs
