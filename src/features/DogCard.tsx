@@ -21,8 +21,13 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
     <>
       <article
         className="dog-card-container flex h-full cursor-pointer flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl md:mx-auto"
-        aria-label={`Dog card ${name}`}
+        role="button"
+        tabIndex={0}
+        aria-label={`Open details for ${name}`}
         onClick={() => setIsModalOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') setIsModalOpen(true);
+        }}
       >
         <div className="dog-card-image-height group relative overflow-hidden bg-neutral-200">
           {!isImageLoaded && (
