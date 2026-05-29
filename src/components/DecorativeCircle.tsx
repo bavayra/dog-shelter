@@ -1,4 +1,4 @@
-import React from 'react';
+import type { CSSProperties } from 'react';
 
 interface DecorativeCircleProps {
   sizeVariant: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -19,7 +19,7 @@ interface DecorativeCircleProps {
   className?: string;
 }
 
-export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
+export const DecorativeCircle = ({
   sizeVariant,
   color,
   top,
@@ -29,7 +29,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
   opacity,
   zIndex,
   className = '',
-}) => {
+}: DecorativeCircleProps) => {
   const colorMap: Record<string, string> = {
     'primary-50': 'var(--color-primary-50)',
     'primary-200': 'var(--color-primary-200)',
@@ -45,7 +45,7 @@ export const DecorativeCircle: React.FC<DecorativeCircleProps> = ({
     return `${num * 0.25}rem`;
   };
 
-  const style: React.CSSProperties = {
+  const style: CSSProperties = {
     backgroundColor: colorMap[color],
     top: top !== undefined ? parsePosition(top) : undefined,
     bottom: bottom !== undefined ? parsePosition(bottom) : undefined,
