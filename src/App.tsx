@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import LoadingSpinner from '@/components/LoadingSpinner';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Sidebar from '@/components/Sidebar';
@@ -129,43 +130,47 @@ function App() {
             </div>
             <DogGrid />
           </section>
-          <Suspense fallback={<LoadingSpinner message="Loading content..." />}>
-            <div className="phone:top-2 relative">
-              <DecorativeCircle
-                sizeVariant="xl"
-                color="primary-500"
-                top="-8"
-                left="-30"
-                opacity={20}
-                zIndex={2}
-                className="circle-after-dogs"
-              />
-            </div>
-            <HowToHelp />
-            <AdoptionRules />
-            <div className="relative">
-              <DecorativeCircle
-                sizeVariant="md"
-                color="primary-300"
-                top="0"
-                left="0"
-                opacity={40}
-                zIndex={10}
-                className="circle-about-md"
-              />
-              <DecorativeCircle
-                sizeVariant="xs"
-                color="primary-500"
-                top="0"
-                left="0"
-                opacity={90}
-                zIndex={10}
-                className="circle-about-xs"
-              />
-            </div>
-            <AboutUs />
-            <ContactSection />
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense
+              fallback={<LoadingSpinner message="Loading content..." />}
+            >
+              <div className="phone:top-2 relative">
+                <DecorativeCircle
+                  sizeVariant="xl"
+                  color="primary-500"
+                  top="-8"
+                  left="-30"
+                  opacity={20}
+                  zIndex={2}
+                  className="circle-after-dogs"
+                />
+              </div>
+              <HowToHelp />
+              <AdoptionRules />
+              <div className="relative">
+                <DecorativeCircle
+                  sizeVariant="md"
+                  color="primary-300"
+                  top="0"
+                  left="0"
+                  opacity={40}
+                  zIndex={10}
+                  className="circle-about-md"
+                />
+                <DecorativeCircle
+                  sizeVariant="xs"
+                  color="primary-500"
+                  top="0"
+                  left="0"
+                  opacity={90}
+                  zIndex={10}
+                  className="circle-about-xs"
+                />
+              </div>
+              <AboutUs />
+              <ContactSection />
+            </Suspense>
+          </ErrorBoundary>
         </main>
       </div>
       <Footer />
