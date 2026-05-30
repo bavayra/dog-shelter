@@ -76,8 +76,8 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
             )}
             <div className="dog-card-desc-spacing shrink overflow-hidden">
               <div className="dog-card-desc-text text-primary-700 text-left">
-                {description.map((line) => (
-                  <p key={line}>{line}</p>
+                {description.map((line, i) => (
+                  <p key={i}>{line}</p>
                 ))}
               </div>
             </div>
