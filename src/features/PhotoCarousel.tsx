@@ -1,22 +1,35 @@
-import { useState } from 'react';
+import { useState, useCallback, type KeyboardEvent } from 'react';
 import { shelterGallery } from '@/data/gallery';
 import { getGalleryImage, PLACEHOLDER_IMAGE } from '@/utils/images';
 
 const PhotoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === shelterGallery.length - 1 ? 0 : prevIndex + 1
     );
-  };
-  const prevSlide = () => {
+  }, []);
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? shelterGallery.length - 1 : prevIndex - 1
     );
-  };
+  }, []);
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextSlide();
+      }
+    },
+    [prevSlide, nextSlide]
+  );
 
   const currentImage = shelterGallery[currentIndex];
 
@@ -25,7 +38,13 @@ const PhotoCarousel = () => {
   const resolvedImageUrl = getGalleryImage(currentImage.imageUrl);
 
   return (
-    <div className="carousel-container bg-primary-50 relative z-10 mx-auto rounded-2xl">
+    <div
+      className="carousel-container bg-primary-50 relative z-10 mx-auto rounded-2xl"
+      role="region"
+      aria-label="Photo gallery"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+    >
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         Slide {currentIndex + 1} of {shelterGallery.length}:{' '}
         {currentImage.caption}
