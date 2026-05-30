@@ -76,18 +76,14 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
             )}
             <div className="dog-card-desc-spacing shrink overflow-hidden">
               <div className="dog-card-desc-text text-primary-700 text-left">
-                {description
-                  .filter((line) => !line.startsWith('-'))
-                  .map((line, i) => (
-                    <p key={i}>{line}</p>
-                  ))}
-                {description.some((line) => line.startsWith('-')) && (
+                <p>{description.intro}</p>
+                {description.traits.length > 0 && (
                   <ul className="mt-1 list-none">
-                    {description
-                      .filter((line) => line.startsWith('-'))
-                      .map((line, i) => (
-                        <li key={i}>{line.slice(1).trim()}</li>
-                      ))}
+                    {description.traits.map((trait) => (
+                      <li key={trait.label}>
+                        {trait.label}: {trait.value}
+                      </li>
+                    ))}
                   </ul>
                 )}
               </div>

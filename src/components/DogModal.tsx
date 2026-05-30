@@ -147,22 +147,14 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
 
           <div className="4xl:mb-8 mb-4">
             <div className="text-fluid-modal-desc phone-sm:px-3 4xl:leading-tighter tablet-lg:leading-tight text-primary-700 phone:px-1 px-2 text-justify leading-tight tracking-tight lg:font-normal xl:px-3">
-              {description
-                .filter((line) => !line.startsWith('-'))
-                .map((line, i) => (
-                  <p key={i} className="mb-2">
-                    {line}
-                  </p>
-                ))}
-              {description.some((line) => line.startsWith('-')) && (
+              <p className="mb-2">{description.intro}</p>
+              {description.traits.length > 0 && (
                 <ul className="mt-1 list-disc pl-4">
-                  {description
-                    .filter((line) => line.startsWith('-'))
-                    .map((line, i) => (
-                      <li key={i} className="mb-1">
-                        {line.slice(1).trim()}
-                      </li>
-                    ))}
+                  {description.traits.map((trait) => (
+                    <li key={trait.label} className="mb-1">
+                      <strong>{trait.label}:</strong> {trait.value}
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>

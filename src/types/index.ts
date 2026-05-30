@@ -1,3 +1,13 @@
+export interface DogTrait {
+  label: string;
+  value: string;
+}
+
+export interface DogDescription {
+  intro: string;
+  traits: DogTrait[];
+}
+
 export interface Dog {
   id: number;
   name: string;
@@ -5,7 +15,7 @@ export interface Dog {
   age: '' | 'under-1' | '1-3' | '4-7' | '8-plus';
   gender: 'Boy' | 'Girl';
   health: 'Healthy' | 'Special needs';
-  description: string[];
+  description: DogDescription;
   imageUrl: string;
   isAdopted: boolean;
 }
