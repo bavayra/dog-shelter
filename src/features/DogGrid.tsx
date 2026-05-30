@@ -1,7 +1,7 @@
 import useDogFilters from './useDogFilters';
 import DogFilters from './DogFilters';
 import DogCard from './DogCard';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '@/components/Button';
 
 const DogGrid = () => {
@@ -16,27 +16,18 @@ const DogGrid = () => {
   } = useDogFilters();
 
   const [showAll, setShowAll] = useState(false);
-  const [initialDisplayCount, setInitialDisplayCount] = useState(() =>
-    window.innerWidth >= 1024 ? 6 : 4
+  const [isDesktop, setIsDesktop] = useState(
+    () => window.matchMedia('(min-width: 1024px)').matches
   );
 
-  const updateDisplayCount = useCallback(() => {
-    setInitialDisplayCount(window.innerWidth >= 1024 ? 6 : 4);
+  useEffect(() => {
+    const mql = window.matchMedia('(min-width: 1024px)');
+    const handleChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+    mql.addEventListener('change', handleChange);
+    return () => mql.removeEventListener('change', handleChange);
   }, []);
 
-  useEffect(() => {
-    let timeoutId: ReturnType<typeof setTimeout>;
-    const handleResize = () => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(updateDisplayCount, 300);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [updateDisplayCount]);
+  const initialDisplayCount = isDesktop ? 6 : 4;
 
   const displayedDogs = showAll
     ? filteredDogs
