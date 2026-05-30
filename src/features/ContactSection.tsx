@@ -70,16 +70,9 @@ const ContactSection = () => {
     setErrorMessage('');
     setErrors({});
 
-    const rawData = {
-      name: name.trim(),
-      phone: phone.trim(),
-      email: email.trim(),
-      message: message.trim(),
-    };
+    const sanitizedData = normalizeFormData({ name, phone, email, message });
 
-    if (!validateAll(rawData)) return;
-
-    const sanitizedData = normalizeFormData(rawData);
+    if (!validateAll(sanitizedData)) return;
 
     const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
     if (!apiUrl) {
