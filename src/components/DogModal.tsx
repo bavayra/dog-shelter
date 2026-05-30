@@ -3,6 +3,7 @@ import type { Dog } from '@/types';
 import Button from '@/components/Button';
 import { getDogImage, PLACEHOLDER_IMAGE } from '@/utils/images';
 import { getAgeLabel, getGenderBadgeColor } from '@/utils/dogHelpers';
+import useFocusTrap from '@/hooks/useFocusTrap';
 
 interface DogModalProps {
   dog: Dog;
@@ -12,6 +13,7 @@ interface DogModalProps {
 
 const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!isOpen) return;
     const originalOverflow = document.body.style.overflow;
@@ -38,41 +40,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen, onClose]);
 
-  useEffect(() => {
-    if (!isOpen || !modalRef.current) return;
-
-    const modal = modalRef.current;
-    const closeButton = modal.querySelector(
-      '[aria-label*="Close"]'
-    ) as HTMLElement;
-    closeButton?.focus();
-
-    const focusableElements = modal.querySelectorAll<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
-
-    const handleTab = (e: KeyboardEvent) => {
-      if (e.key !== 'Tab') return;
-
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          e.preventDefault();
-          lastElement?.focus();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          e.preventDefault();
-          firstElement?.focus();
-        }
-      }
-    };
-
-    modal.addEventListener('keydown', handleTab);
-
-    return () => modal.removeEventListener('keydown', handleTab);
-  }, [isOpen]);
+  useFocusTrap(modalRef, isOpen);
   if (!isOpen) return null;
 
   const { name, breed, age, gender, health, description, imageUrl, isAdopted } =

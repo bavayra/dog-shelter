@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NAVIGATION_ITEMS } from '@/constants';
+import useFocusTrap from '@/hooks/useFocusTrap';
 
 import ContactsIcon from '@/assets/icons/contacts-nav-icon.svg?react';
 import HelpIcon from '@/assets/icons/help-nav-icon.svg?react';
@@ -21,6 +22,7 @@ const iconMap = {
 
 const Sidebar = ({ className = '' }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -29,6 +31,8 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
+
+  useFocusTrap(sidebarRef, isOpen);
 
   return (
     <>
@@ -61,10 +65,31 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
       )}
 
       <aside
+        ref={sidebarRef}
         className={`bg-primary-500 tablet-sm:w-72 phone-sm:w-50 tablet-lg:w-88 phone:w-54 fixed top-0 bottom-0 left-0 z-52 h-full w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:w-80 lg:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
+        <button
+          className="absolute top-4 right-4 text-neutral-300 hover:text-neutral-700 lg:hidden"
+          onClick={() => setIsOpen(false)}
+          aria-label="Close sidebar"
+        >
+          <svg
+            className="tablet-sm:w-8 tablet-sm:h-8 h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
         <nav className="tablet-lg:mt-8 phone-sm:mt-4 relative p-4 md:pl-12">
           <h2 className="tablet-sm:text-2xl tablet-lg:text-3xl mb-4 text-lg font-bold text-neutral-50">
             NAVIGATION
@@ -95,25 +120,6 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
             style={{ bottom: '0' }}
           ></div>
         </nav>
-        <button
-          className="absolute top-4 right-4 text-neutral-300 hover:text-neutral-700 lg:hidden"
-          onClick={() => setIsOpen(false)}
-          aria-label="Close sidebar"
-        >
-          <svg
-            className="tablet-sm:w-8 tablet-sm:h-8 h-6 w-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
       </aside>
     </>
   );
