@@ -8,6 +8,8 @@ const DogGrid = () => {
   const {
     filters,
     filteredDogs,
+    showAll,
+    setShowAll,
     setAgeFilter,
     setGenderFilter,
     setHealthFilter,
@@ -15,7 +17,6 @@ const DogGrid = () => {
     resetFilters,
   } = useDogFilters();
 
-  const [showAll, setShowAll] = useState(false);
   const [isDesktop, setIsDesktop] = useState(
     () =>
       typeof window !== 'undefined' &&

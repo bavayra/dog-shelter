@@ -10,23 +10,30 @@ const useDogFilters = () => {
     breed: '',
   });
 
+  const [showAll, setShowAll] = useState(false);
+
   const setAgeFilter = (age: DogFilters['age']) => {
+    setShowAll(false);
     setFilters((prev) => ({ ...prev, age }));
   };
 
   const setGenderFilter = (gender: DogFilters['gender']) => {
+    setShowAll(false);
     setFilters((prev) => ({ ...prev, gender }));
   };
 
   const setHealthFilter = (health: DogFilters['health']) => {
+    setShowAll(false);
     setFilters((prev) => ({ ...prev, health }));
   };
 
   const setBreedFilter = (breed: DogFilters['breed']) => {
+    setShowAll(false);
     setFilters((prev) => ({ ...prev, breed }));
   };
 
   const resetFilters = () => {
+    setShowAll(false);
     setFilters({
       age: '',
       gender: '',
@@ -56,6 +63,8 @@ const useDogFilters = () => {
   return {
     filters,
     filteredDogs,
+    showAll,
+    setShowAll,
     setAgeFilter,
     setGenderFilter,
     setHealthFilter,
