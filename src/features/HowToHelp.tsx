@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import Button from '@/components/Button';
 import RottweilerPupImage from '@/assets/icons/rott-puppy-bg-image.avif';
 
 const HowToHelp = () => {

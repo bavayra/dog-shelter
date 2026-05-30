@@ -9,7 +9,7 @@ import { shelterStats } from '@/data/dogs';
 import DogGrid from '@/features/DogGrid';
 import SocialLinks from '@/components/SocialLinks';
 import RottweilerImage from '@/assets/icons/rott-image-bg.avif';
-import { DecorativeCircle } from './components/DecorativeCircle';
+import { DecorativeCircle } from '@/components/DecorativeCircle';
 
 const AdoptionRules = lazy(() => import('./features/AdoptionRules'));
 const AboutUs = lazy(() => import('./features/AboutUs'));
