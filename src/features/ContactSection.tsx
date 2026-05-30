@@ -10,6 +10,8 @@ import TextInput from '@/components/TextInput';
 import { DecorativeCircle } from '@/components/DecorativeCircle';
 import ContactInfo from '@/components/ContactInfo';
 
+const MIN_SUBMIT_INTERVAL = 30000;
+
 const ContactSection = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -22,7 +24,6 @@ const ContactSection = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
-  const MIN_SUBMIT_INTERVAL = 30000;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
