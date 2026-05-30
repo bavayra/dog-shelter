@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import type { Dog } from '@/types';
 import Button from '@/components/Button';
-import { getDogImage } from '@/utils/images';
+import { getDogImage, PLACEHOLDER_IMAGE } from '@/utils/images';
 import { getAgeLabel, getGenderBadgeColor } from '@/utils/dogHelpers';
 
 interface DogModalProps {
@@ -123,8 +123,7 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             className="modal-image mx-auto h-full w-full object-cover md:w-auto md:rounded-2xl md:object-contain"
             loading="lazy"
             onError={(e) => {
-              e.currentTarget.src =
-                'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23ddd" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" fill="%23999"%3EImage not found%3C/text%3E%3C/svg%3E';
+              e.currentTarget.src = PLACEHOLDER_IMAGE;
             }}
           />
 

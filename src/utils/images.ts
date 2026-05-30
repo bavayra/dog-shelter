@@ -1,3 +1,6 @@
+export const PLACEHOLDER_IMAGE =
+  'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23ddd" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" fill="%23999"%3EImage not found%3C/text%3E%3C/svg%3E';
+
 const imageModules = import.meta.glob<{ default: string }>(
   '../assets/dogs-images/*.{jpg,jpeg,png,webp,svg}',
   { eager: true }
@@ -32,7 +35,7 @@ for (const path in galleryImageModules) {
 
 export const getDogImage = (
   fileName: string,
-  fallback = '/placeholder-dog.jpg'
+  fallback = PLACEHOLDER_IMAGE
 ): string => {
   if (fileName.startsWith('http://') || fileName.startsWith('https://')) {
     return fileName;
@@ -42,7 +45,7 @@ export const getDogImage = (
 
 export const getGalleryImage = (
   fileName: string,
-  fallback = '/placeholder-gallery.jpg'
+  fallback = PLACEHOLDER_IMAGE
 ): string => {
   if (fileName.startsWith('http://') || fileName.startsWith('https://')) {
     return fileName;

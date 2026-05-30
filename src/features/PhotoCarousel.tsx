@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { shelterGallery } from '@/data/gallery';
-import { getGalleryImage } from '@/utils/images';
+import { getGalleryImage, PLACEHOLDER_IMAGE } from '@/utils/images';
 
 const PhotoCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,8 +37,7 @@ const PhotoCarousel = () => {
           className="carousel-image w-full object-cover transition-opacity duration-500"
           loading="lazy"
           onError={(e) => {
-            e.currentTarget.src =
-              'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23ddd" width="400" height="300"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" fill="%23999"%3EImage not found%3C/text%3E%3C/svg%3E';
+            e.currentTarget.src = PLACEHOLDER_IMAGE;
           }}
         />
         <div className="absolute right-0 bottom-0 left-0 bg-black/40 p-2 backdrop-blur-sm">
