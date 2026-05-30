@@ -1,5 +1,9 @@
 import { useState, type FormEvent } from 'react';
 import { normalizeFormData } from '@/utils/sanitize';
+import {
+  validateContactForm,
+  type ContactFormErrors,
+} from '@/utils/contactValidation';
 
 import Button from '@/components/Button';
 import TextInput from '@/components/TextInput';
@@ -13,46 +17,9 @@ const ContactSection = () => {
   const [message, setMessage] = useState('');
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    phone?: string;
-    message?: string;
-  }>({});
+  const [errors, setErrors] = useState<ContactFormErrors>({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
-  const isValidEmail = (s: string) => {
-    const emailRegex =
-      /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/;
-    return emailRegex.test(s);
-  };
-  const isValidPhone = (s: string) => {
-    const phoneRegex =
-      /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{4,}$/;
-    const digitsOnly = s.replace(/\D/g, '');
-    return (
-      phoneRegex.test(s) && digitsOnly.length >= 10 && digitsOnly.length <= 15
-    );
-  };
-
-  const validateAll = (data: {
-    name: string;
-    email: string;
-    phone: string;
-    message: string;
-  }) => {
-    const e: typeof errors = {};
-    if (!data.name) e.name = 'Name is required';
-    if (!data.email) e.email = 'Email is required';
-    else if (!isValidEmail(data.email)) e.email = 'Invalid email format';
-    if (!data.phone) e.phone = 'Phone number is required';
-    else if (!isValidPhone(data.phone)) e.phone = 'Invalid phone number';
-    if (!data.message || data.message.length < 5)
-      e.message = 'Message is too short';
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  };
 
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
   const MIN_SUBMIT_INTERVAL = 30000;
@@ -72,7 +39,9 @@ const ContactSection = () => {
 
     const sanitizedData = normalizeFormData({ name, phone, email, message });
 
-    if (!validateAll(sanitizedData)) return;
+    const validationErrors = validateContactForm(sanitizedData);
+    setErrors(validationErrors);
+    if (Object.keys(validationErrors).length > 0) return;
 
     const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
     if (!apiUrl) {
