@@ -86,16 +86,27 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
         </button>
 
         <div className="px-4 pb-4">
-          <Button
-            href={isAdopted ? undefined : '#contact'}
-            variant={isAdopted ? 'secondary' : 'primary'}
-            size="medium"
-            disabled={isAdopted}
-            className="dog-card-button w-full"
-            aria-label={`Adopt ${name}`}
-          >
-            {isAdopted ? 'Already found home ❤️' : 'ADOPT ME'}
-          </Button>
+          {isAdopted ? (
+            <Button
+              variant="secondary"
+              size="medium"
+              disabled
+              className="dog-card-button w-full"
+              aria-label={`${name} has already been adopted`}
+            >
+              Already found home ❤️
+            </Button>
+          ) : (
+            <Button
+              href="#contact"
+              variant="primary"
+              size="medium"
+              className="dog-card-button w-full"
+              aria-label={`Adopt ${name}`}
+            >
+              ADOPT ME
+            </Button>
+          )}
         </div>
       </article>
 

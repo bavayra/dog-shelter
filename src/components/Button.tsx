@@ -7,25 +7,41 @@ import type {
 type ButtonVariant = 'primary' | 'secondary' | 'outline';
 type ButtonSize = 'small' | 'medium' | 'large';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+/**
+ * Shared visual props that apply to both <button> and <a> variants.
+ */
+interface BaseProps {
   children: ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
-  href?: string;
-  target?: string;
 }
 
-const Button = ({
-  children,
-  variant = 'primary',
-  size = 'medium',
-  className = '',
-  disabled,
-  target,
-  href,
-  ...props
-}: ButtonProps) => {
+/**
+ * When no `href` is provided the component renders a <button>.
+ * `href?: never` is the discriminant: it prevents passing href=undefined
+ * and allows TypeScript to narrow the union inside the component body.
+ */
+type ButtonAsButton = BaseProps &
+  ButtonHTMLAttributes<HTMLButtonElement> & { href?: never };
+
+/**
+ * When `href` is provided the component renders an <a>.
+ * All anchor-specific attributes (rel, target, download, …) are available
+ * automatically through AnchorHTMLAttributes — no manual listing needed.
+ */
+type ButtonAsAnchor = BaseProps &
+  AnchorHTMLAttributes<HTMLAnchorElement> & { href: string };
+
+type ButtonProps = ButtonAsButton | ButtonAsAnchor;
+
+const Button = (props: ButtonProps) => {
+  const {
+    children,
+    variant = 'primary',
+    size = 'medium',
+    className = '',
+  } = props;
   const baseStyles =
     ' rounded-full transform transition-all duration-200 px-6 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
   const variantStyles: Record<ButtonVariant, string> = {
@@ -44,20 +60,34 @@ const Button = ({
 
   const sharedClass = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
-  if (href) {
+  // TypeScript narrows `props` to ButtonAsAnchor here because ButtonAsButton
+  // has `href?: never`, meaning props.href can only be undefined in that branch.
+  if (props.href !== undefined) {
+    const {
+      href,
+      variant: _variant,
+      size: _size,
+      className: _className,
+      children: _children,
+      ...anchorProps
+    } = props;
     return (
-      <a
-        href={href}
-        className={sharedClass}
-        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
-      >
+      <a href={href} className={sharedClass} {...anchorProps}>
         {children}
       </a>
     );
   }
 
+  // TypeScript narrows `props` to ButtonAsButton here.
+  const {
+    variant: _variant,
+    size: _size,
+    className: _className,
+    children: _children,
+    ...buttonProps
+  } = props;
   return (
-    <button className={sharedClass} disabled={disabled} {...props}>
+    <button className={sharedClass} {...buttonProps}>
       {children}
     </button>
   );

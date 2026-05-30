@@ -188,17 +188,28 @@ const DogModal = ({ dog, isOpen, onClose }: DogModalProps) => {
             </div>
           </div>
 
-          <Button
-            href={isAdopted ? undefined : '#contact'}
-            variant={isAdopted ? 'secondary' : 'primary'}
-            size="medium"
-            onClick={isAdopted ? undefined : onClose}
-            disabled={isAdopted}
-            className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm phone-sm:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
-            aria-label={`Adopt ${name}`}
-          >
-            {isAdopted ? 'Already found home' : 'ADOPT ME'}
-          </Button>
+          {isAdopted ? (
+            <Button
+              variant="secondary"
+              size="medium"
+              disabled
+              className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm phone-sm:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
+              aria-label={`${name} has already been adopted`}
+            >
+              Already found home
+            </Button>
+          ) : (
+            <Button
+              href="#contact"
+              variant="primary"
+              size="medium"
+              onClick={onClose}
+              className="4xl:w-xs 5xl:w-md 5xl:py-4 6xl:w-sm phone-sm:px-16 tablet-lg:w-xs mx-auto flex w-auto justify-center md:mb-6"
+              aria-label={`Adopt ${name}`}
+            >
+              ADOPT ME
+            </Button>
+          )}
         </div>
       </div>
     </div>
