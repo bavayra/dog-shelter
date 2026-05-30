@@ -17,10 +17,13 @@ const DogGrid = () => {
 
   const [showAll, setShowAll] = useState(false);
   const [isDesktop, setIsDesktop] = useState(
-    () => window.matchMedia('(min-width: 1024px)').matches
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(min-width: 1024px)').matches
   );
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const mql = window.matchMedia('(min-width: 1024px)');
     const handleChange = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
     mql.addEventListener('change', handleChange);
