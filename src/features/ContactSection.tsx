@@ -76,6 +76,7 @@ const ContactSection = () => {
 
     const apiUrl = import.meta.env.VITE_CONTACT_API_URL;
     if (!apiUrl) {
+      setLastSubmitTime(now);
       setSuccessMessage('Thank you! (Demo mode: form submission is disabled)');
       setName('');
       setPhone('');
