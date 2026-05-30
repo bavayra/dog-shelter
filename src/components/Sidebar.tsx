@@ -11,6 +11,14 @@ interface SidebarProps {
   className?: string;
 }
 
+const iconMap = {
+  pets: PetPawIcon,
+  help: HelpIcon,
+  'adoption-rules': RulesIcon,
+  about: AboutUsIcon,
+  contact: ContactsIcon,
+};
+
 const Sidebar = ({ className = '' }: SidebarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,14 +29,6 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
-
-  const iconMap = {
-    pets: PetPawIcon,
-    help: HelpIcon,
-    'adoption-rules': RulesIcon,
-    about: AboutUsIcon,
-    contact: ContactsIcon,
-  };
 
   return (
     <>
