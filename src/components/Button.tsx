@@ -13,6 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
   className?: string;
   href?: string;
+  target?: string;
 }
 
 const Button = ({
@@ -21,6 +22,7 @@ const Button = ({
   size = 'medium',
   className = '',
   disabled,
+  target,
   href,
   ...props
 }: ButtonProps) => {

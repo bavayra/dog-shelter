@@ -31,21 +31,17 @@ const HowToHelp = () => {
         </div>
 
         <div className="help-button-container flex justify-center">
-          <a
+          <Button
             href="https://qr.nspk.ru/example-link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block"
+            variant="outline"
+            size="large"
+            className="help-donate-button flex items-center"
+            aria-label="Donate to help our pets"
           >
-            <Button
-              variant="outline"
-              size="large"
-              className="help-donate-button flex items-center"
-              aria-label="Donate to help our pets button"
-            >
-              Help Our Pets Now
-            </Button>
-          </a>
+            Help Our Pets Now
+          </Button>
         </div>
       </div>
       <img
