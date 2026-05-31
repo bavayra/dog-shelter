@@ -320,10 +320,6 @@ html {
       font-weight: 700;
       line-height: 1.5;
     }
-    .circle-decorative-about {
-      transform: translateX(clamp(-90%, -4.17vw + -33.33%, -33.33%))
-        translateY(clamp(-20%, -0.69vw + -15%, -10%));
-    }
     .text-fluid-rules-heading {
       font-size: clamp(2.25rem, 5.9vw + 0.923rem, 8rem);
     }
@@ -441,19 +437,6 @@ html {
       margin-top: clamp(0rem, 2.73vw + 2.182rem, 12.5rem);
       margin-left: clamp(-10rem, -1.36vw + -7.655rem, -3.5rem);
     }
-    .circle-about-md {
-      transform: translateX(clamp(-33.33%, 66.67vw + -50%, 100%))
-        translateY(clamp(20%, -10vw + 50%, 40%));
-      margin-top: clamp(-0.5rem, 0.68vw + -0.591rem, 3rem);
-      margin-left: clamp(1rem, 0.45vw + 0.462rem, 3rem);
-    }
-    .circle-about-xs {
-      transform: translateX(clamp(-10%, 116.67vw + -66.67%, 245%))
-        translateY(clamp(85%, -27.27vw + 175.45%, 145%));
-      margin-top: clamp(-0.5rem, 0.57vw + -0.682rem, 2.5rem);
-      margin-left: clamp(0rem, 0.34vw + 0.727rem, 2rem);
-    }
-
     /* About Section */
     .about-heading {
       margin-top: clamp(0rem, -1.14vw + 4.655rem, 2.5rem);

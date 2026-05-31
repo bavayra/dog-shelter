@@ -147,26 +147,6 @@ function App() {
               </div>
               <HowToHelp />
               <AdoptionRules />
-              <div className="relative">
-                <DecorativeCircle
-                  sizeVariant="md"
-                  color="primary-300"
-                  top="0"
-                  left="0"
-                  opacity={40}
-                  zIndex={10}
-                  className="circle-about-md"
-                />
-                <DecorativeCircle
-                  sizeVariant="xs"
-                  color="primary-500"
-                  top="0"
-                  left="0"
-                  opacity={90}
-                  zIndex={10}
-                  className="circle-about-xs"
-                />
-              </div>
               <AboutUs />
               <ContactSection />
             </Suspense>
