@@ -5,7 +5,7 @@ const HowToHelp = () => {
   return (
     <section
       id="help"
-      className="bg-primary-50 border-b-primary-500 help-section-height phone:pt-10 relative z-1 scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30"
+      className="bg-primary-50 border-b-primary-500 help-section-height phone:pt-10 relative z-1 scroll-mt-20 overflow-hidden border-b-3 pb-30"
     >
       <div className="z-10 container mx-auto px-4">
         <h2 className="text-fluid-help-heading text-primary-500 heading-help-spacing mb-0 text-center font-bold">
