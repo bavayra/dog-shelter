@@ -605,7 +605,8 @@ html {
       margin-bottom: clamp(1rem, 0.91vw + 0.773rem, 2rem);
     }
     .contact-grid {
-      width: clamp(100%, 10.23vw + 90.91rem, 100rem);
+      width: 100%;
+      max-width: 100rem;
       gap: clamp(0.5rem, 6.82vw + -6.727rem, 7.5rem);
       padding-inline: clamp(0rem, 0.59vw + -0.455rem, 2rem);
       margin: clamp(0rem, 0.44vw + -0.341rem, 1.5rem);
