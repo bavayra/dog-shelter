@@ -25,7 +25,7 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
           onClick={() => setIsModalOpen(true)}
           aria-label={`Open details for ${name}`}
         >
-          <div className="dog-card-image-height relative overflow-hidden bg-neutral-200">
+          <div className="dog-card-image-height relative w-full overflow-hidden bg-neutral-200">
             {!isImageLoaded && (
               <div className="absolute inset-0 animate-pulse bg-neutral-200" />
             )}
@@ -78,10 +78,10 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
               <div className="dog-card-desc-text text-primary-700 text-left">
                 <p>{description.intro}</p>
                 {description.traits.length > 0 && (
-                  <ul className="mt-1 list-none">
+                  <ul className="mt-1 list-disc pl-4">
                     {description.traits.map((trait) => (
-                      <li key={trait.label}>
-                        {trait.label}: {trait.value}
+                      <li key={trait.label} className="mb-1">
+                        <strong>{trait.label}:</strong> {trait.value}
                       </li>
                     ))}
                   </ul>
