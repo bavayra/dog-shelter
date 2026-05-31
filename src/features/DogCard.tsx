@@ -19,13 +19,13 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
 
   return (
     <>
-      <article className="dog-card-container flex h-full flex-col overflow-hidden rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl md:mx-auto">
+      <article className="dog-card-container flex h-full flex-col rounded-lg bg-neutral-50 shadow-md transition-all duration-300 hover:scale-[1.02] hover:shadow-xl md:mx-auto">
         <button
           className="focus-visible:ring-primary-500 group flex min-h-0 w-full flex-1 cursor-pointer flex-col text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-inset"
           onClick={() => setIsModalOpen(true)}
           aria-label={`Open details for ${name}`}
         >
-          <div className="dog-card-image-height relative w-full overflow-hidden bg-neutral-200">
+          <div className="dog-card-image-height relative w-full overflow-hidden rounded-t-lg bg-neutral-200">
             {!isImageLoaded && (
               <div className="absolute inset-0 animate-pulse bg-neutral-200" />
             )}
@@ -92,13 +92,13 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
           </div>
         </button>
 
-        <div className="px-4 pb-4">
+        <div className="flex justify-center px-4 pb-2">
           {isAdopted ? (
             <Button
               variant="secondary"
               size="medium"
               disabled
-              className="dog-card-button w-full"
+              className="dog-card-button phone-sm:px-16 -translate-y-1/2"
               aria-label={`${name} has already been adopted`}
             >
               Already found home ❤️
@@ -108,7 +108,7 @@ const DogCard = memo(({ dog }: { dog: Dog }) => {
               href="#contact"
               variant="primary"
               size="medium"
-              className="dog-card-button w-full"
+              className="dog-card-button phone-sm:px-16 -translate-y-1/2"
               aria-label={`Adopt ${name}`}
             >
               ADOPT ME
