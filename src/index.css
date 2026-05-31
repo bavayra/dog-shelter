@@ -485,6 +485,7 @@ html {
     .rule-text {
       font-size: clamp(0.875rem, 0.68vw + 0.705rem, 1.5rem);
       padding-inline: clamp(0rem, 0.11vw + -0.136rem, 2.5rem);
+      color: #747787;
     }
 
     /* Filters Section */
