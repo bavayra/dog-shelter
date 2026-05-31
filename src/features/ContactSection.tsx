@@ -83,21 +83,26 @@ const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="bg-primary-200 pt-8 pb-10 md:px-6">
-      <div className="xl2:mr-20 3xl:mr-32 mr-6xl-sm 6xl:mr-110 relative">
-        <DecorativeCircle
-          sizeVariant="xxs"
-          color="primary-50"
-          top="0"
-          right="0"
-          zIndex={10}
-          opacity={70}
-          className="circle-contact-xxs"
-        />
+    <section
+      id="contact"
+      className="bg-primary-200 relative pt-8 pb-10 md:px-6"
+    >
+      <div className="flex justify-center">
+        <div className="relative w-fit">
+          <DecorativeCircle
+            sizeVariant="xxs"
+            color="primary-50"
+            top="0"
+            right="0"
+            zIndex={10}
+            opacity={70}
+            className="circle-contact-xxs"
+          />
+          <h2 className="contact-heading text-fluid-contact-heading text-primary-500 relative z-11 leading-snug font-bold">
+            Contact Us
+          </h2>
+        </div>
       </div>
-      <h2 className="contact-heading text-fluid-contact-heading text-primary-500 relative z-11 text-center leading-snug font-bold">
-        Contact Us
-      </h2>
       <div className="contact-grid tablet-lg:grid tablet-lg:grid-cols-2 relative flex justify-center md:mx-auto">
         <div className="contact-form-wrapper w-full px-6">
           <form id="contact-form" onSubmit={handleSubmit} className="space-y-2">
@@ -157,7 +162,7 @@ const ContactSection = () => {
             <div>
               <label
                 htmlFor="input-message"
-                className="contact-label mb-4 block"
+                className="contact-label mb-4 block text-neutral-700"
               >
                 Message
               </label>
@@ -176,28 +181,27 @@ const ContactSection = () => {
                 </p>
               )}
             </div>
-            <div className="relative">
-              <DecorativeCircle
-                sizeVariant="xxs"
-                color="primary-500"
-                top="0"
-                left="0"
-                zIndex={12}
-                className="phone-sm:translate-x-[220%] 3xl:ml-14 4xl:ml-18 5xl:ml-32 5xl:-mt-2 tablet-sm:translate-x-[260%] tablet-lg:translate-x-[120%] tablet-lg:-mt-1 phone:ml-5 translate-x-[150%] translate-y-[20%] md:translate-x-[220%] lg:ml-9 xl:ml-18"
-              />
-            </div>
-
             <div className="flex justify-center pt-4">
-              <Button
-                type="submit"
-                variant="outline"
-                size="medium"
-                disabled={isSubmitting}
-                aria-label="Submit this form"
-                className="5xl:py-4 5xl:px-10 w-auto text-center font-semibold"
-              >
-                {isSubmitting ? 'Sending...' : 'SEND MESSAGE'}
-              </Button>
+              <div className="relative">
+                <DecorativeCircle
+                  sizeVariant="xxs"
+                  color="primary-500"
+                  top="0"
+                  left="0"
+                  zIndex={12}
+                  className="-translate-x-1/3 -translate-y-1/3"
+                />
+                <Button
+                  type="submit"
+                  variant="outline"
+                  size="medium"
+                  disabled={isSubmitting}
+                  aria-label="Submit this form"
+                  className="5xl:py-4 5xl:px-10 w-auto text-center font-semibold"
+                >
+                  {isSubmitting ? 'Sending...' : 'SEND MESSAGE'}
+                </Button>
+              </div>
             </div>
 
             {successMessage && (

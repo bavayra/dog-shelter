@@ -453,12 +453,6 @@ html {
       margin-top: clamp(-0.5rem, 0.57vw + -0.682rem, 2.5rem);
       margin-left: clamp(0rem, 0.34vw + 0.727rem, 2rem);
     }
-    .circle-contact-xxs {
-      transform: translateX(clamp(-860%, 482.95vw + -1363.64%, 200%))
-        translateY(clamp(20%, 22.73vw + -3.636%, 70%));
-      margin-top: clamp(-0.75rem, -0.03vw + -0.227rem, 0rem);
-      margin-right: clamp(1.5rem, 1.14vw + 0.845rem, 8rem);
-    }
 
     /* About Section */
     .about-heading {
