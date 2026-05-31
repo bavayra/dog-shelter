@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-grid tablet-lg:grid-cols-2 container mx-auto grid grid-cols-1 justify-items-center px-4 md:grid-cols-3">
         <div>
           <h3 className="footer-heading text-center font-bold">{APP_NAME}</h3>
-          <p className="footer-description text-center text-neutral-300">
+          <p className="footer-description mx-auto w-[60%] text-center text-neutral-300">
             Find your perfect companion and give a shelter dog a loving home.
           </p>
         </div>
