@@ -338,6 +338,7 @@ html {
       column-gap: clamp(0rem, 1.39vw + -0.844rem, 4rem);
       row-gap: clamp(1rem, 0.35vw + 0.906rem, 1.5rem);
       max-width: clamp(36rem, -8.33vw + 74.67rem, 80rem);
+      padding-inline: 1rem;
     }
     .rules-button {
       font-size: clamp(1rem, 1.3vw + 0.6rem, 2.25rem);
@@ -347,8 +348,8 @@ html {
       margin-bottom: clamp(1rem, 1.52vw + 0.636rem, 1.5rem);
     }
     .rules-intro {
-      width: clamp(100%, -5.45vw + 111.82%, 95rem);
-      padding-inline: clamp(0rem, -5.45vw + 11.91rem, 15rem);
+      width: 80%;
+      max-width: 95rem;
       margin-top: clamp(1rem, 0vw + 1rem, 1rem);
       margin-bottom: clamp(1.5rem, 0.91vw + 1.364rem, 2rem);
     }
@@ -468,9 +469,9 @@ html {
 
     /* Rules Section */
     .rule-card {
-      width: clamp(100%, 4.55vw + 88.18%, 40rem);
+      width: 100%;
       max-width: clamp(20rem, -11.36vw + 52.73rem, 36rem);
-      margin-inline: clamp(0.5rem, 0.91vw + 0.091rem, 4rem);
+      margin-inline: auto;
       padding-inline: clamp(1.5rem, 0.45vw + 1.338rem, 2rem);
       padding-block: clamp(1rem, -0.11vw + 1.136rem, 1.5rem);
     }
