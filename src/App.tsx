@@ -142,7 +142,7 @@ function App() {
                   left="-30"
                   opacity={20}
                   zIndex={2}
-                  className="circle-after-dogs"
+                  className="circle-after-dogs hidden"
                 />
               </div>
               <HowToHelp />
