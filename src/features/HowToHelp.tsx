@@ -8,7 +8,7 @@ const HowToHelp = () => {
       className="bg-primary-50 border-b-primary-500 help-section-height phone:pt-10 relative z-1 scroll-mt-20 overflow-hidden border-b-3 pt-6 pb-30"
     >
       <div className="z-10 container mx-auto px-4">
-        <h2 className="text-fluid-help-heading text-primary-500 heading-help-spacing text-center font-bold">
+        <h2 className="text-fluid-help-heading text-primary-500 heading-help-spacing mb-0 text-center font-bold">
           How to Help ROTVODOM
         </h2>
         <div className="help-content-width mx-auto text-center">
@@ -20,7 +20,7 @@ const HowToHelp = () => {
             donation helps us provide food, medical care, and a safe home for
             dogs in need.
           </p>
-          <p className="help-support-text leading-relaxed">
+          <p className="text-fluid-help-body leading-relaxed text-neutral-700">
             Your support makes a{' '}
             <span className="text-primary-500 font-semibold">
               real difference
