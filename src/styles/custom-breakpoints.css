@@ -34,6 +34,47 @@
   }
 }
 
+@media (min-width: 391px) and (max-width: 412px) {
+  #hero {
+    padding-top: 4rem;
+  }
+  .circle-hero-transform {
+    transform: translateY(128%) translateX(-50%);
+  }
+  .heading-fluid-hero {
+    font-size: 2.5rem;
+    max-width: 25rem;
+  }
+  .glass-card {
+    font-size: 1.05rem;
+    padding-inline: 1.5rem;
+    margin-top: 4rem;
+  }
+  .img-fluid-hero-dog {
+    width: 20rem;
+    height: 20rem;
+  }
+  .circle-xl {
+    width: 21rem;
+    height: 21rem;
+  }
+  .circle-md {
+    width: 12rem;
+    height: 12rem;
+  }
+  .circle-sm {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+  .hero-circle-sm {
+    transform: translateX(-195%) translateY(50%);
+  }
+  .social-link-sm {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
 @media (max-width: 1023px) {
   #hero.hero-vh {
     max-height: 100lvh;
