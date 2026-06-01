@@ -100,6 +100,9 @@
   .circle-hero-transform {
     transform: translateY(148%) translateX(-50%);
   }
+  .hero-circle-sm {
+    transform: translateX(-225%) translateY(50%);
+  }
   .heading-fluid-hero {
     font-size: 3rem;
     max-width: 26rem;
