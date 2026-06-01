@@ -1,6 +1,6 @@
 /* Custom breakpoints for specific screen dimensions */
 
-@media (max-width: 360px) and (min-height: 750px) {
+@media (max-width: 375px) and (min-height: 750px) {
   #hero {
     padding-top: 3.5rem;
   }
