@@ -132,6 +132,21 @@
     width: 3.25rem;
     height: 3.25rem;
   }
+  .dog-grid-layout {
+    justify-items: center;
+  }
+  .dog-card-container {
+    width: 24rem;
+  }
+  #help {
+    padding-bottom: 7rem;
+  }
+  .rule-text {
+    font-size: 1.05rem;
+  }
+  .about-circle-xs {
+    transform: translateY(115%);
+  }
 }
 
 @media (max-width: 1023px) {
