@@ -1,11 +1,36 @@
 /* Custom breakpoints for specific screen dimensions */
 
-@media (max-width: 375px) and (min-height: 750px) {
+@media (max-width: 390px) and (min-height: 750px) {
   #hero {
     padding-top: 3.5rem;
   }
   .circle-hero-transform {
     margin-top: 2rem;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 390px) {
+  .about-circle-xs {
+    transform: translateY(50%);
+  }
+  .img-fluid-hero-dog {
+    width: 18.5rem;
+    height: 18.5rem;
+  }
+  .circle-xl {
+    width: 20rem;
+    height: 20rem;
+  }
+  .circle-md {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+  .circle-sm {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+  .hero-circle-sm {
+    transform: translateX(-230%) translateY(50%);
   }
 }
 
