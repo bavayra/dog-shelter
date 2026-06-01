@@ -73,6 +73,24 @@
     width: 3.5rem;
     height: 3.5rem;
   }
+  .dog-grid-layout {
+    justify-items: center;
+  }
+  .help-section-height {
+    min-height: auto;
+  }
+  .help-button-container {
+    margin-bottom: 0;
+  }
+  #help {
+    padding-bottom: 10rem;
+  }
+  .rule-text {
+    font-size: 1rem;
+  }
+  .contact-label {
+    font-size: 1.125rem;
+  }
 }
 
 @media (max-width: 1023px) {
