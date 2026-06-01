@@ -1,5 +1,14 @@
 /* Custom breakpoints for specific screen dimensions */
 
+@media (max-width: 360px) and (min-height: 750px) {
+  #hero {
+    padding-top: 3.5rem;
+  }
+  .circle-hero-transform {
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 1023px) {
   #hero.hero-vh {
     max-height: 100lvh;
