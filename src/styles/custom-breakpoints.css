@@ -93,6 +93,44 @@
   }
 }
 
+@media (min-width: 413px) and (max-width: 428px) {
+  #hero {
+    padding-top: 4.5rem;
+  }
+  .circle-hero-transform {
+    transform: translateY(148%) translateX(-50%);
+  }
+  .heading-fluid-hero {
+    font-size: 3rem;
+    max-width: 26rem;
+  }
+  .glass-card {
+    font-size: 1.1rem;
+    padding-inline: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .img-fluid-hero-dog {
+    width: 19.5rem;
+    height: 19.5rem;
+  }
+  .circle-xl {
+    width: 23rem;
+    height: 23rem;
+  }
+  .circle-md {
+    width: 13.13rem;
+    height: 13.13rem;
+  }
+  .circle-sm {
+    width: 7.53rem;
+    height: 7.53rem;
+  }
+  .social-link-sm {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
 @media (max-width: 1023px) {
   #hero.hero-vh {
     max-height: 100lvh;
