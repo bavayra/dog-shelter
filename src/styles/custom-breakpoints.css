@@ -278,7 +278,6 @@
     min-width: fit-content;
     white-space: nowrap;
   }
-
   #hero {
     height: calc(var(--vph, 100svh) - 5.25rem);
     max-height: calc(var(--vph, 100svh) - 5.25rem);
@@ -290,7 +289,6 @@
   .py-fluid-hero-bottom {
     padding-bottom: 1rem;
   }
-
   .heading-fluid-hero {
     font-size: 4rem;
     max-width: 34rem;
@@ -319,6 +317,19 @@
   .hero-social-position {
     gap: 1.25rem;
     margin-top: 2.5rem;
+  }
+  .hero-circle-xl {
+    width: 32rem;
+    height: 32rem;
+  }
+  .hero-circle-md {
+    width: 20rem;
+    height: 20rem;
+  }
+  .hero-circle-sm {
+    width: 14rem;
+    height: 14rem;
+    transform: translateX(-150%) translateY(40%);
   }
 }
 
