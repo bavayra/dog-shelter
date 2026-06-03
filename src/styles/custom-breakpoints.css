@@ -149,6 +149,47 @@
   }
 }
 
+@media (min-width: 429px) and (max-width: 480px) {
+  /* Header */
+  .text-fluid-logo {
+    font-size: 1.125rem;
+  }
+  .header-logo {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  #hero {
+    padding-top: 4rem;
+  }
+  .circle-hero-transform {
+    transform: translateY(100%) translateX(-50%);
+  }
+  .heading-fluid-hero {
+    font-size: 3rem;
+    max-width: 30rem;
+  }
+  .glass-card {
+    font-size: 1rem;
+    padding-inline: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .hero-cta-section p {
+    font-size: 1.125rem;
+  }
+  .img-fluid-hero-dog {
+    width: 16rem;
+    height: 16rem;
+  }
+  .social-link-sm {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .hero-circle-sm {
+    transform: translateX(-230%) translateY(50%);
+  }
+}
+
 @media (max-width: 1023px) {
   #hero.hero-vh {
     max-height: 100lvh;
