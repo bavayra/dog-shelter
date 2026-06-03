@@ -37,7 +37,7 @@ const HowToHelp = () => {
             rel="noopener noreferrer"
             variant="outline"
             size="large"
-            className="help-donate-button phone:mb-10 flex items-center"
+            className="help-donate-button phone:mb-10 flex items-center md:mb-20"
             aria-label="Donate to help our pets"
           >
             Help Our Pets Now
