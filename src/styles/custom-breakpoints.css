@@ -250,6 +250,9 @@
     height: 10rem;
     transform: translateX(-190%) translateY(40%);
   }
+  .contact-form-wrapper {
+    max-width: 32rem;
+  }
 }
 
 @media (max-width: 1023px) {
