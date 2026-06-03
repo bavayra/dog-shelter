@@ -210,6 +210,46 @@
     padding-bottom: 0.75rem;
     padding-inline: 1.5rem;
   }
+  .py-fluid-hero-top {
+    padding-top: 5.5rem;
+  }
+  .heading-fluid-hero {
+    font-size: 3.5rem;
+    max-width: 30rem;
+  }
+  .glass-card {
+    font-size: 1.125rem;
+  }
+  .hero-cta-section {
+    margin-inline: auto;
+  }
+  .hero-cta-section p {
+    font-size: 1.25rem;
+  }
+  .img-fluid-hero-dog {
+    width: 24rem;
+    height: 24rem;
+  }
+  .social-link-sm {
+    width: 4rem;
+    height: 4rem;
+  }
+  .hero-social-position {
+    gap: 1rem;
+  }
+  .hero-circle-xl {
+    width: 26rem;
+    height: 26rem;
+  }
+  .hero-circle-md {
+    width: 16rem;
+    height: 16rem;
+  }
+  .hero-circle-sm {
+    width: 10rem;
+    height: 10rem;
+    transform: translateX(-190%) translateY(40%);
+  }
 }
 
 @media (max-width: 1023px) {
