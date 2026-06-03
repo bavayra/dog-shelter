@@ -188,6 +188,12 @@
   .hero-circle-sm {
     transform: translateX(-230%) translateY(50%);
   }
+  .dog-card-container {
+    width: 26rem;
+  }
+  .dog-grid-layout {
+    justify-items: center;
+  }
 }
 
 @media (max-width: 1023px) {
