@@ -37,7 +37,7 @@ const HowToHelp = () => {
             rel="noopener noreferrer"
             variant="outline"
             size="large"
-            className="help-donate-button flex items-center"
+            className="help-donate-button phone:mb-10 flex items-center"
             aria-label="Donate to help our pets"
           >
             Help Our Pets Now
@@ -48,7 +48,7 @@ const HowToHelp = () => {
         src={RottweilerPupImage}
         alt=""
         aria-hidden="true"
-        className="from-primary-50 puppy-image pointer-events-none absolute bottom-0 left-1/2 z-3 h-auto w-full -translate-x-1/2 translate-y-1/4 overflow-visible bg-linear-to-b to-neutral-50 object-contain placeholder-purple-50 md:bg-none"
+        className="from-primary-50 puppy-image tablet-sm:translate-y-1/4 pointer-events-none absolute bottom-0 left-1/2 z-3 h-auto w-full -translate-x-1/2 translate-y-1/4 overflow-visible bg-linear-to-b to-neutral-50 object-contain placeholder-purple-50 md:bg-none"
       />
     </section>
   );
