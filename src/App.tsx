@@ -27,62 +27,64 @@ function App() {
             id="hero"
             className="from-primary-200 to-primary-50 hero-height border-primary-500 px-fluid-hero py-fluid-hero-top py-fluid-hero-bottom relative flex flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md"
           >
-            <h2 className="heading-fluid-hero text-primary-700 relative z-10 mx-auto w-full text-center font-semibold">
-              Give a Shelter Dog a Loving Home
-            </h2>
-            <DecorativeCircle
-              sizeVariant="lg"
-              color="primary-500"
-              top="0"
-              left="0"
-              opacity={70}
-              className="circle-hero-transform circle-position-6xl-md 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 lg:-mt-16"
-            />
-            <div className="glass-card text-primary-700 relative z-10 mx-auto rounded-3xl text-center font-semibold">
-              <p className="4xl:mb-4 mb-2">
-                DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
-              </p>
-              <p className="4xl:mb-4 mb-2">
-                DOGS ADOPTED THIS YEAR: {shelterStats.dogsAdoptedThisYear}
-              </p>
-              <p className="mb-2">
-                TOTAL DOGS ADOPTED: {shelterStats.dogsAdoptedTotal}
-              </p>
-            </div>
+            <div className="pt-32">
+              <h2 className="heading-fluid-hero text-primary-700 relative z-10 mx-auto w-full text-center font-semibold">
+                Give a Shelter Dog a Loving Home
+              </h2>
+              <DecorativeCircle
+                sizeVariant="lg"
+                color="primary-500"
+                top="0"
+                left="0"
+                opacity={70}
+                className="circle-hero-transform circle-position-6xl-md 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 lg:-mt-16"
+              />
+              <div className="glass-card text-primary-700 relative z-10 mx-auto rounded-3xl text-center font-semibold">
+                <p className="4xl:mb-4 mb-2">
+                  DOGS IN ROTVODOM NOW: {shelterStats.totalDogsNow}{' '}
+                </p>
+                <p className="4xl:mb-4 mb-2">
+                  DOGS ADOPTED THIS YEAR: {shelterStats.dogsAdoptedThisYear}
+                </p>
+                <p className="mb-2">
+                  TOTAL DOGS ADOPTED: {shelterStats.dogsAdoptedTotal}
+                </p>
+              </div>
 
-            <div className="tablet-lg:-mt-6 -mt-4 flex justify-center">
-              <Button
-                href="#pets"
-                variant="primary"
-                size="large"
-                className="4xl:py-4 4xl:px-10 z-10 transition-transform hover:scale-105"
-                aria-label="Find Your Best Friend"
-              >
-                Find Your Best Friend
-              </Button>
-            </div>
-            <div className="hero-cta-section relative z-10 mt-6 max-w-2xl px-4">
-              <p className="text-primary-700 text-center font-semibold lg:hidden xl:block">
-                Left behind and waiting each day—many gentle hearts long for a
-                warm lap and a loving home. We are Autonomous Non-profit
-                Organization (ANO), we only spend and never earn. We rely solely
-                on the{' '}
-                <a
-                  href="#help"
-                  className="hover:text-primary-900 text-primary-700 font-bold underline transition-colors"
-                  aria-label="Go to How to Help section"
+              <div className="tablet-lg:-mt-6 -mt-4 flex justify-center">
+                <Button
+                  href="#pets"
+                  variant="primary"
+                  size="large"
+                  className="4xl:py-4 4xl:px-10 z-10 transition-transform hover:scale-105"
+                  aria-label="Find Your Best Friend"
                 >
-                  generosity
-                </a>{' '}
-                of people.
-              </p>
+                  Find Your Best Friend
+                </Button>
+              </div>
+              <div className="hero-cta-section relative z-10 mt-6 max-w-2xl px-4">
+                <p className="text-primary-700 text-center font-semibold lg:hidden xl:block">
+                  Left behind and waiting each day—many gentle hearts long for a
+                  warm lap and a loving home. We are Autonomous Non-profit
+                  Organization (ANO), we only spend and never earn. We rely
+                  solely on the{' '}
+                  <a
+                    href="#help"
+                    className="hover:text-primary-900 text-primary-700 font-bold underline transition-colors"
+                    aria-label="Go to How to Help section"
+                  >
+                    generosity
+                  </a>{' '}
+                  of people.
+                </p>
+              </div>
+              <SocialLinks
+                size="sm"
+                className="hero-social-position gap-2"
+                iconColor="text-neutral-50"
+                bgColor="bg-primary-500"
+              />
             </div>
-            <SocialLinks
-              size="sm"
-              className="hero-social-position gap-2"
-              iconColor="text-neutral-50"
-              bgColor="bg-primary-500"
-            />
             <div>
               <DecorativeCircle
                 sizeVariant="xl"
