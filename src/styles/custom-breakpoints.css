@@ -331,6 +331,34 @@
     height: 14rem;
     transform: translateX(-150%) translateY(40%);
   }
+
+  /* Dog grid */
+  .dog-grid-layout {
+    column-gap: 2rem;
+  }
+  .dog-card-container {
+    width: 18rem;
+    min-height: 27rem;
+    margin-inline: auto;
+  }
+
+  /* Filters */
+  .filter-button {
+    font-size: 1rem;
+  }
+  .filters-container {
+    max-width: 56rem;
+  }
+
+  /* Rule cards */
+  .rule-text {
+    font-size: 1.125rem;
+  }
+
+  /* About section */
+  .about-content {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 1023px) {
