@@ -196,6 +196,22 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 819px) {
+  /* Header */
+  .header-logo {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+  .text-fluid-logo {
+    font-size: 1.625rem;
+  }
+  header .container {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-inline: 1.5rem;
+  }
+}
+
 @media (max-width: 1023px) {
   #hero.hero-vh {
     max-height: 100lvh;
