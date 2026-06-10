@@ -250,6 +250,9 @@
     height: 10rem;
     transform: translateX(-190%) translateY(40%);
   }
+  .about-circle-xs {
+    transform: translateX(-10%) translateY(10%);
+  }
   .contact-form-wrapper {
     max-width: 32rem;
   }
