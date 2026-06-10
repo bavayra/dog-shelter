@@ -398,19 +398,13 @@
     min-width: fit-content;
     white-space: nowrap;
   }
-
-  /* Hero statistics */
   .glass-card {
     font-size: 1.375rem;
-    max-width: 34rem;
+    max-width: 30rem;
   }
-
-  /* Hero CTA button */
   .btn-text-large {
     font-size: 1.25rem;
   }
-
-  /* Hero decorative circles (bottom-right) */
   .hero-circle-xl {
     width: 27rem;
     height: 27rem;
