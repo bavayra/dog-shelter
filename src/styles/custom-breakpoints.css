@@ -373,6 +373,65 @@
   }
 }
 
+@media (min-width: 1280px) and (max-width: 1439px) {
+  /* Header */
+  header .container {
+    padding-inline: 3rem;
+  }
+  header h1 {
+    overflow: visible;
+    text-overflow: clip;
+    min-width: max-content;
+  }
+  .header-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .text-fluid-logo {
+    font-size: 2rem;
+  }
+  .text-fluid-nav {
+    font-size: 1rem;
+  }
+  .header-contact-button {
+    width: auto;
+    min-width: fit-content;
+    white-space: nowrap;
+  }
+
+  /* Hero statistics */
+  .glass-card {
+    font-size: 1.375rem;
+    max-width: 34rem;
+  }
+
+  /* Hero CTA button */
+  .btn-text-large {
+    font-size: 1.25rem;
+  }
+
+  /* Hero decorative circles (bottom-right) */
+  .hero-circle-xl {
+    width: 27rem;
+    height: 27rem;
+  }
+  .hero-circle-md {
+    width: 16rem;
+    height: 16rem;
+  }
+  .hero-circle-sm {
+    width: 10rem;
+    height: 10rem;
+    transform: translateX(-160%) translateY(40%);
+  }
+
+  /* Hero dog image */
+  .img-fluid-hero-dog {
+    width: 34rem;
+    height: 34rem;
+  }
+}
+
 @media (min-width: 2560px) and (min-height: 1440px) {
   .mt-6xl-sm {
     margin-top: 4.5rem;
