@@ -39,7 +39,7 @@ const AboutUs = () => {
             zIndex={5}
             className="top-1/2 hidden translate-x-1/2 -translate-y-1/2"
           />
-          <div className="about-content bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto rounded-2xl border-2 text-center md:mx-auto">
+          <div className="about-content bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto rounded-2xl border-2 text-center">
             <p>
               Rotvodom was founded in 2010 by Rotvomama, who started building a
               shelter in her own backyard by herself. She started taking in one

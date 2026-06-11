@@ -440,6 +440,12 @@
   .rule-card {
     width: 90%;
   }
+
+  .about-content {
+    font-size: 1.5rem;
+    width: 60rem;
+    margin: 0;
+  }
 }
 
 @media (min-width: 2560px) and (min-height: 1440px) {
