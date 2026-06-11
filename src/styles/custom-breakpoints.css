@@ -434,6 +434,12 @@
   .dog-grid-container {
     max-width: 70rem;
   }
+  #adoption-rules .container {
+    max-width: 70rem;
+  }
+  .rule-card {
+    width: 90%;
+  }
 }
 
 @media (min-width: 2560px) and (min-height: 1440px) {

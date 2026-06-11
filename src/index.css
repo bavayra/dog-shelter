@@ -438,14 +438,11 @@ html {
       margin-top: clamp(0rem, 2.73vw + 2.182rem, 12.5rem);
       margin-left: clamp(-10rem, -1.36vw + -7.655rem, -3.5rem);
     }
-    /* About Section */
     .about-heading {
       margin-top: clamp(0rem, -1.14vw + 4.655rem, 2.5rem);
       margin-bottom: clamp(1rem, 1.36vw + 0.345rem, 3rem);
       padding-top: clamp(0rem, 0.68vw + -0.245rem, 0.5rem);
     }
-
-    /* Rules Section */
     .rule-card {
       width: 100%;
       max-width: clamp(20rem, -11.36vw + 52.73rem, 36rem);
