@@ -197,7 +197,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 819px) {
-  /* Header */
   .header-logo {
     width: 3.25rem;
     height: 3.25rem;
@@ -334,8 +333,6 @@
     height: 14rem;
     transform: translateX(-150%) translateY(40%);
   }
-
-  /* Dog grid */
   .dog-grid-layout {
     column-gap: 2rem;
   }
@@ -374,9 +371,9 @@
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
-  /* Header */
   header .container {
     padding-inline: 3rem;
+    max-width: 100%;
   }
   header h1 {
     overflow: visible;
