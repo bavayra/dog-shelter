@@ -158,7 +158,6 @@
     width: 2.5rem;
     height: 2.5rem;
   }
-
   #hero {
     padding-top: 4rem;
   }
@@ -395,12 +394,24 @@
     min-width: fit-content;
     white-space: nowrap;
   }
+  .heading-fluid-hero {
+    max-width: fit-content;
+  }
+  .py-fluid-hero-top {
+    padding-top: 0;
+  }
   .glass-card {
     font-size: 1.375rem;
     max-width: 30rem;
   }
   .btn-text-large {
     font-size: 1.25rem;
+  }
+  .hero-social-position {
+    transform: none;
+  }
+  .circle-hero-transform {
+    transform: translateX(-50%) translateY(45%);
   }
   .hero-circle-xl {
     width: 27rem;
@@ -409,17 +420,16 @@
   .hero-circle-md {
     width: 16rem;
     height: 16rem;
+    transform: translateX(-55%) translateY(40%);
   }
   .hero-circle-sm {
     width: 10rem;
     height: 10rem;
-    transform: translateX(-160%) translateY(40%);
+    transform: translateX(-200%) translateY(40%);
   }
-
-  /* Hero dog image */
   .img-fluid-hero-dog {
-    width: 34rem;
-    height: 34rem;
+    width: 26rem;
+    height: 26rem;
   }
 }
 
