@@ -440,11 +440,17 @@
   .rule-card {
     width: 90%;
   }
-
   .about-content {
     font-size: 1.5rem;
     max-width: 60rem;
     margin-inline: auto;
+  }
+  .contact-grid {
+    width: 80%;
+  }
+  .circle-contact-xxs {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 

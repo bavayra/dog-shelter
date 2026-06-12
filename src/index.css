@@ -559,8 +559,6 @@ html {
     .modal-emoji {
       font-size: clamp(1.5rem, 0.34vw + 1.414rem, 2.25rem);
     }
-
-    /* Carousel */
     .carousel-container {
       max-width: clamp(36rem, 7.27vw + 30.55rem, 56rem);
       margin-bottom: clamp(0rem, 0.8vw + -0.606rem, 3.5rem);
@@ -575,8 +573,6 @@ html {
       width: clamp(1.5rem, 0.23vw + 1.455rem, 3rem);
       height: clamp(1.5rem, 0.23vw + 1.455rem, 3rem);
     }
-
-    /* Contact Section */
     .contact-heading {
       margin-bottom: clamp(1rem, 0.91vw + 0.773rem, 2rem);
     }
