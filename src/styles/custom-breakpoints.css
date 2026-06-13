@@ -1,15 +1,5 @@
 /* Custom breakpoints for specific screen dimensions */
-
-@media (max-width: 390px) and (min-height: 750px) {
-  #hero {
-    padding-top: 3.5rem;
-  }
-  .circle-hero-transform {
-    margin-top: 2rem;
-  }
-}
-
-@media (min-width: 376px) and (max-width: 390px) {
+@media (min-width: 376px) {
   .about-circle-xs {
     transform: translateY(50%);
   }
@@ -32,9 +22,15 @@
   .hero-circle-sm {
     transform: translateX(-230%) translateY(50%);
   }
+  #hero {
+    padding-top: 3.5rem;
+  }
+  .circle-hero-transform {
+    margin-top: 2rem;
+  }
 }
 
-@media (min-width: 391px) and (max-width: 412px) {
+@media (min-width: 391px) {
   #hero {
     padding-top: 4rem;
   }
@@ -66,9 +62,6 @@
     width: 6.75rem;
     height: 6.75rem;
   }
-  .hero-circle-sm {
-    transform: translateX(-230%) translateY(50%);
-  }
   .social-link-sm {
     width: 3.5rem;
     height: 3.5rem;
@@ -93,23 +86,18 @@
   }
 }
 
-@media (min-width: 413px) and (max-width: 428px) {
+@media (min-width: 413px) {
   #hero {
     padding-top: 4.5rem;
   }
   .circle-hero-transform {
     transform: translateY(148%) translateX(-50%);
   }
-  .hero-circle-sm {
-    transform: translateX(-225%) translateY(50%);
-  }
   .heading-fluid-hero {
     font-size: 3rem;
     max-width: 26rem;
   }
   .glass-card {
-    font-size: 1.1rem;
-    padding-inline: 1.5rem;
     margin-top: 2.5rem;
   }
   .img-fluid-hero-dog {
@@ -136,21 +124,15 @@
     width: 3.25rem;
     height: 3.25rem;
   }
-  .dog-grid-layout {
-    justify-items: center;
-  }
   .dog-card-container {
     width: 24rem;
   }
   #help {
     padding-bottom: 7rem;
   }
-  .rule-text {
-    font-size: 1.05rem;
-  }
 }
 
-@media (min-width: 429px) and (max-width: 480px) {
+@media (min-width: 429px) {
   .text-fluid-logo {
     font-size: 1.125rem;
   }
@@ -165,12 +147,9 @@
     transform: translateY(100%) translateX(-50%);
   }
   .heading-fluid-hero {
-    font-size: 3rem;
     max-width: 30rem;
   }
   .glass-card {
-    font-size: 1rem;
-    padding-inline: 1.5rem;
     margin-top: 1.5rem;
   }
   .hero-cta-section p {
@@ -184,18 +163,12 @@
     width: 3.5rem;
     height: 3.5rem;
   }
-  .hero-circle-sm {
-    transform: translateX(-230%) translateY(50%);
-  }
   .dog-card-container {
     width: 26rem;
   }
-  .dog-grid-layout {
-    justify-items: center;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 819px) {
+@media (min-width: 768px) {
   .header-logo {
     width: 3.25rem;
     height: 3.25rem;
@@ -204,8 +177,7 @@
     font-size: 1.625rem;
   }
   header .container {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-block: 0.75rem;
     padding-inline: 1.5rem;
   }
   .py-fluid-hero-top {
@@ -213,7 +185,6 @@
   }
   .heading-fluid-hero {
     font-size: 3.5rem;
-    max-width: 30rem;
   }
   .glass-card {
     font-size: 1.125rem;
@@ -256,7 +227,7 @@
   }
 }
 
-@media (min-width: 820px) and (max-width: 1023px) {
+@media (min-width: 820px) {
   .header-logo {
     width: 3.5rem;
     height: 3.5rem;
@@ -265,8 +236,7 @@
     font-size: 1.75rem;
   }
   header .container {
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
+    padding-block: 0.875rem;
     padding-inline: 2rem;
   }
   header h1 {
@@ -298,10 +268,8 @@
   }
   .glass-card {
     font-size: 1.25rem;
-    margin-top: 1.5rem;
   }
   .hero-cta-section {
-    margin-inline: auto;
     margin-top: 1.5rem;
   }
   .hero-cta-section p {
@@ -362,7 +330,7 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) {
   header .container {
     max-width: 100%;
     padding-inline: 4.5rem;
@@ -400,22 +368,13 @@
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1439px) {
+@media (min-width: 1280px) {
   header .container {
     padding-inline: 3rem;
-    max-width: 100%;
-  }
-  header h1 {
-    overflow: visible;
-    text-overflow: clip;
-    min-width: max-content;
   }
   .header-logo {
     width: 3.5rem;
     height: 3.5rem;
-  }
-  .text-fluid-logo {
-    font-size: 2rem;
   }
   .text-fluid-nav {
     font-size: 1rem;
@@ -428,18 +387,12 @@
   .heading-fluid-hero {
     max-width: fit-content;
   }
-  .py-fluid-hero-top {
-    padding-top: 0;
-  }
   .glass-card {
     font-size: 1.375rem;
     max-width: 30rem;
   }
   .btn-text-large {
     font-size: 1.25rem;
-  }
-  .hero-social-position {
-    transform: none;
   }
   .circle-hero-transform {
     transform: translateX(-50%) translateY(45%);
@@ -472,7 +425,6 @@
     width: 90%;
   }
   .about-content {
-    font-size: 1.5rem;
     max-width: 60rem;
     margin-inline: auto;
   }
