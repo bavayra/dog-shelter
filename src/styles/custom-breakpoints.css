@@ -378,6 +378,26 @@
     max-height: calc(100vh - 4rem);
     max-height: calc(var(--vph, 100vh) - 4rem);
   }
+  .heading-fluid-hero {
+    font-size: 5rem;
+    max-width: 42rem;
+  }
+  .glass-card {
+    font-size: 1.5rem;
+    max-width: 36rem;
+    margin-top: 2.5rem;
+  }
+  .hero-cta-section p {
+    font-size: 1.5rem;
+  }
+  .hero-social-position {
+    transform: none;
+  }
+  .social-link-sm,
+  .social-link {
+    min-width: 5rem;
+    min-height: 5rem;
+  }
 }
 
 @media (min-width: 1280px) and (max-width: 1439px) {
