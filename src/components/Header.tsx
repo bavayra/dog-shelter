@@ -10,8 +10,8 @@ const Header = () => {
 
   return (
     <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
-      <div className="phone-sm:py-2 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:px-4">
-        <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50 lg:gap-6">
+      <div className="phone-sm:py-2 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:py-4">
+        <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50">
           <div className="phone:gap-2 flex min-w-0 flex-row items-center gap-1">
             <img
               src={LogoIcon}
@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           <nav
-            className="4xl:gap-10 hidden items-center gap-8 text-center lg:flex lg:flex-row lg:gap-0"
+            className="4xl:gap-10 hidden items-center gap-8 text-center lg:flex-row lg:gap-0 xl:flex"
             aria-label="Main navigation"
           >
             {headerLinks.map((link) => (

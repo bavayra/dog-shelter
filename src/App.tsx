@@ -21,7 +21,7 @@ function App() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <div className="flex flex-1">
-        <Sidebar className="lg:hidden" />
+        <Sidebar className="xl:hidden" />
         <main className="flex-1">
           <section
             id="hero"

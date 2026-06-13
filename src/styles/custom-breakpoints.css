@@ -363,6 +363,17 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
+  header .container {
+    max-width: 100%;
+    padding-inline: 4.5rem;
+  }
+  .header-logo {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .text-fluid-logo {
+    font-size: 2rem;
+  }
   #hero.hero-vh {
     max-height: calc(100vh - 4rem);
     max-height: calc(var(--vph, 100vh) - 4rem);
