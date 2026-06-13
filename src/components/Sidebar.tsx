@@ -59,14 +59,14 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-51 bg-black/50 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-51 bg-black/50 backdrop-blur-sm xl:hidden"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       <aside
         ref={sidebarRef}
-        className={`bg-primary-500 tablet-sm:w-72 phone-sm:w-50 tablet-lg:w-88 phone:w-54 fixed top-0 bottom-0 left-0 z-52 h-full w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:w-80 lg:hidden ${
+        className={`bg-primary-500 tablet-sm:w-72 phone-sm:w-50 tablet-lg:w-88 phone:w-54 fixed top-0 bottom-0 left-0 z-52 h-full w-48 overflow-hidden overscroll-none rounded-r-sm shadow-md transition-transform duration-300 md:w-80 xl:hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } ${className}`}
       >
