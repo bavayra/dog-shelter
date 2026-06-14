@@ -183,6 +183,9 @@
     width: 19rem;
     height: 19rem;
   }
+  .help-section-height {
+    min-height: 80vh;
+  }
 }
 
 @media (min-width: 768px) {
