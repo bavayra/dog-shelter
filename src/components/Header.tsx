@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
       <div className="phone-sm:py-2 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:py-4">
-        <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50">
+        <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50 xl:gap-26">
           <div className="phone:gap-2 flex min-w-0 flex-row items-center gap-1">
             <img
               src={LogoIcon}
@@ -26,14 +26,14 @@ const Header = () => {
           </div>
 
           <nav
-            className="4xl:gap-10 hidden items-center gap-8 text-center lg:flex-row lg:gap-0 xl:flex"
+            className="4xl:gap-10 hidden items-center gap-8 text-center xl:flex xl:flex-row xl:gap-8"
             aria-label="Main navigation"
           >
             {headerLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
-                className="hover:text-primary-900 text-fluid-nav hover:bg-primary-200 mx-0 py-3 font-medium text-neutral-700 transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold"
+                className="hover:text-primary-900 text-fluid-nav hover:bg-primary-200 mx-0 py-3 font-medium text-neutral-700 transition-transform hover:scale-105 hover:rounded-lg hover:font-bold md:rounded-full md:px-4 md:py-1 md:font-bold lg:font-semibold xl:px-0"
                 aria-label={`Go to ${link.label} section`}
               >
                 {link.label.toUpperCase()}
