@@ -135,20 +135,12 @@ html {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
   }
 
-  .typography-h3 {
-    @apply text-primary-700 leading-normal font-bold;
-  }
-
   .typography-large {
     @apply text-primary-500 text-lg leading-normal font-medium;
   }
 
   .typography-body {
     @apply text-base leading-normal text-neutral-700;
-  }
-
-  .typography-small {
-    @apply text-xs leading-snug tracking-normal text-neutral-700;
   }
 
   .z-3 {

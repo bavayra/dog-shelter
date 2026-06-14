@@ -386,117 +386,123 @@
     height: 16rem;
     transform: translateX(-160%) translateY(40%);
   }
-
-  @media (min-width: 1280px) {
-    header .container {
-      padding-inline: 3rem;
-    }
-    .header-logo {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-    .text-fluid-nav {
-      font-size: 1rem;
-    }
-    .header-contact-button {
-      width: auto;
-      min-width: fit-content;
-      white-space: nowrap;
-    }
-    .heading-fluid-hero {
-      max-width: fit-content;
-    }
-    .glass-card {
-      font-size: 1.375rem;
-      max-width: 30rem;
-    }
-    .btn-text-large {
-      font-size: 1.25rem;
-    }
-    .circle-hero-transform {
-      transform: translateX(-50%) translateY(45%);
-    }
-    .hero-circle-xl {
-      width: 27rem;
-      height: 27rem;
-    }
-    .hero-circle-md {
-      width: 16rem;
-      height: 16rem;
-      transform: translateX(-55%) translateY(40%);
-    }
-    .hero-circle-sm {
-      width: 10rem;
-      height: 10rem;
-      transform: translateX(-200%) translateY(40%);
-    }
-    .img-fluid-hero-dog {
-      width: 26rem;
-      height: 26rem;
-    }
-    .dog-grid-container {
-      max-width: 70rem;
-    }
-    #adoption-rules .container {
-      max-width: 70rem;
-    }
-    .rule-card {
-      width: 90%;
-    }
-    .about-content {
-      max-width: 60rem;
-      margin-inline: auto;
-    }
-    .contact-grid {
-      width: 80%;
-    }
-    .circle-contact-xxs {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
+  .dog-grid-container {
+    max-width: 68rem;
   }
-
-  @media (min-width: 2560px) and (min-height: 1440px) {
-    .mt-6xl-sm {
-      margin-top: 4.5rem;
-    }
-    .font-6xl-sm {
-      font-size: 2rem;
-    }
-    .container-w-6xl-sm {
-      max-width: 1000px;
-    }
-    .social-link-6xl-sm {
-      width: 7.5rem;
-      height: 7.5rem;
-    }
-    .icon-size-6xl-sm {
-      width: 6rem;
-      height: 6rem;
-    }
-    .mr-6xl-sm {
-      margin-right: 24rem;
-    }
+  .dog-grid-layout {
+    column-gap: 0;
   }
+}
 
-  @media (min-width: 2560px) and (min-height: 1600px) {
-    .font-6xl-md {
-      font-size: 2.25rem;
-    }
-    .mt-6xl-md {
-      margin-top: 5rem;
-    }
-    .social-link-6xl-md {
-      width: 3.5rem;
-      height: 3.5rem;
-    }
-    .circle-position-6xl-md {
-      transform: translateY(25%);
-    }
+@media (min-width: 1280px) {
+  header .container {
+    padding-inline: 3rem;
   }
+  .header-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .text-fluid-nav {
+    font-size: 1rem;
+  }
+  .header-contact-button {
+    width: auto;
+    min-width: fit-content;
+    white-space: nowrap;
+  }
+  .heading-fluid-hero {
+    max-width: fit-content;
+  }
+  .glass-card {
+    font-size: 1.375rem;
+    max-width: 30rem;
+  }
+  .btn-text-large {
+    font-size: 1.25rem;
+  }
+  .circle-hero-transform {
+    transform: translateX(-50%) translateY(45%);
+  }
+  .hero-circle-xl {
+    width: 27rem;
+    height: 27rem;
+  }
+  .hero-circle-md {
+    width: 16rem;
+    height: 16rem;
+    transform: translateX(-55%) translateY(40%);
+  }
+  .hero-circle-sm {
+    width: 10rem;
+    height: 10rem;
+    transform: translateX(-200%) translateY(40%);
+  }
+  .img-fluid-hero-dog {
+    width: 26rem;
+    height: 26rem;
+  }
+  .dog-grid-container {
+    max-width: 80rem;
+  }
+  #adoption-rules .container {
+    max-width: 70rem;
+  }
+  .rule-card {
+    width: 90%;
+  }
+  .about-content {
+    max-width: 60rem;
+    margin-inline: auto;
+  }
+  .contact-grid {
+    width: 80%;
+  }
+  .circle-contact-xxs {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 
-  :root {
-    --vh: 1vh;
-    --vph: calc(var(--vh, 1vh) * 100);
+@media (min-width: 2560px) and (min-height: 1440px) {
+  .mt-6xl-sm {
+    margin-top: 4.5rem;
   }
+  .font-6xl-sm {
+    font-size: 2rem;
+  }
+  .container-w-6xl-sm {
+    max-width: 1000px;
+  }
+  .social-link-6xl-sm {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  .icon-size-6xl-sm {
+    width: 6rem;
+    height: 6rem;
+  }
+  .mr-6xl-sm {
+    margin-right: 24rem;
+  }
+}
+
+@media (min-width: 2560px) and (min-height: 1600px) {
+  .font-6xl-md {
+    font-size: 2.25rem;
+  }
+  .mt-6xl-md {
+    margin-top: 5rem;
+  }
+  .social-link-6xl-md {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .circle-position-6xl-md {
+    transform: translateY(25%);
+  }
+}
+
+:root {
+  --vh: 1vh;
+  --vph: calc(var(--vh, 1vh) * 100);
 }
