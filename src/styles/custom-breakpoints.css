@@ -400,6 +400,9 @@
   .rules-grid {
     width: 90%;
   }
+  .rules-button {
+    font-size: 1.125rem;
+  }
   #about-us .circle-md {
     width: 20rem;
     height: 20rem;
@@ -486,7 +489,6 @@
     max-width: 1400px;
     padding-inline: 2rem;
   }
-
   #help .help-content-width {
     width: 100%;
     padding-inline: 3rem;
