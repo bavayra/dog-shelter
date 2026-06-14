@@ -168,6 +168,23 @@
   }
 }
 
+@media (min-width: 600px) {
+  .glass-card {
+    max-width: 26rem;
+  }
+  .circle-hero-transform {
+    transform: translateY(60%) translateX(-50%);
+  }
+  .hero-circle-xl {
+    width: 20rem;
+    height: 20rem;
+  }
+  .img-fluid-hero-dog {
+    width: 19rem;
+    height: 19rem;
+  }
+}
+
 @media (min-width: 768px) {
   .header-logo {
     width: 3.25rem;
