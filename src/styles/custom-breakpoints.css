@@ -189,6 +189,11 @@
   .rule-card {
     width: 80%;
   }
+  .about-circle-xs {
+    width: 6.5rem;
+    height: 6.5rem;
+    transform: translateX(-15%) translateY(15%);
+  }
 }
 
 @media (min-width: 768px) {
