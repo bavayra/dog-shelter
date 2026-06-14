@@ -392,6 +392,12 @@
   .dog-grid-layout {
     column-gap: 0;
   }
+  .rule-card {
+    width: 80%;
+  }
+  .rules-grid {
+    width: 90%;
+  }
 }
 
 @media (min-width: 1280px) {
