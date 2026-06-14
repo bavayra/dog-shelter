@@ -276,8 +276,8 @@
     font-size: 1.375rem;
   }
   .img-fluid-hero-dog {
-    width: 30rem;
-    height: 30rem;
+    width: 28rem;
+    height: 28rem;
   }
   .social-link-sm {
     width: 4.5rem;
@@ -288,8 +288,8 @@
     margin-top: 2.5rem;
   }
   .hero-circle-xl {
-    width: 32rem;
-    height: 32rem;
+    width: 30rem;
+    height: 30rem;
   }
   .hero-circle-md {
     width: 20rem;
@@ -299,6 +299,9 @@
     width: 14rem;
     height: 14rem;
     transform: translateX(-150%) translateY(40%);
+  }
+  .circle-hero-transform {
+    transform: translateY(50%) translateX(-50%);
   }
   .dog-grid-layout {
     column-gap: 2rem;

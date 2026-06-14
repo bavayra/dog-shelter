@@ -27,7 +27,7 @@ function App() {
             id="hero"
             className="from-primary-200 to-primary-50 hero-height border-primary-500 px-fluid-hero py-fluid-hero-top py-fluid-hero-bottom relative flex flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md"
           >
-            <div className="tablet-lg:pt-32 lg:pt-20 xl:pt-12">
+            <div className="tablet-lg:pt-20 xl:pt-12">
               <h2 className="heading-fluid-hero text-primary-700 relative z-10 mx-auto w-full text-center font-semibold">
                 Give a Shelter Dog a Loving Home
               </h2>
@@ -37,7 +37,7 @@ function App() {
                 top="0"
                 left="0"
                 opacity={70}
-                className="circle-hero-transform circle-position-6xl-md 4xl:ml-5 tablet-lg:mt-2 5xl:-mt-4 6xl:-mt-26 lg:-mt-16"
+                className="circle-hero-transform circle-position-6xl-md 4xl:ml-5 5xl:-mt-4 6xl:-mt-26 lg:-mt-16"
               />
               <div className="glass-card text-primary-700 relative z-10 mx-auto rounded-3xl text-center font-semibold">
                 <p className="4xl:mb-4 mb-2">
