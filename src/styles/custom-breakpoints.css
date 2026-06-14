@@ -186,6 +186,9 @@
   .help-section-height {
     min-height: 80vh;
   }
+  .rule-card {
+    width: 80%;
+  }
 }
 
 @media (min-width: 768px) {
