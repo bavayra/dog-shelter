@@ -477,7 +477,10 @@
     height: 24rem;
   }
   .dog-grid-container {
-    max-width: 80rem;
+    max-width: 70rem;
+  }
+  .filter-button {
+    font-size: 0.85rem;
   }
   #adoption-rules .container {
     max-width: 70rem;
