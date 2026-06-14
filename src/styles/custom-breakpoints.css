@@ -554,6 +554,9 @@
 }
 
 @media (min-width: 2560px) and (min-height: 1440px) {
+  .text-fluid-nav {
+    font-size: 1.5rem;
+  }
   .mt-6xl-sm {
     margin-top: 4.5rem;
   }
