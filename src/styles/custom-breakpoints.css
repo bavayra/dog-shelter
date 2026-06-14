@@ -406,6 +406,10 @@
     width: 10rem;
     height: 10rem;
   }
+  .contact-grid {
+    width: 80%;
+    gap: 4rem;
+  }
 }
 
 @media (min-width: 1280px) {
