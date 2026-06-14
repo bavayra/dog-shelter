@@ -403,6 +403,18 @@
   .rules-button {
     font-size: 1.125rem;
   }
+  #about-us .container {
+    max-width: 1280px;
+    padding-inline: 2rem;
+  }
+
+  #about-us .about-content {
+    max-width: 980px;
+    width: 85%;
+    padding-inline: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
   #about-us .circle-md {
     width: 20rem;
     height: 20rem;
