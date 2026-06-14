@@ -435,6 +435,7 @@
   }
   .heading-fluid-hero {
     max-width: fit-content;
+    font-size: 4.5rem;
   }
   .glass-card {
     font-size: 1.375rem;
@@ -443,12 +444,23 @@
   .btn-text-large {
     font-size: 1.25rem;
   }
+  .hero-cta-section p {
+    font-size: 1.25rem;
+  }
+  .social-link-sm,
+  .social-link {
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+  }
+  .hero-social-position {
+    margin-top: 1rem;
+  }
   .circle-hero-transform {
     transform: translateX(-50%) translateY(45%);
   }
   .hero-circle-xl {
-    width: 27rem;
-    height: 27rem;
+    width: 25rem;
+    height: 25rem;
   }
   .hero-circle-md {
     width: 16rem;
@@ -461,8 +473,8 @@
     transform: translateX(-200%) translateY(40%);
   }
   .img-fluid-hero-dog {
-    width: 26rem;
-    height: 26rem;
+    width: 24rem;
+    height: 24rem;
   }
   .dog-grid-container {
     max-width: 80rem;
