@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="bg-primary-200 sticky top-0 z-50 w-full overflow-x-hidden shadow-md">
       <div className="phone-sm:py-2 5xl:px-0 container mx-auto px-2 py-1 md:px-0 lg:py-4">
-        <div className="tablet-lg:gap-58 flex flex-row items-center justify-evenly gap-30 md:gap-50 xl:gap-26">
+        <div className="tablet-lg:gap-58 tablet-sm:gap-64 flex flex-row items-center justify-evenly gap-30 md:gap-50 xl:gap-26">
           <div className="phone:gap-2 flex min-w-0 flex-row items-center gap-1">
             <img
               src={LogoIcon}
