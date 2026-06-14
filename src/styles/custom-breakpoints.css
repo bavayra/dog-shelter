@@ -482,6 +482,16 @@
   .filter-button {
     font-size: 0.85rem;
   }
+  #help .container {
+    max-width: 1400px;
+    padding-inline: 2rem;
+  }
+
+  #help .help-content-width {
+    width: 100%;
+    padding-inline: 3rem;
+    margin-inline: auto;
+  }
   #adoption-rules .container {
     max-width: 70rem;
   }
