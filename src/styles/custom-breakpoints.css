@@ -630,6 +630,13 @@
     height: 15rem;
     transform: translateX(215%) translateY(-10%);
   }
+  .contact-label {
+    font-size: 1.5rem;
+  }
+  .circle-contact-xxs {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
   .mt-6xl-sm {
     margin-top: 4.5rem;
   }

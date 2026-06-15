@@ -189,7 +189,7 @@ const ContactSection = () => {
                   top="0"
                   left="0"
                   zIndex={12}
-                  className="-translate-x-1/3 -translate-y-1/3 xl:h-8 xl:w-8"
+                  className="6xl:h-10 6xl:w-10 -translate-x-1/3 -translate-y-1/3 xl:h-8 xl:w-8"
                 />
                 <Button
                   type="submit"
