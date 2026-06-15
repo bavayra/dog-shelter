@@ -617,6 +617,9 @@
   .text-fluid-modal-desc {
     font-size: 1.25rem;
   }
+  .help-section-height {
+    min-height: 68vh;
+  }
   .mt-6xl-sm {
     margin-top: 4.5rem;
   }
