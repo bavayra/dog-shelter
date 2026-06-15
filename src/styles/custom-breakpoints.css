@@ -560,6 +560,35 @@
   .heading-fluid-hero {
     font-size: 6.5rem;
   }
+  #hero {
+    height: 75dvh;
+  }
+  .hero-cta-section p {
+    font-size: 1.75rem;
+  }
+  .hero-cta-section {
+    max-width: 60rem;
+    margin-block: 4rem;
+  }
+  .img-fluid-hero-dog {
+    width: 44rem;
+    height: 44rem;
+  }
+  .hero-circle-xl {
+    width: 46rem;
+    height: 46rem;
+    transform: translateX(15%) translateY(30%);
+  }
+  .hero-circle-md {
+    width: 30rem;
+    height: 30rem;
+    transform: translateX(-60%) translateY(40%);
+  }
+  .hero-circle-sm {
+    width: 20rem;
+    height: 20rem;
+    transform: translateX(-160%) translateY(40%);
+  }
   .mt-6xl-sm {
     margin-top: 4.5rem;
   }
