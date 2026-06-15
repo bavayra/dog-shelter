@@ -620,6 +620,16 @@
   .help-section-height {
     min-height: 68vh;
   }
+  #about-us .circle-md {
+    width: 30rem;
+    height: 30rem;
+    transform: translateX(110%) translateY(-20%);
+  }
+  #about-us .circle-xs {
+    width: 15rem;
+    height: 15rem;
+    transform: translateX(215%) translateY(-10%);
+  }
   .mt-6xl-sm {
     margin-top: 4.5rem;
   }
