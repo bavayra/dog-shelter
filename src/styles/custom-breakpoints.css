@@ -589,6 +589,34 @@
     height: 20rem;
     transform: translateX(-160%) translateY(40%);
   }
+  #pets .container {
+    max-width: 1880px;
+    padding-inline: 2rem;
+  }
+  #pets-heading {
+    width: 40rem;
+    margin-inline: auto;
+  }
+  .filters-container {
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+  .filter-button {
+    font-size: 1.25rem;
+  }
+  .dog-card-container {
+    width: 28rem;
+    min-height: 30rem;
+  }
+  .dog-card-gender-text {
+    font-size: 1.25rem;
+  }
+  .dog-card-desc-text {
+    font-size: 1.125rem;
+  }
+  .text-fluid-modal-desc {
+    font-size: 1.25rem;
+  }
   .mt-6xl-sm {
     margin-top: 4.5rem;
   }

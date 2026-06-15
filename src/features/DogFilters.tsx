@@ -115,7 +115,7 @@ const DogFilters = ({
           aria-label="Reset filters"
           variant="outline"
           size="small"
-          className="4xl:py-3 phone-sm:pt-2 4xl:px-8"
+          className="4xl:py-3 phone-sm:pt-2 4xl:px-8 6xl:text-lg"
         >
           RESET FILTERS
         </Button>
