@@ -447,7 +447,9 @@
     max-width: 68rem;
   }
   .dog-grid-layout {
+    width: 62rem;
     column-gap: 0;
+    margin-inline: auto;
   }
   .rule-card {
     width: 80%;
@@ -477,6 +479,7 @@
   #about-us .circle-xs {
     width: 10rem;
     height: 10rem;
+    transform: translateX(-5%) translateY(35%);
   }
   .contact-grid {
     width: 80%;
