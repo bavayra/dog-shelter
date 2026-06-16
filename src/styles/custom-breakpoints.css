@@ -168,6 +168,21 @@
   }
 }
 
+@media (min-width: 429px) {
+  .hero-circle-xl {
+    width: 18rem;
+    height: 18rem;
+  }
+  .hero-circle-md {
+    width: 12rem;
+    height: 12rem;
+  }
+  .hero-circle-sm {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
 @media (min-width: 600px) {
   .glass-card {
     max-width: 26rem;

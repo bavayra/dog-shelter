@@ -111,7 +111,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="hero-circle-sm"
+                className="hero-circle-sm tablet-sm:translate-x-1/2"
               />
             </div>
             <img
