@@ -261,8 +261,18 @@
     width: 10rem;
     height: 10rem;
   }
+  .dog-grid-layout {
+    width: 38rem;
+  }
+  .dog-card-container {
+    width: 16rem;
+    min-height: 24rem;
+  }
   .about-circle-xs {
     transform: translateX(-10%) translateY(10%);
+  }
+  .help-section-height {
+    min-height: 68vh;
   }
   .contact-form-wrapper {
     max-width: 32rem;
