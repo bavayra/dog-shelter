@@ -23,7 +23,7 @@ const AboutUs = () => {
         left="0"
         opacity={90}
         zIndex={0}
-        className="about-circle-xs phone:translate-y-1/4 phone-lg:translate-y-1/6 tablet-sm:translate-y-1/6 tablet-lg:translate-y-1/2 tablet-lg:-translate-x-1/10"
+        className="about-circle-xs phone:translate-y-1/4 phone-lg:translate-y-1/6 tablet-sm:translate-y-1/6 tablet-lg:translate-y-1/3 tablet-lg:-translate-x-1/10"
       />
       <div className="container mx-auto px-4">
         <h2 className="about-heading text-fluid-about-heading text-primary-500 z-12 text-center leading-tight font-bold">
