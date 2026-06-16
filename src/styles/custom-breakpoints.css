@@ -641,6 +641,10 @@
   .filter-button {
     font-size: 1.25rem;
   }
+  .dog-grid-layout {
+    width: 100rem;
+    margin-inline: auto;
+  }
   .dog-card-container {
     width: 28rem;
     min-height: 30rem;
@@ -665,7 +669,7 @@
   #about-us .circle-xs {
     width: 15rem;
     height: 15rem;
-    transform: translateX(215%) translateY(-10%);
+    transform: translateX(215%) translateY(5%);
   }
   .contact-label {
     font-size: 1.5rem;
