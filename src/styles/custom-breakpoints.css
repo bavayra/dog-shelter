@@ -549,6 +549,10 @@
   .dog-grid-container {
     max-width: 70rem;
   }
+  .dog-grid-layout {
+    width: 60rem;
+    margin-inline: auto;
+  }
   .filter-button {
     font-size: 0.85rem;
   }
@@ -566,6 +570,9 @@
   }
   .rule-card {
     width: 90%;
+  }
+  .about-circle-xs {
+    transform: translateX(-5%) translateY(35%);
   }
   .about-content {
     max-width: 60rem;
