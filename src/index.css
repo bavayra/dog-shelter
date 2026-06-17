@@ -84,6 +84,8 @@
   --font-sans:
     'Roboto', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial,
     sans-serif;
+  --vh: 1vh;
+  --vph: calc(var(--vh, 1vh) * 100);
 }
 
 body {
@@ -174,11 +176,13 @@ html {
       padding-block: clamp(1rem, 1.36vw + -0.545rem, 2.5rem);
       max-width: clamp(36rem, 20.45vw + 26.91rem, 64rem);
     }
+    /* All section headings use the same clamp for visual consistency.
+       At 2560px the original sizes are restored in custom-breakpoints.css */
     .text-fluid-section-heading {
-      font-size: clamp(3rem, 7.16vw + 0.425rem, 10rem);
+      font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
     }
     .text-fluid-contact-heading {
-      font-size: clamp(3rem, 6.25vw + 0.5rem, 8rem);
+      font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
     }
     .text-fluid-logo {
       font-size: clamp(0.875rem, 2.05vw + 0.218rem, 3rem);
@@ -187,11 +191,11 @@ html {
       font-size: clamp(1.125rem, 0.69vw + 0.875rem, 1.875rem);
     }
     .btn-text-small {
-      font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.875rem);
+      /* Max reduced to 1.125rem so Reset Filters stays similar in size to filter buttons */
+      font-size: clamp(0.875rem, 0.58vw + 0.688rem, 1.125rem);
     }
     .btn-padding-small {
-      padding: clamp(0.375rem, 0.03vw + 0.367rem, 0.5rem)
-        clamp(0.75rem, 0rem + 0.75rem, 0.75rem);
+      padding: clamp(0.375rem, 0.03vw + 0.367rem, 0.5rem) clamp(0.75rem);
     }
     .btn-text-medium {
       font-size: clamp(1rem, 0.58vw + 0.813rem, 1.5rem);
@@ -278,15 +282,12 @@ html {
     }
     .dog-card-health-badge {
       font-size: clamp(1rem, 0.36vw + 0.909rem, 1.5rem);
-      padding-block: clamp(0rem, 0.68vw + -1.045rem, 0.5rem)
-        clamp(0rem, -1.19vw + 1.714rem, 0.5rem);
-      padding-left: clamp(0rem, 1.03vw + -1.977rem, 1rem);
     }
     .dog-card-button {
       font-size: clamp(1rem, 0.12vw + 0.773rem, 1.2rem);
     }
     .text-fluid-about-heading {
-      font-size: clamp(3rem, 6.64vw + 1.506rem, 10rem);
+      font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
     }
     .about-content {
       font-size: clamp(1.125rem, 0.71vw + 0.965rem, 1.875rem);
@@ -302,7 +303,7 @@ html {
       line-height: 1.5;
     }
     .text-fluid-rules-heading {
-      font-size: clamp(2.25rem, 5.9vw + 0.923rem, 8rem);
+      font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
     }
     .text-fluid-rules-intro {
       font-size: clamp(1.125rem, 1.07vw + 0.884rem, 2.25rem);
@@ -331,7 +332,7 @@ html {
         clamp(1.5rem, 0.91vw + 1.364rem, 2rem);
     }
     .text-fluid-help-heading {
-      font-size: clamp(2.25rem, 3.31vw + 1.456rem, 5rem);
+      font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
     }
     .text-fluid-help-body {
       font-size: clamp(1.125rem, 1.07vw + 0.884rem, 2.25rem);

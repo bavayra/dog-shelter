@@ -61,3 +61,6 @@ changes
 
 # TypeScript
 *.tsbuildinfo
+
+# Generated/auxiliary
+breakpoints-reference.html

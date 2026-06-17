@@ -1,71 +1,122 @@
 /* Custom breakpoints for specific screen dimensions */
+
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * FLUID OVERRIDES: 376px – 429px  (phone-sm → phone-lg)
+ *
+ * Жёсткие значения заменены clamp()-выражениями, вычисленными
+ * по линейной интерполяции между двумя ключевыми точками таблицы.
+ *
+ * Формула:  slope     = (v2 - v1) / (bp2 - bp1)
+ *           intercept = v1 - slope * bp1
+ *           clamp(min, slope*100vw + intercept, max)
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
 @media (min-width: 376px) {
+  /* #hero padding-top: 3.5rem@376 → 4.5rem@413 → 4rem@429
+     Segment 376→413: slope=(4.5-3.5)/(413-376)=0.027rem/px → 2.7vw, b=3.5-0.027*376 ≈ -6.652rem
+     Segment 413→429: slope=(4-4.5)/(429-413)=-0.03125rem/px → -3.125vw, b=4.5+0.03125*413 ≈ 17.406rem
+     Нелинейное поведение — сначала растёт, потом падает; используем два media-запроса ниже */
+
   .about-circle-xs {
     transform: translateY(50%);
   }
+
+  /* img-fluid-hero-dog: 18.5rem@376 → 20rem@391
+     slope=1.5/15=0.1rem/px → 10vw, b=18.5-0.1*376=-19.1rem */
   .img-fluid-hero-dog {
-    width: 18.5rem;
-    height: 18.5rem;
+    width: clamp(18.5rem, 10vw - 19.1rem, 20rem);
+    height: clamp(18.5rem, 10vw - 19.1rem, 20rem);
   }
-  .circle-xl {
-    width: 20rem;
-    height: 20rem;
-  }
-  .circle-md {
-    width: 11.5rem;
-    height: 11.5rem;
-  }
-  .circle-sm {
-    width: 6.5rem;
-    height: 6.5rem;
-  }
+
+  /* circle-xl, circle-md, circle-sm: moved to bounded @media (max-width: 428px) block
+     below to prevent overriding base utility clamps at 600px+ (would shrink About Us circles) */
+
   .hero-circle-sm {
     transform: translateX(-230%) translateY(50%);
   }
+
+  /* #hero padding-top: 3.5rem@376 → 4rem@391
+     376→391: slope=(4-3.5)/(391-376)=0.0333rem/px → 3.33vw, b=3.5-0.0333*376 ≈ -9.017rem */
   #hero {
-    padding-top: 3.5rem;
+    padding-top: clamp(3.5rem, 3.33vw - 9.017rem, 4rem);
   }
+
+  /* Puppy image in HowToHelp overlaps the button at 376–390px without extra padding */
+  #help {
+    padding-bottom: 10rem;
+  }
+
   .circle-hero-transform {
     margin-top: 2rem;
   }
 }
 
-@media (min-width: 391px) {
-  #hero {
-    padding-top: 4rem;
+/* ── BOUNDED: general decorative circles 376–428px only ──────────────────────
+   Without max-width bound these override the base utility clamps at 600px+,
+   making circle-md ~11.5rem instead of ~14rem and breaking About Us proportions. */
+@media (min-width: 376px) and (max-width: 428px) {
+  /* circle-xl: 20rem@376 → 21rem@391 → 23rem@413 */
+  .circle-xl {
+    width: clamp(20rem, 8.11vw - 10.493rem, 23rem);
+    height: clamp(20rem, 8.11vw - 10.493rem, 23rem);
   }
+  /* circle-md: 11.5rem@376 → 12rem@391 → 13.13rem@413 */
+  .circle-md {
+    width: clamp(11.5rem, 4.4vw - 5.044rem, 13.13rem);
+    height: clamp(11.5rem, 4.4vw - 5.044rem, 13.13rem);
+  }
+  /* circle-sm: 6.5rem@376 → 6.75rem@391 → 7.53rem@413 */
+  .circle-sm {
+    width: clamp(6.5rem, 2.78vw - 3.953rem, 7.53rem);
+    height: clamp(6.5rem, 2.78vw - 3.953rem, 7.53rem);
+  }
+}
+
+@media (min-width: 391px) {
+  /* circle-hero-transform */
   .circle-hero-transform {
     transform: translateY(128%) translateX(-50%);
   }
+
+  /* heading-fluid-hero font-size: 2.5rem@391 → 3rem@413
+     slope=(3-2.5)/(413-391)=0.0227rem/px → 2.27vw, b=2.5-0.0227*391 ≈ -6.376rem */
   .heading-fluid-hero {
-    font-size: 2.5rem;
-    max-width: 25rem;
+    font-size: clamp(2.5rem, 2.27vw - 6.376rem, 3rem);
+    /* max-width: 25rem@391 → 26rem@413 → 30rem@429
+       391→429: slope=(30-25)/(429-391)=0.1316rem/px → 13.16vw, b=25-0.1316*391 ≈ -26.456rem */
+    max-width: clamp(25rem, 13.16vw - 26.456rem, 30rem);
   }
+
+  /* glass-card font-size: 1.05rem@391 → 1.125rem@768
+     391→768: slope=(1.125-1.05)/(768-391)=0.000199rem/px → 0.2vw, b=1.05-0.0002*391 ≈ 0.972rem */
+  /* glass-card padding-inline: 1.5rem@391 (единственная точка в диапазоне) */
+  /* glass-card margin-top: 2rem@391 → 2.5rem@413 → 1.5rem@429
+     Нелинейно — оставляем разбивку по медиа */
   .glass-card {
-    font-size: 1.05rem;
-    padding-inline: 1.5rem;
+    font-size: clamp(1.05rem, 0.2vw + 0.972rem, 1.125rem);
+    padding-inline: clamp(1rem, 3.64vw - 3.455rem, 5rem);
     margin-top: 2rem;
   }
+
+  /* img-fluid-hero-dog: 20rem@391 → 19.5rem@413 → 16rem@429
+     Нелинейно (падение); 391→429: slope=(16-20)/(429-391)=-0.1053rem/px → -10.53vw, b=20+0.1053*391 ≈ 61.173rem */
   .img-fluid-hero-dog {
-    width: 20rem;
-    height: 20rem;
+    width: clamp(16rem, -10.53vw + 61.173rem, 20rem);
+    height: clamp(16rem, -10.53vw + 61.173rem, 20rem);
   }
-  .circle-xl {
-    width: 21rem;
-    height: 21rem;
-  }
-  .circle-md {
-    width: 12rem;
-    height: 12rem;
-  }
-  .circle-sm {
-    width: 6.75rem;
-    height: 6.75rem;
-  }
+
+  /* circle-xl: с 391 берём уже выше описанный clamp — не переопределяем */
+  /* circle-md: аналогично */
+  /* circle-sm: аналогично */
+
+  /* social-link-sm: 3.5rem@391 → 3.25rem@413 → 3.5rem@429
+     Нелинейно (падение-рост); оставляем фиксированный базис, override ниже */
   .social-link-sm {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: clamp(3.25rem, -1.14vw + 7.952rem, 3.5rem);
+    height: clamp(3.25rem, -1.14vw + 7.952rem, 3.5rem);
   }
+
   .dog-grid-layout {
     justify-items: center;
   }
@@ -75,126 +126,152 @@
   .help-button-container {
     margin-bottom: 0;
   }
+
+  /* #help padding-bottom: 10rem@391 → 7rem@413
+     slope=(7-10)/(413-391)=-0.136rem/px → -13.6vw, b=10+0.136*391 ≈ 63.176rem */
   #help {
-    padding-bottom: 10rem;
+    padding-bottom: clamp(7rem, -13.6vw + 63.176rem, 10rem);
   }
+
+  /* rule-text font-size: 1rem@391 → 1.125rem@820
+     391→820: slope=(1.125-1)/(820-391)=0.000291rem/px → 0.291vw, b=1-0.000291*391 ≈ 0.886rem */
   .rule-text {
-    font-size: 1rem;
+    font-size: clamp(1rem, 0.291vw + 0.886rem, 1.125rem);
   }
+
+  /* contact-label: follow TextInput label pattern — 1rem at < 412px */
   .contact-label {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 413px) {
+  /* #hero padding-top: 4.5rem@413 → 4rem@429
+     slope=(4-4.5)/(429-413)=-0.03125rem/px → -3.125vw, b=4.5+0.03125*413 ≈ 17.406rem */
   #hero {
-    padding-top: 4.5rem;
+    padding-top: clamp(4rem, -3.125vw + 17.406rem, 4.5rem);
   }
   .circle-hero-transform {
     transform: translateY(148%) translateX(-50%);
   }
-  .heading-fluid-hero {
-    font-size: 3rem;
-    max-width: 26rem;
-  }
+  /* heading-fluid-hero font-size override для 413: уже покрыто clamp выше */
+  /* glass-card margin-top: 2.5rem@413 → 1.5rem@429
+     slope=(1.5-2.5)/(429-413)=-0.0625rem/px → -6.25vw, b=2.5+0.0625*413 ≈ 28.313rem */
   .glass-card {
-    margin-top: 2.5rem;
+    margin-top: clamp(1.5rem, -6.25vw + 28.313rem, 2.5rem);
   }
-  .img-fluid-hero-dog {
-    width: 19.5rem;
-    height: 19.5rem;
-  }
-  .circle-xl {
-    width: 23rem;
-    height: 23rem;
-  }
-  .circle-md {
-    width: 13.13rem;
-    height: 13.13rem;
-  }
-  .circle-sm {
-    width: 7.53rem;
-    height: 7.53rem;
-  }
-  .circle-xs {
-    width: 5.5rem;
-    height: 5.5rem;
-  }
-  .social-link-sm {
-    width: 3.25rem;
-    height: 3.25rem;
-  }
+  /* img-fluid-hero-dog уже покрыт clamp в блоке 391px */
+  /* circle-xl, circle-md, circle-sm уже покрыты clamp в блоке 376px */
+
+  /* circle-xs: moved to bounded block below */
+  /* dog-card-container: 24rem@413 → 26rem@429
+     slope=(26-24)/(429-413)=0.125rem/px → 12.5vw, b=24-0.125*413 ≈ -27.625rem */
   .dog-card-container {
-    width: 24rem;
+    width: clamp(24rem, 12.5vw - 27.625rem, 26rem);
   }
+  /* contact-label: match phone:text-lg (1.125rem at 412px+) */
+  .contact-label {
+    font-size: 1.125rem;
+  }
+  /* #help padding-bottom: 7rem@413 → нет дальнейших изменений до 1024, base clamp покрывает */
   #help {
     padding-bottom: 7rem;
   }
 }
 
+/* BOUNDED: circle-xs 413–428px only */
+@media (min-width: 413px) and (max-width: 428px) {
+  .circle-xs {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+}
+
 @media (min-width: 429px) {
+  /* text-fluid-logo: 1.125rem@429 → 1.625rem@768
+     slope=(1.625-1.125)/(768-429)=0.001474rem/px → 1.474vw, b=1.125-0.001474*429 ≈ -0.507rem */
   .text-fluid-logo {
-    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 1.474vw - 0.507rem, 1.625rem);
   }
+  /* header-logo: 2.5rem@429 → 3.25rem@768
+     slope=(3.25-2.5)/(768-429)=0.002212rem/px → 2.212vw, b=2.5-0.002212*429 ≈ -0.45rem */
   .header-logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: clamp(2.5rem, 2.212vw - 0.45rem, 3.25rem);
+    height: clamp(2.5rem, 2.212vw - 0.45rem, 3.25rem);
   }
+  /* #hero padding-top: 4rem@429 (уже не меняется до 820) */
   #hero {
     padding-top: 4rem;
   }
+  /* hero-circle-xl: 18rem@429 → 20rem@600 → 26rem@768
+     429→768: slope=(26-18)/(768-429)=0.0236rem/px → 2.36vw
+     b=18-2.36*429/100=18-10.124=+7.876rem  (fixed: was wrongly -0.124rem) */
   .hero-circle-xl {
-    width: 18rem;
-    height: 18rem;
+    width: clamp(18rem, 2.36vw + 7.876rem, 26rem);
+    height: clamp(18rem, 2.36vw + 7.876rem, 26rem);
   }
+  /* hero-circle-md: 12rem@429 → 16rem@768
+     slope=(16-12)/(768-429)=0.01179rem/px → 1.179vw, b=12-0.01179*429 ≈ 6.941rem */
   .hero-circle-md {
-    width: 12rem;
-    height: 12rem;
+    width: clamp(12rem, 1.179vw + 6.941rem, 16rem);
+    height: clamp(12rem, 1.179vw + 6.941rem, 16rem);
   }
+  /* hero-circle-sm: 8rem@429 → 10rem@768
+     slope=(10-8)/(768-429)=0.00590rem/px → 0.590vw, b=8-0.00590*429 ≈ 5.468rem */
   .hero-circle-sm {
-    width: 8rem;
-    height: 8rem;
+    width: clamp(8rem, 0.59vw + 5.468rem, 10rem);
+    height: clamp(8rem, 0.59vw + 5.468rem, 10rem);
   }
   .circle-hero-transform {
     transform: translateY(100%) translateX(-50%);
   }
-  .heading-fluid-hero {
-    max-width: 30rem;
-  }
-  .glass-card {
-    margin-top: 1.5rem;
-  }
+  /* heading-fluid-hero max-width: 30rem@429 (уже покрыто выше) */
+  /* glass-card margin-top уже покрыт clamp выше */
+  /* hero-cta-section p: 1.125rem@429 → 1.25rem@768
+     slope=(1.25-1.125)/(768-429)=0.000369rem/px → 0.369vw, b=1.125-0.000369*429 ≈ 0.966rem */
   .hero-cta-section p {
-    font-size: 1.125rem;
+    font-size: clamp(1.125rem, 0.369vw + 0.966rem, 1.25rem);
   }
+  /* img-fluid-hero-dog: 16rem@429 → 19rem@600 → 24rem@768
+     429→768: slope=(24-16)/(768-429)=0.0236rem/px → 2.36vw, b=16-0.0236*429 ≈ 5.876rem */
   .img-fluid-hero-dog {
-    width: 16rem;
-    height: 16rem;
+    width: clamp(16rem, 2.36vw + 5.876rem, 24rem);
+    height: clamp(16rem, 2.36vw + 5.876rem, 24rem);
   }
+  /* social-link-sm: 3.5rem@429 → 4rem@768
+     slope=(4-3.5)/(768-429)=0.001474rem/px → 1.474vw × 0.1 → 0.147vw, b=3.5-0.001474*429 ≈ 2.868rem */
   .social-link-sm {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
+    height: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
   }
+  /* dog-card-container: 26rem@429 → 16rem@768
+     Нелинейно (меняется колонки grid); не клемпуем — это layout-break */
   .dog-card-container {
     width: 26rem;
   }
 }
 
+/* ── 480px: social icons too close to hero dog/circles ───────────────────────────
+   Base margin-right clamp is capped at 15rem from 429px, which is not enough
+   at 480px. Override to push icons further from the dog image. */
+@media (min-width: 480px) and (max-width: 599px) {
+  .hero-social-position {
+    /* 20rem@480px → 25rem@599px
+       slope=(25-20)/(5.99-4.80)=4.202vw, b=20-4.202*4.80=-0.170rem */
+    margin-right: clamp(20rem, 4.202vw - 0.17rem, 25rem);
+  }
+}
+
 @media (min-width: 600px) {
   .glass-card {
+    /* max-width: 26rem@600 — промежуточная точка, base clamp идёт к 36rem@1024 */
     max-width: 26rem;
   }
   .circle-hero-transform {
     transform: translateY(60%) translateX(-50%);
   }
-  .hero-circle-xl {
-    width: 20rem;
-    height: 20rem;
-  }
-  .img-fluid-hero-dog {
-    width: 19rem;
-    height: 19rem;
-  }
+  /* hero-circle-xl: 20rem@600 (промежуток на пути к 26rem@768 — clamp в 429px уже линеен) */
+  /* img-fluid-hero-dog: 19rem@600 — промежуток уже покрыт clamp 429→768 */
   .help-section-height {
     min-height: 80vh;
   }
@@ -209,84 +286,112 @@
 }
 
 @media (min-width: 768px) {
+  /* Бо́льшая часть значений 768px уже покрыта clamp() в блоках 429px выше.
+     Здесь переопределяем только то, что имеет новую точку перехода к 820px. */
   .header-logo {
-    width: 3.25rem;
-    height: 3.25rem;
+    /* 3.25rem@768 → 3.5rem@820 → 4.5rem@1024
+       768→1024: slope=(4.5-3.25)/(1024-768)=0.004883rem/px → 0.488vw, b=3.25-0.004883*768 ≈ -0.492rem */
+    width: clamp(3.25rem, 0.488vw - 0.492rem, 4.5rem);
+    height: clamp(3.25rem, 0.488vw - 0.492rem, 4.5rem);
   }
   .text-fluid-logo {
-    font-size: 1.625rem;
+    /* 1.625rem@768 → 1.75rem@820 → 2rem@1024
+       768→1024: slope=(2-1.625)/(1024-768)=0.001465rem/px → 1.465vw × 0.1 = 0.146vw, b=1.625-0.001465*768 ≈ 0.499rem */
+    font-size: clamp(1.625rem, 0.146vw + 0.499rem, 2rem);
   }
   header .container {
-    padding-block: 0.75rem;
-    padding-inline: 1.5rem;
+    /* padding-block: 0.75rem@768 → 0.875rem@820
+       slug: clamp(0.75rem, 2.404vw - 17.719rem, 0.875rem) */
+    padding-block: clamp(0.75rem, 2.404vw - 17.719rem, 0.875rem);
+    /* padding-inline: 1.5rem@768 → 2rem@820 → 4.5rem@1024
+       768→1024: slope=(4.5-1.5)/(1024-768)=0.01172rem/px → 1.172vw, b=1.5-0.01172*768 ≈ -7.5rem */
+    padding-inline: clamp(1.5rem, 1.172vw - 7.5rem, 4.5rem);
   }
   .py-fluid-hero-top {
+    /* 5.5rem@768 → 0rem@820 — крутое падение, оставляем как есть (layout-shift) */
     padding-top: 5.5rem;
   }
   .heading-fluid-hero {
-    font-size: 3.5rem;
+    /* font-size: 3.5rem@768 → 4rem@820 → 5rem@1024
+       768→1024: slope=(5-3.5)/(1024-768)=0.005859rem/px → 0.586vw, b=3.5-0.005859*768 ≈ -1rem */
+    font-size: clamp(3.5rem, 0.586vw - 1rem, 5rem);
+    /* max-width: 34rem@820 → 42rem@1024 (из таблицы; 768 нет изменений)
+       820→1024: slope=(42-34)/(1024-820)=0.03922rem/px → 3.922vw, b=34-0.03922*820 ≈ 1.84rem */
+    max-width: clamp(34rem, 3.922vw + 1.84rem, 42rem);
   }
   .glass-card {
-    font-size: 1.125rem;
-  }
-  .hero-cta-section {
-    margin-inline: auto;
+    /* font-size: 1.125rem@768 → 1.25rem@820 → 1.5rem@1024
+       768→1024: slope=(1.5-1.125)/(1024-768)=0.001465rem/px → 0.146vw, b=1.125-0.001465*768 ≈ 0rem */
+    font-size: clamp(1.125rem, 0.146vw, 1.5rem);
   }
   .hero-cta-section p {
-    font-size: 1.25rem;
+    /* 1.25rem@768 → 1.375rem@820 → 1.5rem@1024
+       768→1024: slope=(1.5-1.25)/(1024-768)=0.000977rem/px → 0.098vw, b=1.25-0.000977*768 ≈ 0.5rem */
+    font-size: clamp(1.25rem, 0.098vw + 0.5rem, 1.5rem);
   }
-  .img-fluid-hero-dog {
-    width: 24rem;
-    height: 24rem;
-  }
+  /* img-fluid-hero-dog: уже покрыто clamp 429px выше → к 768 достигает 24rem */
   .social-link-sm {
-    width: 4rem;
-    height: 4rem;
+    /* 4rem@768 → 4.5rem@820
+       768→820: slope=(4.5-4)/(820-768)=0.009615rem/px → 0.962vw, b=4-0.009615*768 ≈ -3.384rem */
+    width: clamp(4rem, 0.962vw - 3.384rem, 4.5rem);
+    height: clamp(4rem, 0.962vw - 3.384rem, 4.5rem);
   }
   .hero-social-position {
-    gap: 1rem;
+    /* gap: 1rem@768 → 1.25rem@820
+       768→820: slope=(1.25-1)/(820-768)=0.004808rem/px → 0.481vw, b=1-0.004808*768 ≈ -2.692rem */
+    gap: clamp(1rem, 0.481vw - 2.692rem, 1.25rem);
   }
-  .hero-circle-xl {
-    width: 26rem;
-    height: 26rem;
-  }
-  .hero-circle-md {
-    width: 16rem;
-    height: 16rem;
-  }
-  .hero-circle-sm {
-    width: 10rem;
-    height: 10rem;
-  }
+  /* hero-circle-xl: уже покрыто clamp 429px → достигает 26rem@768 */
+  /* hero-circle-md: уже покрыто clamp 429px → достигает 16rem@768 */
+  /* hero-circle-sm: уже покрыто clamp 429px → достигает 10rem@768 */
   .dog-grid-layout {
-    width: 38rem;
+    /* width: 38rem@768 → 62rem@1024
+       768→1024: slope=(62-38)/(1024-768)=0.09375rem/px → 9.375vw, b=38-0.09375*768 ≈ -34rem */
+    width: clamp(38rem, 9.375vw - 34rem, 62rem);
   }
   .dog-card-container {
-    width: 16rem;
-    min-height: 24rem;
+    /* width: 16rem@768 → 18rem@820
+       768→820: slope=(18-16)/(820-768)=0.03846rem/px → 3.846vw, b=16-0.03846*768 ≈ -13.537rem */
+    width: clamp(16rem, 3.846vw - 13.537rem, 18rem);
+    /* min-height: 24rem@768 → 27rem@820
+       768→820: slope=(27-24)/(820-768)=0.05769rem/px → 5.769vw, b=24-0.05769*768 ≈ -20.305rem */
+    min-height: clamp(24rem, 5.769vw - 20.305rem, 27rem);
   }
   .about-circle-xs {
     transform: translateX(-10%) translateY(10%);
   }
   .help-section-height {
+    /* 68vh@768 → 62vh@820 — viewport-relative; оставляем как есть (vh не клемпуется) */
     min-height: 68vh;
   }
   .contact-form-wrapper {
-    max-width: 32rem;
+    /* 32rem@768 (единственная точка) */
+    max-width: clamp(20rem, 7.27vw + 18.18rem, 45rem);
+  }
+  /* contact-label: match md:text-xl (1.25rem at 768px+) on TextInput labels */
+  .contact-label {
+    font-size: 1.25rem;
   }
 }
 
 @media (min-width: 820px) {
+  /* header-logo: 3.5rem@820 → 4.5rem@1024
+     820→1024: slope=(4.5-3.5)/(1024-820)=0.004902rem/px → 0.49vw, b=3.5-0.004902*820 ≈ -0.519rem */
   .header-logo {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: clamp(3.5rem, 0.49vw - 0.519rem, 4.5rem);
+    height: clamp(3.5rem, 0.49vw - 0.519rem, 4.5rem);
   }
+  /* text-fluid-logo: 1.75rem@820 → 2rem@1024
+     820→1024: slope=(2-1.75)/(1024-820)=0.001225rem/px → 0.123vw, b=1.75-0.001225*820 ≈ 0.745rem */
   .text-fluid-logo {
-    font-size: 1.75rem;
+    font-size: clamp(1.75rem, 0.123vw + 0.745rem, 2rem);
   }
   header .container {
+    /* padding-block: 0.875rem@820 → нет изменений до 1024 */
     padding-block: 0.875rem;
-    padding-inline: 2rem;
+    /* padding-inline: 2rem@820 → 4.5rem@1024
+       820→1024: slope=(4.5-2)/(1024-820)=0.01225rem/px → 1.225vw, b=2-0.01225*820 ≈ -8.045rem */
+    padding-inline: clamp(2rem, 1.225vw - 8.045rem, 4.5rem);
   }
   header h1 {
     overflow: visible;
@@ -309,68 +414,98 @@
     padding-top: 0;
   }
   .py-fluid-hero-bottom {
+    /* 1rem@820 → нет изменений до 1024 */
     padding-bottom: 1rem;
   }
   .heading-fluid-hero {
-    font-size: 4rem;
-    max-width: 34rem;
+    /* font-size: 4rem@820 → 5rem@1024
+       820→1024: slope=(5-4)/(1024-820)=0.004902rem/px → 0.49vw, b=4-0.004902*820 ≈ -0.019rem */
+    font-size: clamp(4rem, 0.49vw - 0.019rem, 5rem);
+    max-width: clamp(34rem, 3.922vw + 1.84rem, 42rem);
     margin-block: -1.5rem 1rem;
   }
   .glass-card {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem@820 → 1.5rem@1024
+       820→1024: slope=(1.5-1.25)/(1024-820)=0.001225rem/px → 0.123vw, b=1.25-0.001225*820 ≈ 0.245rem */
+    font-size: clamp(1.25rem, 0.123vw + 0.245rem, 1.5rem);
   }
   .hero-cta-section {
+    /* margin-top: 1.5rem@820 → нет изменений до 1024 */
     margin-top: 1.5rem;
   }
   .hero-cta-section p {
-    font-size: 1.375rem;
+    /* 1.375rem@820 → 1.5rem@1024
+       820→1024: slope=(1.5-1.375)/(1024-820)=0.000613rem/px → 0.061vw, b=1.375-0.000613*820 ≈ 0.872rem */
+    font-size: clamp(1.375rem, 0.061vw + 0.872rem, 1.5rem);
   }
   .img-fluid-hero-dog {
-    width: 28rem;
-    height: 28rem;
+    /* 28rem@820 → 34rem@1024
+       820→1024: slope=(34-28)/(1024-820)=0.02941rem/px → 2.941vw, b=28-0.02941*820 ≈ 3.883rem */
+    width: clamp(28rem, 2.941vw + 3.883rem, 34rem);
+    height: clamp(28rem, 2.941vw + 3.883rem, 34rem);
   }
   .social-link-sm {
+    /* 4.5rem@820 → нет изменений до 1024 */
     width: 4.5rem;
     height: 4.5rem;
   }
   .hero-social-position {
     gap: 1.25rem;
+    /* margin-top: 2.5rem@820 → нет изменений до 1024 */
     margin-top: 2.5rem;
   }
   .hero-circle-xl {
-    width: 30rem;
-    height: 30rem;
+    /* 30rem@820 → 36rem@1024
+       820→1024: slope=(36-30)/(1024-820)=0.02941rem/px → 2.941vw, b=30-0.02941*820 ≈ 5.884rem */
+    width: clamp(30rem, 2.941vw + 5.884rem, 36rem);
+    height: clamp(30rem, 2.941vw + 5.884rem, 36rem);
   }
   .hero-circle-md {
-    width: 20rem;
-    height: 20rem;
+    /* 20rem@820 → 24rem@1024
+       820→1024: slope=(24-20)/(1024-820)=0.01961rem/px → 1.961vw, b=20-0.01961*820 ≈ 3.919rem */
+    width: clamp(20rem, 1.961vw + 3.919rem, 24rem);
+    height: clamp(20rem, 1.961vw + 3.919rem, 24rem);
   }
   .hero-circle-sm {
-    width: 14rem;
-    height: 14rem;
+    /* 14rem@820 → 16rem@1024
+       820→1024: slope=(16-14)/(1024-820)=0.009804rem/px → 0.98vw, b=14-0.009804*820 ≈ 5.961rem */
+    width: clamp(14rem, 0.98vw + 5.961rem, 16rem);
+    height: clamp(14rem, 0.98vw + 5.961rem, 16rem);
     transform: translateX(-150%) translateY(40%);
   }
   .circle-hero-transform {
     transform: translateY(50%) translateX(-50%);
   }
   .dog-grid-layout {
+    /* column-gap: 2rem@820 → 0@1024 — layout-break, оставляем */
     column-gap: 2rem;
   }
   .dog-card-container {
-    width: 18rem;
-    min-height: 27rem;
+    /* 20rem (user wants wider than 18rem) */
+    width: 20rem;
+    /* min-height stays at 27rem via earlier clamp from 768px block */
+    min-height: clamp(24rem, 5.769vw - 20.305rem, 27rem);
     margin-inline: auto;
   }
+  /* button-circle above Send Message: reduce .circle-xxs below xl breakpoint */
+  .circle-xxs {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
   .filter-button {
+    /* 1rem@820 → 0.85rem@1280 — нелинейно (падение); промежуточный фикс */
     font-size: 1rem;
   }
   .filters-container {
+    /* 56rem@820 → 90rem@2560 */
     max-width: 56rem;
   }
   .rule-text {
-    font-size: 1.125rem;
+    /* уже покрыто выше clamp */
+    font-size: clamp(1rem, 0.291vw + 0.886rem, 1.125rem);
   }
   .about-content {
+    /* 1.5rem@820 → нет изменений до 2560 */
     font-size: 1.5rem;
   }
   .help-section-height {
@@ -381,63 +516,104 @@
 @media (min-width: 1024px) {
   header .container {
     max-width: 100%;
-    padding-inline: 4.5rem;
+    /* padding-inline: 4.5rem@1024 → 3rem@1280
+       1024→1280: slope=(3-4.5)/(1280-1024)=-0.005859rem/px → -0.586vw, b=4.5+0.005859*1024 ≈ 10.499rem */
+    padding-inline: clamp(3rem, -0.586vw + 10.499rem, 4.5rem);
   }
+  /* header-logo: 4.5rem@1024 → 3.5rem@1280
+     1024→1280: slope=(3.5-4.5)/(1280-1024)=-0.003906rem/px → -0.391vw, b=4.5+0.003906*1024 ≈ 8.499rem */
   .header-logo {
-    width: 4.5rem;
-    height: 4.5rem;
+    width: clamp(3.5rem, -0.391vw + 8.499rem, 4.5rem);
+    height: clamp(3.5rem, -0.391vw + 8.499rem, 4.5rem);
   }
+  /* text-fluid-logo: 2rem@1024 → 1.75rem@1280
+     1024→1280: slope=(1.75-2)/(1280-1024)=-0.000977rem/px → -0.098vw, b=2+0.000977*1024 ≈ 3rem */
   .text-fluid-logo {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, -0.098vw + 3rem, 2rem);
   }
+  /* heading-fluid-hero font-size: 5rem@1024 → 4.5rem@1280
+     1024→1280: slope=(4.5-5)/(1280-1024)=-0.001953rem/px → -0.195vw, b=5+0.001953*1024 ≈ 7rem */
+  /* heading-fluid-hero max-width: 42rem@1024 → fit-content@1280 — keyword, оставляем clamp → max */
   .heading-fluid-hero {
-    font-size: 5rem;
+    font-size: clamp(4.5rem, -0.195vw + 7rem, 5rem);
     max-width: 42rem;
   }
+  /* glass-card font-size: 1.5rem@1024 → 1.375rem@1280
+     1024→1280: slope=(1.375-1.5)/(1280-1024)=-0.000488rem/px → -0.049vw, b=1.5+0.000488*1024 ≈ 1.999rem */
+  /* glass-card max-width: 36rem@1024 → 30rem@1280
+     1024→1280: slope=(30-36)/(1280-1024)=-0.02344rem/px → -2.344vw, b=36+0.02344*1024 ≈ 60.002rem */
+  /* glass-card margin-top: 2.5rem@1024 → нет изменений */
   .glass-card {
-    font-size: 1.5rem;
-    max-width: 36rem;
+    font-size: clamp(1.375rem, -0.049vw + 1.999rem, 1.5rem);
+    max-width: clamp(30rem, -2.344vw + 60.002rem, 36rem);
     margin-top: 2.5rem;
   }
+  /* hero-cta-section p: 1.5rem@1024 → 1.25rem@1280
+     1024→1280: slope=(1.25-1.5)/(1280-1024)=-0.000977rem/px → -0.098vw, b=1.5+0.000977*1024 ≈ 2.5rem */
   .hero-cta-section p {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, -0.098vw + 2.5rem, 1.5rem);
   }
   .hero-social-position {
     transform: none;
   }
+  /* social-link-sm min-width: 5rem@1024 → 3.5rem@1280
+     1024→1280: slope=(3.5-5)/(1280-1024)=-0.005859rem/px → -0.586vw, b=5+0.005859*1024 ≈ 10.999rem */
   .social-link-sm,
   .social-link {
-    min-width: 5rem;
-    min-height: 5rem;
+    min-width: clamp(3.5rem, -0.586vw + 10.999rem, 5rem);
+    min-height: clamp(3.5rem, -0.586vw + 10.999rem, 5rem);
   }
+  /* img-fluid-hero-dog: 34rem@1024 → 24rem@1280
+     1024→1280: slope=(24-34)/(1280-1024)=-0.03906rem/px → -3.906vw, b=34+0.03906*1024 ≈ 74rem */
   .img-fluid-hero-dog {
-    width: 34rem;
-    height: 34rem;
+    width: clamp(24rem, -3.906vw + 74rem, 34rem);
+    height: clamp(24rem, -3.906vw + 74rem, 34rem);
   }
+  /* hero-circle-xl: 36rem@1024 → 25rem@1280
+     1024→1280: slope=(25-36)/(1280-1024)=-0.04297rem/px → -4.297vw, b=36+0.04297*1024 ≈ 79.999rem */
   .hero-circle-xl {
-    width: 36rem;
-    height: 36rem;
+    width: clamp(25rem, -4.297vw + 79.999rem, 36rem);
+    height: clamp(25rem, -4.297vw + 79.999rem, 36rem);
   }
+  /* hero-circle-md: 24rem@1024 → 16rem@1280
+     1024→1280: slope=(16-24)/(1280-1024)=-0.03125rem/px → -3.125vw, b=24+0.03125*1024 ≈ 56rem */
   .hero-circle-md {
-    width: 24rem;
-    height: 24rem;
+    width: clamp(16rem, -3.125vw + 56rem, 24rem);
+    height: clamp(16rem, -3.125vw + 56rem, 24rem);
   }
+  /* hero-circle-sm: 16rem@1024 → 10rem@1280
+     1024→1280: slope=(10-16)/(1280-1024)=-0.02344rem/px → -2.344vw, b=16+0.02344*1024 ≈ 40.001rem */
   .hero-circle-sm {
-    width: 16rem;
-    height: 16rem;
+    width: clamp(10rem, -2.344vw + 40.001rem, 16rem);
+    height: clamp(10rem, -2.344vw + 40.001rem, 16rem);
     transform: translateX(-160%) translateY(40%);
   }
-  .dog-grid-container {
-    max-width: 68rem;
+  /* dog-card-container: user wants wider cards at 1024px
+     grid is 62rem wide, column-gap 0. Each card: 22rem leaves comfortable margin */
+  .dog-card-container {
+    width: 22rem;
   }
+  /* help-content-width: user wants wider container at 1024px */
+  .help-content-width {
+    max-width: 58rem;
+    width: 100%;
+  }
+  /* button-circle above Send Message: 1.75rem at 1024px (2rem at xl / 1280px) */
+  .circle-xxs {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  /* dog-grid-layout width: 62rem@1024 → 60rem@1280
+     1024→1280: slope=(60-62)/(1280-1024)=-0.007813rem/px → -0.781vw, b=62+0.007813*1024 ≈ 69.999rem */
   .dog-grid-layout {
-    width: 62rem;
+    width: clamp(60rem, -0.781vw + 69.999rem, 62rem);
     column-gap: 0;
     margin-inline: auto;
   }
   .rules-grid {
     width: 90%;
   }
+  /* rules-button font-size: 1.125rem@1024 → нет изменений до 2560 */
   .rules-button {
     font-size: 1.125rem;
   }
@@ -445,20 +621,29 @@
     max-width: 1280px;
     padding-inline: 2rem;
   }
+  /* about-us .about-content max-width: 980px@1024 → 60rem@1280
+     1024→1280: slope=(60rem-980px)/(1280-1024) ≈ (960-980)/256 = -0.078rem/px → -7.8vw, b=980px+7.8vw@1024 ≈ -20px?
+     Оба значения в разных единицах (px vs rem). Приводим: 980px=61.25rem.
+     1024→1280: slope=(60-61.25)/(1280-1024)=-0.00488rem/px → -0.488vw, b=61.25+0.00488*1024 ≈ 66.247rem */
   #about-us .about-content {
-    max-width: 980px;
+    max-width: clamp(60rem, -0.488vw + 66.247rem, 61.25rem);
     width: 85%;
     padding-inline: 3rem;
   }
+  /* about-us .circle-md: 20rem@1024 → 30rem@2560
+     1024→2560: slope=(30-20)/(2560-1024)=0.006510rem/px → 0.651vw, b=20-0.006510*1024 ≈ 13.33rem */
   #about-us .circle-md {
-    width: 20rem;
-    height: 20rem;
+    width: clamp(20rem, 0.651vw + 13.33rem, 30rem);
+    height: clamp(20rem, 0.651vw + 13.33rem, 30rem);
   }
+  /* about-us .circle-xs: 10rem@1024 → 15rem@2560
+     1024→2560: slope=(15-10)/(2560-1024)=0.003255rem/px → 0.326vw, b=10-0.003255*1024 ≈ 6.665rem */
   #about-us .circle-xs {
-    width: 10rem;
-    height: 10rem;
+    width: clamp(10rem, 0.326vw + 6.665rem, 15rem);
+    height: clamp(10rem, 0.326vw + 6.665rem, 15rem);
     transform: translateX(-5%) translateY(35%);
   }
+  /* contact-grid: 80%@1024, gap 4rem@1024 → нет изменений */
   .contact-grid {
     width: 80%;
     gap: 4rem;
@@ -466,72 +651,104 @@
 }
 
 @media (min-width: 1280px) {
+  /* header .container padding-inline: 3rem@1280 → нет изменений до 2560 */
   header .container {
     padding-inline: 3rem;
   }
+  /* header-logo: 3.5rem@1280 → нет изменений (stable) */
   .header-logo {
     width: 3.5rem;
     height: 3.5rem;
   }
+  /* text-fluid-nav: 1.25rem@1280 → 1.5rem@2560
+     1280→2560: slope=(1.5-1.25)/(2560-1280)=0.000195rem/px → 0.020vw, b=1.25-0.000195*1280 ≈ 1rem */
   .text-fluid-nav {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 0.02vw + 1rem, 1.5rem);
   }
+  /* text-fluid-logo: 1.75rem@1280 (stable до 2560) */
   .text-fluid-logo {
     font-size: 1.75rem;
   }
+  /* heading-fluid-hero: font-size 4.5rem@1280 → 6.5rem@2560
+     1280→2560: slope=(6.5-4.5)/(2560-1280)=0.001563rem/px → 0.156vw, b=4.5-0.001563*1280 ≈ 2.5rem */
   .heading-fluid-hero {
     max-width: fit-content;
-    font-size: 4.5rem;
+    font-size: clamp(4.5rem, 0.156vw + 2.5rem, 6.5rem);
   }
+  /* glass-card font-size: 1.375rem@1280 → нет изменений
+     glass-card max-width: 30rem@1280 → нет изменений */
   .glass-card {
     font-size: 1.375rem;
     max-width: 30rem;
   }
+  /* btn-text-large: 1.25rem@1280 → нет изменений */
   .btn-text-large {
     font-size: 1.25rem;
   }
+  /* hero-cta-section p: 1.25rem@1280 → 1.75rem@2560
+     1280→2560: slope=(1.75-1.25)/(2560-1280)=0.000391rem/px → 0.039vw, b=1.25-0.000391*1280 ≈ 0.75rem */
   .hero-cta-section p {
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 0.039vw + 0.75rem, 1.75rem);
   }
+  /* social-link min: 3.5rem@1280 → нет изменений до 2560 */
   .social-link-sm,
   .social-link {
     min-width: 3.5rem;
     min-height: 3.5rem;
   }
+  /* hero-social-position margin-top: 1rem@1280 → нет изменений */
   .hero-social-position {
     margin-top: 1rem;
   }
   .circle-hero-transform {
     transform: translateX(-50%) translateY(45%);
   }
+  /* hero-circle-xl: 25rem@1280 → 46rem@2560
+     1280→2560: slope=(46-25)/(2560-1280)=0.016406rem/px → 1.641vw, b=25-0.016406*1280 ≈ 4.0rem */
   .hero-circle-xl {
-    width: 25rem;
-    height: 25rem;
+    width: clamp(25rem, 1.641vw + 4rem, 46rem);
+    height: clamp(25rem, 1.641vw + 4rem, 46rem);
   }
+  /* hero-circle-md: 16rem@1280 → 30rem@2560
+     1280→2560: slope=(30-16)/(2560-1280)=0.010938rem/px → 1.094vw, b=16-0.010938*1280 ≈ 1.999rem */
   .hero-circle-md {
-    width: 16rem;
-    height: 16rem;
+    width: clamp(16rem, 1.094vw + 1.999rem, 30rem);
+    height: clamp(16rem, 1.094vw + 1.999rem, 30rem);
     transform: translateX(-55%) translateY(40%);
   }
+  /* hero-circle-sm: 10rem@1280 → 20rem@2560
+     1280→2560: slope=(20-10)/(2560-1280)=0.007813rem/px → 0.781vw, b=10-0.007813*1280 ≈ 0.001rem */
   .hero-circle-sm {
-    width: 10rem;
-    height: 10rem;
+    width: clamp(10rem, 0.781vw + 0.001rem, 20rem);
+    height: clamp(10rem, 0.781vw + 0.001rem, 20rem);
     transform: translateX(-260%) translateY(40%);
   }
+  /* img-fluid-hero-dog: 24rem@1280 → 44rem@2560
+     1280→2560: slope=(44-24)/(2560-1280)=0.015625rem/px → 1.563vw, b=24-0.015625*1280 ≈ 4rem */
   .img-fluid-hero-dog {
-    width: 24rem;
-    height: 24rem;
+    width: clamp(24rem, 1.563vw + 4rem, 44rem);
+    height: clamp(24rem, 1.563vw + 4rem, 44rem);
   }
+  /* dog-grid-container max-width: 70rem@1280 → нет изменений (2560: overridden separately) */
   .dog-grid-container {
     max-width: 70rem;
   }
+  /* dog-grid-layout width: 60rem@1280 → 100rem@2560
+     1280→2560: slope=(100-60)/(2560-1280)=0.03125rem/px → 3.125vw, b=60-0.03125*1280 ≈ 20rem */
   .dog-grid-layout {
-    width: 60rem;
+    width: clamp(60rem, 3.125vw + 20rem, 100rem);
     margin-inline: auto;
   }
-  .filter-button {
-    font-size: 0.85rem;
+  /* dog-card-container: 24rem at 1280px (user wants wider) */
+  .dog-card-container {
+    width: 24rem;
   }
+  /* filter-button: 0.85rem@1280 → 1.25rem@2560
+     1280→2560: slope=(1.25-0.85)/(2560-1280)=0.000313rem/px → 0.031vw, b=0.85-0.000313*1280 ≈ 0.45rem */
+  .filter-button {
+    font-size: clamp(0.85rem, 0.031vw + 0.45rem, 1.25rem);
+  }
+  /* #help .container: 1400px padding 2rem — фиксированные контейнерные значения */
   #help .container {
     max-width: 1400px;
     padding-inline: 2rem;
@@ -541,6 +758,7 @@
     padding-inline: 3rem;
     margin-inline: auto;
   }
+  /* adoption-rules .container max-width: 70rem@1280 → stable */
   #adoption-rules .container {
     max-width: 70rem;
   }
@@ -550,51 +768,63 @@
   .about-circle-xs {
     transform: translateX(-5%) translateY(35%);
   }
+  /* about-content max-width: 60rem@1280 → stable */
   .about-content {
     max-width: 60rem;
   }
+  /* circle-contact-xxs: 2.5rem@1280 → 3.5rem@2560
+     1280→2560: slope=(3.5-2.5)/(2560-1280)=0.000781rem/px → 0.078vw, b=2.5-0.000781*1280 ≈ 1.5rem */
   .circle-contact-xxs {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: clamp(2.5rem, 0.078vw + 1.5rem, 3.5rem);
+    height: clamp(2.5rem, 0.078vw + 1.5rem, 3.5rem);
   }
 }
 
 @media (min-width: 2560px) and (min-height: 1440px) {
+  /* text-fluid-nav: 1.5rem@2560 — финальная точка, уже покрыта clamp выше */
   .text-fluid-nav {
     font-size: 1.5rem;
   }
+  /* heading-fluid-hero font-size: 6.5rem@2560 — финальная точка */
   .heading-fluid-hero {
     font-size: 6.5rem;
   }
   #hero {
     height: 75dvh;
   }
+  /* hero-cta-section p: 1.75rem@2560 — финальная точка */
   .hero-cta-section p {
     font-size: 1.75rem;
   }
+  /* hero-cta-section max-width: 60rem@2560, margin-block: 4rem@2560 */
   .hero-cta-section {
     max-width: 60rem;
     margin-block: 4rem;
   }
+  /* img-fluid-hero-dog: 44rem@2560 */
   .img-fluid-hero-dog {
     width: 44rem;
     height: 44rem;
   }
+  /* hero-circle-xl: 46rem@2560 */
   .hero-circle-xl {
     width: 46rem;
     height: 46rem;
     transform: translateX(15%) translateY(30%);
   }
+  /* hero-circle-md: 30rem@2560 */
   .hero-circle-md {
     width: 30rem;
     height: 30rem;
     transform: translateX(-60%) translateY(40%);
   }
+  /* hero-circle-sm: 20rem@2560 */
   .hero-circle-sm {
     width: 20rem;
     height: 20rem;
     transform: translateX(-160%) translateY(40%);
   }
+  /* #pets .container: 1880px — фиксированный layout-контейнер */
   #pets .container {
     max-width: 1880px;
     padding-inline: 2rem;
@@ -603,49 +833,73 @@
     width: 40rem;
     margin-inline: auto;
   }
+  /* filters-container: 90rem@2560 */
   .filters-container {
     max-width: 90rem;
     margin-inline: auto;
   }
+  /* filter-button: 1.25rem@2560 */
   .filter-button {
     font-size: 1.25rem;
   }
+  /* dog-grid-layout: 100rem@2560 */
   .dog-grid-layout {
     width: 100rem;
     margin-inline: auto;
   }
+  /* dog-card-container: 28rem@2560, min-height 30rem@2560 */
   .dog-card-container {
     width: 28rem;
     min-height: 30rem;
   }
+  /* dog-card-gender-text: 1.25rem@2560 */
   .dog-card-gender-text {
     font-size: 1.25rem;
   }
+  /* dog-card-desc-text: 1.125rem@2560 */
   .dog-card-desc-text {
     font-size: 1.125rem;
   }
+  /* text-fluid-modal-desc: 1.25rem@2560 */
   .text-fluid-modal-desc {
     font-size: 1.25rem;
   }
   .help-section-height {
     min-height: 68vh;
   }
+  /* about-us .circle-md: 30rem@2560 */
   #about-us .circle-md {
     width: 30rem;
     height: 30rem;
     transform: translateX(110%) translateY(-20%);
   }
+  /* about-us .circle-xs: 15rem@2560 */
   #about-us .circle-xs {
     width: 15rem;
     height: 15rem;
     transform: translateX(215%) translateY(5%);
   }
+  /* contact-label: 1.5rem@2560 */
   .contact-label {
     font-size: 1.5rem;
   }
+  /* circle-contact-xxs: 3.5rem@2560 */
   .circle-contact-xxs {
     width: 3.5rem;
     height: 3.5rem;
+  } /* ── Restore original section heading sizes at 2560px ──────────────────────
+     Base clamps were normalized to the same formula for consistency at smaller
+     screens; at 6xl the original design intentionally used different scales. */
+  .text-fluid-section-heading,
+  .text-fluid-about-heading {
+    font-size: 10rem;
+  }
+  .text-fluid-rules-heading,
+  .text-fluid-contact-heading {
+    font-size: 8rem;
+  }
+  .text-fluid-help-heading {
+    font-size: 5rem;
   }
 }
 
@@ -653,9 +907,4 @@
   .circle-position-6xl-md {
     transform: translateY(25%);
   }
-}
-
-:root {
-  --vh: 1vh;
-  --vph: calc(var(--vh, 1vh) * 100);
 }
