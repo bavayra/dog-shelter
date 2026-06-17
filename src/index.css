@@ -166,7 +166,7 @@ html {
       transform: translateX(clamp(-31rem, -13.64vw + 7.273rem, 0rem));
     }
     .circle-hero-transform {
-      transform: translateY(clamp(78%, 4.55vw + 64.52%, 153%)) translateX(50%);
+      transform: translateY(clamp(78%, 4.55vw + 64.52%, 153%)) translateX(-50%);
     }
     .glass-card {
       font-size: clamp(0.875rem, 1.02vw + 0.435rem, 1.75rem);
@@ -416,6 +416,9 @@ html {
       margin-block: clamp(0rem, -1.14vw + 4.655rem, 2.5rem)
         clamp(1rem, 1.36vw + 0.345rem, 3rem);
       padding-top: clamp(0rem, 0.68vw + -0.245rem, 0.5rem);
+    }
+    .about-circle-xs {
+      transform: translateX(-10%) translateY(15%);
     }
     .rule-card {
       width: 100%;
