@@ -1,8 +1,5 @@
 /* Custom breakpoints for specific screen dimensions */
 
-/* Connect --img-hero-dog variable to the hero dog image class.
-   Without this, the variable is set but never applied — the class
-   falls back to the @layer components value (14.625rem = too small). */
 .img-fluid-hero-dog {
   width: var(--img-hero-dog, clamp(14.625rem, 1.83vw + 8.775rem, 55.575rem));
   height: var(--img-hero-dog, clamp(14.625rem, 1.83vw + 8.775rem, 55.575rem));
@@ -44,7 +41,9 @@
 
 @media (min-width: 390px) {
   :root {
-    --circle-hero-transform: translateY(95%) translateX(-50%);
+    .circle-hero-transform {
+      transform: translateY(100%) translateX(-50%);
+    }
     --glass-font-size: clamp(1.05rem, 0.2vw + 0.972rem, 1.125rem);
     --glass-padding-inline: clamp(1rem, 3.64vw - 3.455rem, 5rem);
     --glass-margin-top: 2rem;
@@ -94,9 +93,6 @@
   #help {
     padding-bottom: 7rem;
   }
-}
-
-@media (min-width: 413px) and (max-width: 428px) {
   .circle-xs {
     width: 5.5rem;
     height: 5.5rem;
@@ -115,17 +111,26 @@
     padding-top: 4rem;
   }
   :root {
-    --hero-circle-xl: clamp(18rem, 2.36vw + 7.876rem, 26rem);
-    --hero-circle-md: clamp(12rem, 1.179vw + 6.941rem, 16rem);
-    --hero-circle-sm: clamp(8rem, 0.59vw + 5.468rem, 10rem);
-    --circle-hero-transform: translateY(100%) translateX(-50%);
+    .hero-circle-xl {
+      width: clamp(22rem, 3.125vw + 1.875rem, 28rem);
+      height: clamp(22rem, 3.125vw + 1.875rem, 28rem);
+    }
+    .hero-circle-md {
+      height: clamp(12rem, 1.179vw + 6.941rem, 16rem);
+      width: clamp(12rem, 1.179vw + 6.941rem, 16rem);
+    }
+    .hero-circle-sm {
+      width: clamp(8rem, 0.59vw + 5.468rem, 10rem);
+      height: clamp(8rem, 0.59vw + 5.468rem, 10rem);
+    }
+    .circle-hero-transform {
+      transform: translateY(90%) translateX(-50%);
+    }
   }
   .hero-cta-section p {
     font-size: clamp(1.125rem, 0.369vw + 0.966rem, 1.25rem);
   }
   :root {
-    /* Scales dog image 16rem @ 429px → 19rem @ 600px → 22rem @ 768px
-       matching circle-xl ratio ≈ 0.93 across the whole 429–768px range */
     --img-hero-dog: clamp(16rem, 27.86vw + 8.66rem, 22rem);
   }
   .social-link-sm {
@@ -134,12 +139,6 @@
   }
   .dog-card-container {
     width: 26rem;
-  }
-}
-
-@media (min-width: 480px) and (max-width: 599px) {
-  .hero-social-position {
-    margin-right: clamp(20rem, 4.202vw - 0.17rem, 25rem);
   }
 }
 
