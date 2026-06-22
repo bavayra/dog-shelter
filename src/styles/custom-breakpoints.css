@@ -194,6 +194,15 @@
   .hero-social-position {
     gap: clamp(1rem, 0.481vw - 2.692rem, 1.25rem);
   }
+  .hero-circle-xl {
+    transform: translateX(20%) translateY(30%);
+  }
+  .hero-circle-md {
+    transform: translateX(-70%) translateY(40%);
+  }
+  .hero-circle-sm {
+    transform: translateX(-270%) translateY(40%);
+  }
   .dog-grid-layout {
     width: clamp(38rem, 9.375vw - 34rem, 62rem);
   }
@@ -202,7 +211,7 @@
     min-height: clamp(24rem, 5.769vw - 20.305rem, 27rem);
   }
   .about-circle-xs {
-    transform: translateX(-10%) translateY(10%);
+    transform: translateX(-10%) translateY(70%);
   }
   .help-section-height {
     min-height: 68vh;
