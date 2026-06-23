@@ -141,21 +141,12 @@ html {
 
   @layer utilities {
     .heading-fluid-hero {
-      font-size: clamp(1.875rem, 4.09vw + 0.955rem, 7.5rem);
+      font-size: 2.5rem;
       line-height: 1;
       margin-block: clamp(2.75rem, 0.06vw + 2.53rem, 4rem)
         clamp(0rem, 1.52vw + -2.909rem, 1rem);
       max-width: clamp(20rem, 72.73vw + -240rem, 100rem);
       padding-inline: clamp(0rem, 1.33vw + -0.639rem, 1rem);
-    }
-    .hero-cta-section {
-      margin-top: clamp(1rem, 2.73vw + -1.218rem, 4.5rem);
-      max-width: clamp(32rem, 10.23vw + 19.09rem, 64rem);
-
-      & p {
-        font-size: clamp(1rem, 0.76vw + 0.709rem, 1.875rem);
-        line-height: clamp(1.375, 0.05vw + 1.345, 1.5);
-      }
     }
     .hero-height {
       height: calc(100dvh - clamp(3rem, 0.91vw + 2.773rem, 6rem));
@@ -164,9 +155,6 @@ html {
       margin-top: clamp(1rem, 4.32vw + -3.273rem, 6rem);
       margin-right: clamp(0rem, 7.27vw + -11.09rem, 15rem);
       transform: translateX(clamp(-31rem, -13.64vw + 7.273rem, 0rem));
-    }
-    .circle-hero-transform {
-      transform: translateY(clamp(78%, 4.55vw + 64.52%, 153%)) translateX(-50%);
     }
     .glass-card {
       font-size: clamp(0.875rem, 1.02vw + 0.435rem, 1.75rem);
@@ -226,6 +214,9 @@ html {
     .py-fluid-hero-bottom {
       padding-bottom: clamp(1.5rem, 4vw + 0.34rem, 5rem);
     }
+    .circle-hero-transform {
+      transform: translateX(-50%) translateY(135%);
+    }
     .img-fluid-hero-dog {
       width: clamp(14.625rem, 1.83vw + 8.775rem, 55.575rem);
       height: clamp(14.625rem, 1.83vw + 8.775rem, 55.575rem);
@@ -244,7 +235,7 @@ html {
       margin-bottom: clamp(1rem, 1.11vw + 0.6rem, 2rem);
     }
     .dog-card-container {
-      width: clamp(18.5rem, 5.68vw + 14.91rem, 28rem);
+      max-width: clamp(18.5rem, 5.68vw + 14.91rem, 28rem);
       min-height: clamp(35rem, 5.45vw + 31.36rem, 45rem);
       margin-inline: clamp(1rem, 1.36vw + 0.345rem, 2.5rem);
     }
