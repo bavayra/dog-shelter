@@ -32,15 +32,23 @@
 
 @media (min-width: 390px) {
   .circle-hero-transform {
-    transform: translateY(100%) translateX(-50%);
+    transform: translateY(135%) translateX(-50%);
   }
   .heading-fluid-hero {
     font-size: clamp(2.5rem, 2.27vw - 6.376rem, 3rem);
     max-width: clamp(25rem, 13.16vw - 26.456rem, 30rem);
+    margin-top: 4rem;
   }
   .social-link-sm {
     width: clamp(3.25rem, -1.14vw + 7.952rem, 3.5rem);
     height: clamp(3.25rem, -1.14vw + 7.952rem, 3.5rem);
+  }
+  .glass-card {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  .hero-social-position {
+    margin-top: 2rem;
   }
   .dog-grid-layout {
     justify-items: center;
