@@ -1,10 +1,5 @@
 /* Custom breakpoints for specific screen dimensions */
-@media (min-width: 360px) {
-  .hero-cta-section p {
-    font-size: 0.6rem;
-  }
-}
-@media (min-width: 376px) {
+@media (min-width: 375px) {
   .about-circle-xs {
     transform: translateY(50%);
   }
@@ -12,14 +7,12 @@
     transform: translateX(-230%) translateY(50%);
   }
   #hero {
-    padding-top: clamp(3.5rem, 3.33vw - 9.017rem, 4rem);
+    padding-top: 2rem;
   }
-  #help {
-    padding-bottom: 10rem;
+  .img-fluid-hero-dog {
+    width: 18rem;
+    height: 18rem;
   }
-}
-
-@media (min-width: 376px) and (max-width: 428px) {
   .circle-xl {
     width: clamp(20rem, 8.11vw - 10.493rem, 23rem);
     height: clamp(20rem, 8.11vw - 10.493rem, 23rem);
@@ -31,6 +24,9 @@
   .circle-sm {
     width: clamp(6.5rem, 2.78vw - 3.953rem, 7.53rem);
     height: clamp(6.5rem, 2.78vw - 3.953rem, 7.53rem);
+  }
+  #help {
+    padding-bottom: 10rem;
   }
 }
 
