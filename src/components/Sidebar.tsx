@@ -43,7 +43,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
         aria-expanded={isOpen}
       >
         <svg
-          className="phone:h-8 phone:w-8 h-3 w-3 md:h-10 md:w-10 lg:h-14 lg:w-14"
+          className="h-8 w-8 md:h-10 md:w-10 lg:h-14 lg:w-14"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
