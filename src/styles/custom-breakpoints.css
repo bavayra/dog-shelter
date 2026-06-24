@@ -145,9 +145,6 @@
     padding-block: clamp(0.75rem, 2.404vw - 17.719rem, 0.875rem);
     padding-inline: clamp(1.5rem, 1.172vw - 7.5rem, 4.5rem);
   }
-  .py-fluid-hero-top {
-    padding-top: 5.5rem;
-  }
   .heading-fluid-hero {
     font-size: clamp(3.5rem, 0.586vw - 1rem, 5rem);
     max-width: clamp(34rem, 3.922vw + 1.84rem, 42rem);
@@ -199,10 +196,8 @@
   header h1 {
     overflow: visible;
     text-overflow: clip;
-    min-width: max-content;
   }
   .header-contact-button {
-    width: auto;
     min-width: fit-content;
     white-space: nowrap;
     font-size: 1rem;
@@ -211,12 +206,6 @@
   #hero {
     height: calc(var(--vph, 100svh) - 5.25rem);
     max-height: calc(var(--vph, 100svh) - 5.25rem);
-  }
-  .py-fluid-hero-top {
-    padding-top: 0;
-  }
-  .py-fluid-hero-bottom {
-    padding-bottom: 1rem;
   }
   .heading-fluid-hero {
     font-size: clamp(4rem, 0.49vw - 0.019rem, 5rem);
@@ -256,7 +245,6 @@
   }
   .dog-card-container {
     width: 20rem;
-    margin-inline: auto;
   }
   .circle-xxs {
     width: 1.75rem;

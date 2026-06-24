@@ -205,15 +205,6 @@ html {
     .text-fluid-modal-desc {
       font-size: clamp(1rem, 0.58vw + 0.813rem, 1.875rem);
     }
-    .px-fluid-hero {
-      padding-inline: clamp(1rem, 1.5vw + 0.52rem, 2.5rem);
-    }
-    .py-fluid-hero-top {
-      padding-top: clamp(1.5rem, 2vw + 0.86rem, 2.5rem);
-    }
-    .py-fluid-hero-bottom {
-      padding-bottom: clamp(1.5rem, 4vw + 0.34rem, 5rem);
-    }
     .circle-hero-transform {
       transform: translateX(-50%) translateY(135%);
     }
@@ -373,10 +364,6 @@ html {
       width: clamp(9rem, 19.9vw + 4.522rem, 30rem);
       height: clamp(9rem, 19.9vw + 4.522rem, 30rem);
     }
-    .circle-lg {
-      width: clamp(10rem, 28.43vw + 3.603rem, 40rem);
-      height: clamp(10rem, 28.43vw + 3.603rem, 40rem);
-    }
     .circle-xl {
       width: clamp(16rem, 29.86vw + 9.281rem, 47.5rem);
       height: clamp(16rem, 29.86vw + 9.281rem, 47.5rem);
@@ -398,10 +385,6 @@ html {
         translateY(clamp(40%, -3.41vw + 51.82%, 50%));
       margin-right: clamp(-0.5rem, 8.33vw + -8.125rem, 4rem);
       margin-bottom: clamp(-1.5rem, -0.91vw + -0.364rem, 0rem);
-    }
-    .circle-after-dogs {
-      margin-top: clamp(0rem, 2.73vw + 2.182rem, 12.5rem);
-      margin-left: clamp(-10rem, -1.36vw + -7.655rem, -3.5rem);
     }
     .about-heading {
       margin-block: clamp(0rem, -1.14vw + 4.655rem, 2.5rem)
