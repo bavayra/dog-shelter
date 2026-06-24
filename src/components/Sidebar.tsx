@@ -37,7 +37,7 @@ const Sidebar = ({ className = '' }: SidebarProps) => {
   return (
     <>
       <button
-        className="border-primary-700 bg-primary-500 hover:bg-primary-700 phone-sm:top-15 tablet-sm:top-18 tablet-lg:top-30 fixed top-12 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 md:ml-8 lg:top-36 xl:hidden"
+        className="border-primary-700 bg-primary-500 hover:bg-primary-700 phone-sm:top-15 phone-lg:top-24 tablet-sm:top-18 tablet-lg:top-30 fixed top-12 left-3 z-51 rounded-full border-2 p-3 text-neutral-50 shadow-lg transition-colors md:top-22 md:ml-8 lg:top-36 xl:hidden"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle sidebar"
         aria-expanded={isOpen}

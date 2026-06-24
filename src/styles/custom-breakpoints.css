@@ -98,7 +98,7 @@
   }
 }
 
-@media (min-width: 429px) {
+@media (min-width: 428px) {
   .text-fluid-logo {
     font-size: clamp(1.125rem, 1.474vw - 0.507rem, 1.625rem);
   }
@@ -116,30 +116,31 @@
   .hero-circle-md {
     height: clamp(12rem, 1.179vw + 6.941rem, 16rem);
     width: clamp(12rem, 1.179vw + 6.941rem, 16rem);
+    transform: translateX(-50%) translateY(40%);
   }
   .hero-circle-sm {
     width: clamp(8rem, 0.59vw + 5.468rem, 10rem);
     height: clamp(8rem, 0.59vw + 5.468rem, 10rem);
+    transform: translateX(-180%) translateY(40%);
   }
   .circle-hero-transform {
-    transform: translateY(90%) translateX(-50%);
+    transform: translateY(150%) translateX(-50%);
+  }
+  .hero-cta-section p {
+    font-size: clamp(1.125rem, 0.369vw + 0.966rem, 1.25rem);
+  }
+  .img-fluid-hero-dog {
+    width: 19rem;
+    height: 19rem;
+  }
+  .social-link-sm {
+    width: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
+    height: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
+  }
+  .dog-card-container {
+    width: 26rem;
   }
 }
-.hero-cta-section p {
-  font-size: clamp(1.125rem, 0.369vw + 0.966rem, 1.25rem);
-}
-.img-hero-dog {
-  width: clamp(16rem, 27.86vw + 8.66rem, 22rem);
-  height: clamp(16rem, 27.86vw + 8.66rem, 22rem);
-}
-.social-link-sm {
-  width: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
-  height: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
-}
-.dog-card-container {
-  width: 26rem;
-}
-
 @media (min-width: 600px) {
   .glass-card {
     max-width: 26rem;
