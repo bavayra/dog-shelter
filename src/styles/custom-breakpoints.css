@@ -1,6 +1,6 @@
 /* Custom breakpoints for specific screen dimensions */
 @media (min-width: 375px) {
-  .about-circle-xs {
+  .circle-xs {
     transform: translateY(50%);
   }
   .hero-circle-sm {
@@ -24,9 +24,6 @@
   .circle-sm {
     width: clamp(6.5rem, 2.78vw - 3.953rem, 7.53rem);
     height: clamp(6.5rem, 2.78vw - 3.953rem, 7.53rem);
-  }
-  #help {
-    padding-bottom: 10rem;
   }
 }
 
@@ -53,15 +50,6 @@
   .dog-grid-layout {
     justify-items: center;
   }
-  .help-section-height {
-    min-height: auto;
-  }
-  .help-button-container {
-    margin-bottom: 0;
-  }
-  #help {
-    padding-bottom: clamp(7rem, -13.6vw + 63.176rem, 10rem);
-  }
   .rule-text {
     font-size: clamp(1rem, 0.291vw + 0.886rem, 1.125rem);
   }
@@ -75,7 +63,7 @@
     font-size: clamp(1.125rem, 1.474vw - 0.507rem, 1.625rem);
   }
   #hero {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   .heading-fluid-hero {
     font-size: 3rem;
@@ -88,9 +76,6 @@
   }
   .contact-label {
     font-size: 1.125rem;
-  }
-  #help {
-    padding-bottom: 7rem;
   }
   .circle-xs {
     width: 5.5rem;
@@ -105,9 +90,6 @@
   .header-logo {
     width: clamp(2.5rem, 2.212vw - 0.45rem, 3.25rem);
     height: clamp(2.5rem, 2.212vw - 0.45rem, 3.25rem);
-  }
-  #hero {
-    padding-top: 4rem;
   }
   .hero-circle-xl {
     width: clamp(22rem, 3.125vw + 1.875rem, 28rem);
@@ -126,19 +108,9 @@
   .circle-hero-transform {
     transform: translateY(150%) translateX(-50%);
   }
-  .hero-cta-section p {
-    font-size: clamp(1.125rem, 0.369vw + 0.966rem, 1.25rem);
-  }
   .img-fluid-hero-dog {
     width: 19rem;
     height: 19rem;
-  }
-  .social-link-sm {
-    width: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
-    height: clamp(3.5rem, 0.147vw + 2.868rem, 4rem);
-  }
-  .dog-card-container {
-    width: 26rem;
   }
 }
 @media (min-width: 600px) {
@@ -154,7 +126,7 @@
   .rule-card {
     width: 80%;
   }
-  .about-circle-xs {
+  .circle-xs {
     width: 6.5rem;
     height: 6.5rem;
     transform: translateX(-15%) translateY(15%);
@@ -209,7 +181,7 @@
     width: clamp(16rem, 3.846vw - 13.537rem, 18rem);
     min-height: clamp(24rem, 5.769vw - 20.305rem, 27rem);
   }
-  .about-circle-xs {
+  .circle-xs {
     transform: translateX(-10%) translateY(70%);
   }
   .help-section-height {
@@ -224,17 +196,6 @@
 }
 
 @media (min-width: 820px) {
-  .header-logo {
-    width: clamp(3.5rem, 0.49vw - 0.519rem, 4.5rem);
-    height: clamp(3.5rem, 0.49vw - 0.519rem, 4.5rem);
-  }
-  .text-fluid-logo {
-    font-size: clamp(1.75rem, 0.123vw + 0.745rem, 2rem);
-  }
-  header .container {
-    padding-block: 0.875rem;
-    padding-inline: clamp(2rem, 1.225vw - 8.045rem, 4.5rem);
-  }
   header h1 {
     overflow: visible;
     text-overflow: clip;
@@ -250,7 +211,6 @@
   #hero {
     height: calc(var(--vph, 100svh) - 5.25rem);
     max-height: calc(var(--vph, 100svh) - 5.25rem);
-    overflow: hidden;
   }
   .py-fluid-hero-top {
     padding-top: 0;
@@ -260,7 +220,6 @@
   }
   .heading-fluid-hero {
     font-size: clamp(4rem, 0.49vw - 0.019rem, 5rem);
-    max-width: clamp(34rem, 3.922vw + 1.84rem, 42rem);
     margin-block: -1.5rem 1rem;
   }
   .glass-card {
@@ -275,14 +234,6 @@
   .img-fluid-hero-dog {
     width: clamp(28rem, 2.941vw + 3.883rem, 34rem);
     height: clamp(28rem, 2.941vw + 3.883rem, 34rem);
-  }
-  .social-link-sm {
-    width: 4.5rem;
-    height: 4.5rem;
-  }
-  .hero-social-position {
-    gap: 1.25rem;
-    margin-top: 2.5rem;
   }
   .hero-circle-xl {
     width: 36rem;
@@ -305,12 +256,11 @@
   }
   .dog-card-container {
     width: 20rem;
-    min-height: clamp(24rem, 5.769vw - 20.305rem, 27rem);
     margin-inline: auto;
   }
   .circle-xxs {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
   }
   .filter-button {
     font-size: 1rem;
@@ -318,14 +268,8 @@
   .filters-container {
     max-width: 56rem;
   }
-  .rule-text {
-    font-size: clamp(1rem, 0.291vw + 0.886rem, 1.125rem);
-  }
   .about-content {
     font-size: 1.5rem;
-  }
-  .help-section-height {
-    min-height: 62vh;
   }
 }
 
@@ -338,9 +282,6 @@
     width: clamp(3.5rem, -0.391vw + 8.499rem, 4.5rem);
     height: clamp(3.5rem, -0.391vw + 8.499rem, 4.5rem);
   }
-  .text-fluid-logo {
-    font-size: clamp(1.75rem, -0.098vw + 3rem, 2rem);
-  }
   .heading-fluid-hero {
     font-size: clamp(4.5rem, -0.195vw + 7rem, 5rem);
     max-width: 42rem;
@@ -348,7 +289,6 @@
   .glass-card {
     font-size: clamp(1.375rem, -0.049vw + 1.999rem, 1.5rem);
     max-width: clamp(30rem, -2.344vw + 60.002rem, 36rem);
-    margin-top: 2.5rem;
   }
   .hero-cta-section p {
     font-size: clamp(1.25rem, -0.098vw + 2.5rem, 1.5rem);
@@ -358,8 +298,8 @@
   }
   .social-link-sm,
   .social-link {
-    min-width: clamp(3.5rem, -0.586vw + 10.999rem, 5rem);
-    min-height: clamp(3.5rem, -0.586vw + 10.999rem, 5rem);
+    min-width: 3.5rem;
+    min-height: 3.5rem;
   }
   .img-fluid-hero-dog {
     width: clamp(24rem, -3.906vw + 74rem, 34rem);
@@ -368,10 +308,6 @@
   .hero-circle-xl {
     width: clamp(25rem, -4.297vw + 79.999rem, 36rem);
     height: clamp(25rem, -4.297vw + 79.999rem, 36rem);
-  }
-  .hero-circle-md {
-    width: clamp(16rem, -3.125vw + 56rem, 24rem);
-    height: clamp(16rem, -3.125vw + 56rem, 24rem);
   }
   .hero-circle-sm {
     width: clamp(10rem, -2.344vw + 40.001rem, 16rem);
@@ -384,10 +320,6 @@
   .help-content-width {
     max-width: 58rem;
     width: 100%;
-  }
-  .circle-xxs {
-    width: 1.75rem;
-    height: 1.75rem;
   }
   .dog-grid-layout {
     width: clamp(60rem, -0.781vw + 69.999rem, 62rem);
@@ -404,16 +336,16 @@
     max-width: 1280px;
     padding-inline: 2rem;
   }
-  #about-us .about-content {
+  .about-content {
     max-width: clamp(60rem, -0.488vw + 66.247rem, 61.25rem);
     width: 85%;
     padding-inline: 3rem;
   }
-  #about-us .circle-md {
+  .circle-md {
     width: clamp(20rem, 0.651vw + 13.33rem, 30rem);
     height: clamp(20rem, 0.651vw + 13.33rem, 30rem);
   }
-  #about-us .circle-xs {
+  .circle-xs {
     width: clamp(10rem, 0.326vw + 6.665rem, 15rem);
     height: clamp(10rem, 0.326vw + 6.665rem, 15rem);
     transform: translateX(-5%) translateY(35%);
@@ -428,15 +360,8 @@
   header .container {
     padding-inline: 3rem;
   }
-  .header-logo {
-    width: 3.5rem;
-    height: 3.5rem;
-  }
   .text-fluid-nav {
     font-size: clamp(1.25rem, 0.02vw + 1rem, 1.5rem);
-  }
-  .text-fluid-logo {
-    font-size: 1.75rem;
   }
   .heading-fluid-hero {
     max-width: fit-content;
@@ -444,21 +369,12 @@
   }
   .glass-card {
     font-size: 1.375rem;
-    max-width: 30rem;
   }
   .btn-text-large {
     font-size: 1.25rem;
   }
   .hero-cta-section p {
     font-size: clamp(1.25rem, 0.039vw + 0.75rem, 1.75rem);
-  }
-  .social-link-sm,
-  .social-link {
-    min-width: 3.5rem;
-    min-height: 3.5rem;
-  }
-  .hero-social-position {
-    margin-top: 1rem;
   }
   .circle-hero-transform {
     transform: translateX(-50%) translateY(45%);
@@ -486,34 +402,20 @@
   }
   .dog-grid-layout {
     width: clamp(60rem, 3.125vw + 20rem, 100rem);
-    margin-inline: auto;
-  }
-  .dog-card-container {
-    width: 24rem;
-  }
-  .filter-button {
-    font-size: clamp(0.85rem, 0.031vw + 0.45rem, 1.25rem);
   }
   #help .container {
     max-width: 1400px;
     padding-inline: 2rem;
   }
-  #help .help-content-width {
-    width: 100%;
+  .help-content-width {
     padding-inline: 3rem;
     margin-inline: auto;
   }
   #adoption-rules .container {
     max-width: 70rem;
   }
-  .rule-card {
-    width: 90%;
-  }
-  .about-circle-xs {
+  .circle-xs {
     transform: translateX(-5%) translateY(35%);
-  }
-  .about-content {
-    max-width: 60rem;
   }
   .circle-contact-xxs {
     width: clamp(2.5rem, 0.078vw + 1.5rem, 3.5rem);
@@ -567,14 +469,9 @@
   }
   .filters-container {
     max-width: 90rem;
-    margin-inline: auto;
-  }
-  .filter-button {
-    font-size: 1.25rem;
   }
   .dog-grid-layout {
     width: 100rem;
-    margin-inline: auto;
   }
   .dog-card-container {
     width: 28rem;
@@ -589,15 +486,12 @@
   .text-fluid-modal-desc {
     font-size: 1.25rem;
   }
-  .help-section-height {
-    min-height: 68vh;
-  }
-  #about-us .circle-md {
+  .circle-md {
     width: 30rem;
     height: 30rem;
     transform: translateX(110%) translateY(-20%);
   }
-  #about-us .circle-xs {
+  .circle-xs {
     width: 15rem;
     height: 15rem;
     transform: translateX(215%) translateY(5%);

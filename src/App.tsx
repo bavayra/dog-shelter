@@ -136,7 +136,7 @@ function App() {
             <Suspense
               fallback={<LoadingSpinner message="Loading content..." />}
             >
-              <div className="phone:top-2 relative">
+              <div className="relative">
                 <DecorativeCircle
                   sizeVariant="xl"
                   color="primary-500"
@@ -144,7 +144,6 @@ function App() {
                   left="-30"
                   opacity={20}
                   zIndex={2}
-                  className="circle-after-dogs hidden"
                 />
               </div>
               <HowToHelp />
