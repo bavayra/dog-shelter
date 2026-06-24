@@ -70,12 +70,18 @@
   }
 }
 
-@media (min-width: 413px) {
+@media (min-width: 412px) {
+  .text-fluid-logo {
+    font-size: clamp(1.125rem, 1.474vw - 0.507rem, 1.625rem);
+  }
   #hero {
-    padding-top: clamp(4rem, -3.125vw + 17.406rem, 4.5rem);
+    padding-top: 3rem;
+  }
+  .heading-fluid-hero {
+    font-size: 3rem;
   }
   .circle-hero-transform {
-    transform: translateY(148%) translateX(-50%);
+    transform: translateY(170%) translateX(-50%);
   }
   .dog-card-container {
     width: clamp(24rem, 12.5vw - 27.625rem, 26rem);
