@@ -250,17 +250,18 @@
     height: clamp(28rem, 2.941vw + 3.883rem, 34rem);
   }
   .hero-circle-xl {
-    width: 36rem;
-    height: 36rem;
+    width: 30rem;
+    height: 30rem;
   }
   .hero-circle-md {
     width: clamp(20rem, 1.961vw + 3.919rem, 24rem);
     height: clamp(20rem, 1.961vw + 3.919rem, 24rem);
+    transform: translateX(-50%) translateY(40%);
   }
   .hero-circle-sm {
     width: clamp(14rem, 0.98vw + 5.961rem, 16rem);
     height: clamp(14rem, 0.98vw + 5.961rem, 16rem);
-    transform: translateX(-150%) translateY(40%);
+    transform: translateX(-170%) translateY(40%);
   }
   .circle-hero-transform {
     transform: translateY(0%) translateX(-50%);
@@ -270,6 +271,16 @@
   }
   .dog-card-container {
     width: 20rem;
+  }
+  .about-circle-md {
+    width: 16rem;
+    height: 16rem;
+    transform: translateX(-35%) translateY(-10%);
+  }
+  .circle-xs {
+    width: 8rem;
+    height: 8rem;
+    transform: translateX(60%);
   }
   .circle-xxs {
     width: 1.75rem;
@@ -283,6 +294,9 @@
   }
   .about-content {
     font-size: 1.5rem;
+  }
+  .circle-contact-xxs {
+    transform: translateX(-15%) translateY(45%);
   }
 }
 
