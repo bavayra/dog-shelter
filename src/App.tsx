@@ -25,9 +25,9 @@ function App() {
         <main className="flex-1">
           <section
             id="hero"
-            className="from-primary-200 to-primary-50 hero-height border-primary-500 px-fluid-hero relative flex flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md"
+            className="from-primary-200 to-primary-50 hero-height border-primary-500 relative flex flex-col overflow-hidden border-b-3 bg-linear-to-b shadow-md"
           >
-            <div className="tablet-lg:pt-20 pt-20 xl:pt-12">
+            <div className="tablet-lg:pt-20 tablet-sm:pt-6 pt-20 xl:pt-12">
               <h2 className="heading-fluid-hero text-primary-700 relative z-10 mx-auto w-full text-center font-semibold">
                 Give a Shelter Dog a Loving Home
               </h2>
@@ -111,7 +111,7 @@ function App() {
                 bottom="0"
                 right="0"
                 zIndex={0}
-                className="hero-circle-sm tablet-sm:translate-x-1/2"
+                className="hero-circle-sm"
               />
             </div>
             <img
