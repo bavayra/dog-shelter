@@ -2,6 +2,8 @@
 @media (min-width: 375px) {
   .circle-xs {
     transform: translateY(50%);
+    width: 5rem;
+    height: 5rem;
   }
   .hero-circle-sm {
     transform: translateX(-230%) translateY(50%);
@@ -30,7 +32,6 @@
   }
   .heading-fluid-hero {
     font-size: clamp(2.5rem, 2.27vw - 6.376rem, 3rem);
-    max-width: clamp(25rem, 13.16vw - 26.456rem, 30rem);
     margin-top: 4rem;
   }
   .social-link-sm {
@@ -64,20 +65,22 @@
   }
   .heading-fluid-hero {
     font-size: 3rem;
-    max-width: 20rem;
   }
   .circle-hero-transform {
     transform: translateY(170%) translateX(-50%);
   }
   .dog-card-container {
-    width: clamp(24rem, 12.5vw - 27.625rem, 26rem);
+    width: 24rem;
+    max-width: 100%;
+  }
+  .about-circle-md {
+    transform: translateX(-65%);
+  }
+  .circle-xs {
+    transform: translateX(10%) translateY(55%);
   }
   .contact-label {
     font-size: 1.125rem;
-  }
-  .circle-xs {
-    width: 5.5rem;
-    height: 5.5rem;
   }
 }
 
@@ -112,11 +115,26 @@
   }
 }
 @media (min-width: 600px) {
+  #hero h2 {
+    padding-top: 1rem;
+    max-width: 24rem;
+    font-size: 3.5rem;
+  }
   .glass-card {
     max-width: 26rem;
   }
+  .img-fluid-hero-dog {
+    width: 21rem;
+    height: 21rem;
+  }
   .circle-hero-transform {
     transform: translateY(60%) translateX(-50%);
+  }
+  .circle-md {
+    transform: translateX(-65%) translateY(35%);
+  }
+  .circle-sm {
+    transform: translateX(-205%) translateY(35%);
   }
   .help-section-height {
     min-height: 80vh;
@@ -124,10 +142,13 @@
   .rule-card {
     width: 80%;
   }
+  .about-circle-md {
+    transform: translateX(-35%) translateY(5%);
+  }
   .circle-xs {
-    width: 6.5rem;
-    height: 6.5rem;
-    transform: translateX(-15%) translateY(15%);
+    width: 6rem;
+    height: 6rem;
+    transform: translateX(50%) translateY(45%);
   }
 }
 
@@ -143,9 +164,9 @@
     padding-block: clamp(0.75rem, 2.404vw - 17.719rem, 0.875rem);
     padding-inline: clamp(1.5rem, 1.172vw - 7.5rem, 4.5rem);
   }
-  .heading-fluid-hero {
-    font-size: clamp(3.5rem, 0.586vw - 1rem, 5rem);
-    max-width: clamp(34rem, 3.922vw + 1.84rem, 42rem);
+  #hero h2 {
+    font-size: 4rem;
+    max-width: 36rem;
   }
   .glass-card {
     font-size: clamp(1.125rem, 0.146vw, 1.5rem);
@@ -167,17 +188,23 @@
     transform: translateX(-70%) translateY(40%);
   }
   .hero-circle-sm {
-    transform: translateX(-270%) translateY(40%);
+    transform: translateX(-220%) translateY(40%);
   }
   .dog-grid-layout {
     width: clamp(38rem, 9.375vw - 34rem, 62rem);
   }
   .dog-card-container {
-    width: clamp(16rem, 3.846vw - 13.537rem, 18rem);
     min-height: clamp(24rem, 5.769vw - 20.305rem, 27rem);
   }
+  .about-circle-md {
+    width: 14rem;
+    height: 14rem;
+    transform: translateX(-35%) translateY(-5%);
+  }
   .circle-xs {
-    transform: translateX(-10%) translateY(70%);
+    width: 7rem;
+    height: 7rem;
+    transform: translateX(60%) translateY(55%);
   }
   .help-section-height {
     min-height: 68vh;

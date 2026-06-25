@@ -14,7 +14,7 @@ const AboutUs = () => {
         left="0"
         opacity={40}
         zIndex={0}
-        className="-translate-x-1/3 translate-y-1/3"
+        className="about-circle-md translate-x-1/3 translate-y-1/3"
       />
       <DecorativeCircle
         sizeVariant="xs"
