@@ -6,9 +6,6 @@
   .hero-circle-sm {
     transform: translateX(-230%) translateY(50%);
   }
-  #hero {
-    padding-top: 2rem;
-  }
   .img-fluid-hero-dog {
     width: 18rem;
     height: 18rem;
@@ -63,10 +60,11 @@
     font-size: clamp(1.125rem, 1.474vw - 0.507rem, 1.625rem);
   }
   #hero {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
   .heading-fluid-hero {
     font-size: 3rem;
+    max-width: 20rem;
   }
   .circle-hero-transform {
     transform: translateY(170%) translateX(-50%);

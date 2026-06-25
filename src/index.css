@@ -162,7 +162,7 @@ html {
       margin-top: clamp(1rem, 1.36vw + -0.545rem, 3rem);
       padding-inline: clamp(1rem, 3.64vw + -3.455rem, 5rem);
       padding-block: clamp(1rem, 1.36vw + -0.545rem, 2.5rem);
-      max-width: clamp(36rem, 20.45vw + 26.91rem, 64rem);
+      max-width: 18rem;
     }
     .text-fluid-section-heading {
       font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
