@@ -133,7 +133,7 @@ html {
     @apply text-primary-500 text-lg leading-normal font-medium;
   }
   .typography-body {
-    @apply text-base leading-normal text-neutral-700;
+    @apply text-center text-base leading-normal text-neutral-700;
   }
   .z-3 {
     z-index: 3;
@@ -267,6 +267,9 @@ html {
     }
     .text-fluid-about-heading {
       font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
+      margin-block: clamp(0rem, -1.14vw + 4.655rem, 2.5rem)
+        clamp(1rem, 1.36vw + 0.345rem, 3rem);
+      padding-top: clamp(0rem, 0.68vw + -0.245rem, 0.5rem);
     }
     .about-content {
       font-size: clamp(1.125rem, 0.71vw + 0.965rem, 1.875rem);
@@ -280,12 +283,16 @@ html {
       padding-block: clamp(0rem, 0.59vw + -0.455rem, 0.5rem);
       font-weight: 700;
       line-height: 1.5;
+      color: var(--color-primary-500);
+      margin-block: clamp(1.5rem, 0.91vw + 1.364rem, 2rem);
+      text-align: center;
+      font-weight: 700;
     }
     .about-circle-md {
-      transform: translateX(-65%) translateY(10%);
+      transform: translateX(-30%) translateY(45%);
     }
-    .circle-xs {
-      transform: translateX(-5%) translateY(35%);
+    .about-circle-xs {
+      transform: translateX(25%) translateY(45%);
     }
     .text-fluid-rules-heading {
       font-size: clamp(2.5rem, 6.25vw + 0.5rem, 9rem);
@@ -358,7 +365,7 @@ html {
       width: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);
       height: clamp(2rem, 1.42vw + 1.68rem, 3.5rem);
     }
-    .circle-xs {
+    .about-circle-xs {
       width: clamp(4rem, 10.42vw + 1.655rem, 15rem);
       height: clamp(4rem, 10.42vw + 1.655rem, 15rem);
     }
@@ -391,11 +398,6 @@ html {
         translateY(clamp(40%, -3.41vw + 51.82%, 50%));
       margin-right: clamp(-0.5rem, 8.33vw + -8.125rem, 4rem);
       margin-bottom: clamp(-1.5rem, -0.91vw + -0.364rem, 0rem);
-    }
-    .about-heading {
-      margin-block: clamp(0rem, -1.14vw + 4.655rem, 2.5rem)
-        clamp(1rem, 1.36vw + 0.345rem, 3rem);
-      padding-top: clamp(0rem, 0.68vw + -0.245rem, 0.5rem);
     }
     .about-circle-xs {
       transform: translateX(-10%) translateY(15%);

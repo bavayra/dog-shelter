@@ -14,7 +14,7 @@ const AboutUs = () => {
         left="0"
         opacity={40}
         zIndex={0}
-        className="about-circle-md translate-x-1/3 translate-y-1/3"
+        className="about-circle-md"
       />
       <DecorativeCircle
         sizeVariant="xs"
@@ -23,15 +23,15 @@ const AboutUs = () => {
         left="0"
         opacity={90}
         zIndex={0}
-        className="circle-xs phone:-translate-y-1/7 phone:-translate-x-1/10 phone-lg:-translate-y-1/6 tablet-sm:-translate-y-1/6 tablet-lg:translate-y-1/3 tablet-lg:-translate-x-1/10"
+        className="about-circle-xs"
       />
       <div className="container mx-auto px-4">
-        <h2 className="about-heading text-fluid-about-heading text-primary-500 z-12 text-center leading-tight font-bold">
+        <h2 className="text-fluid-about-heading text-primary-500 z-12 text-center leading-tight font-bold">
           About Us
         </h2>
 
         <div className="relative mx-auto my-2">
-          <div className="about-content bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto rounded-2xl border-2 text-center">
+          <div className="about-content bg-primary-100 typography-body border-primary-300 relative z-10 mx-auto rounded-2xl border-2">
             <p>
               Rotvodom was founded in 2010 by Rotvomama, who started building a
               shelter in her own backyard by herself. She started taking in one
@@ -53,9 +53,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <h3 className="about-moments-heading text-primary-500 my-6 text-center leading-normal font-bold">
-          Moments from Rotvodom
-        </h3>
+        <h3 className="about-moments-heading">Moments from Rotvodom</h3>
         <PhotoCarousel />
       </div>
     </section>
