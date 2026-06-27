@@ -133,7 +133,7 @@ html {
     @apply text-primary-500 text-lg leading-normal font-medium;
   }
   .typography-body {
-    @apply text-center text-base leading-normal text-neutral-700;
+    @apply text-left text-base leading-normal text-neutral-700;
   }
   .z-3 {
     z-index: 3;
