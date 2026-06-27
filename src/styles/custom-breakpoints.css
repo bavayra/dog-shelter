@@ -344,22 +344,30 @@
     width: clamp(25rem, -4.297vw + 79.999rem, 36rem);
     height: clamp(25rem, -4.297vw + 79.999rem, 36rem);
   }
+  .hero-circle-md {
+    width: clamp(20rem, 0.651vw + 13.33rem, 30rem);
+    height: clamp(20rem, 0.651vw + 13.33rem, 30rem);
+    transform: translateX(-70%) translateY(30%);
+  }
   .hero-circle-sm {
     width: clamp(10rem, -2.344vw + 40.001rem, 16rem);
     height: clamp(10rem, -2.344vw + 40.001rem, 16rem);
     transform: translateX(-160%) translateY(40%);
   }
-  .dog-card-container {
-    width: 22rem;
-  }
-  .help-content-width {
-    max-width: 58rem;
-    width: 100%;
+  #pets .container {
+    max-width: 100%;
   }
   .dog-grid-layout {
     width: clamp(60rem, -0.781vw + 69.999rem, 62rem);
     column-gap: 0;
     margin-inline: auto;
+  }
+  .dog-card-container {
+    width: 18rem;
+  }
+  .help-content-width {
+    max-width: 58rem;
+    width: 100%;
   }
   .rules-grid {
     width: 90%;
@@ -376,14 +384,9 @@
     width: 85%;
     padding-inline: 3rem;
   }
-  .circle-md {
-    width: clamp(20rem, 0.651vw + 13.33rem, 30rem);
-    height: clamp(20rem, 0.651vw + 13.33rem, 30rem);
-  }
   .about-circle-xs {
-    width: clamp(10rem, 0.326vw + 6.665rem, 15rem);
-    height: clamp(10rem, 0.326vw + 6.665rem, 15rem);
-    transform: translateX(-5%) translateY(35%);
+    width: 8rem;
+    height: 8rem;
   }
   .contact-grid {
     width: 80%;
