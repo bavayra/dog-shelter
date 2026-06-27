@@ -96,7 +96,7 @@ const ContactSection = () => {
             right="0"
             zIndex={10}
             opacity={70}
-            className="circle-contact-xxs xl:-translate-x-1/3 xl:translate-y-1/3"
+            className="circle-contact-xxs xl:-translate-x-1/4 xl:translate-y-1/8"
           />
           <h2 className="contact-heading text-fluid-contact-heading text-primary-500 relative z-11 leading-snug font-bold">
             Contact Us

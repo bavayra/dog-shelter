@@ -405,8 +405,12 @@
     max-width: fit-content;
     font-size: clamp(4.5rem, 0.156vw + 2.5rem, 6.5rem);
   }
+  #hero h2 {
+    max-width: 64rem;
+  }
   .glass-card {
-    font-size: 1.375rem;
+    font-size: 1.175rem;
+    max-width: 30rem;
   }
   .btn-text-large {
     font-size: 1.25rem;
@@ -429,7 +433,7 @@
   .hero-circle-sm {
     width: clamp(10rem, 0.781vw + 0.001rem, 20rem);
     height: clamp(10rem, 0.781vw + 0.001rem, 20rem);
-    transform: translateX(-260%) translateY(40%);
+    transform: translateX(-220%) translateY(40%);
   }
   .img-fluid-hero-dog {
     width: clamp(24rem, 1.563vw + 4rem, 44rem);
@@ -451,9 +455,6 @@
   }
   #adoption-rules .container {
     max-width: 70rem;
-  }
-  .about-circle-xs {
-    transform: translateX(-5%) translateY(35%);
   }
   .circle-contact-xxs {
     width: clamp(2.5rem, 0.078vw + 1.5rem, 3.5rem);
