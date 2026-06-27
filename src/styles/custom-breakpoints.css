@@ -462,6 +462,20 @@
   }
 }
 
+@media (min-width: 1440px) {
+  #hero h2 {
+    font-size: 5rem;
+  }
+  .filters-container {
+    max-width: 70rem;
+  }
+  .dog-grid-layout {
+    width: 80rem;
+  }
+  .dog-card-container {
+    width: 22rem;
+  }
+}
 @media (min-width: 2560px) and (min-height: 1440px) {
   .text-fluid-nav {
     font-size: 1.5rem;
